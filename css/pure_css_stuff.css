@@ -1,0 +1,117 @@
+:root
+{
+    --duration: 7.5s;
+}
+
+.profile {
+  width: 100%;
+}
+
+/* fake radio buttons */
+.fake-radio {
+
+  li:nth-child(1){
+    &:focus-within {
+      background-color: blue;
+    }
+  } 
+}
+
+/* ticker test */
+* { box-sizing: border-box; }
+
+@-webkit-keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.ticker-wrap {
+  
+  position: fixed;
+  bottom: 0;
+  left:0;
+  width: 100%;
+  /* overflow: hidden; */
+  height: 4rem;
+  /* background-color: black;  */
+  padding-left: 100%;
+  box-sizing: content-box;
+  z-index: 999;
+
+  .ticker {
+
+    display: inline-block;
+    height: 4rem;
+    line-height: 4rem;  
+    white-space: nowrap;
+    padding-right: 100%;
+    box-sizing: content-box;
+
+    -webkit-animation-iteration-count: infinite; 
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+   -webkit-animation-name: ticker;
+           animation-name: ticker;
+    -webkit-animation-duration: var(--duration);
+            animation-duration: var(--duration);
+
+    .ticker_item {
+
+      display: inline-block;
+      font-size: 2rem;
+      color: white;   
+
+      &:hover {
+        &::before {
+          content: "thank you for visiting!";
+          display: flex;
+          position: absolute;
+          background-color: black;
+          font-size: 1.3rem;
+          height: 1.3rem;
+          align-items: center;
+          flex-direction: row;
+          text-align: center;
+          padding: 10px;
+          bottom: 46px;
+          left: -33px;
+        }
+      }
+
+    }
+
+  }
+
+  .lion_run {
+    height: 4rem;
+    cursor: pointer;
+  }
+
+}
+
+
+
+body { padding-bottom: 5rem; }
+h1,h2,p {padding: 0 5%;}

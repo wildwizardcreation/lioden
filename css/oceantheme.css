@@ -1,0 +1,521 @@
+/* bookmarks */
+
+/* pixels */
+/* https://pixels.crd.co/assets/images/gallery30/9eb8efc6.gif?v=99d3974e
+
+*/
+
+/* jellies */
+/* https://www.lioden.com/images/items/Other/jellyfish.png
+
+https://www.lioden.com/images/items/Decoration/translucentjelly.png
+
+https://www.lioden.com/images/items/Other/jellyfish2.png 
+
+*/
+
+/* fish */
+/* https://static.lioden.com/images/items/Food/bream.png
+
+https://static.lioden.com/images/items/Food/vundu.png
+
+https://static.lioden.com/images/items/Food/nyangatrout.png 
+
+*/
+
+/* other animals */
+/*  https://static.lioden.com/images/items/Other/snail.png
+
+*/
+
+/* backgrounds */
+/* https://static.lioden.com/images/dynamic/backgrounds/buriedtreasure.png
+
+https://static.lioden.com/images/dynamic/backgrounds/hiddencove.png 
+
+https://static.lioden.com/images/dynamic/backgrounds/thailandlake.png
+
+https://static.lioden.com/images/dynamic/backgrounds/angel_shark.png
+
+https://static.lioden.com/images/dynamic/backgrounds/Atlantic_humpback_dolphin.png
+
+https://static.lioden.com/images/dynamic/backgrounds/krakenattack.png
+
+https://static.lioden.com/images/dynamic/backgrounds/zaxcrashingwave.png
+
+https://static.lioden.com/images/dynamic/backgrounds/beachnight.png
+
+https://static.lioden.com/images/dynamic/backgrounds/sparkle_dawn.png
+
+https://static.lioden.com/images/dynamic/backgrounds/lakemalawi.png
+
+https://static.lioden.com/images/dynamic/backgrounds/knysnalagoon.png
+
+https://static.lioden.com/images/dynamic/backgrounds/seychelles.png
+*/
+
+/* replace the player-id with your own! */
+:root{
+    --player-id-long: a[href$="mid=533914"];
+    --player-id: "mid=533914";
+
+    --floater1: url("https://static.lioden.com/images/items/Other/snail.png");
+    --floater2: url("https://www.lioden.com/images/items/Food/carcass_shark.png");
+    --floater3: url("https://static.lioden.com/images/items/Other/LongfinEel.png");
+
+    --snail: url("https://static.lioden.com/images/items/Other/snail.png");
+    --nomfish: url("https://www.lioden.com/images/items/Food/nommablefish.png");
+}
+
+/* mass adjust */
+
+a:link, a:visited, a:active, a {
+    color: #ccc3c0;
+    text-shadow: #00000070 0px 0px 7px;
+}
+
+a:hover {
+    color: #f3ebe9;
+    text-shadow: #00000070 0px 0px 7px;
+}
+
+p, h3, h2, h1, .sidebar h3  {
+    color: #2f393b;
+}
+
+/* background */
+body {
+    background: url(https://static.lioden.com/images/dynamic/backgrounds/thailandlake.png) top center fixed;
+    /* backdrop-filter: blur(6px); */
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+/* topbar */
+
+.topbar {
+    background-color: #2f393b;
+    border-radius: 0px 0px 4px 4px;
+
+    a:link, a:visited, a:active, a {
+    color: #ccc3c0;
+    text-shadow: #00000070 0px 0px 7px;
+    }
+
+    a:hover {
+    color: #f3ebe9;
+    text-shadow: #00000070 0px 0px 7px;
+}
+}
+
+/*  */
+.row {
+    background-color: #879d9d;
+}
+
+/* main page */
+div.col-md-9.col-xs-12 {
+    background-color: transparent;
+}
+
+/* sidebar */
+
+
+/* panels */
+.panel {
+    background-color: #788665;
+}
+
+.col-md-3 .panel {
+    border: none;
+    box-shadow: none;
+}
+
+/* alerts */
+
+.alert-danger {
+    background-color:#a56d60;
+    border: #772817 2px solid;
+    color: #772817;
+    font-weight: bold;
+
+    a {
+        color: #2f393b !important;
+    }
+}
+
+.alert-success {
+    background-color:#b7c393;
+    border: #788665 2px solid;
+    color: #788665;
+    font-weight: bold;
+
+    a {
+        color: #2f393b !important;
+    }
+}
+
+/* progress bars */
+
+/* energy */
+.progress-bar-warning {
+    background-color: #d9bd92;
+}
+
+/* hunger */
+.progress-bar-danger {
+    background-color: #a56d60;
+}
+
+
+/* exp */
+.progress-bar-success {
+    background-color:#b7c393;
+}
+
+/* impression */
+body > div.container.main > div:nth-child(2) > div.sidebar.col-md-3.visible-xs.visible-sm.col-xs-12.visible-md.visible-lg > div.col-md-12.col-xs-6 > div:nth-child(5) > div > div:nth-child(4) > div.progress-bar {
+    background-color:#507070;
+}
+
+
+/* online offline */
+
+.member-online {
+    background: none;
+    border-radius: 0;
+    height: auto;
+    width: auto;
+    vertical-align: text-bottom;
+    content: url(https://pixels.crd.co/assets/images/gallery52/6a977acf.gif);
+}
+
+.member-offline {
+    background: none;
+    border-radius: 0;
+    height: auto;
+    width: auto;
+    vertical-align: text-bottom;
+    content: url(https://pixels.crd.co/assets/images/gallery61/99df91a2.gif);
+}
+
+/* navbar */
+.navbar {
+    background-color: #788665;
+    border-bottom: #2f393b solid 2px;
+}
+
+.navbar-nav {
+    a {
+        color: #ccc3c0 !important;
+    }
+}
+
+.navbar-default .navbar-nav li a:hover {
+    background-color: #b7c393;
+    color: #2f393b !important;
+}
+
+/* logo replacer */
+.navbar-brand{
+    margin: 0px;
+    height: auto;
+    max-height: 48px;
+}
+
+div.navbar-header > a > img[src="//static.lioden.com/img/layout/logo-full-2.png"] {
+    content: url(https://img-l.ink/img/1rSghw0oVrP3znJrwynlKifxvRpd2KPTf.png);
+    height: 135px !important;
+    margin-left: -35px;
+    margin-top: -35px;
+    margin-right: -5px;
+}
+
+.navbar-brand.visible-lg.visible-md {
+    display: flex !important;
+    align-items: center;
+}
+
+/* table colors */
+
+.table {
+    background-color: #95a777;
+    border: none;
+
+    a {
+        color: #3c4334 !important;
+    }
+}
+
+.table .top, .table th, .table .bottom, #player > tbody > tr:nth-child(3) {
+    background-color: #788665;
+}
+#player > tbody > tr:nth-child(3) > td:nth-child(1), #player > tbody > tr:nth-child(3) > td:nth-child(2) {
+    background-color: transparent;
+}
+
+.table .left {
+    background-color: #788665;
+}
+
+.inner-table .right {
+    background-color: #b7c393;
+}
+
+.table .right_odd {
+    background-color: #b7c393;
+}
+
+.table .right_odd, .table .right, .table .left {
+    a:link, a:visited, a:active, a {
+        text-shadow: none;
+    }
+}
+
+/* button */
+
+.select-control, button.button, input[type="button"], input[type="submit"], input[type="reset"] {
+    background: linear-gradient(to bottom, #6e8f8f 5%, #507070 5%, #507070 49%, #507070 95%, #314242 95%);
+    border: 1px solid #2f393b;
+    color: #141819;
+    text-shadow: none;
+    font-weight: bold;
+}
+
+.select-control:hover, button.button:hover, input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover {
+    background: linear-gradient(to bottom, #6e8f8f -10%, #507070 5%, #507070 49%, #507070 100%, #314242 95%);
+    border: 1px solid #2f393b;
+    color: #141819;
+    text-shadow: none;
+    font-weight: bold;
+}
+
+/* breadcrumb */
+
+.breadcrumb {
+    background-color: #2f393b;
+}
+
+/* side panel floaters */
+div.col-md-12.col-xs-6 > a[href$="mid=533914"], div.col-md-12.col-xs-5 > a[href="/achievements.php"], div.col-md-12.col-xs-5 > a[href="/bookmarks.php"] {
+
+    h3 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    div.floatright {
+        height: 60px;
+        position: absolute;
+        right: 0;
+    }
+}
+
+
+/* your king */
+div.col-md-12.col-xs-6 > a[href$="mid=533914"] {
+    
+    h3 {
+    }
+
+    div.floatright {
+    content: var(--floater1);
+    }
+}
+
+/* achievements */
+div.col-md-12.col-xs-5 > a[href="/achievements.php"] { 
+
+    h3 {
+    }
+
+    div.floatright {
+    content: var(--floater2);
+    }
+}
+
+/* bookmarks */
+div.col-md-12.col-xs-5 > a[href="/bookmarks.php"] { 
+    
+    h3 {
+    }
+
+    div.floatright {
+    content: var(--floater3);
+    }
+}
+
+
+
+/* cave adjustments */
+
+.cave-grid {
+    height: 140px;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 30px;
+
+    font-size: 19px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: #000000 0px 0px 6px;
+
+    background-image: url('https://static.lioden.com/images/dynamic/backgrounds/beachnight.png');
+    background-position: center center;
+    background-size: cover;
+
+    img {
+        content: url('https://static.lioden.com/images/dynamic/backgrounds/beachnight.png') !important;
+        opacity: 0%;
+        width: 0px;
+        height: 0px;
+    }
+}
+
+.cave-grid:has(i){
+    filter: grayscale(100);
+}
+
+.col-md-4.col-xs-6.center {
+    overflow: hidden;
+}
+
+/* Unsorted, Nesting, Overview */
+div.cave-grid:has(img[src="//static.lioden.com/images/layout/unsortedlionsbanner.png"]), 
+div.cave-grid:has(img[src="//static.lioden.com/images/layout/nestingbanner.png"]), 
+div.cave-grid:has(img[src="//static.lioden.com/images/layout/prideoverviewbanner.png"]) {
+
+    font-size: 15px;
+    height: 100px !important;
+    padding-bottom: 20px;
+    
+    img {
+        position: absolute;
+        height: 0px !important;
+        width: 0px !important;
+    }
+}
+
+
+/* unsorted */
+div.cave-grid:has(img[src="//static.lioden.com/images/layout/unsortedlionsbanner.png"]) {
+    background-image: url('https://static.lioden.com/images/dynamic/backgrounds/angel_shark.png');
+    background-position: top center;
+    background-size: cover;
+}
+
+/* nesting */
+div.cave-grid:has(img[src="//static.lioden.com/images/layout/nestingbanner.png"]) {
+    background-image: url('https://static.lioden.com/images/dynamic/backgrounds/seychelles.png');
+    background-position: 50% 20%;
+    background-size: cover;
+}
+
+/* overview */
+div.cave-grid:has(img[src="//static.lioden.com/images/layout/prideoverviewbanner.png"]) {
+    background-image: url('https://static.lioden.com/images/dynamic/backgrounds/Atlantic_humpback_dolphin.png');
+    background-position: top center;
+    background-size: cover;
+}
+
+
+/* Cave Images */
+
+a[href$="475577"]>div.cave-grid {
+    background-image: url('https://static.lioden.com/images/dynamic/backgrounds/zaxcrashingwave.png');
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* mound adjustments */
+
+.mound-grid {
+    height: 100px;
+
+    text-align: center;
+    font-size: 19px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: #000000 0px 0px 6px;
+
+    background-image: url('https://static.lioden.com/images/dynamic/backgrounds/beachnight.png');
+    background-position: center center;
+    background-size: cover;
+
+    img {
+        content: url('https://static.lioden.com/images/dynamic/backgrounds/beachnight.png') !important;
+        opacity: 0%;
+        width: 0px;
+        height: 0px;
+    }
+}
+
+.mound-grid:has(i){
+    filter: grayscale(100);
+}
+
+/* mound images */
+
+/* dynasty buttons */
+
+.col-md-3 > div.left {
+    background-color: #3c4334 !important;
+    
+    h3 {
+        color: #ccc3c0;
+    }
+}
+
+/* toggle panels */
+.item {
+    background: #879d9d;
+    border: none;
+}
+
+.item-header {
+    color: #ccc3c0;
+    background: #2f393b;
+}
+
+input:checked+.slider {
+    background-color: #788665 !important;
+}
+
+/* feed all play all */
+div.feature {
+    background: #b7c393;
+    border: 2px solid #788665;
+}
+
+/* chat adjustments */
+
+.s-chat-message {
+    a {color: #141819;
+    }
+}
+
+/* credit! */
+body > div.container.main > div:nth-child(2) > div.col-md-9.col-xs-12 > div.floatright {
+    display: block;
+    margin: 27px 19px 0px 0px !important;
+    float: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+div.floatright:has(form[method="post"])::before {
+    content: "CSS By: The Wizard (#414436)";
+    display: inline;
+    color: #879d9d;
+    position: absolute;
+    width: 224px;
+    margin-left: -136px;
+    margin-top: 4px;
+}

@@ -1,0 +1,930 @@
+
+:root
+{
+--invite-icon: url(https://cdn3.emoji.gg/emojis/9437-invite.png);
+--default-pfp: url(https://archive.org/download/discordprofilepictures/discordblue.png);
+--server-name: "Abbadon's Epic Den";
+
+--message-background: #1a1a1e;
+--message-highlight-background: #242428;
+--message-ping: #ce9c5c;
+--message-ping-background: #25201c;
+--message-ping-hover: #1f1d1d;
+
+--gold-beetle-icon: url(https://cdn3.emoji.gg/temp/6851eda3167a32.92074028_hifngkmpjqole.png);
+--silver-beetle-icon: url(https://cdn3.emoji.gg/temp/6851ed7b843d20.20225267_kgpoiqlmhfnej.png);
+
+--profile-header: url(https://64.media.tumblr.com/97123a907d58fdf8152e1d6fa0345e94/e3aeddbf99dedaa0-76/s540x810/3122a4a36845ef24c71e2254f6f4d08c6020c22e.gif)
+
+}
+
+/* mass adjust */
+a:link, a:visited, a:active, a {
+    color: #fbfbfb;
+    font-weight: normal;
+}
+
+a:hover {
+    color: #fbfbfb;
+}
+
+p, h5, h4, h3, h2, h1, .sidebar h3, #pageContainer  {
+    color: #fbfbfb;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, h5 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container, .row {
+    padding: 0px;
+}
+
+.row {
+    margin: 0px;
+    background-color: #1a1a1e;
+}
+
+/* layout adjustment */
+@media only screen and (min-width: 1000px) {
+        .container {
+        width: 1300px;
+    }
+
+        .main {
+        display:flex!important;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+    }
+
+.navbar-default {
+	display:flex;
+    flex-direction: column;
+	width:230px;
+	background:none;
+}
+
+.navbar-collapse {
+    padding: 0px;
+}
+
+.navbar-header {
+    margin-bottom: 53px;
+}
+
+.nav>li {
+	/* transform:translate(-180px,70px); */
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+	background:none;
+}
+}
+
+/* themeing */
+body {
+    background: #121214;
+    overflow-x: hidden;
+}
+
+/* main section */
+.container.main {
+    box-shadow: none;
+    border: 1px solid #29292d;
+    width: 100%;
+    margin: 0px;
+}
+
+.col-md-9 {
+    background: #1a1a1e;
+    border: 1px solid #29292d;
+    border-top: none;
+    border-bottom: none;
+}
+
+/* breadcrumb */
+.breadcrumb {
+    background-color: #18181c;
+    border: 1px solid #2a2a2e;
+    color: #8c8d94;
+
+    >.active, li+li:before, a {
+        color: #8c8d94;
+    }
+
+    >li+li:before, >li+li:after{
+        font-size: 20px !important
+    }
+
+    >li+li:after {
+        content: "den";
+        color: white;
+    }
+
+    >li.breadcrumb-item.active:before {
+        content: "#";
+    }
+
+    >li:has(a){
+        font-size: 0px;
+    }
+}
+
+.breadcrumb-item.active {
+    font-size: 0px;
+}
+
+/* info sidebar */
+.sidebar {
+    background-color: #1a1a1e;
+    color: #6f6f77;
+
+    h3 {
+        color: #6f6f77;
+        font-size: 12px;
+    }
+}
+
+/* alerts */
+.alert {
+    background-color: #242429;
+    border: 1px solid #323237;
+    color:#a9a9b0;
+    font-weight: bold;
+
+    a {
+        background-color: #5865f2;
+        color: white;
+        padding: 6px;
+        border-radius: 5px;
+        font-size: 10px;
+        font-weight: bold;
+
+        &:hover {
+            background-color: #4654c0;
+        }
+    }
+}
+
+/* progress bars */
+.progress-bar-warning {
+    background-color: #ffdb5e;
+}
+
+.progress-bar-danger {
+    background-color: #ff4cd2;
+}
+
+.progress-bar-success {
+    background-color: #35ed7e;
+}
+
+.progress:nth-child(4)>.progress-bar{
+    background-color: #5865f2;
+}
+
+/* panels */
+.panel, .col-md-3 .panel {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+/* nav sidebar */
+.row:has(.navbar) {
+    background: #121214;
+    width: auto;
+}
+
+/* navbar */
+
+.nav.navbar-nav {
+    padding: 5px;
+    text-transform: lowercase;
+}
+
+/* fake border bar beneath events */
+.navbar-collapse::before{
+    content: " ";
+    width: 84%;
+    height: 1px;
+    margin: 12px auto;
+    background: #29292d;
+    text-align: center;
+}
+
+.navbar-default .navbar-nav > li {
+    width: 100%;
+    margin: 2px 0px;
+    text-align: left;
+    background: transparent;
+    font-weight: 100;
+    border-radius: 8px;
+
+    &:hover {
+        background-color: #1d1d1e;
+    }
+
+    a {
+        vertical-align: middle;
+        padding: 6.5px 13px;
+        color: #82838b;
+        font-size: 16px;
+
+        &:hover {
+            color: #f3f3f3;
+        }
+
+        &::before {
+            background-image: url(https://cdn3.emoji.gg/emojis/3280-text.png);
+            display: inline-block;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: center center;
+            content: " ";
+            vertical-align: bottom;
+            min-height: 23px;
+            min-width: 20px;
+            margin-right: 10px;
+        }
+    }
+
+    /* fake active link */
+    &:has(a[href="/territory.php"]) {
+        background-color: #2c2c30  !important;
+
+            a {
+                color:#efefef;
+            }
+        }
+
+    /* reordering event link */
+    &:has(a[href="/event.php"]) {
+        top: 60px;
+        position: absolute;
+        background-color: transparent;
+        text-transform: capitalize;
+        width: calc(100% - 10px);
+
+            a {
+
+                &::before {
+                    background-image: url(https://cdn3.emoji.gg/emojis/2373-events.png);
+                }
+
+                &::after{
+                    content: "s";
+                }
+            }
+
+            &:hover {
+                background-color: #1d1d1e;
+            }
+        }
+    
+}
+
+/* buttons */
+.select-control, button.button, input[type="button"], input[type="submit"], input[type="reset"] {
+    background: #5865f2;
+    color: white;
+    padding: 6px;
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: bold;
+    text-shadow: none;
+    border: none;
+
+    &:hover {
+        background: #4654c0;
+        color: white;
+        padding: 6px;
+        border-radius: 5px;
+        font-size: 10px;
+        font-weight: bold;
+        text-shadow: none;
+        border: none;
+    }
+}
+
+/* logo replacer / "server" name */
+
+.navbar-header {
+    /* display: flex; */
+}
+
+.navbar-brand{
+    display: flex !important;
+    margin: 0px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    border-bottom: 1px solid #29292d;
+    img {
+        height: 0px;
+        width: 0px;
+    }
+}
+
+.navbar-brand.visible-lg.visible-md::before {
+    content: var(--server-name);
+    color: #f3f3f3;
+    font-size: 85%;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.navbar-brand.visible-lg.visible-md::after {
+    background-image: url(https://cdn3.emoji.gg/emojis/9437-invite.png);
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center;
+    content: " ";
+    vertical-align: middle;
+    min-height: 24px;
+    min-width: 24px;
+}
+
+/* topbar */
+
+.container.topbar {
+    background-color: #121214;
+    margin: 0px;
+    width: 100%;
+    padding: 10px 10px;
+
+    ul {
+        position: relative;
+        z-index: 5 !important;
+    }
+
+    &::before {
+        content: var(--server-name);
+        position: absolute;
+        display: block;
+        text-align: center;
+        width: 98.5%;
+        z-index: 1;
+    }
+}
+
+body > div.container.topbar > ul > li:nth-child(2) > a > img {
+    content: var(--silver-beetle-icon);
+    width: 26px;
+}
+body > div.container.topbar > ul > li:nth-child(3) > a > img {
+    content: var(--gold-beetle-icon);
+    width: 26px;
+}
+
+.toplinks {
+    >li>a:hover {
+        filter: brightness(1.1);
+    }
+
+    >li>a:before {
+        min-height: 20px;
+        min-width: 20px;
+    }
+
+    >li>a:hover:after{
+            display: block;
+            position: absolute;
+            height: 40px;
+            font-size: 13px;
+            background-color: #242429;
+            border: 1px solid #323237;
+            color: #f3f3f3;
+            font-weight: bold;
+            padding: 11px;
+            border-radius: 10px;
+            box-shadow: #121214ad 0 5px 12px 0px;
+            animation: .05s ease-in-out 0s 1 tooltipHover;
+        }
+
+    >li:has(a[href="/inbox.php"]){ 
+        font-size: 0px;
+
+        >a:before{
+            background-image: url(https://cdn3.emoji.gg/emojis/4059-inbox.png);
+            display: inline-block;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: center center;
+            content: " ";
+            vertical-align: middle;
+        }
+
+        >a:hover:after{
+                content: "Messages";
+                width: 86px;
+                top: 23px;
+                right: -30px;
+        }
+    }
+
+    >li:has(a[href="https://www.lioden.wiki"]){ 
+        font-size: 0px;
+
+        >a:before{
+            background-image: url(https://cdn3.emoji.gg/emojis/5139-help.png);
+            display: inline-block;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: center center;
+            content: " ";
+            vertical-align: middle;
+        }
+
+        >a:hover:after{
+                content: "Wiki";
+                width: 50x;
+                top: 23px;
+                right: -13px;
+        }
+        
+    }
+
+    >li:has(a[href="/modbox.php"]){ 
+        font-size: 0px;
+
+        >a:before{
+            background-image: url(https://cdn3.emoji.gg/emojis/4524-moderation-mobile.png);
+            display: inline-block;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: center center;
+            content: " ";
+            vertical-align: middle;
+        }
+
+        >a:hover:after{
+                content: "Modbox";
+                width: 74px;
+                top: 23px;
+                right: -22px;
+        }
+        
+    }
+
+    >li:has(a[href="/logout.php"]){ 
+        font-size: 0px;
+
+        >a:before{
+            background-image: url(https://cdn3.emoji.gg/emojis/2792-show-user-profile-white.png);
+            display: inline-block;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: center center;
+            content: " ";
+            vertical-align: middle;
+        }
+
+        >a:hover:after{
+                content: "Logout";
+                width: 70px;
+                top: 23px;
+                right: 0px;
+        }
+        
+    }
+
+}
+
+@keyframes tooltipHover {
+  0% {
+    transform: 
+        translateY(-3%)
+        scale(.98);
+  }
+  100% {
+    transform: 
+        translateY(0%) 
+        scale(1);
+  }
+}
+
+.welcomeback {
+    background-color: #202024;
+    display: flex;
+    position: fixed;
+    height: 40px;
+    width: 212px;
+    flex-direction: row;
+    justify-content: flex-start;
+    bottom: 0;
+    padding: 5px;
+    border-radius: 5.5px;
+    margin-bottom: 10px;
+
+    font-size: 0px;
+
+    a {
+        font-size: 13px !important;
+        color: white !important;
+    }
+
+    &::before {
+        content: " ";
+        background-image: url("https://img-l.ink/img/10wprPkNR7cAMkNSZQjobPbm8Dzb0q4rD.png") !important;
+        background-color: var(--user-highlight-color);
+        border-radius: 100%;
+        background-position: center center;
+        background-size: 100%;
+        width: 32px;
+        height: 32px;
+        margin-right: 6px;
+    }
+
+    &::after {
+        content: " Welcome Back! ";
+        font-size: 9px;
+        color: #82838b;
+        height: fit-content;
+        width: auto;
+        position: absolute;
+        left: 44px;
+        top: 21px;
+        }
+}
+
+/* commentbox to messages */
+
+/* conditions for highlighting user message */
+#pageContainer:has(.table#player tr:nth-child(3)) {
+
+    .comment:has(input[type="button"].bad) {
+        background: var(--message-ping-background) !important;
+
+        small.text-muted > a{
+            background: var(--message-ping-background) !important;
+        }
+
+        &:hover {
+            background: var(--message-ping-hover) !important;
+
+            small.text-muted > a{
+                background: var(--message-ping-hover) !important;
+                }
+        }
+    }
+
+    .comment:has(input[type="button"].bad):before {
+        content: " ";
+        height: auto;
+        width: 2px;
+        background-color: var(--message-ping);
+    }
+}
+
+#commentBox {
+    border-radius: 0px !important;
+}
+
+.comment {
+    background-color: var(--message-background) !important;
+    padding: 0px !important;
+    padding-right: 7px !important;
+    margin-bottom: 13px;
+
+    div {
+        padding: 5px 0px;
+
+        img {
+            margin: 3px 0px;
+        }
+    }
+
+    &::before {
+        content: " ";
+        height: auto;
+        width: 2px;
+        background-color: transparent;
+    }
+}
+
+.comment:hover{
+    background-color: var(--message-highlight-background) !important;
+
+    small.text-muted>a {
+        background-color: var(--message-highlight-background);
+    }
+}
+
+/* pfps */
+.commentTag {
+    border-radius: 100% !important;
+}
+
+.commentText {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+}
+
+small.text-muted {
+    color:#82838b;
+
+    a {
+        margin-left: -17px;
+        font-size: 15px;
+        color: #efefef;
+        background-color: var(--message-background);
+    }
+
+}
+
+.comment:nth-child(even) {
+     small.text-muted > a {
+        color: red;
+     }
+}
+
+/* delete button */
+.comment .bad {
+    background: url("https://cdn3.emoji.gg/emojis/4151-delete-guild.png") !important;
+    background-position: center center !important;
+    background-size: 100% !important;
+    background-repeat: no-repeat !important;
+    border: none !important;
+    color: transparent !important;
+    font-size: 0px !important;
+    text-shadow: none !important;
+    border-radius: 0px !important;
+    padding: 0px !important;
+    min-width: 20px;
+    min-height: 20px;
+
+    &:hover {
+        background-color: #e938482b !important;
+    }
+}
+
+#makeComment {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input#postComment{
+    background-color: transparent;
+    background-image: url("https://img-l.ink/img/1JsZGGpULYod8Ryr6noLF9-rYGBu1uZAp.png");
+    font-size: 0px;
+    background-position: center center !important;
+    background-size: 100% !important;
+    background-repeat: no-repeat !important;
+    margin: 10px;
+    min-width: 20px;
+    min-height: 23px;
+}
+
+input[type="text"]{
+    background-color: #222327;
+    border: none;
+
+    &::placeholder{
+    color: transparent;
+    }
+}
+
+/* chatbox to messages */
+
+
+/* caves and mounds */
+
+#fraMoundList {
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col-md-3.col-xs-4.center > a, .col-md-4.col-xs-6.center > a {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.mound-grid {
+    width: 170px;
+    margin: 15px auto;
+}
+
+.mound-grid img{
+    width: 100%;
+}
+
+/* player profile */
+
+#player {
+    background-color: #242429;
+}
+
+#player > tbody > tr.right{
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+}
+#player hr{
+    display:none;
+}
+
+#player tbody {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#player .center {
+    text-align: left;
+
+    &.h3 {
+        font-weight: bold;
+        margin-left: 5px;
+    }
+}
+#player > tbody > tr.right > td:nth-child(2) {
+    /* background-image: var(--profile-header); */
+    background-color: #323237;
+    background-size: cover;
+    background-position: center;
+    width: 100% !important;
+    text-align: left !important;
+    vertical-align: bottom;
+    height:215px;
+}
+#player > tbody > tr.right > td:nth-child(2) > img{
+    position: absolute;
+    border-radius: 100%;
+    width: 130px;
+    top: 142px;
+}
+
+#player > tbody > tr:nth-child(1) > td > div {
+    position: absolute;
+    font-weight: normal;
+    /* text-transform: lowercase; */
+    font-size: 12px;
+}
+
+#player > tbody > tr.right > td:nth-child(1) {
+    padding-top: 70px;
+    width: 100%;
+}
+
+/* online / offline / optional idle + DnD */
+
+/* .member-online, .member-offline {
+    vertical-align: baseline;
+    background-color: transparent;
+    background-size: cover;
+    background-position: center;
+    height: 20px;
+    width: 20px;
+} */
+ 
+.member-online, .member-offline{
+    vertical-align: baseline;
+    background-color: transparent;
+    background-size: 165%;
+    background-position: center;
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    top: 17px;
+    left: 104px;
+    z-index: 1;
+    /* margin: -10px; */
+    border: black 6px solid;
+}
+
+.member-online {
+    background-image: url(https://cdn3.emoji.gg/emojis/1415-online.png);
+}
+
+.member-offline {
+    background-image: url(https://cdn3.emoji.gg/emojis/4624-discord-offline.png);
+}
+
+#player > tbody > tr.right > td:nth-child(1) > div.xlarge {
+    position: absolute;
+    top: 20px;
+    right: 13px;
+
+    >a:hover {
+        filter: brightness(1.2);
+    }
+
+    >span.text-muted{
+        font-size: 0px;
+        padding: 0 10px !important;
+    }
+}
+
+div>a[href^="/compose.php"] {
+    font-size: 0px;
+
+    font-size: 0px;
+    background-color: #323237;
+    padding: 6px 20px 9px;
+    border-radius: 8px;
+
+    &::before {
+        content: " ";
+        display: inline-block;
+        background-image: url("https://cdn3.emoji.gg/emojis/8312-active-threads.png");
+        background-position: center center;
+        background-size: 100%;
+        width: 20px;
+        height: 20px;
+        margin-right: 6px;
+        vertical-align: bottom;
+        filter: brightness(2);
+    }
+
+    &::after {
+        font-size: 15px;
+        content: "Message";
+        vertical-align: middle;
+    }
+}
+
+div>a[href^="/trading_center.php"], div>a[href^="/transfers.php"]{
+
+    font-size: 0px;
+    background-color: #323237;
+    padding: 8px;
+    border-radius: 8px;
+    color: white;
+    
+    &:hover::after{
+        display: block;
+        position: absolute;
+        top: 42px;
+        height: 40px;
+        font-size: 13px;
+        background-color: #242429;
+        border: 1px solid #323237;
+        color: #f3f3f3;
+        font-weight: bold;
+        padding: 11px;
+        border-radius: 10px;
+        box-shadow: #121214ad 0 5px 12px 0px;
+        animation: .05s ease-in-out 0s 1 tooltipHover;
+    }
+
+    &::before {
+        content: " ";
+        display: inline-block;
+        background-position: center center;
+        background-size: 100%;
+        width: 20px;
+        height: 20px;
+        filter: brightness(2);
+    }
+}
+
+div>a[href^="/transfers.php"] {
+    font-size: 0px;
+
+    &::before {
+        background-image: url("https://cdn3.emoji.gg/emojis/8630-gift.png");
+    }
+
+    &:hover:after {
+        content: "Gift";
+        width: 48px;
+        right: -6px;
+    }
+}
+
+div>a[href^="/trading_center.php"] {
+    font-size: 0px;
+
+    &::before {
+        background-image: url("https://cdn3.emoji.gg/emojis/1484-pluse.png");
+    }
+
+    &:hover:after {
+        content: "Make A Trade";
+        width: 107px;
+        right: -34px;
+    }
+}
+
+
+/* wizard is a special boy */
+
+a[href="/territory.php?id=414436"]::after {
+    content: var(--specialboy-icon);
+}
+
+.comment small.text-muted > a[href="/territory.php?id=414436"] {
+    color: #81aecf;
+}
