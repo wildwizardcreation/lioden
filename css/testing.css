@@ -1,10 +1,10 @@
 
-::root {
+:root {
     --smilus-tag: url(https://www.lioden.com/images/tags/0/0/57.png);
 }
 
-
-/*works janky on mobile :<*/
+/* original by kennyotsu on uiverse.io */
+/* edits by wizard #414436 */
 
 .container-card {
   position: relative;
@@ -322,4 +322,98 @@
   user-select: none;
    /* Non-prefixed version, currently
 									supported by Chrome, Edge, Opera and Firefox */
+}
+
+/* original by 0xNihilist on uiverse.io */
+/* edits by wizard #414436 */
+
+
+#makeComment {
+  position: relative;
+  background: #f0f0f0;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  border: 4px solid #000;
+  max-width: 650px;
+  transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  transform-style: preserve-3d;
+  transform: rotateX(10deg) rotateY(-10deg);
+  perspective: 1000px;
+  box-shadow: 10px 10px 0 #000;
+}
+
+#makeComment:hover {
+  transform: rotateX(5deg) rotateY(1 deg) scale(1.05);
+  box-shadow: 25px 25px 0 -5px #e9b50b, 25px 25px 0 0 #000;
+}
+
+
+#makeComment::before {
+  content: "LEAVE A COMMENT :D";
+  position: absolute;
+  top: -15px;
+  left: 35px;
+  background: #e9b50b;
+  color: #000;
+  font-weight: bold;
+  padding: 5px 10px;
+  font-size: 14px;
+  transform: translateZ(50px);
+  z-index: 4;
+  border: 2px solid #000;
+}
+
+#comment {
+  width: 100%;
+  outline: none;
+  border: 3px solid #000;
+  padding: 15px;
+  font-size: 18px;
+  background: #fff;
+  color: #000;
+  transform: translateZ(10px);
+  transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
+  z-index: 3;
+  font-family: "Roboto", Arial, sans-serif;
+  letter-spacing: -0.5px;
+}
+
+#comment::placeholder {
+  color: #666;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#comment:hover,
+#commment:focus {
+  background: #f0f0f0;
+  transform: translateZ(20px) translateX(-5px) translateY(-5px);
+  box-shadow: 5px 5px 0 0 #000;
+}
+
+#postComment {
+  cursor: pointer;
+  border: 3px solid #000;
+    color: black;
+  background: #e9b50b;
+  transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  transform: translateZ(20px);
+  position: relative;
+  z-index: 3;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#postComment:hover {
+  background: #e9b50b;
+  transform: translateZ(10px) translateX(-5px) translateY(-5px);
+  box-shadow: 5px 5px 0 0 #000;
 }
