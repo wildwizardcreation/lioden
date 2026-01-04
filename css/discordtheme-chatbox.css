@@ -1,0 +1,393 @@
+
+/* chat box to message box */
+
+:root {
+    --discord-border: #323237;
+    --discord-light-border: #424248;
+    
+    --discord-white: #fbfbfb;
+    --discord-dark-white: #82838b;
+    
+    --discord-darkest: #121214;
+    --discord-dark: #1a1a1e;
+	--discord-mid: #202024;
+	--discord-light: #242429;
+    --discord-lighter: #2c2c30;
+    --discord-lightest: #7f8088;
+    
+    --discord-buttons: #323237;
+
+    --discord-link: #5197ed;
+
+    --discord-blurple: #5865f2;
+    --discord-blurple-50: #282b50;
+    --discord-blurple-text: #a9baff;
+
+    --discord-green: #35ed7e;
+    --discord-pink: #ff4cd2;
+    --discord-yellow: #ffdb5e;
+
+
+    --vip-badge: url("https://cdn3.emoji.gg/emojis/18822-2-level-boost.png");
+    --mod-badge: url("https://cdn3.emoji.gg/emojis/2731-certified-moderator.png");
+    --admin-badge: url("https://cdn3.emoji.gg/emojis/7871-discord-staff.png");
+    --artist-badge: url("https://sitebuilder.neocities.org/assets/lioden/artist_badge.png");
+
+    --pinned-icon: url("https://cdn3.emoji.gg/emojis/7896-pinned.png");
+    --settings-icon: url("https://cdn3.emoji.gg/emojis/2888-settings.png");
+    --reload-icon: url("https://cdn3.emoji.gg/emojis/8562-replay.png");
+    --emoji-icon: url("https://cdn3.emoji.gg/emojis/7354-emoji.png");
+    --options-icon: url("https://cdn3.emoji.gg/emojis/6375-more-options.png");
+    --send-icon: url("https://sitebuilder.neocities.org/assets/lioden/send-message-icon.png");
+}
+
+img[src^="//static.lioden.com/images/layout/donator.png"] {
+    content: var(--vip-badge) !important;
+}
+
+img[src^="//static.lioden.com/images/PawMod.png"] {
+    content: var(--mod-badge) !important;
+}
+
+img[src^="//static.lioden.com/images/PawAdmin.png"] {
+    content: var(--admin-badge) !important;
+}
+
+img[src^="//static.lioden.com/images/PawArtist.png"] {
+    content: var(--artist-badge) !important;
+}
+
+#btnLoadNewMessages {
+    background: var(--reload-icon) 0 0 / contain no-repeat;
+}
+
+#fraChatSettings {
+    height: 24px;
+    width: 24px;
+}
+
+#btnChatSettings {
+    background: var(--settings-icon) 0 0 / contain no-repeat;
+}
+
+
+
+#fraSidebarChat {
+    background: var(--discord-dark);
+    color: var(--discord-white);
+}
+
+.s-chat-sidebar #chatMessageContainer {
+    background-color: var(--discord-dark);
+    border: none;
+}
+
+#chatMessageList {
+    scrollbar-color: var(--discord-light) transparent;
+}
+
+.s-chat-message:nth-child(even), .s-chat-message:nth-child(odd) {
+	background: transparent;
+}
+
+span.s-chat-message_content {
+    margin-top:3px;
+}
+
+span.s-chat-message_content > a {
+    color: var(--discord-link);
+    
+    &::after {
+        display: none !important;
+    }
+}
+
+.s-chat-sidebar .s-chat-message {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+    border: none;
+    padding: 1px 12px;
+}
+
+.s-chat-message:hover {
+    background: var(--message-highlight-background);
+}
+
+.s-chat-message__mod>div, .s-chat-message>div:has(.s-chat__username) {
+    font-weight: bold;
+    font-size: 14px;
+    display: block;
+    flex-grow: 1;
+    flex-shrink: 0;
+    align-self: auto;
+    order: -1;
+    width: auto;
+}
+
+.s-chat-sidebar .s-chat-message_timestamp {
+    position: relative;
+    display: block;
+    flex-grow: 10;
+    flex-shrink: 0;
+    flex-basis: 50%;
+    align-self: auto;
+    order: -1;
+    margin-top: 2px;
+
+    color: var(--discord-lightest);
+}
+
+
+.s-chat-message:has(span.s-chat-message_content>a.s-chat__username) {
+    padding-top: 20px;
+    
+    b {
+        font-size: 0px;
+        position: absolute;
+    }
+    
+    span.s-chat-message_content .s-chat__username{
+        position: absolute;
+        top: 2px;
+        left: 35px;
+        font-size: 12px;
+        font-weight: normal;
+        background-color: var(--discord-blurple-50);
+        color: var(--discord-blurple-text);
+        border-radius: 4px;
+        padding: 1px;
+
+        &:hover {
+            background-color: var(--discord-blurple);
+            color: var(--discord-white);
+            text-decoration: none;
+        }
+    }
+}
+
+.s-chat__username:hover, span.s-chat-message_content > a:hover {
+    text-decoration: underline;
+}
+
+#fra_chatContainer .modMessage, .s-chat-message__mod {
+    background: var(--message-ping-background) !important;
+    border: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+
+#chatMessagePinned.s-chat-message__pinned {
+    border: none;
+    color: var(--discord-white);
+    font-weight: normal;
+}
+
+
+#chatMessagePinned.s-chat-message__pinned {
+    background-color: var(--discord-mid);
+    background-image: var(--pinned-icon);
+    background-size: 20px;
+}
+
+#fra_chatContainer .channelMenu {
+    background-color: var(--discord-darkest);
+    z-index: 100;
+}
+
+#fra_chatContainer .channelMenu .channelSwitcher {
+    color: var(--discord-dark-white);
+    border-radius: 3px;
+    display: inline-block;
+    font-weight: 700;
+    margin-right: 4px;
+    padding: 3px 12px;
+}
+
+#fra_chatContainer .channelMenu .channelSwitcher:hover {
+    background: #1d1d1e;
+    color: var(--discord-white);
+}
+
+#fra_chatContainer .channelMenu .channelSwitcher.active {
+    background: var(--discord-lighter);
+    color: var(--discord-white);
+}
+
+.s-chat-sidebar #label_currentChannel {
+    background: var(--discord-dark);
+    border: none;
+    color: var(--discord-dark-white);
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    min-width: 140px;
+    padding: 4px 12px;
+}
+
+.s-chat-sidebar #fraChatChannelMenu {
+    background: inherit;
+    border-radius: 4px;
+    border: 1px solid var(--discord-border);
+    box-shadow: 1px 4px 9px 3px #000000;
+    cursor: default;
+    padding: 2px;
+    position: absolute;
+    width: 140px;
+    z-index: 99999999;
+}
+
+#txtChatContainer .emoteContainer {
+    position: absolute;
+    right: 47px;
+	top: 0px;
+}
+
+#txtChatContainer .emoteContainer, #txtChatContainer > div:nth-child(2):has(#btnChatSend) {
+	top: 8px;
+}
+
+.emoteInput {
+	background-image: var(--emoji-icon)!important;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 24px;
+	width: 24px;
+}
+
+.emoteInput:hover {
+	background-image: url(https://cdn3.emoji.gg/emojis/6105-super-reaction.png) !important;
+}
+
+.emoteList {
+    background: var(--discord-dark);
+    box-shadow: 0 2px 8px 4px rgba(0, 0, 0, 0.5);
+    border: 2px solid var(--discord-border);
+    border-radius: 6px;
+    display: block;
+    padding: 6px;
+    position: absolute;
+    text-align: center;
+    bottom: 41px !important;
+    left: -157px !important;
+    width: 184px;
+    min-height: 120px;
+}
+
+.emoteList img:hover {
+	background-color: var(--discord-lighter);
+	box-shadow: var(--discord-lighter) 0 0 0px 4px;
+}
+
+.s-chat-sidebar .emoteList::after {
+    border-bottom-color: transparent;
+    border-top-color: var(--discord-dark);
+    /* background-color: inherit; */
+}
+
+.s-chat-sidebar .emoteList::before {
+	border-bottom-color: transparent;
+    border-top-color: var(--discord-border);
+}
+
+#txtChatContainer > div:nth-child(1) {
+	z-index: 100 !important;
+}
+
+#txtChatContainer > div:nth-child(2) {
+	margin: 0 !important;
+	position: absolute;
+	top: 0;
+	right: 9px;
+	z-index: 105;
+}
+
+#btnChatSend {
+	background-image: var(--send-icon);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: transparent;
+	color: transparent;
+	padding: 0;
+	margin: 0px;
+	border-radius: 0;
+	border: none;
+	/* position: absolute; */
+	z-index: 5;
+	width:  24px;
+	height: 24px;
+}
+
+#btnChatSend:hover {
+	background-image: url("https://sitebuilder.neocities.org/assets/lioden/blurple-send-message-icon.png");
+}
+
+#fra_chatContainer #txtChatInput {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #242429;
+    border: 1px solid #323237;
+    color: #fbfbfb;
+    font-weight: bold;
+    height: 40px;
+    border-radius: 4px;
+    outline: none;
+    padding-right: 75px;
+    padding-left: 5px;
+}
+
+.navbar-default .navbar-nav > li {
+    width: 100%;
+    margin: 2px 0px;
+    text-align: left;
+    background: transparent;
+    font-weight: 100;
+    border-radius: 8px;
+
+    &:hover {
+        background-color: #1d1d1e;
+    }
+
+    a {
+        vertical-align: middle;
+        padding: 6.5px 13px;
+        color: #82838b;
+        font-size: 16px;
+
+        &:hover {
+            color: var(--discord-white);
+        }
+
+        &::before {
+            background-image: url(https://cdn3.emoji.gg/emojis/3280-text.png);
+            display: inline-block;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: center center;
+            content: " ";
+            vertical-align: bottom;
+            min-height: 23px;
+            min-width: 20px;
+            margin-right: 10px;
+        }
+    }
+
+    /* fake active link */
+    &:has(a[href="/territory.php"]) {
+        background-color: #2c2c30  !important;
+
+            a {
+                color:#efefef;
+            }
+        }
+}
