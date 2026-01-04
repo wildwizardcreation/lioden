@@ -3,14 +3,26 @@
     --smilus-tag: url(https://www.lioden.com/images/tags/0/0/57.png);
 }
 
-/* original by kennyotsu on uiverse.io */
+.tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+
+  gap: 5px;
+}
+
+/* pure css hover by kennyotsu on uiverse.io */
 /* edits by wizard #414436 */
 
 .container-card {
   position: relative;
-  width: 150px;
-  height: 150px;
+  width: 155px;
+  height: 155px;
   transition: 200ms;
+  cursor: default;
 }
 
 .container-card:active {
@@ -22,13 +34,77 @@
   position: absolute;
   inset: 0;
   z-index: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   transition: 700ms;
+  overflow: hidden;
+  background-color: #000;
     
   width: 100%;
   height: 100%;
+}
+
+/* spin glow original by ElSombrero2 on uiverse */
+
+.spin {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card > img {
+  z-index: 2;
+  min-width: 150px;
+  min-height: 150px;
+  height: 100%;
+  width: 100%;
+  aspect-ratio: 1 /1 ;
+}
+
+.card.spin > img {
+  width: 150px;
+  height: 150px;
+}
+
+.card.spin::after {
+  position: absolute;
+  content: ' ';
+  display: block;
+  z-index: 1;
+  width: 160px;
+  height: 160%;
+  background: linear-gradient(90deg, transparent, #E8A137, #E8A137, #E8A137, #E8A137, transparent);
+  animation: rotation_481 5000ms infinite linear;
+}
+
+@keyframes rotation_481 {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  0% {
+    transform: rotateZ(360deg);
+  }
+}
+
+/* tag shine original by mrhyddenn on uiverse */
+
+.card-load {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 3;
+  /* background: linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 
+  40%, #e5e5e5 48%); */
+  background: linear-gradient(120deg, transparent 30%, #f0f0f026 38%, #f0f0f01c 40%, transparent 48%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  animation: load89234 2s infinite;
+}
+
+@keyframes load89234 {
+  100% {
+    background-position: -100% 0;
+  }
 }
 
 .tracker {
@@ -39,7 +115,7 @@
 }
 
 .tracker:hover {
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .tracker:hover ~ .card .prompt {
@@ -51,11 +127,11 @@
   filter: brightness(1.1);
 }
 
-.container-card:hover .card::before {
+/* .container-card:hover .card::before {
   transition: 200ms;
   content: '';
   opacity: 80%;
-}
+} */
 
 .canvas {
   perspective: 800px;
@@ -72,18 +148,7 @@
     "tr-16 tr-17 tr-18 tr-19 tr-20"
     "tr-21 tr-22 tr-23 tr-24 tr-25";
 }
-
-.card::before {
-  content: '';
-	box-shadow: 1px 1px 1px black;
-  opacity: 30%;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: -1;
-  transition: 200ms;
-}
-
+  
 .tr-1 {
   grid-area: tr-1;
 }
