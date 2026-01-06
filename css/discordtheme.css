@@ -21,7 +21,12 @@ the class to whatever "main" div your html is in */
 
 /* 
 
-.discord-cave-icons -> adds "server" icons to caves to futher mimic the discord discovery page
+.discord-cave-icons -> adds "server" icons to caves to futher mimic the discord apps page
+.discord-mound-icons -> adds "server" icons to mounds to futher mimic the discord apps page
+
+.discord-cave-descriptions -> adds descriptions to caves to futher mimic the discord apps page
+.discord-mound-descriptions -> adds descriptions to mounds to futher mimic the discord apps page
+
 
 .discord-custom-profile -> SUPER SCUFFED!! MAY NOT WORK!! -> shifts the entirety of the 'profile' content
 to the fake user profile (below the comments and next to the lion profile)
@@ -49,6 +54,10 @@ https://emoji.gg/user/bet.official
 
 
 :root{
+
+    /* ------------------- utility vars ------------------- */
+    /* --- !!! DO NOT CHANGE THESE THINGS WILL BREAK !!! --- */
+    --blank: url("https://cdn3.emoji.gg/emojis/7352-blank.png");
     --default-pfp: url(https://archive.org/download/discordprofilepictures/discordblue.png);
     --server-name: "Abbadon's Epic Den";
 
@@ -61,39 +70,95 @@ https://emoji.gg/user/bet.official
     --gold-beetle-icon: url(https://cdn3.emoji.gg/emojis/5611-evolving-badge-nitro-15-months.png);
     --silver-beetle-icon: url(https://cdn3.emoji.gg/emojis/99057-orbs-discord.png);
 
-   /* cave images */
+	
+    /* ------------------- cave customization ------------------- */
+	
+	/* default images (leave vars blank to keep these) */
+	--default-cave-image: url("https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/672165db4c87e38208370925_Products%20%26%20Features%20-%201%20(2)-p-2600.png");
+
+	--default-cave-icon: url("https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/672165db4c87e38208370925_Products%20%26%20Features%20-%201%20(2)-p-2600.png");
+
+    /* unsorted */
 
 	--unsorted-cave-image: url("https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/66eb67698c19f39b38d643ab_image1.png");
-	--pregnant-cave-image: url("https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/648cef33984677d825ca2763_PortalArticleHeader_1800x720.png");
-	--overview-cave-image: url("https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/611580b41ebb6e0f81f958c8_0_D9T4mJniZUz2QeQx.png");
-	
-	--first-cave-image: url("https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/672165db4c87e38208370925_Products%20%26%20Features%20-%201%20(2)-p-2600.png");
-	--second-cave-image: url("https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/611be3897e514d7771a4a0e7_0_NMu3mta7hRrQas_X.png");
-	--third-cave-image: url("https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/64af3aac29866b3f86f1c648_Products%20%26%20Features%20-%202-p-2600.png");
-	--fourth-cave-image: url("https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/64121f8765e921a28f9a2b54_Discord%20HQ%20-%202-p-2600.png");
-	--fifth-cave-image: url("https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/64064bb87f76f7e45341ed38_AI-DD-Blog-Header.png");
-	--sixth-cave-image: url("");
-
-	--unused-cave-image: url("https://sitebuilder.neocities.org/assets/lioden/invite_background_dark.png");
-
-	/* optional cave "server" icons */
 	--unsorted-cave-icon: url("https://cdn3.emoji.gg/emojis/985781-magnifying-glass.png");
+    --unsorted-cave-description: "TEST TEST TEST LALALALAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	
+    /* nesting */
+	
+	--pregnant-cave-image: url("https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/648cef33984677d825ca2763_PortalArticleHeader_1800x720.png");
 	--pregnant-cave-icon: url("https://cdn3.emoji.gg/emojis/423717-discord-heart.png");
-	--overview-cave-icon: url("https://cdn3.emoji.gg/emojis/445181-discord-orbsbook.png");
+    --pregnant-cave-description: "TEST TEST TEST LALALALA";
 	
-	--first-cave-icon: url("https://cdn3.emoji.gg/emojis/620166-discord-wumpussale.png");
-	--second-cave-icon: url("https://cdn3.emoji.gg/emojis/7609-wumpus-coin.png");
-	--third-cave-icon: url("");
-	--fourth-cave-icon: url("");
-	--fifth-cave-icon: url("");
-	--sixth-cave-icon: url("");
-	
-	--unused-cave-icon: url("https://lioden.wildwizardcreation.com/assets/discord/invite_background_dark.png");
 
+    /* overview */
+
+	--overview-cave-image: url("https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/611580b41ebb6e0f81f958c8_0_D9T4mJniZUz2QeQx.png");
+	--overview-cave-icon: url("https://cdn3.emoji.gg/emojis/445181-discord-orbsbook.png");
+    --overview-cave-description: "TEST TEST TEST LALALALA";
+
+	/* other caves */
+	
+	--first-cave-image: url("https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/61aa7642a72a1b627d695f49_Discord-Elixir-Blog-Header.png");
+
+
+	--first-cave-icon: url("https://cdn3.emoji.gg/emojis/620166-discord-wumpussale.png");
+	
+	--second-cave-image: url("https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/611be3897e514d7771a4a0e7_0_NMu3mta7hRrQas_X.png");
+	--second-cave-icon: url("https://cdn3.emoji.gg/emojis/7609-wumpus-coin.png");
+	
+	--third-cave-image: url("https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/64121f8765e921a28f9a2b54_Discord%20HQ%20-%202-p-2600.png");
+	--third-cave-icon: url(" ");
+	
+	--fourth-cave-image: url("");
+	--fourth-cave-icon: none;
+	
+	--fifth-cave-image: none;
+	--fifth-cave-icon: url(" ");
+	
+	--sixth-cave-image: url(" ");
+	--sixth-cave-icon: url(" ");
+
+    /* unused */
+	
+	--unused-cave-image: url("https://sitebuilder.neocities.org/assets/lioden/invite_background_dark.png");
+	--unused-cave-icon: url("https://lioden.wildwizardcreation.com/assets/discord/invite_background_dark.png");
+	
+	
+	/* ------------------- mound customization ------------------- */
+	
+	/* default images (leave vars blank to keep these) */
+	--default-mound-image: url("https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/611ed6b3ff0df3e75a6b3c28_1_BYeVEgTVQia4MD5LSLoUlA.png");
+	--default-mound-icon: url("https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/611ed6b3ff0df3e75a6b3c28_1_BYeVEgTVQia4MD5LSLoUlA.png");
+
+	/* unsorted */
+
+	--unsorted-mound-image: url("https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/66eb67698c19f39b38d643ab_image1.png");
+	--unsorted-mound-icon: url("https://cdn3.emoji.gg/emojis/985781-magnifying-glass.png");
+    --unsorted-mound-description: "All of your unsorted beetle friends!";
+
+	/* other mounds */
+	--first-mound-image: url("");
+	--first-mound-icon: url("https://cdn3.emoji.gg/emojis/620166-discord-wumpussale.png");
+    --first-mound-description: "TEST TEST TEST LALALALA";
+
+    --second-mound-image: url("");
+	--second-mound-icon: url("https://cdn3.emoji.gg/emojis/620166-discord-wumpussale.png");
+    --second-mound-description: "TEST TEST TEST LALALALA";
+
+    --third-mound-image: url("");
+	--third-mound-icon: url("https://cdn3.emoji.gg/emojis/620166-discord-wumpussale.png");
+    --third-mound-description: "TEST TEST TEST LALALALA";
+
+	
+	/* unused */
+	--unused-mound-image: url("https://sitebuilder.neocities.org/assets/lioden/invite_background_dark.png");
+	--unused-mound-icon: url("https://lioden.wildwizardcreation.com/assets/discord/invite_background_dark.png");
+	
 	
     /* default colors */
 
-    --discord-border: #323237;
+	--discord-border: #323237;
     --discord-light-border: #424248;
     
     --discord-white: #fbfbfb;
@@ -124,7 +189,7 @@ https://emoji.gg/user/bet.official
     --admin-badge: url("https://cdn3.emoji.gg/emojis/7871-discord-staff.png");
     --artist-badge: url("https://sitebuilder.neocities.org/assets/lioden/artist_badge.png");
 
-    /* default icons */
+    /* default ui icons */
     --invite-icon: url("https://cdn3.emoji.gg/emojis/9437-invite.png");
     --pinned-icon: url("https://cdn3.emoji.gg/emojis/7896-pinned.png");
     --settings-icon: url("https://cdn3.emoji.gg/emojis/2888-settings.png");
@@ -132,6 +197,12 @@ https://emoji.gg/user/bet.official
     --emoji-icon: url("https://cdn3.emoji.gg/emojis/7354-emoji.png");
     --options-icon: url("https://cdn3.emoji.gg/emojis/6375-more-options.png");
     --send-icon: url("https://sitebuilder.neocities.org/assets/lioden/send-message-icon.png");
+
+    /* pixel social media icons */
+    --twitch-icon: url("https://cdn3.emoji.gg/emojis/77281-twitch.png");
+    --twitter-icon: url("https://cdn3.emoji.gg/emojis/12994-twitter.png");
+    --facebook-icon: url("https://cdn3.emoji.gg/emojis/87895-facebook.png");
+    --youtube-icon: url("https://cdn3.emoji.gg/emojis/12899-youtube.png");
 
 
     /* player "profile" colors, info, and images */
@@ -141,7 +212,7 @@ https://emoji.gg/user/bet.official
     --player-buttons: #323237;
 
 	/* images */
-    --player-header: url(https://64.media.tumblr.com/97123a907d58fdf8152e1d6fa0345e94/e3aeddbf99dedaa0-76/s540x810/3122a4a36845ef24c71e2254f6f4d08c6020c22e.gif);
+    --player-header: url(https://sitebuilder.neocities.org/assets/tumblr_c0ce31cb8da59f998d1b29443edbe203_2ab0ebec_500.png);
     --player-pfp: url(https://cdn3.emoji.gg/emojis/98237-akkoshrug.png);
 
     /* lion "profile" colors, info, and images */
@@ -234,7 +305,23 @@ h1, .h1, h2, .h2, h3, .h3, h4, h5 {
 	#about, #player {
 		width: 100% !important;
 	}
+
+	#pageContainer:has(#fraProfileContent div.discord-cave-icons) {
+
+		.col-md-4.col-xs-6.center {
+			line-height: 2.1em;
+		}
+
+		.col-md-4.col-xs-6.center > a > div.cave-grid img {
+			height: 7em !important;
+		}
+	}
 	
+}
+
+
+.col-md-4 {
+    width: 33.33333333%;
 }
 
 /* image replacements */
@@ -468,7 +555,7 @@ body {
     font-weight: bold;
     text-shadow: none;
     border: none;
-
+    
     &:hover {
         background: #4654c0;
         color: white;
@@ -555,7 +642,7 @@ body {
     ul {
         position: relative;
         z-index: 5 !important;
-        gap: 24px;
+        gap: 30px;
         display: flex;
         flex-direction: row;
         align-content: center;
@@ -577,6 +664,7 @@ body {
 
 
 .toplinks {
+	
     >li>a:hover {
         filter: brightness(1.1);
     }
@@ -602,6 +690,9 @@ body {
 	}
 
     li:has(a) {
+		
+		padding: 0 !important;
+		
         >a:before {
             display: inline-block;
             background-repeat: no-repeat;
@@ -800,18 +891,20 @@ body {
     font-weight: bold;
     height: 60px;
     border-radius: 4px;
-
+    padding-left: 15px;
+    /* padding-right: 20px; */
 }
 
 #comment {
     position: relative;
     text-align: left;
-    width: 85%;
+    width: 100%;
     height: 100%;
     font-size: 1.5em;
     font-weight: lighter;
     background-color: transparent;
     margin-top: 4px;
+    padding-right: 30px;
 }
 
 #comment::placeholder {
@@ -824,39 +917,51 @@ body {
 }
 
 #makeComment:has(#comment:placeholder-shown)::before {
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: flex-start;
-    flex-direction: row;
+    display: block;
+}
+
+#makeComment:has(#comment:placeholder-shown) {
+	#postComment {
+		cursor: default;
+		opacity: .2;
+		background-image: var(--send-icon);
+	}
 }
 
 #makeComment::before {
     content: "Message #den";
     display: none;
     position: absolute;
-    height: 100%;
+    /* height: 100%; */
     text-align: left;
-    font-size: 14px;
+    /* font-size: 14px; */
     width: 88%;
     z-index: 4;
     pointer-events: none;
-    font-size: 1.5em;
+    font-size: 1.4em;
     font-weight: lighter;
     color: #757575;
-    margin-top: 4px;
+    top: 17px;
+    left: 20px;
 }
 
 input#postComment{
     background-color: transparent;
-    background-image: url("https://img-l.ink/img/1JsZGGpULYod8Ryr6noLF9-rYGBu1uZAp.png");
+    background-image: var(--send-icon);
     font-size: 0px;
     background-position: center center !important;
     background-size: 100% !important;
     background-repeat: no-repeat !important;
-    margin: 10px;
-    min-width: 20px;
-    min-height: 23px;
+    margin: 0;
+    min-width: 24px;
+    min-height: 24px;
+    padding: 0;
+    margin-right: 32px;
+	transition: background-image linear .1s;
+}
+
+input#postComment:hover {
+	background-image: url("https://sitebuilder.neocities.org/assets/lioden/blurple-send-message-icon.png");
 }
 
 
@@ -927,6 +1032,16 @@ input#postComment{
     border-radius: 0px !important;
 }
 
+.comment:last-child {
+	display: block;
+	color: var(--discord-dark-white);
+
+	.commentText {
+		display: inline-block;
+		padding-left: 10px;
+	}
+}
+
 .comment {
     background-color: var(--message-background) !important;
     padding: 0px !important;
@@ -937,7 +1052,9 @@ input#postComment{
         padding: 5px 0px;
 
         img {
+			display: inline-block;
             margin: 3px 0px;
+			max-width: 23px;
         }
     }
 
@@ -1012,182 +1129,241 @@ small.text-muted {
 #fraOrganizationBlock {
 	position: relative;
 	display: inline-block;
-	padding: 5px;
-	text-align: left;
+	/* padding: 5px; */
+	text-align: center;
 	/* word-wrap: break-word; */
 	font-size: 0px;
-}
-
-#fraOrganizationBlock::before {
-	content: " ";
-	width: 100%;
-	height: calc(100% - 140px);
-	position: absolute;
-	top: 0;
-	left: 0;
-	/* padding-bottom: 76px; */
-	border: 2px solid var(--discord-light-border);
+	padding-top: 20px;
+	margin-top: 15px;
 }
 
 
-/* .col-md-3.col-xs-4.center > a, .col-md-4.col-xs-6.center > a {
-    display: block;
-    width: fit-content;
-    margin: 0 auto;
-} */
+/* caves AND mounds */
 
-/* caves */
-
-/* mass adjust caves */
+.col-md-3.col-xs-4.center, 
 .col-md-4.col-xs-6.center {
+	position: relative;
 	padding: 10px;
 	display: inline-block;
 	float: none;
 	margin: 0;
 	font-size: 1.5rem;
 	text-align: left;
-	line-height: 2.1em;
+	line-height: 1;
+	width: 100%;
+	min-width: 25%;
+	max-width: 33.333%;
+	/* overflow: hidden; */
 }
 
-div.cave-grid:first-letter {
-    padding-left: 30px;
-}
-
-.col-md-4.col-xs-6.center > a {
+.col-md-4.col-xs-6.center > a,
+.col-md-3.col-xs-4.center > a {
 	
-	> div.cave-grid {
+	div.cave-grid,
+	div.mound-grid {
+		/* display: flex; */
+		flex-direction: column;
+		border-radius: 6px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		text-wrap-mode: nowrap;
+		/* replace /\ with \/ to allow long cave names */
+		/* text-wrap-mode: wrap; */
 		background: var(--discord-mid);
 		border: 1.5px solid transparent;
-		height: 260px;
+		min-height: 140px;
 		margin: 0;
 		width: 100%;
 		max-width: none;
 		position: relative;
+		padding: 0px;
 		padding-left: 18px;
-		padding-bottom: 0px;
-		/* overflow: visible; */
+		padding-bottom: 10px;
+		/* white-space: nowrap; */
 	}
 
-    > div.cave-grid:hover {
+    div.cave-grid:hover,
+	div.mound-grid:hover {
 		background: var(--discord-light);
 		border: 1.5px solid var(--discord-light-border);
     }
 
 	img {
-		height: 136px;
 		display: block;
+		position: relative;
 		object-fit: cover;
 		margin-left: -19px;
 		width: calc(100% + 20px);
-		/* position: absolute; */
+		height: 8em;
+		margin-bottom: 0px;
 	}
 }
+
+div.mound-grid:first-letter,
+div.cave-grid:first-letter {
+    padding-left: 30px;
+}
+
+/* mound section */
+
+#fraMoundList {
+	padding-top: 15px;
+	width: 100%;
+	/* height: 140px; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 6px;
+	border: 1px solid var(--discord-light-border);
+	flex-direction: row;
+	margin-top: 30px;
+	height: auto;
+	position: relative;
+	flex-wrap: wrap;
+}
+
+
+#fraMoundList::before {
+	display: block;
+	content: " Mounds ";
+	color: var(--discord-white);
+	position: absolute;
+	font-size: 3rem;
+	font-weight: 500;
+	top: -20px;
+	left: 30px;
+	padding: 0 10px;
+	background: var(--discord-dark);
+}
+
+/* cave section */
+/* fake border around ALL caves */
+
+#fraOrganizationBlock::before {
+	display: block;
+	content: " ";
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 300px;
+	width: 100%;
+	border: 1px solid var(--discord-light-border);
+	border-bottom: none;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+
+#fraCaveList {
+	border: 1px solid var(--discord-light-border);
+	border-top: none;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+
+#fraCaveList::before {
+	display: block;
+	content: " Caves ";
+	color: var(--discord-white);
+	position: absolute;
+	font-size: 3rem;
+	font-weight: 500;
+	top: -275px;
+	left: 30px;
+	padding: 0 10px;
+	background: var(--discord-dark);
+}
+
+/* ------------------- header images ------------------- */
+
+div.col-md-4.col-xs-6.center img, div.col-md-3.col-xs-4.center img {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+    content: var(--blank) !important;
+    color: transparent;
+}
+
+/* ------------------- cave header images ------------------- */
 
 /* unsorted */
 
 div.col-md-4.col-xs-6.center > a[href^="unsorted.php?"] {
-	> div.cave-grid {
-		
-	}
 
 	img {
-		content: var(--unsorted-cave-image);
+		background-image: var(--unsorted-cave-image);
 	}
 }
 
 /* nesting */
 
 div.col-md-4.col-xs-6.center > a[href^="nesting.php"] {
-	> div.cave-grid {
-		
-	}
 
 	img {
-		content: var(--pregnant-cave-image);
+		background-image: var(--pregnant-cave-image);
 	}
 }
 
 /* overview */
 
 div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
-	> div.cave-grid {
-
-	}
 
 	img {
-		content: var(--overview-cave-image);
+		background-image: var(--overview-cave-image);
 	}
 }
 
-#fraCaveList {width: auto;height: auto;position: relative;display: flex;flex-wrap: wrap;flex-direction: row;
+#fraCaveList {
+	width: auto;
+	height: auto;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
 	
 	div:nth-child(1) > a[href^="cave.php?"] {
-		> div.cave-grid {
-	
-		}
 
 		img {
-			content: var(--first-cave-image);
+            background-image: var(--first-cave-image), var(--default-cave-image);
 		}
 	}
 	
 	div:nth-child(2) > a[href^="cave.php?"] {
-		> div.cave-grid {
-	
-		}
 
 		img {
-			content: var(--second-cave-image);
+			background-image: var(--second-cave-image), var(--default-cave-image);
 		}
 	}
 
 	div:nth-child(3) > a[href^="cave.php?"] {
-		> div.cave-grid {
-	
-		}
-
 		img {
-			content: var(--third-cave-image);
+			background-image: var(--third-cave-image), var(--default-cave-image);
 		}
 	}
 
 	div:nth-child(4) > a[href^="cave.php?"] {
-		> div.cave-grid {
-	
-		}
 
 		img {
-			content: var(--fourth-cave-image);
+			background-image: var(--fourth-cave-image), var(--default-cave-image);
 		}
 	}
 
 	div:nth-child(5) > a[href^="cave.php?"] {
-		> div.cave-grid {
-	
-		}
 
 		img {
-			content: var(--fifth-cave-image);
+			background-image: var(--fifth-cave-image), var(--default-cave-image);
 		}
 	}
 
 	div:nth-child(6) > a[href^="cave.php?"] {
-		> div.cave-grid {
-	
-		}
 
 		img {
-			content: var(--sixth-cave-image);
+			background-image: var(--sixth-cave-image), var(--default-cave-image);
 		}
 	}
 
 	/* unused */
 
-	div > a[href^="cave.php?"]:has(i) {
-		> div.cave-grid {
-	
-
-		}
+	div > a[href*="cave.php?"]:has(i) {
 
 		img {
 			content: var(--unused-cave-image) !important;
@@ -1195,56 +1371,74 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
 	}
 }
 
-
-
-/* mounds */
+/* ------------------- mound header images ------------------- */
 
 #fraMoundList {
-    height: 140px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 40px;
-}
 
-/* mass adjust mounds */
-
-.col-md-3.col-xs-4.center > a {
 	
+	/* unsorted */
+	div > a[href*="unsorted-beetles.php"] {
+
+		img {
+			background-image: var(--unsorted-mound-image), var(--default-mound-image);
+		}
+	}
+	
+	/* first */
+	div.col-md-3.col-xs-4.center:nth-child(2) > a[href^="mound.php?"] > div {
+
+		img {
+			background-image: var(--first-mound-image), var(--default-mound-image);
+		}
+	}
+
+    /* second */
+	div.col-md-3.col-xs-4.center:nth-child(3) > a[href^="mound.php?"] > div {
+
+		img {
+			background-image: var(--second-mound-image), var(--default-mound-image);
+		}
+	}
+
+    /* third */
+	div.col-md-3.col-xs-4.center:nth-child(4) > a[href^="mound.php?"] > div {
+
+		img {
+			background-image: var(--third-mound-image), var(--default-mound-image);
+		}
+	}
+	
+	/* unused */
+	div > a[href*="mound.php"]:has(i) {
+
+		img {
+			content: var(--unused-mound-image) !important;
+		}
+	}
 }
 
-.mound-grid {
-    width: 170px;
-    margin: 15px auto;
-}
 
-.mound-grid img{
-    width: 100%;
-}
+/* ------------------- optional "server" icons ------------------- */
 
-#about, #player {
-    height: 600px;
-    width: 49.5%;
-    border: none;
-    position: relative;
-    border-radius: 10px;
-    /* overflow: hidden; */
-}
-
-/* optional cave "server" icons */
+/* caves */
 #pageContainer:has(#fraProfileContent div.discord-cave-icons) {
+
+	.col-md-4.col-xs-6.center {
+		line-height: 2.2rem;
+	}
     
     .col-md-4.col-xs-6.center > a > div.cave-grid{
+        padding-bottom: 10px;
+        line-height: 1 !important;
 	
 		&::before {
 			content: " ";
 			display: block;
 			position: absolute;
-			aspect-ratio: 1 / 1;
 			width: 65px;
-			height: auto;
+			height: 65px;
 			background-color: var(--discord-mid);
-			top: 40%;
+			top: 45%;
 			left: 15px;
 			border-radius: 19px;
 			border: 6px solid var(--discord-mid);
@@ -1253,6 +1447,24 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
 			background-position: center;
 			background-repeat: no-repeat;
 		}
+
+		img {
+			height: 8em;
+			display: block;
+			position: relative;
+			object-fit: cover;
+			margin-left: -19px;
+			margin-bottom: 25px;
+		}
+
+		/* br {
+			content: "A" !important;
+			display: block !important;
+			margin-bottom: 1.5em !important;
+			white-space: normal;
+			text-wrap: auto;
+		} */
+		
 	}
 
 	a[href^="unsorted.php"] > div.cave-grid{
@@ -1277,45 +1489,46 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
 	}
 
 	#fraCaveList{
+		
 		div:nth-child(1) > a[href^="cave.php?"] > div.cave-grid{
 		
 			&::before {
-				background-image: var(--first-cave-icon);
+				content: var(--first-cave-icon, var(--default-cave-icon));
 			}
 		}
 
 		div:nth-child(2) > a[href^="cave.php?"] > div.cave-grid{
 		
 			&::before {
-				background-image: var(--second-cave-icon);
+				background-image: var(--second-cave-icon, var(--default-cave-icon));
 			}
 		}
 
 		div:nth-child(3) > a[href^="cave.php?"] > div.cave-grid{
 		
 			&::before {
-				background-image: var(--third-cave-icon);
+				background-image: var(--third-cave-icon, var(--default-cave-icon));
 			}
 		}
 
 		div:nth-child(4) > a[href^="cave.php?"] > div.cave-grid{
 		
 			&::before {
-				background-image: var(--fourth-cave-icon);
+				background-image: var(--fourth-cave-icon, var(--default-cave-icon));
 			}
 		}
 
 		div:nth-child(5) > a[href^="cave.php?"] > div.cave-grid{
 		
 			&::before {
-				background-image: var(--fifth-cave-icon);
+				background-image: var(--fifth-cave-icon, var(--default-cave-icon));
 			}
 		}
 
 		div:nth-child(6) > a[href^="cave.php?"] > div.cave-grid{
 		
 			&::before {
-				background-image: var(--sixth-cave-icon);
+				background-image: var(--sixth-cave-icon, var(--default-cave-icon));
 			}
 		}
 		
@@ -1332,10 +1545,255 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
 	}
 }
 
+/* mounds */
+#pageContainer:has(#fraProfileContent div.discord-mound-icons) {
+
+	.col-md-3.col-xs-4.center {
+		line-height: 2.2rem;
+	}
+    
+    .col-md-3.col-xs-4.center > a > div.mound-grid{padding-bottom: 10px;line-height: 1 !important;
+	
+		&::before {
+			content: " ";
+			display: block;
+			position: absolute;
+			aspect-ratio: 1 / 1;
+			width: 65px;
+			height: auto;
+			background-color: var(--discord-mid);
+			top: 45%;
+			left: 15px;
+			border-radius: 19px;
+			border: 6px solid var(--discord-mid);
+			z-index: 5;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+
+		img {
+			height: 8em;
+			display: block;
+			position: relative;
+			object-fit: cover;
+			margin-left: -19px;
+			margin-bottom: 25px;
+		}
+
+		/* br {
+			content: "A" !important;
+			display: block !important;
+			margin-bottom: 1.5em !important;
+			white-space: normal;
+			text-wrap: auto;
+		} */
+		
+	}
+	
+	#fraMoundList{
+		a[href^="unsorted.php"] > div.mound-grid{
+	
+			&::before {
+				background-image: var(--unsorted-cave-icon);
+			}
+		}
+
+		div:nth-child(2) > a[href^="mound.php?"] > div.mound-grid{
+		
+			&::before {
+				background-image: var(--second-cave-icon);
+			}
+		}
+
+		div:nth-child(3) > a[href^="mound.php?"] > div.mound-grid{
+		
+			&::before {
+				background-image: var(--third-cave-icon);
+			}
+		}
+
+		div:nth-child(4) > a[href^="mound.php?"] > div.mound-grid{
+		
+			&::before {
+				background-image: var(--fourth-cave-icon);
+			}
+		}
+		
+		/* unused */
+
+		div > a[href^="mound.php?"]:has(i)> div.mound-grid {
+		
+			&::before {
+				background-image: var(--unused-mound-icon) !important;
+				background-size: 300%;
+			}
+		}
+	}
+}
 
 
 
+/* ------------------- optional descriptions ------------------- */
 
+/* caves */
+#pageContainer:has(#fraProfileContent div.discord-cave-descriptions) {
+
+	.col-md-4.col-xs-6.center > a > div.cave-grid {line-height: .7;padding-bottom: 10px;
+
+		&::before {
+			top: 35%;
+		}
+	
+		&::after {
+			content: " ";
+			position: relative;
+			width: calc(100% - 18px);
+			font-weight: normal;
+			/* background-color: red; */
+			line-height: 2rem;
+			font-size: 12px;
+			z-index: 5;
+			min-height: 4em;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			text-wrap: wrap;
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			margin: 0;
+			padding: 0;
+			padding-top: 8px;
+		}
+	}
+
+	.col-md-4.col-xs-6.center > a img {
+		margin-bottom: 10px;
+	}
+
+	div.col-md-4.col-xs-6.center > a[href^="unsorted.php"] {
+		> div.cave-grid::after {
+			content: var(--unsorted-cave-description);
+		}
+	}
+
+    div.col-md-4.col-xs-6.center > a[href^="nesting.php"] {
+		> div.cave-grid::after {
+			content: var(--pregnant-cave-description);
+		}
+	}
+
+    div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
+		> div.cave-grid::after {
+			content: var(--overview-cave-description);
+		}
+	}
+
+    #fraCaveList {
+
+        div:nth-child(1) > a[href^="cave.php?"] > div.cave-grid{
+		
+			&::before {
+			content: var(--first-cave-description);
+            }
+        }
+
+        div:nth-child(2) > a[href^="cave.php?"] > div.cave-grid{
+		
+			&::before {
+			content: var(--second-cave-description);
+            }
+        }
+
+        div:nth-child(3) > a[href^="cave.php?"] > div.cave-grid{
+		
+			&::before {
+			content: var(--third-cave-description);
+            }
+        }
+
+        div:nth-child(4) > a[href^="cave.php?"] > div.cave-grid{
+		
+			&::before {
+			content: var(--fourth-cave-description);
+            }
+        }
+
+        div:nth-child(5) > a[href^="cave.php?"] > div.cave-grid{
+		
+			&::before {
+			content: var(--fifth-cave-description);
+            }
+        }
+
+        div:nth-child(6) > a[href^="cave.php?"] > div.cave-grid{
+		
+			&::before {
+			content: var(--sixth-cave-description);
+            }
+        }
+    }
+}
+
+/* mounds */
+#pageContainer:has(#fraProfileContent div.discord-mound-descriptions) {
+
+	.col-md-3.col-xs-4.center > a > div.mound-grid {line-height: .7;padding-bottom: 10px;
+
+		&::before {
+			top: 35%;
+		}
+	
+		&::after {
+			content: " ";
+			position: relative;
+			width: calc(100% - 18px);
+			font-weight: normal;
+			/* background-color: red; */
+			line-height: 2rem;
+			font-size: 12px;
+			z-index: 5;
+			min-height: 4em;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			text-wrap: wrap;
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			margin: 0;
+			padding: 0;
+			padding-top: 8px;
+		}
+	}
+
+	.col-md-3.col-xs-4.center > a img {
+		margin-bottom: 10px;
+	}
+
+	div.col-md-3.col-xs-4.center > a[href^="unsorted-beetles.php?"] {
+		> div.mound-grid::after {
+			content: var(--unsorted-mound-description);
+		}
+	}
+
+}
+
+/* ------------------- fake user and lion profiles ------------------- */
+
+#about, #player {
+    height: 600px;
+    width: 49.5%;
+    border: none;
+    position: relative;
+    border-radius: 10px;
+    /* overflow: hidden; */
+}
 
 /* lion profile */
 
@@ -1378,11 +1836,7 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
 			display: block;
 			left: 150px;
 			bottom: 0px;
-			width: 102px;
-			
-			
-			
-			
+			width: 100px;
 			
 			
 			b {
@@ -1390,24 +1844,27 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
 				display: inline-block;
 				left: 0px;
 				bottom: 5px;
-				width: 100px;
+				width: 160px;
 				word-break: keep-all;
 				font-size: 14px;
-				word-spacing: 500px;
+				/* word-spacing: 500px; */
 				text-transform: capitalize;
 				white-space: nowrap;
 				overflow: hidden;
-				position: absolute;
+				/* position: absolute; */
+				text-align: left;
+                padding-bottom: 4px;
 			}
 
 			b::after {
 				content: " Mutated Lions ";
 				display: inline-block;
 				word-spacing: 0px;
-				position: absolute;
+				/* position: absolute; */
 				right: 0px;
 				/* top: 0; */
-				/* background-color: var(--lion-primary); */
+				background-color: var(--lion-primary);
+				margin-left: -33px;
 			}
 		}
 
@@ -1459,7 +1916,7 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
 }
 
 #about > tbody > tr.right > td.right {
-    margin-top: 206px;
+    margin-top: 156px;
     
 	.auto {
 		margin: 0;
@@ -1470,8 +1927,8 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
 #about > tbody > tr.right > td.right > table > tbody {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: flex-start;
 	gap: 5px 0;
+	flex-direction: row;
 }
 
 /* fake roles for lion profile */
@@ -1486,8 +1943,10 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
     display: flex;
     width: auto;
     gap: 0px;
-    flex-direction: row;
-    justify-content: space-around;
+    /* flex-basis: 50%; */
+    
+
+    
     
     td.left {
         display: block;
@@ -1496,10 +1955,11 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
         border-radius: 4px;
         position: relative;
         width: fit-content;
-        min-width: 120px;
+        min-width: 87px;
         margin-right: 6px;
         text-align: center;
         text-transform: lowercase;
+        
         
         
 
@@ -1620,6 +2080,12 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
 
 
 /* player profile */
+
+#player:has(a[href^="/refer.php"]) {
+    
+}
+
+
 #player {
     background-color: var(--player-primary);
     float: left;
@@ -1647,6 +2113,8 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
 
 #player .center {
     text-align: left;
+    
+    
 
     &.h3 {
         font-weight: bold;
@@ -1741,7 +2209,7 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
 
 /* player header */
 #player > tbody > tr.right > td:nth-child(2) {
-    background: var(--player-header);
+    background-image: var(--player-header) !important;
     background-color: var(--player-secondary);
     background-size: cover;
     background-position: center;
@@ -1749,8 +2217,8 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
     text-align: left !important;
     vertical-align: bottom;
     height:215px;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 /* player pfp */
@@ -1763,6 +2231,8 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
 }
 
 #player > tbody > tr.right > td:nth-child(1) {
+	display: flex;
+	flex-direction: column;
     padding-top: 70px;
     padding-left: 15px;
     width: 100%;
@@ -1804,10 +2274,14 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
 
 /* buttons */
 
-#player > tbody > tr.right > td:nth-child(1) > div.xlarge {
+#player > tbody > tr.right > td:nth-child(1) > div.xlarge, 
+#player:has(a[href^="/refer.php"]) > tbody > tr.right > td:nth-child(1) > p {
     position: absolute;
     top: 15px;
     right: 67px;
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
     >a:hover {
         filter: brightness(1.2);
@@ -1819,8 +2293,27 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
     }
 }
 
+#player:has(a[href^="/refer.php"]) > tbody > tr.right > td:nth-child(1) > p {
+	right: 13px;
+}
+
 
 /* block and add friend */
+
+/* if already friended 
+- check if the request button exists
+if no: replace with fake friend button + move message button */
+
+#player :has(tbody td.right_odd>a[href*="befriends"]) {
+    tbody > tr:nth-child(3) {
+        
+    }
+        
+    >td.right_odd::before {
+        display: none;
+    }
+}
+
 
 #player > tbody > tr:nth-child(3) {
 	display: flex;
@@ -1833,9 +2326,15 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
 	padding-left: 15px;
 	gap: 20px;
 	
+	width: 100%;
 	td {
 		background: inherit;
 		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		justify-items: center;
+		align-items: center;
 	}
 
 	a:hover {
@@ -1844,8 +2343,56 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
 
 }
 
+/* friend req */
+
+td.right_odd>a[href*="befriends"] {
+	
+	&::after {
+        font-size: 15px;
+        content: "Add Friend";
+        vertical-align: middle;
+    }
+	
+    img {
+        content: url(https://cdn3.emoji.gg/emojis/9437-invite.png);
+    }
+}
+
+
+#player > tbody > tr:nth-child(3) > td.right_odd:has(a[href*="blocked"])::before {
+    content: " ";
+    display: block;
+    background-position: center center;
+    background-size: 100%;
+    background-color: red;
+    width: 20px;
+    height: 20px;
+}
+
+/* block */
+td.right_odd>a[href^="/allies.php?p=blocked"] {
+	img {
+        content: url(https://cdn3.emoji.gg/emojis/2360-cross.png);
+		filter: brightness(1) !important;
+	}
+
+	&:hover:after {
+        content: "Block Member";
+        width: 113px;
+        right: -38px;
+    }
+}
+
+#player > tbody > tr.right > td:nth-child(1) > p:hover::after {
+    content: " ";
+    width: 30px;
+    position: absolute;
+    height: 60px;
+    left: 32px;
+}
+
 #player > tbody > tr.right > td:nth-child(1) > div.xlarge > a > img, 
-#player > tbody > tr:nth-child(3) > td > a > img {
+#player > tbody > tr:nth-child(3) > td > a > img, #player:has(a[href^="/refer.php"]) > tbody > tr.right > td:nth-child(1) > p a>img {
     width: 20px;
     aspect-ratio: 1/1;
     filter: brightness(2);
@@ -1856,7 +2403,7 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
 
 /* long buttons */
 
-div>a[href^="/compose.php"], td.right_odd>a[href^="/territory.php"] {
+div>a[href^="/compose.php"], td.right_odd>a[href*="befriends"] {
 	display: block;
 	font-size: 0px;
 	background-color: #323237;
@@ -1866,25 +2413,19 @@ div>a[href^="/compose.php"], td.right_odd>a[href^="/territory.php"] {
 	/* height: 100%; */
     
     img {
-        content: url("https://cdn3.emoji.gg/emojis/8312-active-threads.png");
-		margin-right: 5px;
+        margin-right: 5px;
+        margin-bottom: 2px;
     }
-
-    /* &::before {
-        content: " ";
-        display: inline-block;
-        background-image: url("https://cdn3.emoji.gg/emojis/8312-active-threads.png");
-        background-position: center center;
-        background-size: 100%;
-        width: 20px;
-        height: 20px;
-        margin-right: 6px;
-        vertical-align: bottom;
-    } */
 
     &::after {
         font-size: 15px;
         vertical-align: middle;
+    }
+}
+
+div>a[href^="/compose.php"] {
+    img {
+        content: url("https://cdn3.emoji.gg/emojis/8312-active-threads.png");
     }
 }
 
@@ -1894,11 +2435,15 @@ td.right_odd>a[href^="/territory.php"] {
 
 /* icons w/ tooltips */
 
-div>a[href^="/trading_center.php"], div>a[href^="/transfers.php"], td.right_odd>a[href^="/allies.php?p=blocked"]{
+div>a[href^="/trading_center.php"], 
+div>a[href^="/transfers.php"], 
+td.right_odd>a[href^="/allies.php?p=blocked"], 
+#player:has(a[href^="/refer.php"]) a[href^="/refer.php"], 
+#player:has(a[href^="/refer.php"]) a[href^="/wishlist.php"]{
+	
 	font-size: 0px;
 	background-color: #323237;
 	padding: 8px;
-	/* height: 100%; */
 	width: 39px;
 	aspect-ratio: 1 / 1;
 	border-radius: 8px;
@@ -1911,7 +2456,8 @@ div>a[href^="/trading_center.php"], div>a[href^="/transfers.php"], td.right_odd>
     &:hover::after{
         display: block;
         position: absolute;
-        top: 42px;
+		text-align: center;
+        top: 46px;
         height: 40px;
         font-size: 13px;
         background-color: #242429;
@@ -1923,16 +2469,6 @@ div>a[href^="/trading_center.php"], div>a[href^="/transfers.php"], td.right_odd>
         box-shadow: #121214ad 0 5px 12px 0px;
         animation: .05s ease-in-out 0s 1 tooltipHover;
     }
-
-    /* &::before {
-        content: " ";
-        display: inline-block;
-        background-position: center center;
-        background-size: 100%;
-        width: 20px;
-        height: 20px;
-        filter: brightness(2);
-    } */
 }
 
 /* message */
@@ -1957,7 +2493,7 @@ div>a[href^="/transfers.php"] {
     &:hover:after {
         content: "Gift";
         width: 48px;
-        right: -6px;
+        right: -4px;
     }
 }
 
@@ -1972,141 +2508,57 @@ div>a[href^="/trading_center.php"] {
 
     &:hover:after {
         content: "Make A Trade";
-        width: 107px;
-        right: -34px;
-    }
-}
-
-/* friend req */
-
-td.right_odd>a[href^="/territory.php"] {
-	
-	&::after {
-        font-size: 15px;
-        content: "Add Friend";
-        vertical-align: middle;
-    }
-	
-    img {
-        content: url(https://cdn3.emoji.gg/emojis/9437-invite.png);
-    }
-}
-
-
-/* if alrady friended (checking if the request button exists, replace with fake friend button if yes) */
-#player > tbody > tr:nth-child(3):has(td.right_odd.text-right) {
-    >td.right_odd::before {
-        display: none;
-    }
-}
-
-#player > tbody > tr:nth-child(3) > td.right_odd::before {
-    content: " ";
-    display: inline-block;
-    background-position: center center;
-    background-size: 100%;
-    background-color: red;
-    width: 20px;
-    height: 20px;
-}
-
-/* block */
-td.right_odd>a[href^="/allies.php?p=blocked"] {
-	img {
-        content: url(https://cdn3.emoji.gg/emojis/2360-cross.png);
-		filter: brightness(1) !important;
-	}
-
-	&:hover:after {
-        content: "Block Member";
-        width: 113px;
+        width: 114px;
         right: -38px;
     }
 }
 
-/* fake "extra" buttons */
 
-/* #player > tbody > tr.right > td:nth-child(1) > p::before {
-    position: absolute;
-    content: " ";
-    background-image: url("https://cdn3.emoji.gg/emojis/8895-more-options.png");
-    background-position: center center;
-    background-size: 100%;
-    min-width: 20px;
-    min-height: 20px;
-    align-self: center;
-    top: 1px;
-    filter: brightness(2);
-    background-color: #323237;
-    padding: 8px;
-    width: 39px;
-    aspect-ratio: 1 / 1;
-    border-radius: 8px;
-    color: white;
-    display: flex;
-    top: 0;
-    left: -65px;
-    align-items: center;
-    justify-content: center;
-	visibility: visible;
+
+
+
+/* personal view */
+
+#player:has(a[href^="/refer.php"]) {
+
+	span.text-muted{
+        font-size: 0px;
+        padding: 0 7px !important;
+    }
+	
+	/* refer */
+	a[href^="/refer.php"] {
+	    font-size: 0px;
+	
+	    img {
+	        content: var(--invite-icon);
+	    }
+	
+	    &:hover:after {
+	        content: "Refer A Friend";
+	        width: 120px;
+	        right: -38px;
+	    }
+	}
+	
+	/* wishlist */
+	
+	a[href^="/wishlist.php"] {
+	    font-size: 0px;
+	
+	    img {
+	        content: url("https://cdn3.emoji.gg/emojis/1546-nature.png");
+	    }
+	
+	    &:hover:after {
+	        content: "View Your Wishlist";
+	        width: 140px;
+	        right: -50px;
+	    }
+	}
 }
 
-#player > tbody > tr.right > td:nth-child(1) > p:has(::before:hover) {
-	visibility: visible;
-}
-
-#player > tbody > tr.right > td:nth-child(1) > p {
-	position: absolute;
-	visibility: hidden;
-	display: block;
-	top: 0;
-	right: -300px;
-	display: block;
-	position: absolute;
-	width: 290px;
-	height: 40px;
-	background-color: #242429;
-	border: 1px solid #323237;
-	color: #f3f3f3;
-	font-weight: bold;
-	padding: 11px;
-	border-radius: 10px;
-	box-shadow: #121214ad 0 5px 12px 0px;
-	animation: .05s ease-in-out 0s 1 tooltipHover;
-	
-	
-	&:hover {
-		filter: brightness(1.2);
-	}
-
-	.text-muted {
-		font-size: 0px;
-		padding: 0px !important;
-	}
-
-	
-	&:hover {
-		cursor: pointer;
-		filter: brightness(1.2);
-	}
-
-
-	a[href^="/wishlist.php"], a[href^="/trading_center.php?s=users&owner="] {
-	}
-
-	
-} */
-
-
-#player > tbody > tr.right > td:nth-child(1) > p:hover::after {
-    content: " ";
-    width: 30px;
-    position: absolute;
-    height: 60px;
-    left: 32px;
-}
-
-#player > tbody > tr.right > td:nth-child(1) > p {
+#player:has(a[href^="/compose.php"]) tbody > tr.right > td:nth-child(1) > p {
 	position: absolute;
 	background-color: #323237;
 	padding: 8px;
@@ -2122,9 +2574,6 @@ td.right_odd>a[href^="/allies.php?p=blocked"] {
 	justify-content: center;
 	z-index: 100;
 	
-	
-	
-
 	.text-muted {
 		font-size: 0px;
 		padding: 0px !important;
@@ -2249,7 +2698,9 @@ td.right_odd>a[href^="/allies.php?p=blocked"] {
 }
 
 span.s-chat-message_content {
+	color: var(--discord-white);
     margin-top:3px;
+	flex: 100%;
 }
 
 span.s-chat-message_content > a {
@@ -2296,13 +2747,14 @@ span.s-chat-message_content > a {
     align-self: auto;
     order: -1;
     margin-top: 2px;
+	font-size: 12px;
 
     color: var(--discord-lightest);
 }
 
 
 .s-chat-message:has(span.s-chat-message_content>a.s-chat__username) {
-    padding-top: 20px;
+    padding-top: 30px;
     
     b {
         font-size: 0px;
@@ -2311,14 +2763,16 @@ span.s-chat-message_content > a {
     
     span.s-chat-message_content .s-chat__username{
         position: absolute;
-        top: 2px;
-        left: 35px;
+        top: 5px;
+        left: 40px;
         font-size: 12px;
         font-weight: normal;
         background-color: var(--discord-blurple-50);
         color: var(--discord-blurple-text);
         border-radius: 4px;
         padding: 1px;
+        z-index: 5;
+        
 
         &:hover {
             background-color: var(--discord-blurple);
@@ -2326,6 +2780,24 @@ span.s-chat-message_content > a {
             text-decoration: none;
         }
     }
+
+	span.s-chat-message_content .s-chat__username::before {
+		content: " ";
+		display: block;
+		position: absolute;
+		z-index: 1;
+		background-image: url("");
+		width: 20px;
+		height: 13px;
+		border-block-width: 2px 0;
+		border-color: var(--discord-border);
+		border-inline-width: 2px 0;
+		border-start-start-radius: 6px;
+		border-style: solid;
+		box-sizing: border-box;
+		bottom: 2px;
+		left: -23px;
+	}
 }
 
 .s-chat__username:hover, span.s-chat-message_content > a:hover {
@@ -2428,7 +2900,7 @@ span.s-chat-message_content > a {
     box-shadow: 0 2px 8px 4px rgba(0, 0, 0, 0.5);
     border: 2px solid var(--discord-border);
     border-radius: 6px;
-    display: block;
+    /* display: block; */
     padding: 6px;
     position: absolute;
     text-align: center;
