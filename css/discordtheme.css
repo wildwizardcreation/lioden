@@ -163,6 +163,7 @@ https://emoji.gg/user/bet.official
     
     --discord-white: #fbfbfb;
     --discord-dark-white: #82838b;
+    --discord-darkest-white: #a9a9b0;
     
     --discord-darkest: #121214;
     --discord-dark: #1a1a1e;
@@ -877,7 +878,38 @@ body {
         }
 }
 
+/* text inputs and dropdowns */
+
+select, textarea, input[type="text"], input[type="password"], input:active, input:target {
+    background-color: var(--discord-mid);
+    color: var(--discord-dark-white);
+    border: var(--discord-border) 1px solid;
+    outline: none;
+    border-radius: 6px;
+    padding: 10px;
+    margin: 5px;
+}
+
+textarea:active, textarea:target, textarea:focus, input:active, input:target, input:focus {
+    color: var(--discord-white) !important;
+    
+    &:placeholder {
+        color: var(--discord-white);
+    }
+}
+
+select {
+    border: none;
+}
+
+textarea[name=desc] {
+    width: calc(100% - 10px) !important;
+    position: relative;
+    
+}
+
 /* comment box to message box */
+
 
 #makeComment {
     margin: 10px 0;
@@ -885,8 +917,8 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    background-color: #242429;
-    border: 1px solid #323237;
+    background-color: var(--discord-mid);
+    border: 1px solid var(--discord-border);
     color: #fbfbfb;
     font-weight: bold;
     height: 60px;
