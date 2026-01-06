@@ -281,8 +281,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, h5 {
 	.navbar-default {
 		display:flex;
 	    flex-direction: column;
-		width:230px;
+		width:260px;
 		background:none;
+		/*! padding: 5px; */
+		/*! margin: 0 10px; */
 	}
 	
 	.navbar-collapse {
@@ -355,6 +357,15 @@ body {
     border: 1px solid #29292d;
     width: 100%;
     margin: 0px;
+}
+
+.main.container > div.row:nth-child(1) {
+    flex-shrink: 1;
+    /*! padding: 0 15px; */
+}
+
+.main.container > div.row:nth-child(2) {
+    flex: 1;
 }
 
 .col-md-9 {
