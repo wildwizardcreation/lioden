@@ -3,6 +3,134 @@
     --smilus-tag: url(https://www.lioden.com/images/tags/0/0/57.png);
 }
 
+#pageContainer {
+  /* background-color: #000; */
+}
+
+.lineage-holder {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  justify-content: center;
+  gap: 1em;
+}
+
+.lion-flip-box {
+  display: flex;
+  width: 150px;
+  height: 100px;
+  /* background-color: #000; */
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  perspective: 1000px;
+
+  .flip-box-inner > .flip-box-front {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 1em;
+    width: 80px;
+    height: 80px;
+  }
+
+  .flip-box-inner > .flip-box-back {
+    background-color: #00ca4e;
+    transform: rotateY(180deg);
+  }
+
+  &.hiatum {
+    .flip-box-inner > .flip-box-front {
+      background-image: url(https://wildwizardcreation.github.io/lioden/assets/icons/lion.png);
+      /* background-color: black; */
+    }
+  }
+
+  &.odillio {
+    .flip-box-inner > .flip-box-front {
+    background-image: url(https://wildwizardcreation.github.io/lioden/assets/icons/lightning-storm.png);
+      background-color: black;
+    }
+  }
+
+  &.cara {
+    .flip-box-inner > .flip-box-front {
+    background-image: url(https://wildwizardcreation.github.io/lioden/assets/icons/dead-wood.png);
+      background-color: black;
+    }
+  }
+
+  &.aba {
+    .flip-box-inner > .flip-box-front {
+    background-image: url(https://wildwizardcreation.github.io/lioden/assets/icons/peace-dove.png);
+      background-color: black;
+    }
+  }
+
+  &.cass {
+    .flip-box-inner > .flip-box-front {
+    background-image: url(https://wildwizardcreation.github.io/lioden/assets/icons/ghost-ally.png);
+      background-color: black;
+    }
+  }
+}
+
+.flip-box-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+
+  border-image-slice:
+  30 fill;
+  border-image-width:
+  20px 20px 20px 20px;
+  border-image-outset:
+  0px 0px 0px 0px;
+  border-image-repeat:
+  repeat;
+
+  border-image-source: url(/assets/borders/stamp.png);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.lion-flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.lion-flip-box.hiatum {
+ 
+}
+
+.lion-flip-box. {
+}
+
+.lion-flip-box. {
+}
+
+.lion-flip-box. {
+}
+
+.lion-flip-box.cass {
+}
+
+
 .tags {
   display: flex;
   flex-direction: row;
@@ -481,4 +609,442 @@
   background: #e9b50b;
   transform: translateZ(10px) translateX(-5px) translateY(-5px);
   box-shadow: 5px 5px 0 0 #000;
+}
+
+
+#fraOrganizationBlock {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+}
+
+#fraCaveList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    /* flex-basis: 21%; */
+    /* width: 100%; */
+}
+
+#fraOrganizationBlock  a {
+    box-sizing: border-box;
+    display: block;
+}
+
+/* Fcodingx */
+/* edits by wizard  */
+
+.col-md-4.col-xs-6.center {
+    width: 190px;
+    height: 120px;
+    flex: 1 0 30%;
+    /* align-self: center; */
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .4s;
+}
+
+.col-md-4.col-xs-6.center:hover {
+  margin-bottom: 100px;
+  z-index: 100;
+}
+
+.col-md-4.col-xs-6.center>a {
+  width: 190px;
+  height: 120px;
+  padding: 0.5rem;
+  background: rgba(198, 198, 198, 0.34);
+  border-radius: 8px;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.440);
+  border-left: 2px  rgba(255, 255, 255, 0.545) outset;
+  box-shadow: -20px 20px 30px rgba(0, 0, 0, 0.280);
+  transform: skewX(10deg);
+  transition: all .4s;
+  overflow: hidden;
+  color: white;
+}
+
+
+.col-md-4.col-xs-6.center>a:hover {
+  height: 200px;
+  transform: skew(0deg) scale(1.3) translateY(40px);
+  box-shadow: -10px 18px 20px -5px rgba(0, 0, 0, 0.280);
+  z-index: 100;
+}
+
+.xcard {
+  width: 190px;
+  height: 120px;
+  padding: 0.5rem;
+  background: rgba(198, 198, 198, 0.34);
+  border-radius: 8px;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.440);
+  border-left: 2px  rgba(255, 255, 255, 0.545) outset;
+  box-shadow: -40px 50px 30px rgba(0, 0, 0, 0.280);
+  transform: skewX(10deg);
+  transition: .4s;
+  overflow: hidden;
+  color: white;
+}
+
+.xcard:hover {
+  height: 254px;
+  transform: skew(0deg);
+}
+
+.align {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-self: flex-start;
+}
+
+.red {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ff605c;
+  box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
+}
+
+.yellow {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ffbd44;
+  box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
+}
+
+.green {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #00ca4e;
+  box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
+}
+
+.card h1 {
+  text-align: center;
+  margin: 1.3rem;
+  color: rgb(218, 244, 237);
+  text-shadow: -10px 5px 10px rgba(0, 0, 0, 0.573);
+}
+
+
+/* energy boost button test */
+
+.sidebar {
+  background-color: #000;
+}
+
+form:has(input[name="freeEnergyBoost"]) {
+  .panel {
+    border: none !important;
+    margin: 0px;
+  }
+
+  input {
+    background: none;
+    text-shadow: none;
+    border: none;
+    font-size: 0px;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+form:has(input[name="freeEnergyBoost"]) {
+  --stone-50: #fafaf9;
+  --stone-800: #292524;
+  --yellow-400: #facc15;
+
+  font-family: "Rubik", sans-serif;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  line-height: 1;
+  font-size: 1rem;
+  border-radius: 1rem;
+  outline: 2px solid transparent;
+  outline-offset: 6px;
+  color: var(--stone-50);
+  margin: 2.5em auto;
+  width: fit-content;
+
+  &:active {
+    outline-color: var(--yellow-400);
+  }
+
+  &:focus-visible {
+    outline-color: var(--yellow-400);
+    outline-style: dashed;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    height: 200%;
+    max-height: 100px;
+    aspect-ratio: 1;
+    margin: auto;
+    background: white;
+    clip-path: polygon(
+      100% 50%,
+      91.48% 56.57%,
+      97.55% 65.45%,
+      87.42% 69.07%,
+      90.45% 79.39%,
+      79.7% 79.7%,
+      79.39% 90.45%,
+      69.07% 87.42%,
+      65.45% 97.55%,
+      56.57% 91.48%,
+      50% 100%,
+      43.43% 91.48%,
+      34.55% 97.55%,
+      30.93% 87.42%,
+      20.61% 90.45%,
+      20.3% 79.7%,
+      9.55% 79.39%,
+      12.58% 69.07%,
+      2.45% 65.45%,
+      8.52% 56.57%,
+      0% 50%,
+      8.52% 43.43%,
+      2.45% 34.55%,
+      12.58% 30.93%,
+      9.55% 20.61%,
+      20.3% 20.3%,
+      20.61% 9.55%,
+      30.93% 12.58%,
+      34.55% 2.45%,
+      43.43% 8.52%,
+      50% 0%,
+      56.57% 8.52%,
+      65.45% 2.45%,
+      69.07% 12.58%,
+      79.39% 9.55%,
+      79.7% 20.3%,
+      90.45% 20.61%,
+      87.42% 30.93%,
+      97.55% 34.55%,
+      91.48% 43.43%
+    );
+
+    animation: star-rotate 4s linear infinite;
+    opacity: 0.1;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+
+  & > div {
+    padding: 2px;
+    border-radius: 1rem;
+    background-color: var(--yellow-400);
+    transform: translate(-4px, -4px);
+    transition: all 150ms ease;
+    box-shadow:
+      0.5px 0.5px 0 0 var(--yellow-400),
+      1px 1px 0 0 var(--yellow-400),
+      1.5px 1.5px 0 0 var(--yellow-400),
+      2px 2px 0 0 var(--yellow-400),
+      2.5px 2.5px 0 0 var(--yellow-400),
+      3px 3px 0 0 var(--yellow-400),
+      0 0 0 2px var(--stone-800),
+      0.5px 0.5px 0 2px var(--stone-800),
+      1px 1px 0 2px var(--stone-800),
+      1.5px 1.5px 0 2px var(--stone-800),
+      2px 2px 0 2px var(--stone-800),
+      2.5px 2.5px 0 2px var(--stone-800),
+      3px 3px 0 2px var(--stone-800),
+      3.5px 3.5px 0 2px var(--stone-800),
+      4px 4px 0 2px var(--stone-800),
+      0 0 0 4px var(--stone-50),
+      0.5px 0.5px 0 4px var(--stone-50),
+      1px 1px 0 4px var(--stone-50),
+      1.5px 1.5px 0 4px var(--stone-50),
+      2px 2px 0 4px var(--stone-50),
+      2.5px 2.5px 0 4px var(--stone-50),
+      3px 3px 0 4px var(--stone-50),
+      3.5px 3.5px 0 4px var(--stone-50),
+      4px 4px 0 4px var(--stone-50) !important; 
+
+    form:has(input[name="freeEnergyBoost"]):hover & {
+      transform: translate(0, 0);
+      box-shadow:
+        0 0 0 0 var(--yellow-400),
+        0 0 0 0 var(--yellow-400),
+        0 0 0 0 var(--yellow-400),
+        0 0 0 0 var(--yellow-400),
+        0 0 0 0 var(--yellow-400),
+        0 0 0 0 var(--yellow-400),
+        0 0 0 2px var(--stone-800),
+        0 0 0 2px var(--stone-800),
+        0 0 0 2px var(--stone-800),
+        0 0 0 2px var(--stone-800),
+        0 0 0 2px var(--stone-800),
+        0 0 0 2px var(--stone-800),
+        0 0 0 2px var(--stone-800),
+        0 0 0 2px var(--stone-800),
+        0 0 0 2px var(--stone-800),
+        0 0 0 4px var(--stone-50),
+        0 0 0 4px var(--stone-50),
+        0 0 0 4px var(--stone-50),
+        0 0 0 4px var(--stone-50),
+        0 0 0 4px var(--stone-50),
+        0 0 0 4px var(--stone-50),
+        0 0 0 4px var(--stone-50),
+        0 0 0 4px var(--stone-50),
+        0 0 0 4px var(--stone-50) !important;
+    }
+
+    & > div {
+      position: relative;
+      pointer-events: none;
+      border-radius: calc(1rem - 2px);
+      background-color: var(--stone-800);
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        inset: 0;
+        border-radius: 1rem;
+        opacity: 0.1;
+        background-image: radial-gradient(
+            rgb(255 255 255 / 80%) 20%,
+            transparent 20%
+          ),
+          radial-gradient(rgb(255 255 255 / 100%) 20%, transparent 20%);
+        background-position:
+          0 0,
+          4px 4px;
+        background-size: 8px 8px;
+        mix-blend-mode: hard-light;
+        box-shadow: inset 0 0 0 1px var(--stone-800);
+        animation: dots 0.4s infinite linear;
+        transition: opacity 150ms ease;
+      }
+
+      &::after {
+        content: "Free Energy Boost!";
+      }
+
+      & > input {
+        position: relative;
+        display: flex;
+        align-items: center;
+        filter: drop-shadow(0 -1px 0 var(--stone-800));
+
+        &:hover {
+          filter: drop-shadow(0 -1px 0 rgba(255, 255, 255, 0.1));
+        }
+
+        &:active {
+          transform: translateY(2px);
+        }
+      }
+    }
+  }
+}
+
+@keyframes star-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dots {
+  0% {
+    background-position:
+      0 0,
+      4px 4px;
+  }
+  100% {
+    background-position:
+      8px 0,
+      12px 4px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .button {
+    &:active,
+    &:focus-visible {
+      outline-color: var(--yellow-400);
+    }
+  }
+}
+
+/* PROGRESS BARS */
+
+.progress {
+  --roundness: 0.5rem;
+  --stone-50: #fafaf9;
+  --stone-800: #292524;
+  --yellow-400: #facc15;
+  --white-30: rgba(255, 255, 255, 0.3);
+  --white-80: rgba(255, 255, 255, 0.8);
+  --white-100: rgba(255, 255, 255, 1);
+
+  width: 100%;
+  max-width: 300px;
+  position: relative;
+  background-color: var(--stone-800);
+  border: 2px solid var(--stone-800);
+  border-radius: var(--roundness);
+  outline: 2px solid var(--stone-50);
+  outline-offset: 2px;
+  height: 2em;
+}
+
+.progress div:nth-child(2) {
+  filter:drop-shadow(0 1px 0 rgb(255, 255, 255))
+        drop-shadow(0 -1px 0 rgb(255, 255, 255))
+        drop-shadow(1px 0 0 rgb(255, 255, 255))
+        drop-shadow(-1px 0 0 rgb(255, 255, 255));
+}
+
+.progress div{
+  height: 1.8em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-bar {
+  border: 2px solid var(--white-30);
+  border-radius: calc(var(--roundness) - 2px);
+  position: relative;
+  overflow: hidden;
+  transition: all 1000ms cubic-bezier(0.5, 0, 0.4, 1);
+}
+
+.progress-bar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 0.375rem;
+  opacity: 0.5;
+  background-image: radial-gradient(var(--white-80) 20%, transparent 20%),
+    radial-gradient(var(--white-100) 20%, transparent 20%);
+  background-position:
+    0 0,
+    4px 4px;
+  background-size: 8px 8px;
+  mix-blend-mode: hard-light;
+  animation: dots 0.5s infinite linear;
 }
