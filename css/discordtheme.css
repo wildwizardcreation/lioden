@@ -174,7 +174,7 @@ https://emoji.gg/user/bet.official
     
     --discord-buttons: #323237;
 
-    --discord-link: #5197ed;
+    --discord-link: #61B0FE;
 
     --discord-blurple: #5865f2;
     --discord-blurple-50: #282b50;
@@ -403,6 +403,14 @@ body {
     }
 }
 
+#pageContainer > div.floatright {
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 33px;
+	margin-right: 25px;
+}
+
 .breadcrumb-item.active {
     font-size: 0px;
 }
@@ -623,10 +631,16 @@ body {
 
 /* main page */
 #pageContainer {
-    >h1 {
+    >
+    h1 {
         display: none;
-        visibility: hidden;
-    }
+    visibility: hidden;
+    position: relative;
+    position: relative;    }
+;
+    position: r;
+    position: relative;
+    position: r;
 }
 
 /* profile contents (move to user "profile" ?) */
@@ -640,7 +654,14 @@ body {
 }
 
 #fraProfileContent {
+	a {
+		color: var(--discord-link);
+		font-weight: normal;
+	}
 
+	a:hover {
+		text-decoration: underline;
+	}
 }
 
 /* topbar */
@@ -925,7 +946,7 @@ textarea[name=desc] {
 #makeComment {
     margin: 10px 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     position: relative;
     background-color: var(--discord-mid);
@@ -985,7 +1006,7 @@ textarea[name=desc] {
     font-weight: lighter;
     color: #757575;
     top: 17px;
-    left: 20px;
+    left: 35px;
 }
 
 input#postComment{
@@ -999,8 +1020,8 @@ input#postComment{
     min-width: 24px;
     min-height: 24px;
     padding: 0;
-    margin-right: 32px;
-	transition: background-image linear .1s;
+    margin-right: 20px;
+    transition: background-image linear .1s;
 }
 
 input#postComment:hover {
@@ -1038,6 +1059,7 @@ input#postComment:hover {
 }
 .comment .commentText {
     flex-grow: 4;
+    margin-left: 6px;
 }
 .comment .bad {
     padding: 2px 7px !important;
@@ -1078,6 +1100,23 @@ input#postComment:hover {
 .comment:last-child {
 	display: block;
 	color: var(--discord-dark-white);
+	margin-left: 1em;
+	/* width: 80%; */
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	.commentText {
 		display: inline-block;
@@ -1093,12 +1132,16 @@ input#postComment:hover {
 
     div {
         padding: 5px 0px;
+        
+        
+        
+        
 
         img {
 			display: inline-block;
-            margin: 3px 0px;
-			max-width: 23px;
-        }
+			margin: 3px 0px;
+			/* max-width: 23px; */
+			}
     }
 
     &::before {
@@ -1310,7 +1353,7 @@ div.cave-grid:first-letter {
 	position: absolute;
 	font-size: 3rem;
 	font-weight: 500;
-	top: -275px;
+	top: -62%;
 	left: 30px;
 	padding: 0 10px;
 	background: var(--discord-dark);
@@ -1879,7 +1922,136 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
 			display: block;
 			left: 150px;
 			bottom: 0px;
-			width: 100px;
+			width: 115px;
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 			
 			
 			b {
@@ -1907,7 +2079,7 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
 				right: 0px;
 				/* top: 0; */
 				background-color: var(--lion-primary);
-				margin-left: -33px;
+				margin-left: -2.4em;
 			}
 		}
 
@@ -2441,8 +2613,9 @@ td.right_odd>a[href^="/allies.php?p=blocked"] {
     filter: brightness(2);
 }
 
+/* specified topbar and pagecontainer to avoid conflicts with sidebar links */
 
-
+.container.topbar, #pageContainer {
 
 /* long buttons */
 
@@ -2705,6 +2878,8 @@ div>a[href^="/trading_center.php"] {
 	
 }
 
+}
+
 /* CHAT BOX ADJUSTMENTS */
 
 #btnLoadNewMessages {
@@ -2734,6 +2909,8 @@ div>a[href^="/trading_center.php"] {
 
 #chatMessageList {
     scrollbar-color: var(--discord-light) transparent;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .s-chat-message:nth-child(even), .s-chat-message:nth-child(odd) {
@@ -2778,7 +2955,7 @@ span.s-chat-message_content > a {
     flex-shrink: 0;
     align-self: auto;
     order: -1;
-    width: auto;
+    width: 100%;
 }
 
 .s-chat-sidebar .s-chat-message_timestamp {
@@ -3030,9 +3207,9 @@ a[href="/territory.php?id=414436"]::after {
     width: auto;
     aspect-ratio: 1 / 1;
     background-size: cover;
-    margin-bottom: -2px;
-    margin-left: 3px;
+    margin: 5px;
     background-image: url(https://cdn3.emoji.gg/emojis/3773-active-developer-badge-animated.gif);
+    margin-bottom: -2px;
 }
 
 .comment small.text-muted > a[href="/territory.php?id=414436"] {
