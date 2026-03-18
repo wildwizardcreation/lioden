@@ -608,23 +608,28 @@ body {
     
 }
 
+
+
 /* buttons */
-.select-control, button.button, input[type="button"], input[type="submit"], input[type="reset"] {
+.select-control, 
+button.button, 
+input[type="button"], input[type="submit"], input[type="reset"], 
+div.col.col-sm-4 > a > div {
     background: #5865f2;
-    color: white;
+    color: var(--discord-white);
     padding: 6px;
     border-radius: 5px;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: bold;
     text-shadow: none;
     border: none;
     
     &:hover {
         background: #4654c0;
-        color: white;
+        color: currentColor;
         padding: 6px;
         border-radius: 5px;
-        font-size: 10px;
+        font-size: 12px;
         font-weight: bold;
         text-shadow: none;
         border: none;
@@ -670,6 +675,260 @@ body {
     vertical-align: middle;
     min-height: 24px;
     min-width: 24px;
+}
+
+
+/* tables */
+
+.table {
+	border: 1px solid var(--discord-border);
+	border-radius: 6px;
+	display: block;
+}
+
+.table tbody {
+	width: 100%;
+	
+	tr {
+		/* background: var(--discord-light); */
+	}
+
+	th, .right_odd, td, td.left {
+		background: none;
+	}
+
+	td.top, td.bottom {
+		background: var(--discord-lighter);
+	}
+}
+
+/* feed all play all */
+
+center > div.row:has(div.feature) {
+	display: flex;
+	align-items: center;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	height: 12em;
+	position: relative;
+	gap: 1em;
+	
+	br {
+		display: none;
+	}
+	
+
+	.col-sm-6.col-xs-12 {
+		display: block;
+		float: none;
+		height: 100%;
+		border: 1px solid var(--discord-border);
+		border-radius: 6px;
+	}
+	
+	form {
+		display: contents;
+	}
+	
+	.feature {
+		display: flex;
+		position: relative;
+		background: none;
+		border: none;
+		width: 100%;
+		height: 100%;
+		/* margin: .5em; */
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		align-content: space-around;
+		
+
+		h3 {
+			width: 100%;
+		}
+	}
+	
+}
+
+/* allies and clans tables */
+
+#allies {
+
+	tbody > tr > td.right {
+		width: 31% !important;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+}
+
+#allies, #clans {
+	
+	tbody {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		/* gap: 1em; */
+	}
+
+	tr {
+		width: 100%;
+	}
+
+	tbody > tr:has(td.right) {
+		display: contents;
+		height: 100%;
+	}
+
+	tbody > tr:has(td.left) {
+		display: none;
+	}
+
+	tbody > tr > td.right {
+		background: var(--discord-mid);
+		border: 1px solid var(--discord-border);
+		border-radius: 6px;
+		height: 7.5em;
+		display: flex;
+		flex-wrap: nowrap;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: .5em;
+		overflow: hidden;
+		
+		
+		>br {
+			display: none;
+		}
+	}
+
+	td.top, td.bottom {
+		width: 100%;
+		display: block;
+		text-align: left;
+	}
+}
+
+#clans {
+	tbody > tr > td.right {
+		height: fit-content;
+		width: 31% !important;
+
+		br {
+			display: none;
+		}
+		
+		&:hover {
+			background: var(--discord-light);
+			border: 1.5px solid var(--discord-light-border);
+		}
+		
+		> a.bigger {
+			width: 100%;
+			height: fit-content;
+			/* display: flex; */
+			flex-direction: column;
+			text-align: left;
+			
+			padding: 0px;
+			padding-left: 18px;
+			padding-bottom: 10px;
+			overflow: hidden;
+		
+			img {
+				display: block;
+				position: relative;
+				object-fit: cover;
+				margin-left: -19px;
+				margin-bottom: 1em;
+				width: calc(100% + 20px) !important;
+				height: 100% !important;
+			}
+		}
+	}
+}
+
+/* extra table boxes */
+
+div.row.dynastycollection {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	div.dynastylist {
+		a {
+			display: block;
+			background: var(--discord-mid);
+			border: 1px solid var(--discord-border);
+			border-radius: 6px;
+			overflow: hidden;
+		}
+
+		a:hover {
+			background: var(--discord-light);
+			border: 1.5px solid var(--discord-light-border);
+		}
+
+		h3 {
+			margin: 1rem !important;
+		}
+
+		img {
+			max-width: 100% !important;
+			width: 100%;
+		}
+
+
+		
+		div.left {
+			display: contents;
+		}
+		
+	}
+}
+
+
+#editdetailspanel {
+	width: 100%;
+	
+	> table {
+		width: 100% !important;
+	}
+
+	> table > tbody {
+		display: flex;
+		flex-direction: column;
+		padding-left: 1em;
+	}
+
+	> table > tbody > tr {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-items: center;
+		
+
+		.left {
+			width: 25%;
+			/* padding-top: 1em; */
+		}
+		
+		.right {
+			width: 100%;
+
+			input {
+				margin: 0;
+				width: 80%;
+			}
+		}
+
+	}
 }
 
 /* main page */
@@ -1274,8 +1533,6 @@ small.text-muted {
 	
 	div.cave-grid,
 	div.mound-grid {
-		/* display: flex; */
-		flex-direction: column;
 		border-radius: 6px;
 		overflow: hidden;
 		text-overflow: ellipsis;
