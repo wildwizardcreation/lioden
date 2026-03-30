@@ -63,3 +63,13 @@
         justify-self: flex-start;
     }
 }
+
+
+.goals {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+
+    img {
+        width: 33%;    }
+}
