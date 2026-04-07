@@ -1,9 +1,22 @@
-#fraProfileContent * {
+#fraProfileContent {
+    * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+    }
+
+    br {
+        display: inline !important;
+    }
 }
+
+
+#pageContainer {
+    br {
+        display: none;
+    }
+}
+
 
 .tags {
     display: flex;
@@ -44,9 +57,12 @@
     min-height: 300px;
     justify-content: center;
     
-    
-    
-    
+    .name-guide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
     
     
     .me-guide {
@@ -72,4 +88,38 @@
 
     img {
         width: 33%;    }
+}
+
+
+/* if/else for if the feed all is visible */
+
+#pageContainer:has(div.row>form[action="territory.php"] div.feature > input[name="playall"]){
+
+    /* actual feed all row styling */
+    div.row:has(>form[action="territory.php"] div.feature > input[name="playall"]) {
+        position: absolute;
+        top: 0;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+
+        >form {
+            width: 50%;
+        }
+
+        .col-sm-6.col-xs-12 {
+            width: 100%;
+        }
+
+        span.xsmall {
+            display: none;
+        }
+    }
+
+    /* pageContainer adjustments so it fits properly */
+    >h1::before {
+        content: " ";
+        display: block;
+        height: 40px;
+    }
 }
