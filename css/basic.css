@@ -96,7 +96,7 @@
 #pageContainer:has(div.row>form[action="territory.php"] div.feature > input[name="playall"]){
 
     /* actual feed all row styling */
-    div.row:has(>form[action="territory.php"] div.feature > input[name="playall"]) {
+    /* div.row:has(>form[action="territory.php"] div.feature > input[name="playall"]) {
         position: absolute;
         top: 70px;
         display: flex;
@@ -114,12 +114,66 @@
         span.xsmall {
             display: none;
         }
-    }
+    } */
 
     /* pageContainer adjustments so it fits properly */
-    >h1::before {
+    /* >h1::before {
         content: " ";
         display: block;
         height: 80px;
+    } */
+}
+
+div.row:has(>form[action="territory.php"] div.feature > input[name="playall"]) {
+    /* position: absolute; */
+    /* top: 70px; */
+    display: flex;
+    flex-direction: row;
+    /* width: 100%; */
+    margin: 15px 0;
+    
+
+    >form {
+        width: 50%;
+    }
+
+    .col-sm-6.col-xs-12 {
+        width: 100%;
+    }
+
+    span.xsmall {
+        display: none;
+    }
+}
+
+#pageContainer > center {
+    display: flex;
+    flex-direction: column;
+
+    .alert {
+        order: -1;
+    }
+
+    div.row:has(>form[action="territory.php"] div.feature > input[name="playall"]) {
+        order: -2;
+    }
+}
+
+#pageContainer > center {
+    display: contents;
+}
+
+#pageContainer {
+    display: flex;
+    flex-direction: column;
+    
+
+    ol.breadcrumb {
+        order: -99;
+    }
+    
+    >div.floatright {
+        order: -99;
+        width: auto !important;
     }
 }
