@@ -98,7 +98,7 @@
     /* actual feed all row styling */
     div.row:has(>form[action="territory.php"] div.feature > input[name="playall"]) {
         position: absolute;
-        top: 0;
+        top: 70px;
         display: flex;
         flex-direction: row;
         width: 100%;
@@ -120,6 +120,6 @@
     >h1::before {
         content: " ";
         display: block;
-        height: 40px;
+        height: 80px;
     }
 }
