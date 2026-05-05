@@ -40,7 +40,7 @@
         &::before {
             content: " ";
             position: absolute;
-            bottom: 0;
+            top: 0;
             display: block;
             /* height: 50px; */
             width: 170px;
