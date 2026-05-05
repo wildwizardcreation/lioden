@@ -28,9 +28,13 @@
     display: flex;
     flex-direction: row;
     width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
 
     img {
-        max-width: 100%;
+        max-width: 45%;
     }
 }
 
