@@ -33,14 +33,38 @@
     padding: 1em;
     gap: 1em;
 
-    div.inara, div.nadira {
+    div {
         /* display: contents; */
         position: relative;
+
+        &::before {
+            content: " ";
+            position: absolute;
+            bottom: 0;
+            display: block;
+            /* height: 50px; */
+            width: 170px;
+            aspect-ratio: 1;
+            z-index: 5;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
     }
 
+    div.inara::before {
+        background-image: url(https://wildwizardcreation.github.io/lioden/assets/wardrobe/inara_portrait_render.png);
+        right: 0;
+    }
+
+    div.nadira::before {
+        background-image: url(https://wildwizardcreation.github.io/lioden/assets/wardrobe/nadira_portrait_render.png);
+    }
+    
     img {
         width: 100%;
         min-width: 0;
+        display: block;
+        z-index: 4;
     }
 }
 
