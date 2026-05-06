@@ -1,6 +1,6 @@
 #fraProfileContent {
     * {
-    box-sizing: border-box;
+        box-sizing: border-box;
     }
 
     br {
@@ -14,6 +14,54 @@
         display: none;
     }
 }
+
+
+#pageContainer>center {
+    display: flex;
+    flex-direction: column;
+
+    .alert {
+        order: -1;
+    }
+}
+
+
+/* typical css credit if the page has the bookmark button */
+
+#pageContainer:has(ol.breadcrumb + div.floatright) {
+    ol.breadcrumb+div.floatright {
+        position: relative;
+
+        &::before {
+            content: "CSS by WildWizard #414436";
+            position: absolute;
+            left: -125px;
+            top: 5px;
+            width: fit-content;
+            display: block;
+        }
+    }
+}
+
+/* css credit if the page does not have the bookmark button */
+
+#pageContainer:not(:has(ol.breadcrumb + div.floatright)) {
+    ol.breadcrumb {
+        position: relative;
+
+        &::before {
+            content: "CSS by WildWizard #414436";
+            /* recommended that this is replaced with a var() just to avoid retyping */
+            position: absolute;
+            right: 15px;
+            top: 7px;
+            width: fit-content;
+            display: block;
+        }
+    }
+}
+
+
 
 
 .tags {
@@ -34,7 +82,6 @@
     gap: 1em;
 
     div {
-        /* display: contents; */
         position: relative;
 
         &::before {
@@ -59,7 +106,7 @@
     div.nadira::before {
         background-image: url(https://wildwizardcreation.github.io/lioden/assets/wardrobe/nadira_portrait_render.png);
     }
-    
+
     img {
         width: 100%;
         min-width: 0;
@@ -100,24 +147,24 @@
     flex-wrap: nowrap;
     min-height: 300px;
     justify-content: center;
-    
+
     .name-guide {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
-    
-    
+
+
     .me-guide {
         justify-self: end;
     }
-    
+
 
     div {
         display: block;
     }
-    
+
     h2 {
         display: block;
         justify-self: flex-start;
@@ -131,93 +178,46 @@
     width: 95%;
 
     img {
-        width: 33%;    }
+        width: 33%;
+    }
 }
 
+#pageContainer>center
+/* specificity to prevent performance issues  */
+div.row:has(>form[action="territory.php"]
 
-/* if/else for if the feed all is visible */
-
-#pageContainer:has(div.row>form[action="territory.php"] div.feature > input[name="playall"]){
-
-    /* actual feed all row styling */
-    /* div.row:has(>form[action="territory.php"] div.feature > input[name="playall"]) {
-        position: absolute;
-        top: 70px;
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-
-        >form {
-            width: 50%;
-        }
-
-        .col-sm-6.col-xs-12 {
-            width: 100%;
-        }
-
-        span.xsmall {
-            display: none;
-        }
-    } */
-
-    /* pageContainer adjustments so it fits properly */
-    /* >h1::before {
-        content: " ";
-        display: block;
-        height: 80px;
-    } */
-}
-
-div.row:has(>form[action="territory.php"] div.feature > input[name="playall"]) {
-    /* position: absolute; */
-    /* top: 70px; */
+    /* this is the div.row we're styling */
+    div.feature > input[name="playall"]) {
+    /* just making sure the playall input exists */
     display: flex;
     flex-direction: row;
-    /* width: 100%; */
     margin: 15px 0;
-    
+    gap: 15px;
+    justify-content: space-around;
+    order: -2;
+    /* reordering to the top of the page. only works if #pageContainer > center is 'display: flex'ed */
+
+    &::before,
+    &::after {
+        display: none !important;
+        /* kill the default layout pseudos */
+    }
 
     >form {
         width: 50%;
+        /* the forms that hold the feature elements */
     }
 
     .col-sm-6.col-xs-12 {
-        width: 100%;
+        /* the bootstrap parent */
+        display: contents;
+        /* using the div.feature as the main element */
     }
+
 
     span.xsmall {
+        /* the tip text. we don't need this! we know how to use these buttons! */
         display: none;
     }
-}
 
-#pageContainer > center {
-    display: flex;
-    flex-direction: column;
-
-    .alert {
-        order: -1;
-    }
-
-    div.row:has(>form[action="territory.php"] div.feature > input[name="playall"]) {
-        order: -2;
-    }
-}
-
-#pageContainer > center {
-    display: contents;
-}
-
-#pageContainer {
-    display: flex;
-    flex-direction: column;
-    
-
-    ol.breadcrumb {
-        order: -99;
-    }
-    
-    >div.floatright {
-        order: -99;
-        width: auto !important;
-    }
 }
