@@ -25,6 +25,28 @@
     }
 }
 
+/* the page *does not* have the edit details panel */
+
+#pageContainer:not(:has(#editdetailspanel)) {
+
+    .alert-danger {
+        display: none;
+    }
+
+    div.ads {
+        display: none;
+    }
+}
+
+/* the page *does* have the edit details panel */
+/* this would usually just be "default", but it's here for the sake of argument/example */
+
+#pageContainer:has(#editdetailspanel) {
+
+    div.ads {
+        display: block;
+    }
+}
 
 /* typical css credit if the page has the bookmark button */
 
