@@ -4,7 +4,7 @@
     }
 
     br {
-        display: none !important;
+        /* display: none !important; */
     }
 }
 
@@ -192,8 +192,9 @@
         justify-self: flex-start;
     }
 
-    br {
-        display: inline-block !important;
+    
+    div > br {
+        display: inline !important;
     }
 }
 
