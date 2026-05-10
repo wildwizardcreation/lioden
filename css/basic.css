@@ -248,3 +248,330 @@ div.row:has(>form[action="territory.php"]
     }
 
 }
+
+
+/* combo breeder box testing */
+
+/* h1, h2, h3, h4, h5, div, a, p{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+.page-doll.horizon {
+  z-index: 999;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  &::before {
+    content: " ";
+    display: block;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-image: url(https://wildwizardcreation.github.io/lioden/assets/horizon_app.png);
+    margin: 0 auto;
+    z-index: 1;
+  }
+  
+  &::after {
+      content: " ";
+      display: block;
+      position: relative;
+      background-image: url(https://wildwizardcreation.github.io/lioden/assets/buttons/horizonbutton.png);
+      width: 150px;
+      height: 50px;
+      margin-top: -5px;
+    }
+}
+
+span.select-span {
+  user-select: all;
+}
+
+.horizon-box {
+  background-image: url(https://wildwizardcreation.github.io/lioden/assets/backgrounds/horizon_bg.png);
+  background-size: cover;
+  background-position: center;
+  min-height: 200px;
+  min-width: 200px;
+  /* margin-left: calc(1em + 10px) !important; */
+}
+
+.heh-box {
+  background: url(https://wildwizardcreation.github.io/lioden/assets/backgrounds/heh_bg.png);
+  background-size: cover;
+  background-position: top center;
+  min-height: 200px;
+  min-width: 200px;
+
+  /* &:after {
+    content: " ";
+    width: 85px;
+    height: 85px;
+    position: absolute;
+    background-image: url(https://wildwizardcreation.github.io/lioden/assets/heh_app.png);
+    background-size: contain;
+    top: -25px;
+    right: -25px;
+  } */
+}
+
+a:has(.count) {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.count {
+  margin-left: 6px;
+  position: relative;
+  vertical-align: baseline;
+  top: -8px;
+  display: inline-block;
+
+  img {
+    vertical-align: middle;
+    image-rendering: pixelated;
+    height: 30px;
+  }
+
+  &::before {
+    content: "";
+    border-bottom: 2px solid black;
+    width: calc(100% + 10px);
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: -1px;
+  }
+}
+
+.heh-box, .horizon-box {
+
+  h1, h2 {
+    user-select: all;
+    
+  }
+
+  a {
+    color: black;
+    font-weight: bold;
+    &:hover {
+    text-shadow: -1px -1px 0px white, 
+                  1px 1px 0px white, 
+                  -1px 1px 0px white, 
+                  1px -1px 0px white;
+}
+  }
+  
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin: 1em;
+  border-radius: 2px;
+  width: 545px;
+  min-width: 435px;
+
+  border: 1px solid black
+
+}
+
+.inner-box {
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.heh-box:before, .horizon-box:before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  background: white;
+  border-radius: 2px;
+  border: 1px solid black;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+}
+
+.factor-flex {
+
+  min-width: 100%;
+  /* background: blue; */
+  display: flex;
+  flex-direction: column;
+  /* gap: 5px; */
+  
+
+}
+
+.base-info {
+  text-align: center;
+
+  h4 {
+    font-size: 20px;
+    
+  }
+
+  .links {
+    width: 100%;
+    text-align: center;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    gap: 5px;
+  }
+
+  div[class^="links-"] {
+    text-align: center;
+    width: 245px;
+    height: 75px;
+    
+    display:grid; 
+    place-items:center;
+    align-content: center;
+    
+    border-radius: 10px;
+    border: 3px solid white;
+
+    span {
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+      flex-direction: row;
+      justify-content: center;
+
+      a {
+        text-wrap: nowrap;
+        
+        &:last-child::before {
+          content:"|";
+          margin: 0 .5rem;
+          cursor: default;
+          text-shadow: none;
+        }
+      }
+      
+    }
+    
+  }
+}
+
+.factor-info {
+  margin-left: 20px;
+}
+
+a:has(.count), .arrow-right {
+  &:hover::after {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    background-image: url(https://wildwizardcreation.github.io/lioden/assets/pixels/arrow_right.gif);
+    background-size: contain;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    margin-top: 2px;
+    image-rendering: pixelated;
+  }
+}
+
+.factor-box {
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  background: white;
+  margin: 5px;
+  padding: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap:wrap;
+
+  h2 {
+    width: 100%;
+    /* text-align: center; */
+    margin: 5px 10px;
+    
+  }
+
+  >img {
+    /* margin-right: 15px; */
+  }
+
+  p {
+    margin: 5px 0;
+  }
+
+  a {
+    color: currentColor;
+    font-weight: bold;
+    font-size: 20px;
+    /* margin: 10px; */
+  }
+
+  .image-half {
+    margin-right: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    max-width: 100px;
+
+    a {
+      display: inline-block;
+      aspect-ratio: 1;
+      width: 30px;
+      height: auto;
+      background-size: contain;
+      background-repeat: no-repeat;
+      order: 1;
+    }
+
+    a[href*="trading_center"] {
+      background-image: url("https://static.lioden.com/images/layout/icon_den_trade.png");
+    }
+    
+    a[href*="search_branches"] {
+      background-image: url("https://static.lioden.com/images/layout/icontreecarvings.png")
+    }
+  }
+
+  .icon-holder {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    .icon {
+      width: 24px;
+      height: auto;
+      object-fit: contain;
+      object-position: center;
+      filter: ;
+    }
+  }
+  
+}
+
+.angel {
+    
+}
+
+.heaven {
+    
+}
+
