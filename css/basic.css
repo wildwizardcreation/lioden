@@ -180,6 +180,10 @@
 
     .me-guide {
         justify-self: end;
+        
+        br {
+            display: inline !important;
+        }
     }
 
 
@@ -193,8 +197,12 @@
     }
 
     
-    div > br {
-        display: inline !important;
+    
+
+    hr {
+        height: 1px;
+        margin: 2px;
+        padding: 2px;
     }
 }
 
@@ -291,6 +299,13 @@ span.select-span {
   user-select: all;
 }
 
+
+  h1, h2, h3, h4, h5, div, a, p {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
 .horizon-box {
   background-image: url(https://wildwizardcreation.github.io/lioden/assets/backgrounds/horizon_bg.png);
   background-size: cover;
@@ -298,11 +313,6 @@ span.select-span {
   min-height: 200px;
   min-width: 200px;
     
-  h1, h2, h3, h4, h5, div, a, p {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
 }
 
 .heh-box {
@@ -589,4 +599,3 @@ a:has(.count), .arrow-right {
 .heaven {
     
 }
-
