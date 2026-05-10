@@ -468,7 +468,7 @@ a:has(.count) {
 
   div[class^="links-"] {
     text-align: center;
-    width: 245px;
+    width: 205px;
     height: 75px;
     display:grid;
     place-items:center;
