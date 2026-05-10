@@ -217,6 +217,24 @@
     }
 }
 
+form[method="post"]:has(>#about) {
+    order: -2;
+}
+
+#commentBox {
+    order: -2;
+    margin-top: 1.5em;
+}
+
+#makeComment {
+    order: -2;
+    margin-bottom: 1em;
+}
+
+#commentErrors {
+    order: -2;
+}
+
 #pageContainer>center
 /* specificity to prevent performance issues  */
 div.row:has(>form[action="territory.php"]
@@ -229,8 +247,9 @@ div.row:has(>form[action="territory.php"]
     margin: 15px 0;
     gap: 15px;
     justify-content: space-around;
-    order: -2;
+    order: -3;
     /* reordering to the top of the page. only works if #pageContainer > center is 'display: flex'ed */
+    /* usually order: -1, i have other things rearranged so its adjust for :3 me*/
 
     &::before,
     &::after {
@@ -382,6 +401,8 @@ a:has(.count) {
 }
   }
   
+  
+  
   box-sizing: border-box;
   position: relative;
   display: flex;
@@ -391,11 +412,9 @@ a:has(.count) {
   align-items: center;
   margin: 1em;
   border-radius: 2px;
-  width: 545px;
-  min-width: 435px;
-
+  /* width: 545px; */
+  width: 435px;
   border: 1px solid black
-
 }
 
 .inner-box {
