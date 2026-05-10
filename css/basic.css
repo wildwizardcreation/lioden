@@ -443,27 +443,28 @@ a:has(.count) {
     border-radius: 10px;
     border: 3px solid white;
 
-    span {
-      display: flex;
-      flex-wrap: wrap;
-      text-align: center;
-      flex-direction: row;
-      justify-content: center;
+       span {
+         display: flex;
+         flex-wrap: wrap;
+         text-align: center;
+         flex-direction: row;
+         justify-content: center;
+   
+         a {
+           text-wrap: nowrap;
+         }
 
-      a {
-        text-wrap: nowrap;
-        
-        &:last-child::before {
-          content:"|";
-          margin: 0 .5rem;
-          cursor: default;
-          text-shadow: none;
-        }
-      }
+          a:last-of-type::before {
+               content:"|";
+               margin: 0 .5rem;
+               display: inline-block;
+               cursor: default;
+               text-shadow: none;
+           }
       
-    }
+       }
     
-  }
+      }
 }
 
 .factor-info {
