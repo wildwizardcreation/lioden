@@ -297,7 +297,12 @@ span.select-span {
   background-position: center;
   min-height: 200px;
   min-width: 200px;
-  /* margin-left: calc(1em + 10px) !important; */
+    
+  h1, h2, h3, h4, h5, div, a, p {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 }
 
 .heh-box {
@@ -344,7 +349,7 @@ a:has(.count) {
     height: 100%;
     position: absolute;
     right: 0;
-    top: -1px;
+    bottom: -1px;
   }
 }
 
@@ -358,6 +363,7 @@ a:has(.count) {
   a {
     color: black;
     font-weight: bold;
+      text-decoration: underline;
     &:hover {
     text-shadow: -1px -1px 0px white, 
                   1px 1px 0px white, 
@@ -435,14 +441,11 @@ a:has(.count) {
     text-align: center;
     width: 245px;
     height: 75px;
-    
-    display:grid; 
+    display:grid;
     place-items:center;
-    align-content: center;
-    
     border-radius: 10px;
     border: 3px solid white;
-
+    align-content: center;
        span {
          display: flex;
          flex-wrap: wrap;
@@ -465,10 +468,16 @@ a:has(.count) {
        }
     
       }
+
+    div.links-studs a:nth-of-type(1) {
+       color: blue !important;
+        width: 100%
+   }
 }
 
 .factor-info {
   margin-left: 20px;
+    text-align: left;
 }
 
 a:has(.count), .arrow-right {
@@ -498,13 +507,17 @@ a:has(.count), .arrow-right {
   justify-content: flex-start;
   flex-wrap:wrap;
 
-  h2 {
-    width: 100%;
-    /* text-align: center; */
-    margin: 5px 10px;
-    
-  }
+    h2, h3 {
+        color: currentcolor;
+        font-weight: bold;
+    }
 
+      h2 {
+        width: 100%;
+        text-align: left;
+        margin: 5px 10px;
+      }
+    
   >img {
     /* margin-right: 15px; */
   }
@@ -515,8 +528,9 @@ a:has(.count), .arrow-right {
 
   a {
     color: currentColor;
-    font-weight: bold;
+    font-weight: bold !important;
     font-size: 20px;
+      text-decoration: underline;
     /* margin: 10px; */
   }
 
