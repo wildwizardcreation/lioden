@@ -272,16 +272,19 @@ ol.breadcrumb {
 }
 
 
+
+
 .goals {
     margin: 1em 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
     img {
         max-height: 100%;
         /* width: 100%; */
         max-width:100%;
         display: block;
-        white-space: normal;
-        width: 640px;
-        height: 500px;
         aspect-ratio: 32/25;
         object-fit: cover;
     }
@@ -290,9 +293,18 @@ ol.breadcrumb {
         /* max-width:100%; */
     }
 
-    td:has(img) {
-    aspect-ratio: 32 / 35;
-    height: 215px;
+    div:has(>i) {
+        width: 100%;
+    }
+
+    div:has(>img) {
+        width: 33.33%;
+        max-width: 100%;
+
+        a {
+            display: block;
+            margin: 5px 0;
+        }
     }
 }
 
