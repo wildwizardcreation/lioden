@@ -78,6 +78,7 @@
 #pageContainer:not(:has(ol.breadcrumb + div.floatright)) {
     ol.breadcrumb {
         position: relative;
+      margin-bottom: 0;
 
         &::before {
             content: "CSS by WildWizard #414436";
