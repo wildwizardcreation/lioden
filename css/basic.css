@@ -59,6 +59,8 @@
 #pageContainer:has(ol.breadcrumb + div.floatright) {
     ol.breadcrumb+div.floatright {
         position: relative;
+        
+        
 
         &::before {
             content: "CSS by WildWizard #414436";
@@ -91,11 +93,16 @@
 
 #pageContainer>h1{
     order: -999;
-    margin-bottom:1em;
+    margin: .5em;
 }
 
 ol.breadcrumb {
     order: -999;
+}
+
+ol.breadcrumb + div.floatright {
+    order: -999;
+    align-self: flex-end;
 }
 
 .linky-line {
@@ -103,6 +110,11 @@ ol.breadcrumb {
     font-size: large;
 }
 
+.ads {
+    p {
+        margin: .5em 0;
+    }
+}
 
 .offsite-bookmarks {
     position: fixed;
@@ -271,6 +283,20 @@ ol.breadcrumb {
     }
 }
 
+/* specificity to prevent performance issues  */
+div.container.main {
+
+    /* using :has to check the sidebar without calling the element itself. allows us to style a non-child element based on the result */
+    &:has(#pageSidebar) {
+        /* if the sidebar has the dry season image */
+        &:has(img[alt="dry Season"]){
+            /* hide any element with the .wet-season class */
+            .wet-season {
+                display: none;
+            }
+        }
+    }
+}
 
 
 
@@ -336,9 +362,11 @@ div.row:has(>form[action="territory.php"]
     display: flex;
     flex-direction: row;
     margin: 15px 0;
+    margin-top: 0;
     gap: 15px;
     justify-content: space-around;
     order: -3;
+    
     /* reordering to the top of the page. only works if #pageContainer > center is 'display: flex'ed */
     /* usually order: -1, i have other things rearranged so its adjust for :3 me*/
 
