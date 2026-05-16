@@ -162,8 +162,8 @@ https://emoji.gg/user/bet.official
     --discord-light-border: #424248;
     
     --discord-white: #fbfbfb;
-    --discord-dark-white: #82838b;
-    --discord-darkest-white: #a9a9b0;
+    --discord-dark-white: #d2cece;
+    --discord-darkest-white: #82838b;
     
     --discord-darkest: #121214;
     --discord-dark: #1a1a1e;
@@ -294,7 +294,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, h5 {
 	}
 	
 	.navbar-header {
-	    margin-bottom: 53px;
+	    /* margin-bottom: 53px; */
 	}
 	
 	.nav>li {
@@ -353,6 +353,34 @@ body {
     overflow-x: hidden;
 }
 
+/* main page */
+#pageContainer {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 15px;
+	
+	
+    > h1 {
+        display: none;
+	    visibility: hidden;
+	    position: relative;
+	}
+}
+
+/* ------ reordering! ------------ */
+
+#pageContainer > center {
+	display: contents;
+}
+
+.breadcrumb {
+	order: -999;
+}
+
+
+
 /* main section */
 .container.main {
     box-shadow: none;
@@ -382,6 +410,10 @@ body {
     background-color: #18181c;
     border: 1px solid #2a2a2e;
     color: #8c8d94;
+    width: 100%;
+    
+    
+    
 
     >.active, li+li:before, a {
         color: #8c8d94;
@@ -426,10 +458,28 @@ body {
     background-color: #1a1a1e;
     color: #6f6f77;
 
+
     h3 {
         color: #6f6f77;
         font-size: 12px;
+		margin-left: 5px;
+		margin-bottom: 5px;
     }
+
+	a {
+		color: var(--discord-dark-white);
+	}
+
+	a:hover {
+		color: var(--discord-white);
+	}
+
+	.panel-body.small {
+		a {
+			margin-top: 5px;
+			display: inline-block;
+		}
+	}
 }
 
 
@@ -518,6 +568,11 @@ body {
     background-color: #5865f2;
 }
 
+
+.navbar {
+	background: transparent;
+}
+
 /* nav sidebar */
 .row:has(.navbar) {
     background: #121214;
@@ -526,20 +581,19 @@ body {
 
 /* navbar */
 
+@media (min-width: 1200px) {
+    .nav.navbar-nav.visible-lg {
+        display:flex !important;
+    }
+}
+
 .nav.navbar-nav {
     padding: 10px;
     text-transform: lowercase;
+    flex-direction: column;
+    width: 100%;
 }
 
-/* fake border bar beneath events */
-.navbar-collapse::before{
-    content: " ";
-    width: 84%;
-    height: 1px;
-    margin: 12px auto;
-    background: #29292d;
-    text-align: center;
-}
 
 .navbar-default .navbar-nav > li {
     width: 100%;
@@ -547,20 +601,23 @@ body {
     text-align: left;
     background: transparent;
     font-weight: 100;
-    border-radius: 8px;
-
-    &:hover {
-        background-color: #1d1d1e;
-    }
-
+	border-radius: 8px;
+	
     a {
         vertical-align: middle;
         padding: 6.5px 13px;
         color: #82838b;
         font-size: 16px;
-
+        border-radius: 8px;
+        width: 100%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-start;
+        align-content: center;
+        
         &:hover {
             color: var(--discord-white);
+	        background-color: #1d1d1e;
         }
 
         &::before {
@@ -583,16 +640,35 @@ body {
 
             a {
                 color:#efefef;
+
+				&:hover {
+					background-color: #2c2c30  !important;
+				}
             }
-        }
+	}
 
     /* reordering event link */
     &:has(a[href="/event.php"]) {
-        top: 60px;
-        position: absolute;
         background-color: transparent;
         text-transform: capitalize;
-        width: calc(100% - 10px);
+        /* width: calc(100% - 10px); */
+        order: -1;
+        
+
+		&::after{
+		    content: " ";
+		    width: 84%;
+		    height: 1px;
+		    margin: 12px auto;
+		    background: #29292d;
+		    text-align: center;
+		    display: block !important;
+		    /* order: -1; */
+
+			&:hover {
+				background: #29292d !important;
+			}
+		}
 
             a {
 
@@ -602,12 +678,14 @@ body {
 
                 &::after{
                     content: "s";
+					text-transform: lowercase;
                 }
+				
+	            &:hover {
+	                background-color: #1d1d1e;
+	            }
             }
 
-            &:hover {
-                background-color: #1d1d1e;
-            }
         }
     
 }
@@ -867,6 +945,8 @@ div.row.dynastycollection {
 	justify-content: center;
 
 	div.dynastylist {
+		max-width: 300px;
+		
 		a {
 			display: block;
 			background: var(--discord-mid);
@@ -936,16 +1016,8 @@ div.row.dynastycollection {
 	}
 }
 
-/* main page */
-#pageContainer {
-	position: relative;
-	
-    > h1 {
-        display: none;
-	    visibility: hidden;
-	    position: relative;
-	}
-}
+
+
 
 /* profile contents (move to user "profile" ?) */
 
@@ -1174,20 +1246,26 @@ div.row.dynastycollection {
     background-color: #202024;
     display: flex;
     position: fixed;
-    height: 40px;
-    width: 212px;
-    flex-direction: row;
+    height: 50px;
+    max-width: 222px;
+    flex-direction: column;
     justify-content: flex-start;
     bottom: 0;
-    padding: 5px;
+    padding: 10px;
     border-radius: 5.5px;
     margin-bottom: 10px;
-
     font-size: 0px;
-
+    flex-wrap: wrap;
+    
+    
     a {
         font-size: 13px !important;
         color: white !important;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 80%;
+        /* height: 50%; */
     }
 
     &::before {
@@ -1196,9 +1274,10 @@ div.row.dynastycollection {
         background-color: var(--user-highlight-color);
         border-radius: 100%;
         background-position: center center;
-        background-size: 100%;
-        width: 32px;
-        height: 32px;
+        background-size: cover;
+        min-width: 32px;
+        min-height: 32px;
+        height: 100%;
         margin-right: 6px;
     }
 
@@ -1206,11 +1285,12 @@ div.row.dynastycollection {
         content: " Welcome Back! ";
         font-size: 9px;
         color: #82838b;
-        height: fit-content;
+        max-height: 30%;
         width: auto;
-        position: absolute;
-        left: 44px;
-        top: 21px;
+        position: relative;
+        /* left: 44px; */
+        /* top: 21px; */
+        display: block;
         }
 }
 
@@ -1218,7 +1298,7 @@ div.row.dynastycollection {
 
 select, textarea, input[type="text"], input[type="password"], input:active, input:target {
     background-color: var(--discord-mid);
-    color: var(--discord-dark-white);
+    color: var(--discord-darkest-white);
     border: var(--discord-border) 1px solid;
     outline: none;
     border-radius: 6px;
@@ -1333,16 +1413,29 @@ input#postComment:hover {
 }
 
 
+#commentBox, #makeComment, #commentErrors {
+	order: -1;
+	width: 100%;
+}
+
 /* commentbox to messages */
 
 center > #commentBox {
-    border: 1px solid transparent;
-    border-radius: 10px;
-    padding: 0px;
-    margin-bottom: 5px;
-    height: 300px;
-    overflow-x: hidden;
+	display: flex;
+	flex-direction: column-reverse;
+	border: 1px solid transparent;
+	border-radius: 10px;
+	padding: 0px;
+	margin-bottom: 5px;
+	height: 500px;
+	overflow-x: hidden;
 	overflow-y: auto;
+}
+
+#commentBox .comment:last-child i {
+	&::before {
+		content: " Comments are in chronological order from bottom to top. ";
+	}
 }
 
 .comment {
@@ -1372,7 +1465,7 @@ center > #commentBox {
 }
 
 /* conditions for highlighting user message */
-#pageContainer:has(.table#player tr:nth-child(3)) {
+#pageContainer:not(:has(#editdetailspanel)) {
 
     .comment:has(input[type="button"].bad) {
         background: var(--message-ping-background) !important;
@@ -1404,7 +1497,7 @@ center > #commentBox {
 
 .comment:last-child {
 	display: block;
-	color: var(--discord-dark-white);
+	color: var(--discord-darkest-white);
 	margin-left: 1em;
 	/* width: 80%; */
 	
@@ -1532,38 +1625,8 @@ small.text-muted {
 	min-width: 25%;
 	max-width: 33.333%;
 	/* overflow: hidden; */
-}
 
-.col-md-4.col-xs-6.center > a,
-.col-md-3.col-xs-4.center > a {
 	
-	div.cave-grid,
-	div.mound-grid {
-		border-radius: 6px;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		text-wrap-mode: nowrap;
-		/* replace /\ with \/ to allow long cave names */
-		/* text-wrap-mode: wrap; */
-		background: var(--discord-mid);
-		border: 1.5px solid transparent;
-		min-height: 140px;
-		margin: 0;
-		width: 100%;
-		max-width: none;
-		position: relative;
-		padding: 0px;
-		padding-left: 18px;
-		padding-bottom: 10px;
-		/* white-space: nowrap; */
-	}
-
-    div.cave-grid:hover,
-	div.mound-grid:hover {
-		background: var(--discord-light);
-		border: 1.5px solid var(--discord-light-border);
-    }
-
 	img {
 		display: block;
 		position: relative;
@@ -1574,6 +1637,34 @@ small.text-muted {
 		margin-bottom: 0px;
 	}
 }
+
+div.cave-grid,
+div.mound-grid {
+	border-radius: 6px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-wrap-mode: nowrap;
+	/* replace /\ with \/ to allow long cave names */
+	/* text-wrap-mode: wrap; */
+	background: var(--discord-mid);
+	border: 1.5px solid transparent;
+	min-height: 140px;
+	margin: 0;
+	width: 100%;
+	max-width: none;
+	position: relative;
+	padding: 0px;
+	padding-left: 18px;
+	padding-bottom: 10px;
+	/* white-space: nowrap; */
+}
+
+a>div.cave-grid:hover,
+a>div.mound-grid:hover {
+	background: var(--discord-light);
+	border: 1.5px solid var(--discord-light-border);
+}
+
 
 div.mound-grid:first-letter,
 div.cave-grid:first-letter {
@@ -1673,7 +1764,7 @@ div.col-md-4.col-xs-6.center > a[href^="unsorted.php?"] {
 
 /* nesting */
 
-div.col-md-4.col-xs-6.center > a[href^="nesting.php"], div.col-md-4.col-xs-6.center:nth-child(2) {
+div.col-md-4.col-xs-6.center > a[href^="nesting.php"], div.col-md-4.col-xs-6.center:has(img[src$="nestingbanner.png"]) {
 
 	img {
 		background-image: var(--pregnant-cave-image);
@@ -2165,139 +2256,170 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
 
 #about, #player {
     height: 600px;
-    width: 49.5%;
+    width: 48.5%;
     border: none;
     position: relative;
     border-radius: 10px;
     /* overflow: hidden; */
+    order: -1;
 }
 
 /* lion profile */
 
+form[method="post"]:has(>#about) {
+	display: contents;
+}
+
 #about {
     background-color: #242429;
-    float: right;
+    /* float: right; */
     display: flex;
+
+	td {
+		background: transparent;
+	}
 }
 
 #about > tbody {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	justify-content: flex-start;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    flex-wrap: wrap;
+    padding: 0 15px;
+    align-content: flex-start;
 }
 
 #about > tbody {
-	> tr:nth-child(1), > tr:nth-last-child(1) {
-		display: block;
-		width: 100%;
-		
 
+	/* header row */
+	> tr:nth-child(1) {
+		order: 2;
+
+		/* name */
 		td {
-			width: 100%;
-			display: block;
-			position: absolute;
-			top: 353px;
-			right: 0;
-			background-color: transparent;
-			font-size: 0px;
+			color: var(--discord-white);
+			top: 270px;
+			text-align: left;
+		}
+	}
+
+	/* info row */
+	> tr:nth-child(2).right {
+		display: contents;
+
+		/* lion header and image */
+		> td:nth-child(1) {
+			order: -1;
+			background-image: var(--lion-header) !important;
+			background-color: var(--player-secondary);
+			background-size: cover;
+			background-position: center;
+			width: calc(100% + 30px) !important;
+			text-align: left !important;
+			vertical-align: bottom;
+			height:215px;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+			margin: 0 -15px;
+			margin-bottom: 60px;
+			position: relative;
+			padding: 0 !important;
+			
+			
+
+			a:has(div#lion_image) {
+			    position: absolute;
+			    width: 130px;
+			    aspect-ratio: 1 / 1;
+			    bottom: -50px;
+			    border-radius: 500px;
+			    overflow: hidden;
+			    margin-left: 10px;
+			    /* object-fit: none; */
+			}
 		}
 
-		td.bottom {
-			padding-bottom: 6px;
-			border-bottom: 1px var(--discord-border) solid;
+		/* lion info */
+		> td:nth-child(2) {
+			order: 4;
+			display: none;
+		}
+		
+	}
+
+	/* mutated lions count */
+	> tr:nth-last-child(1) {
+		order: 2;
+		display: flex;
+		width: 100%;
+		border-bottom: 1px solid var(--discord-border);
+
+		&::before {
+			content: "About Me";
+			text-decoration: underline;
+			text-underline-offset: 7px;
+			display: block;
+			font-size: 14px;
+			font-weight: lighter;
+			padding-bottom: 5px;
+			cursor: pointer;
+			width: fit-content;
+			/* position: absolute; */
+			/* top: -23px; */
 		}
 
-		td > a[href^="/lionoverview.php?id="] {
-			position: absolute;
-			display: block;
-			left: 150px;
-			bottom: 0px;
-			width: 115px;
+		td > a[href^="/lionoverview.php?id="] {font-size: 0px;width: fit-content;height: auto;display: inline-block;
 			
 			b {
 				font-weight: lighter;
-				display: inline-block;
-				left: 0px;
-				bottom: 5px;
-				width: 160px;
-				word-break: keep-all;
 				font-size: 14px;
-				/* word-spacing: 500px; */
-				text-transform: capitalize;
-				white-space: nowrap;
-				overflow: hidden;
-				/* position: absolute; */
-				text-align: left;
-                padding-bottom: 4px;
-			}
-
-			b::after {
-				content: " Mutated Lions ";
 				display: inline-block;
-				word-spacing: 0px;
-				/* position: absolute; */
-				right: 0px;
-				/* top: 0; */
-				background-color: var(--lion-primary);
-				margin-left: -2.5em;
-			}
-		}
+				  /* lock the width to create a stable container. 
+				     115px usually fits '100 mutated lions' nicely */
+				width: auto;
+				text-align: justify;
+				  /* this forces the single space between '8' and 'lions' to stretch */
+				text-align-last: justify;
+				position: relative;
+				word-spacing: calc(5rem + 10px);
+				margin-right: -15px;
+				}
 
-		td > a[href^="/lionoverview.php?id="]:hover{
-			position: absolute;
-			display: block;
-			bottom: -1px;
-			/* padding-bottom: 5px; */
-			border-bottom: 1px var(--discord-white) solid;
+				b::after {
+				  content: "mutated";
+				  position: absolute;
+				  right: calc(3rem + 4px);
+				  /* transform: translateX(-50%); */
+				}
 		}
 		
 	}
 }
 
 
-#about > tbody > tr:nth-child(1) > td {
-	padding-left: 15px;
-	background: transparent;
-	color: var(--discord-white);
-	top: 270px;
-	text-align: left;
-	
-	>div {
-		font-size: 0em;
-	}
-	
-	>div > a {
-		font-size: 24px;
-		color: var(--discord-white);
-		font-weight: lighter;
-	}
+/* lion pfp */
+#about > tbody > tr.right > td:nth-child(1) > 
 
-	>::before {
-		content: " About Me ";
-		font-size: 14px;
-		position: absolute;
-		display: inline-block;
-		bottom: -40px;
-		font-weight: lighter;
-		padding-bottom: 5px;
-		border-bottom: 1px var(--discord-white) solid;
-		z-index: 2;
-	}
+#lion_image {
+    width: 100%;
+    height: 100%;
 }
 
-#about > tbody > tr.right {
-    display: flex;
-    flex-direction: column;
-}
-
-#about > tbody > tr.right > td.right {
-    margin-top: 156px;
+.lion-image-block {
     
-	.auto {
-		margin: 0;
-		width: 100%;
-	}
+    width: 130px !important;
+    height: 130px !important;
+    
+    img {
+        position: absolute;
+        width: 130px !important;
+        height: 130px !important;
+    }
+
+    img:last-of-type {
+        /* content: var(--lion-pfp); */
+    }
 }
 
 #about > tbody > tr.right > td.right > table > tbody {
@@ -2405,53 +2527,6 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
 
 }
 
-/* lion header */
-
-#about > tbody > tr.right > td:nth-child(1) {
-    background: var(--lion-header);
-    background-color: var(--player-secondary);
-    background-size: cover;
-    background-position: center;
-    width: 100% !important;
-    text-align: left !important;
-    vertical-align: bottom;
-    height:215px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-	padding: 0 !important;
-}
-
-/* lion pfp */
-#about > tbody > tr.right > td:nth-child(1) > a:has(div#lion_image) {
-    position: absolute;
-    width: 130px;
-    aspect-ratio: 1 / 1;
-    top: 142px;
-    border-radius: 100%;
-    overflow: hidden;
-    left: 15px;
-}
-
-#lion_image {
-    width: 100%;
-    height: 100%;
-}
-
-.lion-image-block {
-    
-    width: 130px !important;
-    height: 130px !important;
-    
-    img {
-        position: absolute;
-        width: 130px !important;
-        height: 130px !important;
-    }
-
-    img:last-of-type {
-        /* content: var(--lion-pfp); */
-    }
-}
 
 
 
@@ -2466,27 +2541,54 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
 
 #player {
     background-color: var(--player-primary);
-    float: left;
+    /* float: left; */
     display: flex;
-}
-
-#player > tbody > tr.right{
-    display: flex;
-    flex-direction: column-reverse;
-    width: 100%;
-    height: 100%;
-    justify-content: flex-end;
-}
-
-#player hr{
-    display:none;
 }
 
 #player > tbody {
     width: 100%;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: row;
     height: 100%;
+    flex-wrap: wrap;
+    padding: 0 15px;
+    align-content: flex-start;
+    
+    
+    
+
+	> tr:nth-child(1) {
+		order: 3;
+		align-self: start;
+	}
+
+	> tr:nth-child(2) {
+		/* order: -1; */
+	}
+}
+
+
+#player > tbody tr + tr.right {
+    display: contents;
+    width: 100%;
+    height: 100%;
+
+	> td:nth-child(1) {
+		/* order: 1; */
+		display: contents;
+	}
+
+	> td:nth-child(2) {
+		order: -1;
+	}
+
+	a {
+		/* align-self: normal; */
+	}
+}
+
+#player hr{
+    display:none;
 }
 
 #player .center {
@@ -2496,12 +2598,77 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
 
     &.h3 {
         font-weight: bold;
-        /* margin-bottom: 2em; */
+        margin-top: 10px;
+        order: 2;
+        width: 100%;
+        display: block;
+        /* align-self: start; */
     }
 }
 
+
+/* block and add friend */
+
+/* if already friended 
+- check if the request button exists
+if no: replace with fake friend button + move message button */
+
+#player :has(tbody td.right_odd>a[href*="befriends"]) {
+    tbody > tr:nth-child(3) {
+        
+    }
+        
+    >td.right_odd::before {
+        display: none;
+    }
+}
+
+
+#player > tbody > tr:nth-child(3) {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	flex-wrap: nowrap;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	/* height: 40px; */
+	/* padding-left: 15px; */
+	gap: 20px;
+	width: 100%;
+	order: 5;
+	align-self: end;
+	/* margin-top: auto; */
+	padding: 15px;
+	
+	
+	td {
+		background: inherit;
+		height: 40px;
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		justify-items: center;
+		align-items: center;
+		width: 40px;
+	}
+
+	a:hover {
+        filter: brightness(1.2);
+    }
+
+}
+
+#player > tbody > tr:last-child {
+	color: blue !important;
+
+	.right_odd.text-right:not(:has(a)){
+		display: none;
+	}
+}
+
 #player > tbody > tr.right > td:nth-child(1) > div::after {
-	content: "About Me";
+	/* content: "About Me";
 	text-decoration: underline;
 	text-underline-offset: 7px;
 	display: block;
@@ -2510,29 +2677,42 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
 	padding-bottom: 5px;
 	border-bottom: 1px var(--discord-border) solid;
 	margin-top: 3em;
-	cursor: pointer;
+	cursor: pointer; */
 }
+
+
+
+
 
 #player > tbody > tr.right > td:nth-child(1) > table::before {
 	content: var(--player-description);
-	padding: 1em 0;
 	display: block;
+	margin: 15px 0;
+}
+
+#player > tbody > tr.right > td:nth-child(1) > table::after {
+	content: var(--player-description);
+	display: block;
+	margin-bottom: 15px;
+}
+
+
+#player > tbody > tr:nth-child(1){
+	
+	position: relative;
 }
 
 #player > tbody > tr:nth-child(1) > td {
-	position: absolute;
-	bottom: 262px;
+	/* position: absolute; */
 	width: 100%;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	margin: 0px;
+	margin: 5px 0 15px;
 	padding: 0px;
-	padding-left: 16px;
 	background: none;
 	font-weight: normal;
 	font-size: .95em;
-	z-index: 5;
 
 	&::after {
 		content: var(--player-pronouns);
@@ -2555,15 +2735,28 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
 }
 
 #player > tbody > tr.right > td:nth-child(1) > table::after {
-	/* content: "roles" */
-}
+		content: "About Me";
+		text-decoration: underline;
+		text-underline-offset: 7px;
+		display: block;
+		font-size: 14px;
+		font-weight: lighter;
+		padding-bottom: 5px;
+		cursor: pointer;
+		width: fit-content;
+		position: absolute;
+		top: -23px;
+	}
 
 /* joined and last active */
 
 #player > tbody > tr.right > td:nth-child(1) > table {
     margin: 0px;
-    margin-top: 0px !important;
+	border-top: 1px solid var(--discord-border);
     width: 100%;
+    order: 4;
+	position: relative;
+    
 
     tbody > tr {
         width: 100%;    
@@ -2619,29 +2812,54 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
     background-color: var(--player-secondary);
     background-size: cover;
     background-position: center;
-    width: 100% !important;
+    width: calc(100% + 30px) !important;
     text-align: left !important;
     vertical-align: bottom;
     height:215px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    margin: 0 -15px;
+    margin-bottom: 15px;
+    position: relative;
 }
+
+#player:has(div.member-offline) {
+	tbody > tr.right > td:nth-child(2)::before {
+		background-image: url(https://cdn3.emoji.gg/emojis/4624-discord-offline.png);
+	}
+}
+
+#player:has(div.member-online) {
+	tbody > tr.right > td:nth-child(2)::before {
+		background-image: url(https://cdn3.emoji.gg/emojis/1415-online.png);
+	}
+}
+
+#player > tbody > tr.right > td:nth-child(2)::before {
+	content: " ";
+	display: block;
+	background-size: cover;
+	background-position: center;
+	height: 40px;
+	width: 40px;
+	position: absolute;
+	bottom: -50px;
+	left: 105px;
+	z-index: 1;
+	background-color: var(--player-primary);
+	border-radius: 100px
+}
+
 
 /* player pfp */
 #player > tbody > tr.right > td:nth-child(2) > img{
     position: absolute;
-    border-radius: 100%;
+    border-radius: 500px;
     width: 130px;
-    top: 142px;
+    bottom: -50px;
     margin-left: 10px;
-}
-
-#player > tbody > tr.right > td:nth-child(1) {
-	display: flex;
-	flex-direction: column;
-    padding-top: 70px;
-    padding-left: 15px;
-    width: 100%;
+    display: block;
+    object-fit: none;
 }
 
 /* online / offline / optional idle + DnD */
@@ -2656,47 +2874,63 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
 } */
  
 .member-online, .member-offline{
-    vertical-align: baseline;
-    background-color: transparent;
-    background-size: 165%;
-    background-position: center;
-    height: 35px;
-    width: 35px;
-    position: absolute;
-    top: 17px;
-    left: 104px;
-    z-index: 1;
-    /* margin: -10px; */
-    border: var(--player-primary) 6px solid;
-}
-
-.member-online {
-    background-image: url(https://cdn3.emoji.gg/emojis/1415-online.png);
-}
-
-.member-offline {
-    background-image: url(https://cdn3.emoji.gg/emojis/4624-discord-offline.png);
+    display: none;
 }
 
 /* buttons */
 
+/* check if this is the user's page or a visitor by checking if the edit details panel exists */
+
+#pageContainer:not(:has(#editdetailspanel)) {
+
+    #player > tbody > tr.right > td:nth-child(1) > div.xlarge {
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: center;
+		width: fit-content;
+		order: 1;
+		margin-left: auto;
+		/* justify-self: revert-layer; */
+		margin-right: 10px;
+		gap: 10px;
+		flex-direction: row;
+		align-content: center;
+		align-items: center;
+		height: fit-content;
+		/* align-self: flex-start; */
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		>a:hover {
+			filter: brightness(1.2);
+		}
+		
+		>span.text-muted{
+			font-size: 0px;
+			display: none;
+		}
+	}
+}
+
+/* the page *does* have the edit details panel */
+/* this would usually just be "default", but it's here for the sake of argument/example */
+
+#pageContainer:has(#editdetailspanel) {
+
+    div.ads {
+        display: block;
+    }
+}
+
 #player > tbody > tr.right > td:nth-child(1) > div.xlarge, 
 #player:has(a[href^="/refer.php"]) > tbody > tr.right > td:nth-child(1) > p {
-    position: absolute;
-    top: 15px;
-    right: 67px;
-	display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    >a:hover {
-        filter: brightness(1.2);
-    }
-
-    >span.text-muted{
-        font-size: 0px;
-        padding: 0 7px !important;
-    }
+    
 }
 
 #player:has(a[href^="/refer.php"]) > tbody > tr.right > td:nth-child(1) > p {
@@ -2704,50 +2938,6 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
 }
 
 
-/* block and add friend */
-
-/* if already friended 
-- check if the request button exists
-if no: replace with fake friend button + move message button */
-
-#player :has(tbody td.right_odd>a[href*="befriends"]) {
-    tbody > tr:nth-child(3) {
-        
-    }
-        
-    >td.right_odd::before {
-        display: none;
-    }
-}
-
-
-#player > tbody > tr:nth-child(3) {
-	display: flex;
-	flex-direction: row-reverse;
-	justify-content: flex-end;
-	flex-wrap: nowrap;
-	position: absolute;
-	top: 349px;
-	height: 40px;
-	padding-left: 15px;
-	gap: 20px;
-	
-	width: 100%;
-	td {
-		background: inherit;
-		height: 100%;
-		display: flex;
-		justify-content: center;
-		align-content: center;
-		justify-items: center;
-		align-items: center;
-	}
-
-	a:hover {
-        filter: brightness(1.2);
-    }
-
-}
 
 /* friend req */
 
@@ -2765,7 +2955,7 @@ td.right_odd>a[href*="befriends"] {
 }
 
 
-#player > tbody > tr:nth-child(3) > td.right_odd:has(a[href*="blocked"])::before {
+/* #player > tbody > tr:nth-child(3) > td.right_odd:has(a[href*="blocked"])::before {
     content: " ";
     display: block;
     background-position: center center;
@@ -2773,7 +2963,7 @@ td.right_odd>a[href*="befriends"] {
     background-color: red;
     width: 20px;
     height: 20px;
-}
+} */
 
 /* block */
 td.right_odd>a[href^="/allies.php?p=blocked"] {
@@ -2817,7 +3007,10 @@ div>a[href^="/compose.php"], td.right_odd>a[href*="befriends"] {
 	padding: 9px 17px 9px;
 	border-radius: 8px;
 	vertical-align: middle;
-	/* height: 100%; */
+	height: fit-content;
+	
+	
+	
     
     img {
         margin-right: 5px;
@@ -2847,17 +3040,20 @@ div>a[href^="/transfers.php"],
 td.right_odd>a[href^="/allies.php?p=blocked"], 
 #player:has(a[href^="/refer.php"]) a[href^="/refer.php"], 
 #player:has(a[href^="/refer.php"]) a[href^="/wishlist.php"]{
-	
 	font-size: 0px;
 	background-color: #323237;
 	padding: 8px;
-	width: 39px;
+	width: 40px;
+	px; */
 	aspect-ratio: 1 / 1;
+	height: 40px;
 	border-radius: 8px;
 	color: white;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	/* height: fit-content; */
+	
 	
     
     &:hover::after{
@@ -2966,20 +3162,34 @@ div>a[href^="/trading_center.php"] {
 }
 
 #player:has(a[href^="/compose.php"]) tbody > tr.right > td:nth-child(1) > p {
-	position: absolute;
+	/* position: absolute; */
 	background-color: #323237;
 	padding: 8px;
 	width: 39px;
 	aspect-ratio: 1 / 1;
 	border-radius: 8px;
 	color: white;
-	display: flex;
+	display: inline-flex;
 	top: 0;
 	right: 14px;
 	align-items: center;
-	margin-top: 15px !important;
+	margin-top: 0 !important;
 	justify-content: center;
 	z-index: 100;
+	height: fit-content;
+	order: 1;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	.text-muted {
 		font-size: 0px;
@@ -3136,7 +3346,9 @@ span.s-chat-message_content > a {
     width: 100%;
     margin-bottom: 10px;
     border: none;
-    padding: 1px 12px;
+    padding: 0px 12px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid var(--discord-lighter);
 }
 
 .s-chat-message:hover {
@@ -3172,9 +3384,23 @@ span.s-chat-message_content > a {
 .s-chat-message:has(span.s-chat-message_content>a.s-chat__username) {
     padding-top: 30px;
     
-    b {
-        font-size: 0px;
+    b:has(+ a.s-chat__username) {
+        content: " ";
+        display: block;
         position: absolute;
+        z-index: 1;
+        background-image: url("");
+        width: 20px;
+        height: 12px;
+        border-block-width: 2px 0;
+        border-color: var(--discord-border);
+        border-inline-width: 2px 0;
+        border-start-start-radius: 6px;
+        border-style: solid;
+        box-sizing: border-box;
+        top: 11px;
+        left: 13px;
+        color: transparent;
     }
     
     span.s-chat-message_content .s-chat__username{
@@ -3187,9 +3413,14 @@ span.s-chat-message_content > a {
         color: var(--discord-blurple-text);
         border-radius: 4px;
         padding: 1px;
+        padding-left: 3px;
         z-index: 5;
-        
-
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: fit-content;
+        max-width: 80%;
+		
         &:hover {
             background-color: var(--discord-blurple);
             color: var(--discord-white);
@@ -3198,7 +3429,7 @@ span.s-chat-message_content > a {
     }
 
 	span.s-chat-message_content .s-chat__username::before {
-		content: " ";
+		/* content: " ";
 		display: block;
 		position: absolute;
 		z-index: 1;
@@ -3212,7 +3443,7 @@ span.s-chat-message_content > a {
 		border-style: solid;
 		box-sizing: border-box;
 		bottom: 2px;
-		left: -23px;
+		left: -23px; */
 	}
 }
 
@@ -3242,12 +3473,12 @@ span.s-chat-message_content > a {
 }
 
 #fra_chatContainer .channelMenu {
-    background-color: var(--discord-darkest);
+    background-color: var(--discord-dark);
     z-index: 100;
 }
 
 #fra_chatContainer .channelMenu .channelSwitcher {
-    color: var(--discord-dark-white);
+    color: var(--discord-darkest-white);
     border-radius: 3px;
     display: inline-block;
     font-weight: 700;
@@ -3266,14 +3497,15 @@ span.s-chat-message_content > a {
 }
 
 .s-chat-sidebar #label_currentChannel {
-    background: var(--discord-dark);
+    background: var(--discord-light);
     border: none;
-    color: var(--discord-dark-white);
+    color: var(--discord-darkest-white);
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
     min-width: 140px;
     padding: 4px 12px;
+    border: 1px solid var(--discord-border);
 }
 
 .s-chat-sidebar #fraChatChannelMenu {
