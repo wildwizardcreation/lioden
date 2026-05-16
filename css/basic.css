@@ -1,11 +1,17 @@
+/* tips to remember! */
+
+/* order: higher the number, lower on the page. negatives get pushed to the top */
+
+
+
 #fraProfileContent {
     * {
-        box-sizing: border-box;
+    box-sizing: border-box;
     }
-
     br {
-        /* display: none !important; */
-    }
+        /* display: none !important; */}
+    display: c;
+    display: contents;
 }
 
 
@@ -161,60 +167,6 @@ ol.breadcrumb + div.floatright {
     justify-content: center;
 }
 
-.lore {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-    align-content: center;
-    padding: 1em;
-    gap: 1em;
-
-    p {
-        width: 100%;
-    }
-    
-    
-    
-    
-    div {
-        position: relative;
-        width: 250px;
-        
-        
-        &::before {
-            content: " ";
-            position: absolute;
-            top: 0;
-            display: block;
-            /* height: 50px; */
-            width: 25%;
-            aspect-ratio: 1;
-            z-index: 5;
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
-    }
-
-    div.inara::before {
-        background-image: url(https://wildwizardcreation.github.io/lioden/assets/wardrobe/inara_portrait_render.png);
-        right: 0;
-    }
-
-    div.nadira::before {
-        background-image: url(https://wildwizardcreation.github.io/lioden/assets/wardrobe/nadira_portrait_render.png);
-    }
-
-    img {
-        width: 100%;
-        min-width: 0;
-        display: block;
-        z-index: 4;
-    }
-}
-
 
 .boxes-row {
     display: flex;
@@ -299,6 +251,164 @@ div.container.main {
     }
 }
 
+/* fixing clans and allies */
+
+/* the tr elements after the first who have a td.right child */
+#allies > tbody > tr:nth-child(n+2):has(td.right) {
+	display: flex;
+	
+	td.right {
+		display: flex;
+		flex-direction: column;
+		
+		a {
+			margin-bottom: 5px;
+		}
+
+		span.small br {
+			display: inline-block;
+		}
+	}
+}
+
+/* the tr elements after the first who have a td.right child */
+#clans > tbody > tr:nth-child(n+2):has(td.right) {
+	display: flex;
+	
+	td.right a {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		flex-wrap: nowrap;
+	}
+}
+
+
+
+/* custom show/hide buttons */
+/* made to show and hide the allies/clans rows. feel free to tear this apart and test with other elements! :3 */
+.show-allies, .show-clans {
+	margin-left: auto !important;
+	margin-bottom: -32px !important;
+	margin-right: 5px !important;
+}
+
+.show-allies {
+	order: 40;
+	
+	&::before {
+	content: "Show Allies";
+	}
+
+	&:checked::before {
+	content: "Hide Allies";
+	position: relative;
+	}
+}
+
+#allies {
+	order: 41;
+}
+
+.show-clans {
+	order: 42;
+
+	&::before {
+	content: "Show Clans";
+	}
+
+	&:checked::before {
+	content: "Hide Clans";
+	position: relative;
+	}
+}
+
+#clans {
+	order: 43;
+}
+
+/* button styling itself. ripped straight from main.css and tweaked to work for checkboxes */
+
+.button-check {
+	position: relative;
+	width: fit-content;
+	-webkit-appearance: none; /* For Safari/old Chrome */
+	appearance: none;
+	background: #ffe0b5;
+	background: -moz-linear-gradient(top,  #ffe0b5 5%, #edc27d 5%, #edc27d 49%, #edc27d 95%, #dba559 95%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#ffe0b5), color-stop(5%,#edc27d), color-stop(49%,#edc27d), color-stop(95%,#edc27d), color-stop(95%,#dba559));
+	background: -webkit-linear-gradient(top,  #ffe0b5 5%,#edc27d 5%,#edc27d 49%,#edc27d 95%,#dba559 95%);
+	background: -o-linear-gradient(top,  #ffe0b5 5%,#edc27d 5%,#edc27d 49%,#edc27d 95%,#dba559 95%);
+	background: -ms-linear-gradient(top,  #ffe0b5 5%,#edc27d 5%,#edc27d 49%,#edc27d 95%,#dba559 95%);
+	background: linear-gradient(to bottom,  #ffe0b5 5%,#edc27d 5%,#edc27d 49%,#edc27d 95%,#dba559 95%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffe0b5', endColorstr='#dba559',GradientType=0 );
+	color: #6D381F;
+	border: 1px solid #DBA559;
+	text-shadow: 1px 1px 0px #FFCF91;
+	font-weight: bold;
+	font-size: 13px;
+	padding: 3px 12px !important;
+	border-radius: 3px;
+	display: block;
+}
+
+.button-check:hover {
+	background: #ffe5c1;
+	background: -moz-linear-gradient(top,  #ffe5c1 5%, #f0cb90 5%, #f0cb90 49%, #f0cb90 95%, #e0b272 95%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#ffe5c1), color-stop(5%,#f0cb90), color-stop(49%,#f0cb90), color-stop(95%,#f0cb90), color-stop(95%,#e0b272));
+	background: -webkit-linear-gradient(top,  #ffe5c1 5%,#f0cb90 5%,#f0cb90 49%,#f0cb90 95%,#e0b272 95%);
+	background: -o-linear-gradient(top,  #ffe5c1 5%,#f0cb90 5%,#f0cb90 49%,#f0cb90 95%,#e0b272 95%);
+	background: -ms-linear-gradient(top,  #ffe5c1 5%,#f0cb90 5%,#f0cb90 49%,#f0cb90 95%,#e0b272 95%);
+	background: linear-gradient(to bottom,  #ffe5c1 5%,#f0cb90 5%,#f0cb90 49%,#f0cb90 95%,#e0b272 95%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffe5c1', endColorstr='#e0b272',GradientType=0 );
+
+	color: #6D381F;
+	border: 1px solid #DBA559;
+	text-shadow: 1px 1px 0px #FFCF91;
+	font-weight: bold;
+	font-size: 13px;
+	padding: 3px 12px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.button-check:focus {
+	outline: none !important;
+}
+
+/* specificity to prevent performance issues  */
+#pageContainer > center {
+
+	table#allies, table#clans {
+		/* all sibling tr elements that come *after* the very first tr (aka the header) */
+		> tbody > tr ~ tr {
+			
+		}
+	}
+
+    /* using :has to check the checkbox state without calling the element itself. 
+	allows us to style a non-child element based on the result */
+    &:has(.button-check.show-allies:not(:checked)) {
+		
+        table#allies {
+			/* hides all sibling tr elements that come *after* the very first tr (aka the header) */
+			> tbody > tr ~ tr {
+				display: none;
+			}
+		}
+    }
+
+	&:has(.button-check.show-clans:not(:checked)) {
+		
+        table#clans {
+			/* hides all sibling tr elements that come *after* the very first tr (aka the header) */
+			> tbody > tr ~ tr {
+				display: none;
+			}
+		}
+    }
+}
+
 
 
 .goals {
@@ -353,13 +463,18 @@ form[method="post"]:has(>#about) {
     order: -2;
 }
 
-#pageContainer>center
+/* ------------ feed all play all improvements ----------------------- */
+
+/* OLD element selector. keeping it here incase the new pretty one breaks */
+/* #pageContainer>center
 /* specificity to prevent performance issues  */
-div.row:has(>form[action="territory.php"]
+/* div.row:has(>form[action="territory.php"] */
 
     /* this is the div.row we're styling */
-    div.feature > input[name="playall"]) {
-    /* just making sure the playall input exists */
+    /* div.feature > input[name="playall"])   */
+
+/* the "feed all play all" link itself, the bold "days left" text, the spacing paragraph, the feed all row itself */
+a[name="fapa"] + b + p + div.row {
     display: flex;
     flex-direction: row;
     margin: 15px 0;
@@ -394,6 +509,147 @@ div.row:has(>form[action="territory.php"]
         display: none;
     }
 
+}
+
+/* the link itself */
+a[name="fapa"] {
+	order: -3;
+	display: none;
+	
+	/* the days left warning */
+	& + b {
+		order: -3;
+		font-size: 0px;
+		margin-bottom: 5px;
+	
+		> span {
+			font-size: 14px;
+		}
+	
+		&::before {
+			content: "You have ";
+		}
+	
+		&::after {
+			content: " of the Feed All/Play All tool left.";
+			
+		}
+	}
+}
+
+/* removing the spacer paragraphs from below rows and tables and forms using sibling selectors */
+div.row + p, form[method="post"] + p, table + p, a[name="fapa"] + b + p {
+	display: none;
+
+	& + p {
+		display: none;
+	}
+}
+
+
+
+
+
+span.select-span {
+  user-select: all;
+}
+
+
+/* fixing mounds and caves */
+
+.mound-grid {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+#fraMoundList {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+/* ------------ lore container! reordering + checkbox displays so its not in everyone's face lol ----------------------- */
+
+/* dynasty, achievements, showcase, beetlebook. all pushed to the very bottom of the page */
+.dynastycollection {
+    order: 99;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* first two children (king dynasty and pride dynasty) made to 50% of the flex group cause theyre the buttons people actually care abt */
+.dynastycollection > div:nth-child(-n + 2 of .dynastylist) {
+  width: 50%;
+}
+
+/* all div.rows and post forms *after* the dynasty collection (breeding requests, detail editing, account settings), pushed below the collection itself */
+
+.dynastycollection ~ div.row, .dynastycollection ~ form[method="post"] {
+    order: 100;
+}
+
+
+
+.lore {
+	/* order: 1 is below most stuff. i have my show clans/allies set up so im pushing it a bit more */
+    order: 50;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    align-content: center;
+    padding: 1em;
+    gap: 1em;
+    
+    
+
+    p {
+        width: 100%;
+    }
+    
+    
+    
+    
+    div {
+        position: relative;
+        width: 250px;
+        
+        
+        &::before {
+            content: " ";
+            position: absolute;
+            top: 0;
+            display: block;
+            /* height: 50px; */
+            width: 25%;
+            aspect-ratio: 1;
+            z-index: 5;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+
+    div.inara::before {
+        background-image: url(https://wildwizardcreation.github.io/lioden/assets/wardrobe/inara_portrait_render.png);
+        right: 0;
+    }
+
+    div.nadira::before {
+        background-image: url(https://wildwizardcreation.github.io/lioden/assets/wardrobe/nadira_portrait_render.png);
+    }
+
+    img {
+        width: 100%;
+        min-width: 0;
+        display: block;
+        z-index: 4;
+    }
 }
 
 
@@ -433,17 +689,6 @@ div.row:has(>form[action="territory.php"]
       margin-top: -5px;
     }
 }
-
-span.select-span {
-  user-select: all;
-}
-
-
-  h1, h2, h3, h4, h5, div, a, p {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
 
 .horizon-box {
   background-image: url(https://wildwizardcreation.github.io/lioden/assets/backgrounds/horizon_bg.png);
@@ -729,12 +974,4 @@ a:has(.count), .arrow-right {
     }
   }
   
-}
-
-.angel {
-    
-}
-
-.heaven {
-    
 }
