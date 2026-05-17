@@ -239,6 +239,10 @@ https://emoji.gg/user/bet.official
 	--shop-icon: url("https://cdn3.emoji.gg/emojis/7182-shop-w.png");
 	--asterisk-icon: url("https://cdn3.emoji.gg/emojis/5093-moderation.png");
 	--gift-icon: url("https://cdn3.emoji.gg/emojis/8630-gift.png");
+	--insights-icon: url("https://cdn3.emoji.gg/emojis/9587-insights.png");
+	--log-icon: url("https://cdn3.emoji.gg/emojis/6137-auditlog-mobile.png");
+	--activity-icon: url("https://cdn3.emoji.gg/emojis/5636-activity.png");
+	--bug-icon: url("https://cdn3.emoji.gg/emojis/17891-discord-bugs-white.png");
 
 	/* default misc icons */
 	--paws-icon: url("https://cdn3.emoji.gg/emojis/8224-purple-paw-prints.png"); /* used for the "user icons" in the friends list */
@@ -304,7 +308,7 @@ h5 {
 	padding: 0px;
 }
 
-center p:empty, center p:empty + p, br.clear + p, br.clear {
+center p:empty, center p:empty + p, br.clear + p, br.clear, div.dynastycollection + p {
 	display: none;
 }
 
@@ -352,6 +356,13 @@ center p:empty, center p:empty + p, br.clear + p, br.clear {
 	#about,
 	#player {
 		width: 100% !important;
+		max-width: 100% !important;
+	}
+
+	#allies,
+	#clans {
+		width: 100% !important;
+		max-width: 100% !important;
 	}
 
 	#pageContainer:has(#fraProfileContent div.discord-cave-icons) {
@@ -390,6 +401,12 @@ img[src^="//static.lioden.com/images/PawArtist.png"] {
 	content: var(--artist-badge) !important;
 }
 
+img[src="//static.lioden.com/images/layout/bugbox.png"] {
+	content: var(--bug-icon) !important;
+	width: 24px;
+	
+}
+
 /* themeing */
 body {
 	background: #121214;
@@ -398,14 +415,17 @@ body {
 
 /* main page */
 #pageContainer {
-	position: relative;
+	position: static;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	gap: 15px;
+	/* gap: 15px; */
 	z-index: 1;
 	overflow: visible;
-
+	height: fit-content;
+	align-content: space-between;
+	justify-content: space-between;
+	align-items: center;
 
 	>h1 {
 		display: none;
@@ -538,7 +558,7 @@ ol.breadcrumb + div:has(>.alert) {
 
 	.alert {
 		margin: 0;
-		margin-bottom: 10px;
+		margin-bottom: 20px;
 		text-align: center !important;
 		display: flex;
 		align-items: center;
@@ -598,10 +618,14 @@ ol.breadcrumb + div:has(>.alert) {
 	align-items: center;
 	justify-content: flex-end;
 	flex-wrap: nowrap;
-	margin: 0 15px;
+	margin: 5px 15px;
 	/* margin-bottom: 0px; */
 	gap: 10px;
 	align-content: center;
+	
+	
+	
+	
 
 	b {
 		color: var(--discord-white);
@@ -769,6 +793,18 @@ ol.breadcrumb + div:has(>.alert) {
 .sidebar {
 	background-color: #1a1a1e;
 	color: #6f6f77;
+	display: flex !important;
+	flex-direction: column;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 
 	h3 {
@@ -1016,8 +1052,7 @@ ol.breadcrumb + div:has(>.alert) {
 button.button,
 input[type="button"],
 input[type="submit"],
-input[type="reset"],
-div.col.col-sm-4>a>div {
+input[type="reset"], a.btn.button {
 	background: var(--discord-blurple);
 	color: var(--discord-white);
 	padding: 6px;
@@ -1026,6 +1061,7 @@ div.col.col-sm-4>a>div {
 	font-weight: bold;
 	text-shadow: none;
 	border: none;
+	
 
 	&:hover {
 		background: var(--discord-dark-blurple);
@@ -1112,55 +1148,6 @@ div.col.col-sm-4>a>div {
 	}
 }
 
-/* feed all play all */
-
-center>div.row:has(div.feature) {
-	display: flex;
-	align-items: center;
-	flex-wrap: nowrap;
-	flex-direction: row;
-	height: 12em;
-	position: relative;
-	gap: 1em;
-
-	br {
-		display: none;
-	}
-
-
-	.col-sm-6.col-xs-12 {
-		display: block;
-		float: none;
-		height: 100%;
-		border: 1px solid var(--discord-border);
-		border-radius: 6px;
-	}
-
-	form {
-		display: contents;
-	}
-
-	.feature {
-		display: flex;
-		position: relative;
-		background: none;
-		border: none;
-		width: 100%;
-		height: 100%;
-		/* margin: .5em; */
-		flex-direction: row;
-		flex-wrap: wrap;
-		align-items: center;
-		justify-content: center;
-		align-content: space-around;
-
-
-		h3 {
-			width: 100%;
-		}
-	}
-
-}
 
 /* allies and clans tables */
 
@@ -1177,15 +1164,6 @@ center>div.row:has(div.feature) {
 		align-items: center;
 		justify-content: center;
 		padding: 5px;
-		
-		
-		
-		
-		
-		
-		
-		
-
 		
 		
 
@@ -1368,11 +1346,16 @@ center>div.row:has(div.feature) {
 #clans {
 	height: 300px;
 	max-height: 300px;
-	width: 48.5%;
+	min-width: 45%;
+	max-width: calc(50% - 10px);
 	/* border: none; */
 	position: relative;
 	/* border-radius: 10px; */
 	padding-top: 40px;
+	
+	
+	
+	
 	
 	tbody {
 		display: flex;
@@ -1510,7 +1493,21 @@ div.row.dynastycollection {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	order: 99;
+	order: 1;
+	margin: 0;
+	/* margin-top: -50px; */
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	div.dynastylist {
 		max-width: 300px;
@@ -2498,7 +2495,7 @@ div.col-md-4.col-xs-6.center>a[href^="lionoverview.php"] {
 	}
 
 	/* first */
-	div.col-md-3.col-xs-4.center:nth-child(2)>a[href^="mound.php?"]>div {
+	div.col-md-3.col-xs-4.center:nth-child(1)>a[href^="mound.php?"]>div {
 
 		img {
 			background-image: var(--first-mound-image), var(--default-mound-image);
@@ -2506,7 +2503,7 @@ div.col-md-4.col-xs-6.center>a[href^="lionoverview.php"] {
 	}
 
 	/* second */
-	div.col-md-3.col-xs-4.center:nth-child(3)>a[href^="mound.php?"]>div {
+	div.col-md-3.col-xs-4.center:nth-child(2)>a[href^="mound.php?"]>div {
 
 		img {
 			background-image: var(--second-mound-image), var(--default-mound-image);
@@ -2514,7 +2511,7 @@ div.col-md-4.col-xs-6.center>a[href^="lionoverview.php"] {
 	}
 
 	/* third */
-	div.col-md-3.col-xs-4.center:nth-child(4)>a[href^="mound.php?"]>div {
+	div.col-md-3.col-xs-4.center:nth-child(3)>a[href^="mound.php?"]>div {
 
 		img {
 			background-image: var(--third-mound-image), var(--default-mound-image);
@@ -2908,8 +2905,9 @@ div.col-md-4.col-xs-6.center>a[href^="lionoverview.php"] {
 #about,
 #player {
 	height: 600px;
-	width: 48.5%;
+	min-width: 45%;
 	border: none;
+	max-width: calc(50% - 5px);
 	position: relative;
 	border-radius: 10px;
 	/* overflow: hidden; */
@@ -2927,6 +2925,7 @@ form[method="post"]:has(>#about) {
 	background-color: var(--discord-light);
 	/* float: right; */
 	display: flex;
+	margin-right: 10px;
 
 	td {
 		background: transparent;
@@ -3438,8 +3437,10 @@ form[method="post"]:has(>#about) {
 
 #player {
 	background-color: var(--player-primary);
-	/* float: left; */
+	float: none;
 	display: flex;
+	/* justify-self: flex-end; */
+	right: 0;
 }
 
 #player>tbody {
@@ -3450,6 +3451,14 @@ form[method="post"]:has(>#about) {
 	flex-wrap: wrap;
 	padding: 0 15px;
 	align-content: flex-start;
+	
+	
+	
+	
+	
+	
+	
+	
 
 
 
@@ -4052,8 +4061,7 @@ td.right_odd>a[href^="/allies.php?p=blocked"] {
 	color: var(--discord-white);
 }
 
-
-/* personal view */
+/* ------------------- player view ------------------- */
 
 #player:has(a[href^="/refer.php"]) {
 
@@ -4203,6 +4211,319 @@ td.right_odd>a[href^="/allies.php?p=blocked"] {
 	}
 
 
+}
+
+
+/* ------------------- player view: feed all play all ------------------- */
+
+.container.main:has(center a[name="fapa"]) {
+	.sidebar {
+		padding-top: 205px;
+	}
+}
+
+/* the "feed all play all" link itself, the bold "days left" text, the spacing paragraph, the feed all row itself */
+a[name="fapa"] + b + p + div.row {
+    display: flex;
+    flex-direction: row;
+    margin: 15px;
+    gap: 15px;
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    align-items: center;
+    z-index: 100;
+    width: calc(25% - 95px);
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    height: fit-content;
+    background: var(--discord-light);
+    border: 1px solid var(--discord-border);
+    padding: 10px;
+    padding-top: 50px;
+    border-radius: 5px;
+    
+    
+	
+    &::before,
+    &::after {
+        display: none !important;
+    }
+
+    >form {
+        width: 50%;
+        /* the forms that hold the feature elements */
+    }
+
+    .col-sm-6.col-xs-12 {
+        display: contents;
+        /* width: 100%;
+        background: var(--discord-light);
+        border: 1px solid var(--discord-border);
+        padding: 10px; */
+    }
+
+
+    span.xsmall {
+        /* the tip text. we don't need this! we know how to use these buttons! */
+        display: none;
+    }
+
+	input[name="playall"] {
+		font-size: 0px !important;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		background: transparent;
+	}
+
+	input[name="feedall"] {
+		padding: 6px;
+		/* margin-left: -30px; */
+		padding-left: 35px !important;
+	}
+
+}
+
+/* the link itself */
+a[name="fapa"] {
+	position: absolute;
+	top: 0;
+	display: none;
+}
+
+/* the days left warning */
+a[name="fapa"] + b {
+	order: -3;
+	font-size: 0px;
+	margin-bottom: 5px;
+	color: var(--discord-white) !important;
+	position: absolute;
+	top: 50px;
+	right: 0;
+	z-index: 101;
+	margin: 30px;
+	
+	> span, &::before, &::after {
+		font-size: 14px;
+	}
+
+	> span {
+		color: var(--discord-blurple) !important;
+	}
+
+	&::before {
+		content: "You have ";
+	}
+
+	&::after {
+		content: " of the Feed All/Play All tool left.";
+		
+	}
+}
+
+
+/* feed all play all */
+
+center>div.row:has(div.feature) {
+	display: flex;
+	align-items: center;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	/* height: 12em; */
+	position: relative;
+	gap: 1em;
+
+	
+	br {
+		display: none;
+	}
+
+	form {
+		display: contents;
+	}
+
+	.feature {
+		display: flex;
+		position: relative;
+		background: none;
+		border: none;
+		width: fit-content;
+		height: 100%;
+		/* margin: .5em; */
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		align-content: space-around;
+
+
+		h3 {
+			display: none;
+		}
+	}
+
+	.feature:has(input[name="playall"]) {
+		background-color: var(--discord-blurple);
+		
+		&:hover {
+			background-color: var(--discord-dark-blurple);
+		}
+		
+		&::before {
+			content: " ";
+			display: inline-block;
+			background-size: contain;
+			height: 20px;
+			background-image: var(--emoji-icon);
+			width: 20px;
+			filter: brightness(1.6);
+			margin-right: 10px;
+		}
+
+		&::after {
+			content: " Interact With Pride!";
+			font-weight: bold;
+			font-size: 12px;
+		}
+	}
+
+	.feature:has(input[name="feedall"]) {
+		display: contents;
+		
+		&:hover {
+			/* background-color: var(--discord-dark-blurple); */
+		}
+		
+		&::before {
+			content: " ";
+			display: block;
+			background-size: contain;
+			background-origin: content-box;
+			background-repeat: no-repeat;
+			padding: 4px;
+			height: 30px;
+			background-image: var(--food-icon);
+			/* background-color: var(--discord-blurple); */
+			width: 30px;
+			filter: brightness(1.6);
+			margin-right: -47px;
+			pointer-events: none;
+		}
+
+		select {
+			width: 100% !important;
+			order: 1;
+			background: var(--discord-dark);		
+		}
+
+		/* &::after {
+			content: " Interact With Pride!";
+		font-weight: bold;
+		font-size: 12px;
+		} */
+	}
+
+}
+
+/* ------------------- player view: utility stuff ------------------- */
+
+
+center > form[method="post"]:nth-last-of-type(1):has(p:empty) {
+	display: none;
+}
+
+center > form[method="post"]:has(#editdetailspanel) {
+	order: 999;
+	width: 100%;
+}
+
+center > div.row:has(a[href*="stud_requests"]) {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: flex-start;
+	justify-content: center;
+	width: 100%;
+	gap: 10px;
+	
+	
+	
+
+	br, &::before, &::after {
+		display: none;
+	}
+
+	div.col {
+		min-width: 25%;
+		padding: 0;
+		margin: 0;
+		background-color: var(--discord-mid);
+		border: 1px solid var(--discord-border);
+		border-radius: 4px;
+		
+		
+
+		&:hover {
+			filter: brightness(1.2);
+		}
+	}
+
+	div.col a {
+		color: var(--discord-dark-white);
+		.left {
+			background: none;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+		}
+
+		div::before {
+			content: " ";
+			width: 30px;
+			height: 30px;
+			display: inline-block;
+			background-size: contain;
+			background-repeat: no-repeat;
+			margin-right: 10px;
+		}
+	}
+
+	a[href^="/stud_requests"]{
+		div::before {
+			background-image: var(--insights-icon);
+		}
+	}
+
+	a[href^="/userlog"]{
+		div::before {
+			background-image: var(--log-icon);
+		}
+	}
+
+	a[href^="/attacks"]{
+		div::before {
+			background-image: var(--activity-icon);
+		}
+	}
+	
+}
+
+/* sidebar buttons */
+
+.sidebar form[action="/account-link.php"] {
+	max-height: fit-content;
+	position: relative;
+
+	br {
+		display: none;
+	}
+	
+
+	p.center {
+		max-height: fit-content;
+	}
 }
 
 /* CHAT BOX ADJUSTMENTS */
