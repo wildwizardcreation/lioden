@@ -1,4 +1,3 @@
-
 /* hi!! welcome to the discord den theme! */
 
 /* you can find most self explanatory customization in the vars below. replacing the urls and adjusting
@@ -53,261 +52,297 @@ https://emoji.gg/user/bet.official
 /* sourced from https://discord.com/blog */
 
 
-:root{
+:root {
 
-    /* ------------------- utility vars ------------------- */
-    /* --- !!! DO NOT CHANGE THESE THINGS WILL BREAK !!! --- */
-    --blank: url("https://cdn3.emoji.gg/emojis/7352-blank.png");
-    --default-pfp: url(https://archive.org/download/discordprofilepictures/discordblue.png);
-    --server-name: "Abbadon's Epic Den";
+	/* ------------------- utility vars ------------------- */
+	--blank: url("https://cdn3.emoji.gg/emojis/7352-blank.png");
+	--default-pfp: url(https://archive.org/download/discordprofilepictures/discordblue.png);
 
-    --message-background: #1a1a1e;
-    --message-highlight-background: #242428;
-    --message-ping: #ce9c5c;
-    --message-ping-background: #25201c;
-    --message-ping-hover: #1f1d1d;
+	--message-background: #1a1a1e;
+	--message-highlight-background: #242428;
+	--message-ping: #ce9c5c;
+	--message-ping-background: #25201c;
+	--message-ping-hover: #1f1d1d;
 
-    --gold-beetle-icon: url(https://cdn3.emoji.gg/emojis/5611-evolving-badge-nitro-15-months.png);
-    --silver-beetle-icon: url(https://cdn3.emoji.gg/emojis/99057-orbs-discord.png);
+	--gold-beetle-icon: url(https://cdn3.emoji.gg/emojis/5611-evolving-badge-nitro-15-months.png);
+	--silver-beetle-icon: url(https://cdn3.emoji.gg/emojis/99057-orbs-discord.png);
+
+
+
+	/* ------------------- customization vars ------------------- */
+
+
+	--server-name: "Abbadon's Epic Den";
+
+
+	/* player "profile" colors, info, and images */
+	--player-border: ;
+	--player-primary: #242429;
+	--player-secondary: #323237;
+	--player-buttons: #323237;
+	--player-pronouns: "he/him or gam/er";
+	--player-description: "test test lalala yayyyyyy";
+
+	/* player "profile" images */
+	--player-header: url(https://sitebuilder.neocities.org/assets/tumblr_c0ce31cb8da59f998d1b29443edbe203_2ab0ebec_500.png);
+	--player-pfp: url(https://cdn3.emoji.gg/emojis/98237-akkoshrug.png);
+
 
 	
-    /* ------------------- cave customization ------------------- */
-	
+	/* lion "profile" colors, info, and images */
+	--lion-border: ;
+	--lion-primary: #242429;
+	--lion-secondary: #323237;
+	--lion-buttons: #323237;
+
+	/* lion "profile" images */
+	--lion-header: url(https://64.media.tumblr.com/84cab2875d316c4abc251ef7460eb5d3/762c38b2d9a400e5-bc/s540x810/d8fa449274740daf766aece2cd6782d733a8026d.gif);
+	--lion-pfp: url("https://cdn3.emoji.gg/emojis/33751-epiccat.png");
+	/* <- leave blank for normal lion headshot */
+
+
+	/* ------------------- cave customization ------------------- */
+
 	/* default images (leave vars blank to keep these) */
 	--default-cave-image: url("https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/672165db4c87e38208370925_Products%20%26%20Features%20-%201%20(2)-p-2600.png");
-
 	--default-cave-icon: url("https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/672165db4c87e38208370925_Products%20%26%20Features%20-%201%20(2)-p-2600.png");
 
-    /* unsorted */
-
+	/* unsorted */
 	--unsorted-cave-image: url("https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/66eb67698c19f39b38d643ab_image1.png");
 	--unsorted-cave-icon: url("https://cdn3.emoji.gg/emojis/985781-magnifying-glass.png");
-    --unsorted-cave-description: "TEST TEST TEST LALALALAAAAAAAAAAAAAAAAAAAAAAAAAA";
-	
-    /* nesting */
-	
+	--unsorted-cave-description: "TEST TEST TEST LALALALAAAAAAAAAAAAAAAAAAAAAAAAAA";
+
+	/* nesting */
 	--pregnant-cave-image: url("https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/648cef33984677d825ca2763_PortalArticleHeader_1800x720.png");
 	--pregnant-cave-icon: url("https://cdn3.emoji.gg/emojis/423717-discord-heart.png");
-    --pregnant-cave-description: "TEST TEST TEST LALALALA";
-	
+	--pregnant-cave-description: "TEST TEST TEST LALALALA";
 
-    /* overview */
 
+	/* overview */
 	--overview-cave-image: url("https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/611580b41ebb6e0f81f958c8_0_D9T4mJniZUz2QeQx.png");
 	--overview-cave-icon: url("https://cdn3.emoji.gg/emojis/445181-discord-orbsbook.png");
-    --overview-cave-description: "TEST TEST TEST LALALALA";
+	--overview-cave-description: "TEST TEST TEST LALALALA";
 
 	/* other caves */
-	
 	--first-cave-image: url("https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/61aa7642a72a1b627d695f49_Discord-Elixir-Blog-Header.png");
 
 
 	--first-cave-icon: url("https://cdn3.emoji.gg/emojis/620166-discord-wumpussale.png");
-	
+
 	--second-cave-image: url("https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/611be3897e514d7771a4a0e7_0_NMu3mta7hRrQas_X.png");
 	--second-cave-icon: url("https://cdn3.emoji.gg/emojis/7609-wumpus-coin.png");
-	
+
 	--third-cave-image: url("https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/64121f8765e921a28f9a2b54_Discord%20HQ%20-%202-p-2600.png");
 	--third-cave-icon: url(" ");
-	
+
 	--fourth-cave-image: url("");
 	--fourth-cave-icon: none;
-	
+
 	--fifth-cave-image: none;
 	--fifth-cave-icon: url(" ");
-	
+
 	--sixth-cave-image: url(" ");
 	--sixth-cave-icon: url(" ");
 
-    /* unused */
-	
+	/* unused */
 	--unused-cave-image: url("https://sitebuilder.neocities.org/assets/lioden/invite_background_dark.png");
 	--unused-cave-icon: url("https://lioden.wildwizardcreation.com/assets/discord/invite_background_dark.png");
-	
-	
+
+
 	/* ------------------- mound customization ------------------- */
-	
+
 	/* default images (leave vars blank to keep these) */
 	--default-mound-image: url("https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/611ed6b3ff0df3e75a6b3c28_1_BYeVEgTVQia4MD5LSLoUlA.png");
 	--default-mound-icon: url("https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/611ed6b3ff0df3e75a6b3c28_1_BYeVEgTVQia4MD5LSLoUlA.png");
 
 	/* unsorted */
-
 	--unsorted-mound-image: url("https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/66eb67698c19f39b38d643ab_image1.png");
 	--unsorted-mound-icon: url("https://cdn3.emoji.gg/emojis/985781-magnifying-glass.png");
-    --unsorted-mound-description: "All of your unsorted beetle friends!";
+	--unsorted-mound-description: "All of your unsorted beetle friends!";
 
 	/* other mounds */
 	--first-mound-image: url("");
 	--first-mound-icon: url("https://cdn3.emoji.gg/emojis/620166-discord-wumpussale.png");
-    --first-mound-description: "TEST TEST TEST LALALALA";
+	--first-mound-description: "TEST TEST TEST LALALALA";
 
-    --second-mound-image: url("");
+	--second-mound-image: url("");
 	--second-mound-icon: url("https://cdn3.emoji.gg/emojis/620166-discord-wumpussale.png");
-    --second-mound-description: "TEST TEST TEST LALALALA";
+	--second-mound-description: "TEST TEST TEST LALALALA";
 
-    --third-mound-image: url("");
+	--third-mound-image: url("");
 	--third-mound-icon: url("https://cdn3.emoji.gg/emojis/620166-discord-wumpussale.png");
-    --third-mound-description: "TEST TEST TEST LALALALA";
+	--third-mound-description: "TEST TEST TEST LALALALA";
 
-	
+
 	/* unused */
 	--unused-mound-image: url("https://sitebuilder.neocities.org/assets/lioden/invite_background_dark.png");
 	--unused-mound-icon: url("https://lioden.wildwizardcreation.com/assets/discord/invite_background_dark.png");
-	
-	
-    /* default colors */
 
+
+	/* default colors */
 	--discord-border: #323237;
-    --discord-light-border: #424248;
-    
-    --discord-white: #fbfbfb;
-    --discord-dark-white: #d2cece;
-    --discord-darkest-white: #82838b;
-    
-    --discord-darkest: #121214;
-    --discord-dark: #1a1a1e;
+	--discord-light-border: #424248;
+
+	--discord-white: #fbfbfb;
+	--discord-dark-white: #d2cece;
+	--discord-darkest-white: #82838b;
+
+	--discord-darkest: #121214;
+	--discord-dark: #18181c;
 	--discord-mid: #202024;
 	--discord-light: #242429;
-    --discord-lighter: #2c2c30;
-    --discord-lightest: #7f8088;
-    
-    --discord-buttons: #323237;
+	--discord-lighter: #2c2c30;
+	--discord-lightest: #7f8088;
 
-    --discord-link: #61B0FE;
+	--discord-buttons: #323237;
 
-    --discord-blurple: #5865f2;
-    --discord-blurple-50: #282b50;
-    --discord-blurple-text: #a9baff;
+	--discord-link: #61B0FE;
 
-    --discord-green: #35ed7e;
-    --discord-pink: #ff4cd2;
-    --discord-yellow: #ffdb5e;
+	--discord-blurple: #5865f2;
+	--discord-blurple-50: #282b50;
+	--discord-blurple-text: #a9baff;
 
-    /* default badges */
-    --vip-badge: url("https://cdn3.emoji.gg/emojis/18822-2-level-boost.png");
-    --mod-badge: url("https://cdn3.emoji.gg/emojis/2731-certified-moderator.png");
-    --admin-badge: url("https://cdn3.emoji.gg/emojis/7871-discord-staff.png");
-    --artist-badge: url("https://sitebuilder.neocities.org/assets/lioden/artist_badge.png");
+	--discord-green: #35ed7e;
+	--discord-pink: #ff4cd2;
+	--discord-yellow: #ffdb5e;
 
-    /* default ui icons */
-    --invite-icon: url("https://cdn3.emoji.gg/emojis/9437-invite.png");
-    --pinned-icon: url("https://cdn3.emoji.gg/emojis/7896-pinned.png");
-    --settings-icon: url("https://cdn3.emoji.gg/emojis/2888-settings.png");
-    --reload-icon: url("https://cdn3.emoji.gg/emojis/8562-replay.png");
-    --emoji-icon: url("https://cdn3.emoji.gg/emojis/7354-emoji.png");
-    --options-icon: url("https://cdn3.emoji.gg/emojis/6375-more-options.png");
-    --send-icon: url("https://sitebuilder.neocities.org/assets/lioden/send-message-icon.png");
+	--discord-notif-green: #3ba561;
+	--discord-notif-red: #eb3d47;
+	--discord-notif-yellow: #f0b132;
 
-    /* pixel social media icons */
-    --twitch-icon: url("https://cdn3.emoji.gg/emojis/77281-twitch.png");
-    --twitter-icon: url("https://cdn3.emoji.gg/emojis/12994-twitter.png");
-    --facebook-icon: url("https://cdn3.emoji.gg/emojis/87895-facebook.png");
-    --youtube-icon: url("https://cdn3.emoji.gg/emojis/12899-youtube.png");
+	/* default badges */
+	--vip-badge: url("https://cdn3.emoji.gg/emojis/18822-2-level-boost.png");
+	--mod-badge: url("https://cdn3.emoji.gg/emojis/2731-certified-moderator.png");
+	--admin-badge: url("https://cdn3.emoji.gg/emojis/7871-discord-staff.png");
+	--artist-badge: url("https://sitebuilder.neocities.org/assets/lioden/artist_badge.png");
 
+	/* default ui icons */
+	--invite-icon: url("https://cdn3.emoji.gg/emojis/9437-invite.png");
+	--pinned-icon: url("https://cdn3.emoji.gg/emojis/7896-pinned.png");
+	--settings-icon: url("https://cdn3.emoji.gg/emojis/2888-settings.png");
+	--reload-icon: url("https://cdn3.emoji.gg/emojis/8562-replay.png");
+	--emoji-icon: url("https://cdn3.emoji.gg/emojis/7354-emoji.png");
+	--options-icon: url("https://cdn3.emoji.gg/emojis/6375-more-options.png");
+	--send-icon: url("https://sitebuilder.neocities.org/assets/lioden/send-message-icon.png");
+	--notifcation-icon: url("https://cdn3.emoji.gg/emojis/7238-notification-settings.png");
+	--dismiss-icon: url("https://cdn3.emoji.gg/emojis/8864-discord-clear-search.png");
+	--food-icon: url("https://cdn3.emoji.gg/emojis/2605-food-and-drinks.png");
+	--checkmark-icon: url("https://cdn3.emoji.gg/emojis/586735-checkmark.png");
+	--friends-icon: url("https://cdn3.emoji.gg/emojis/8683-communication.png");
+	--discover-icon: url("https://cdn3.emoji.gg/emojis/6506-main.png");
+	--message-icon: url("https://cdn3.emoji.gg/emojis/8312-active-threads.png");
 
-    /* player "profile" colors, info, and images */
-    --player-border: ;
-    --player-primary: #242429;
-    --player-secondary: #323237;
-    --player-buttons: #323237;
-	--player-pronouns: "he/him or gam/er";
-	--player-description: "test test lalala yayyyyyy";
+	/* default misc icons */
+	--paws-icon: url("https://cdn3.emoji.gg/emojis/8224-purple-paw-prints.png"); /* used for the "user icons" in the friends list */
 
-	/* images */
-    --player-header: url(https://sitebuilder.neocities.org/assets/tumblr_c0ce31cb8da59f998d1b29443edbe203_2ab0ebec_500.png);
-    --player-pfp: url(https://cdn3.emoji.gg/emojis/98237-akkoshrug.png);
+	/* pixel social media icons */
+	--twitch-icon: url("https://cdn3.emoji.gg/emojis/77281-twitch.png");
+	--twitter-icon: url("https://cdn3.emoji.gg/emojis/12994-twitter.png");
+	--facebook-icon: url("https://cdn3.emoji.gg/emojis/87895-facebook.png");
+	--youtube-icon: url("https://cdn3.emoji.gg/emojis/12899-youtube.png");
 
-    /* lion "profile" colors, info, and images */
-	
-	--lion-border: ;
-    --lion-primary: #242429;
-    --lion-secondary: #323237;
-    --lion-buttons: #323237;
-
-	/* images */
-    --lion-header: url(https://64.media.tumblr.com/84cab2875d316c4abc251ef7460eb5d3/762c38b2d9a400e5-bc/s540x810/d8fa449274740daf766aece2cd6782d733a8026d.gif);
-    --lion-pfp: url(https://cdn3.emoji.gg/emojis/33751-epiccat.png); /* <- leave blank for normal lion headshot */
-
-    
 }
 
 [hidden] {
-    display: none !important;
+	display: none !important;
 }
 
 /* mass adjust */
-a:link, a:visited, a:active, a {
-    color: #fbfbfb;
+a:link,
+a:visited,
+a:active,
+a {
+	color: #fbfbfb;
 }
 
 a:hover {
-    color: #fbfbfb;
+	color: #fbfbfb;
 }
 
-p, h5, h4, h3, h2, h1, .sidebar h3, #pageContainer  {
-    color: #fbfbfb;
+p,
+h5,
+h4,
+h3,
+h2,
+h1,
+.sidebar h3,
+#pageContainer {
+	color: #fbfbfb;
 }
 
-h1, .h1, h2, .h2, h3, .h3, h4, h5 {
-    margin: 0px;
-    padding: 0px;
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+h5 {
+	margin: 0px;
+	padding: 0px;
 }
 
-.container, .row {
-    padding: 0px;
+.container,
+.row {
+	padding: 0px;
 }
 
 .row {
-    margin: 0px;
-    background-color: #1a1a1e;
+	margin: 0px;
+	background-color: #1a1a1e;
 }
 
 .table>tbody>tr>td {
-    padding: 0px;
+	padding: 0px;
+}
+
+center p:empty, center p:empty + p, br.clear + p, br.clear {
+	display: none;
 }
 
 /* layout adjustment */
 @media only screen and (min-width: 1000px) {
-        .container {
-        width: 1300px;
-    }
+	.container {
+		width: 1300px;
+	}
 
-        .main {
-        display:flex!important;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-content: center;
-    }
+	.main {
+		display: flex !important;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-content: center;
+	}
 
 	.navbar-default {
-		display:flex;
-	    flex-direction: column;
-		width:260px;
-		background:none;
+		display: flex;
+		flex-direction: column;
+		width: 260px;
+		background: none;
 		/*! padding: 5px; */
 		/*! margin: 0 10px; */
 	}
-	
+
 	.navbar-collapse {
-	    padding: 0px;
+		padding: 0px;
 	}
-	
+
 	.navbar-header {
-	    /* margin-bottom: 53px; */
+		/* margin-bottom: 53px; */
 	}
-	
+
 	.nav>li {
 		/* transform:translate(-180px,70px); */
 	}
-	
-	.navbar-default .navbar-nav > li > a:hover {
-		background:none;
+
+	.navbar-default .navbar-nav>li>a:hover {
+		background: none;
 	}
 }
 
 @media only screen and (max-width: 1500px) {
-	#about, #player {
+
+	#about,
+	#player {
 		width: 100% !important;
 	}
 
@@ -317,40 +352,40 @@ h1, .h1, h2, .h2, h3, .h3, h4, h5 {
 			line-height: 2.1em;
 		}
 
-		.col-md-4.col-xs-6.center > a > div.cave-grid img {
+		.col-md-4.col-xs-6.center>a>div.cave-grid img {
 			height: 7em !important;
 		}
 	}
-	
+
 }
 
 
 .col-md-4 {
-    width: 33.33333333%;
+	width: 33.33333333%;
 }
 
 /* image replacements */
 
 img[src^="//static.lioden.com/images/layout/donator.png"] {
-    content: var(--vip-badge) !important;
+	content: var(--vip-badge) !important;
 }
 
 img[src^="//static.lioden.com/images/PawMod.png"] {
-    content: var(--mod-badge) !important;
+	content: var(--mod-badge) !important;
 }
 
 img[src^="//static.lioden.com/images/PawAdmin.png"] {
-    content: var(--admin-badge) !important;
+	content: var(--admin-badge) !important;
 }
 
 img[src^="//static.lioden.com/images/PawArtist.png"] {
-    content: var(--artist-badge) !important;
+	content: var(--artist-badge) !important;
 }
 
 /* themeing */
 body {
-    background: #121214;
-    overflow-x: hidden;
+	background: #121214;
+	overflow-x: hidden;
 }
 
 /* main page */
@@ -360,18 +395,20 @@ body {
 	flex-direction: row;
 	flex-wrap: wrap;
 	gap: 15px;
-	
-	
-    > h1 {
-        display: none;
-	    visibility: hidden;
-	    position: relative;
+	z-index: 1;
+	overflow: visible;
+
+
+	>h1 {
+		display: none;
+		visibility: hidden;
+		position: relative;
 	}
 }
 
 /* ------ reordering! ------------ */
 
-#pageContainer > center {
+#pageContainer>center {
 	display: contents;
 }
 
@@ -383,88 +420,313 @@ body {
 
 /* main section */
 .container.main {
-    box-shadow: none;
-    border: 1px solid #29292d;
-    width: 100%;
-    margin: 0px;
+	box-shadow: none;
+	border: 1px solid #29292d;
+	width: 100%;
+	margin: 0px;
 }
 
-.main.container > div.row:nth-child(1) {
-    flex-shrink: 1;
-    /*! padding: 0 15px; */
+.main.container>div.row:nth-child(1) {
+	flex-shrink: 1;
+	/*! padding: 0 15px; */
 }
 
-.main.container > div.row:nth-child(2) {
-    flex: 1;
+.main.container>div.row:nth-child(2) {
+	flex: 1;
 }
 
 .col-md-9 {
-    background: #1a1a1e;
-    border: 1px solid #29292d;
-    border-top: none;
-    border-bottom: none;
+	background: var(--discord-dark);
+	border: 1px solid #29292d;
+	border-top: none;
+	border-bottom: none;
 }
+
+/* fake notif bell for alerts */
+#pageContainer:has(.alert) {
+	.breadcrumb {
+		margin-bottom: 10px;
+	}
+
+	.breadcrumb::after {
+		filter: brightness(1.5);
+	}
+
+	.breadcrumb::before {
+		content: " ";
+		position: absolute;
+		right: 16px;
+		bottom: 10px;
+		width: 10px;
+		height: 10px;
+		border-radius: 100px;
+		border: 2px solid var(--discord-dark);
+		background-color: var(--discord-notif-red);
+		z-index: 100;
+	}
+
+	/* &::before {
+		content: " ";
+		width: 100%;
+		height: 40px;
+		order: -11;
+		display: block;
+		background-color: #242429;
+		border: 1px solid #323237;
+	} */
+}
+
+/* fake alert grouping panel */
+
+#pageContainer>center>div:nth-last-child(1 of .alert) {
+	/* color: blue !important; */
+
+	&::after {
+		border-bottom-left-radius: 4px;
+		border-bottom-right-radius: 4px;
+		border-bottom-color: var(--discord-border);
+	}
+}
+
+
+#pageContainer:has(> center .alert) {
+	>div:nth-last-child(1 of .alert) {
+		/* color: blue !important; */
+
+		&::after {
+			border-bottom-left-radius: 0px;
+			border-bottom-right-radius: 0px;
+			border-bottom: none;
+		}
+	}
+}
+
+#pageContainer>div:nth-last-child(1 of .alert) {
+	/* color: blue !important; */
+
+	&::after {
+		border-bottom-left-radius: 4px;
+		border-bottom-right-radius: 4px;
+		border-bottom-color: var(--discord-border);
+	}
+}
+
+#pageContainer>div:nth-child(1 of .alert) {
+	/* color: blue !important; */
+
+	&::after {
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+		border-top-color: var(--discord-border);
+	}
+}
+
+/* removed messages alert */
+#pageContainer:has(.alert a[href="inbox.php"]) {
+
+	>div:nth-child(2 of .alert)::after {
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+		border-top-color: var(--discord-border);
+	}
+}
+
+/* alert styling, reordering, etc */
+
+.alert {
+	position: relative;
+	display: flex;
+	z-index: auto;
+	order: -10;
+	width: 100%;
+	height: 46px;
+	/* margin-top: -40px; */
+	/* background-color: #242429; */
+	background-color: var(--discord-mid);
+	border: 1px solid #323237;
+	color: #a9a9b0;
+	font-weight: bold;
+	align-items: center;
+	justify-content: flex-end;
+	flex-wrap: nowrap;
+	margin: 0 15px;
+	/* margin-bottom: 0px; */
+	gap: 10px;
+	align-content: center;
+
+	b {
+		color: var(--discord-white);
+	}
+
+	button[aria-label="dismiss"] {
+		background-image: var(--dismiss-icon) !important;
+		background-size: contain !important;
+		font-size: 0px;
+		height: 12px;
+		width: 12px;
+
+		&:hover {
+			filter: brightness(1.3);
+		}
+	}
+
+	a {
+		background-color: #5865f2;
+		color: white;
+		padding: 6px 8px;
+		border-radius: 5px;
+		font-size: 12px;
+		font-weight: bold;
+		display: inline-block;
+
+		&:hover {
+			background-color: #4654c0;
+		}
+	}
+
+
+
+	&::after {
+		position: absolute;
+		content: " ";
+		right: -15px;
+		top: -15px;
+		display: block;
+		width: calc(100% + 30px);
+		height: calc(100% + 30px);
+		padding: 10px;
+		margin: 0px 0;
+		background-color: transparent;
+		z-index: -1;
+		border: var(--discord-border) 1px solid;
+		border-top-color: var(--discord-dark);
+		border-bottom-color: var(--discord-dark);
+		background-color: var(--discord-dark);
+	}
+
+
+	img[src$="hungry.png"] {
+		content: var(--food-icon);
+		object-fit: contain;
+		width: 20px;
+		height: auto;
+		aspect-ratio: 1 / 1;
+		filter: brightness(1.5);
+	}
+}
+
+.alert.alert-success:has(a[href*="may_challenges_tournament"]) {
+	font-size: 0px;
+
+	&::before {
+		display: inline-block;
+		content: "A tournament you entered has been completed!";
+		font-size: 14px;
+		margin-right: -8px;
+	}
+
+	a {
+		font-size: 0px;
+
+		&::after {
+			display: inline-block;
+			content: "View Results!";
+			font-size: 12px;
+		}
+	}
+
+}
+
+.alert.alert-danger:has(a[href="inbox.php"]) {
+	display: none;
+}
+
 
 /* breadcrumb */
 .breadcrumb {
-    background-color: #18181c;
-    border: 1px solid #2a2a2e;
-    color: #8c8d94;
-    width: 100%;
-    
-    
-    
+	background-color: #18181c;
+	border: 1px solid #2a2a2e;
+	color: #8c8d94;
+	width: 100%;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	align-items: center;
 
-    >.active, li+li:before, a {
-        color: #8c8d94;
-    }
 
-    >li+li:before, >li+li:after{
-        font-size: 20px !important
-    }
 
-    >li+li:after {
-        content: "den";
-        color: white;
-    }
+	&::after {
+		content: " ";
+		background-image: var(--notifcation-icon);
+		background-size: cover;
+		/* background-color: blue; */
+		width: 24px;
+		height: 24px;
+		display: inline-block;
+		/* position: absolute; */
+		right: 0;
+		z-index: 99;
+	}
 
-    >li.breadcrumb-item.active:before {
-        content: "#";
-    }
 
-    >li:has(a){
-        font-size: 0px;
-    }
+	>.active,
+	li+li:before,
+	a {
+		color: #8c8d94;
+	}
+
+	>li+li:before,
+	>li+li:after {
+		font-size: 20px !important
+	}
+
+	>li+li:after {
+		content: "den";
+		color: white;
+	}
+
+	>li.breadcrumb-item.active:before {
+		content: "#";
+	}
+
+	>li:has(a) {
+		font-size: 0px;
+	}
+
+	li:nth-child(1) {
+		display: none;
+	}
 }
 
 #pageContainer {
-    min-width: 0;
+	min-width: 0;
 }
 
-#pageContainer > div.floatright {
+#pageContainer>div.floatright {
 	display: block;
 	position: absolute;
-	right: 25px;
+	right: 70px;
 	top: 33px;
 	margin: 0px !important;
 }
 
 .breadcrumb-item.active {
-    font-size: 0px;
+	font-size: 0px;
 }
 
 /* info sidebar */
 .sidebar {
-    background-color: #1a1a1e;
-    color: #6f6f77;
+	background-color: #1a1a1e;
+	color: #6f6f77;
 
 
-    h3 {
-        color: #6f6f77;
-        font-size: 12px;
+	h3 {
+		color: #6f6f77;
+		font-size: 12px;
 		margin-left: 5px;
 		margin-bottom: 5px;
-    }
+	}
 
 	a {
 		color: var(--discord-dark-white);
@@ -484,15 +746,17 @@ body {
 
 
 /* panels */
-.panel, .col-md-3 .panel {
-    background-color: var(--discord-light);
-    border: 1px solid var(--discord-border);
-    box-shadow: none;
+.panel,
+.col-md-3 .panel {
+	background-color: var(--discord-light);
+	border: 1px solid var(--discord-border);
+	box-shadow: none;
 	border-radius: 5px;
 }
 
-.sidebar > .col-md-12.col-xs-6, .sidebar > .col-md-12.col-xs-5 {
-	> a {
+.sidebar>.col-md-12.col-xs-6,
+.sidebar>.col-md-12.col-xs-5 {
+	>a {
 		position: relative;
 		display: flex;
 		justify-content: space-between;
@@ -511,13 +775,13 @@ body {
 		border-bottom-left-radius: 0;
 		border-bottom-right-radius: 0;
 		margin-bottom: -8px;
-		
-		
+
+
 
 		&:hover {
 			color: var(--discord-white);
 			text-decoration: underline;
-			
+
 		}
 
 		h3 {
@@ -530,42 +794,21 @@ body {
 
 
 
-/* alerts */
-.alert {
-    background-color: #242429;
-    border: 1px solid #323237;
-    color:#a9a9b0;
-    font-weight: bold;
-
-    a {
-        background-color: #5865f2;
-        color: white;
-        padding: 6px;
-        border-radius: 5px;
-        font-size: 10px;
-        font-weight: bold;
-
-        &:hover {
-            background-color: #4654c0;
-        }
-    }
-}
-
 /* progress bars */
 .progress-bar-warning {
-    background-color: #ffdb5e;
+	background-color: #ffdb5e;
 }
 
 .progress-bar-danger {
-    background-color: #ff4cd2;
+	background-color: #ff4cd2;
 }
 
 .progress-bar-success {
-    background-color: #35ed7e;
+	background-color: #35ed7e;
 }
 
-.progress:nth-child(4)>.progress-bar{
-    background-color: #5865f2;
+.progress:nth-child(4)>.progress-bar {
+	background-color: #5865f2;
 }
 
 
@@ -575,188 +818,217 @@ body {
 
 /* nav sidebar */
 .row:has(.navbar) {
-    background: #121214;
-    width: auto;
+	background: #121214;
+	width: auto;
 }
 
 /* navbar */
 
 @media (min-width: 1200px) {
-    .nav.navbar-nav.visible-lg {
-        display:flex !important;
-    }
+	.nav.navbar-nav.visible-lg {
+		display: flex !important;
+	}
+}
+
+@media (min-width: 992px) and (max-width:1199px) {
+	.nav.navbar-nav.visible-md {
+		display: flex !important
+	}
+}
+
+@media (min-width: 992px) and (max-width:1199px),
+@media (min-width: 768px) and (max-width: 991px) {
+	.nav.navbar-nav.visible-md {
+		display: flex !important
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.nav.navbar-nav.visible-sm {
+		display: flex !important
+	}
+}
+
+@media (max-width: 767px) {
+	.nav.navbar-nav.visible-xs {
+		display: flex !important
+	}
 }
 
 .nav.navbar-nav {
-    padding: 10px;
-    text-transform: lowercase;
-    flex-direction: column;
-    width: 100%;
+	padding: 10px;
+	text-transform: lowercase;
+	flex-direction: column;
+	width: 100%;
+	display: flex;
 }
 
 
-.navbar-default .navbar-nav > li {
-    width: 100%;
-    margin: 2px 0px;
-    text-align: left;
-    background: transparent;
-    font-weight: 100;
+.navbar-default .navbar-nav>li {
+	width: 100%;
+	margin: 2px 0px;
+	text-align: left;
+	background: transparent;
+	font-weight: 100;
 	border-radius: 8px;
-	
-    a {
-        vertical-align: middle;
-        padding: 6.5px 13px;
-        color: #82838b;
-        font-size: 16px;
-        border-radius: 8px;
-        width: 100%;
-        display: inline-flex;
-        align-items: center;
-        justify-content: flex-start;
-        align-content: center;
-        
-        &:hover {
-            color: var(--discord-white);
-	        background-color: #1d1d1e;
-        }
 
-        &::before {
-            background-image: url(https://cdn3.emoji.gg/emojis/3280-text.png);
-            display: inline-block;
-            background-repeat: no-repeat;
-            background-size: 100%;
-            background-position: center center;
-            content: " ";
-            vertical-align: bottom;
-            min-height: 23px;
-            min-width: 20px;
-            margin-right: 10px;
-        }
-    }
+	a {
+		vertical-align: middle;
+		padding: 6.5px 13px;
+		color: #82838b;
+		font-size: 16px;
+		border-radius: 8px;
+		width: 100%;
+		display: inline-flex;
+		align-items: center;
+		justify-content: flex-start;
+		align-content: center;
 
-    /* fake active link */
-    &:has(a[href="/territory.php"]) {
-        background-color: #2c2c30  !important;
+		&:hover {
+			color: var(--discord-white);
+			background-color: #1d1d1e;
+		}
 
-            a {
-                color:#efefef;
-
-				&:hover {
-					background-color: #2c2c30  !important;
-				}
-            }
+		&::before {
+			background-image: url(https://cdn3.emoji.gg/emojis/3280-text.png);
+			display: inline-block;
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center center;
+			content: " ";
+			vertical-align: bottom;
+			min-height: 23px;
+			min-width: 20px;
+			margin-right: 10px;
+		}
 	}
 
-    /* reordering event link */
-    &:has(a[href="/event.php"]) {
-        background-color: transparent;
-        text-transform: capitalize;
-        /* width: calc(100% - 10px); */
-        order: -1;
-        
+	/* fake active link */
+	&:has(a[href="/territory.php"]) {
+		background-color: #2c2c30 !important;
 
-		&::after{
-		    content: " ";
-		    width: 84%;
-		    height: 1px;
-		    margin: 12px auto;
-		    background: #29292d;
-		    text-align: center;
-		    display: block !important;
-		    /* order: -1; */
+		a {
+			color: #efefef;
+
+			&:hover {
+				background-color: #2c2c30 !important;
+			}
+		}
+	}
+
+	/* reordering event link */
+	&:has(a[href="/event.php"]) {
+		background-color: transparent;
+		text-transform: capitalize;
+		/* width: calc(100% - 10px); */
+		order: -1;
+
+
+		&::after {
+			content: " ";
+			width: 84%;
+			height: 1px;
+			margin: 12px auto;
+			background: #29292d;
+			text-align: center;
+			display: block !important;
+			/* order: -1; */
 
 			&:hover {
 				background: #29292d !important;
 			}
 		}
 
-            a {
+		a {
 
-                &::before {
-                    background-image: url(https://cdn3.emoji.gg/emojis/2373-events.png);
-                }
+			&::before {
+				background-image: url(https://cdn3.emoji.gg/emojis/2373-events.png);
+			}
 
-                &::after{
-                    content: "s";
-					text-transform: lowercase;
-                }
-				
-	            &:hover {
-	                background-color: #1d1d1e;
-	            }
-            }
+			&::after {
+				content: "s";
+				text-transform: lowercase;
+			}
 
-        }
-    
+			&:hover {
+				background-color: #1d1d1e;
+			}
+		}
+
+	}
+
 }
 
 
 
 /* buttons */
-.select-control, 
-button.button, 
-input[type="button"], input[type="submit"], input[type="reset"], 
-div.col.col-sm-4 > a > div {
-    background: #5865f2;
-    color: var(--discord-white);
-    padding: 6px;
-    border-radius: 5px;
-    font-size: 12px;
-    font-weight: bold;
-    text-shadow: none;
-    border: none;
-    
-    &:hover {
-        background: #4654c0;
-        color: currentColor;
-        padding: 6px;
-        border-radius: 5px;
-        font-size: 12px;
-        font-weight: bold;
-        text-shadow: none;
-        border: none;
-    }
+.select-control,
+button.button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+div.col.col-sm-4>a>div {
+	background: #5865f2;
+	color: var(--discord-white);
+	padding: 6px;
+	border-radius: 5px;
+	font-size: 12px;
+	font-weight: bold;
+	text-shadow: none;
+	border: none;
+
+	&:hover {
+		background: #4654c0;
+		color: currentColor;
+		padding: 6px;
+		border-radius: 5px;
+		font-size: 12px;
+		font-weight: bold;
+		text-shadow: none;
+		border: none;
+	}
 }
 
 /* logo replacer / "server" name */
 
 .navbar-header {
-    /* display: flex; */
+	/* display: flex; */
 }
 
-.navbar-brand{
-    display: flex !important;
-    margin: 0px;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    border-bottom: 1px solid #29292d;
-    img {
-        height: 0px;
-        width: 0px;
-    }
+.navbar-brand {
+	display: flex !important;
+	margin: 0px;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	border-bottom: 1px solid #29292d;
+
+	img {
+		height: 0px;
+		width: 0px;
+	}
 }
 
 .navbar-brand.visible-lg.visible-md::before {
-    content: var(--server-name);
-    color: #f3f3f3;
-    font-size: 85%;
-    font-weight: bold;
-    display: inline-block;
-    vertical-align: middle;
+	content: var(--server-name);
+	color: #f3f3f3;
+	font-size: 85%;
+	font-weight: bold;
+	display: inline-block;
+	vertical-align: middle;
 }
 
 .navbar-brand.visible-lg.visible-md::after {
-    background-image: url(https://cdn3.emoji.gg/emojis/9437-invite.png);
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center center;
-    content: " ";
-    vertical-align: middle;
-    min-height: 24px;
-    min-width: 24px;
+	background-image: url(https://cdn3.emoji.gg/emojis/9437-invite.png);
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center center;
+	content: " ";
+	vertical-align: middle;
+	min-height: 24px;
+	min-width: 24px;
 }
 
 
@@ -771,22 +1043,28 @@ div.col.col-sm-4 > a > div {
 .table tbody {
 	width: 100%;
 	
+	
+
 	tr {
 		/* background: var(--discord-light); */
 	}
 
-	th, .right_odd, td, td.left {
+	th,
+	.right_odd,
+	td,
+	td.left {
 		background: none;
 	}
 
-	td.top, td.bottom {
+	td.top,
+	td.bottom {
 		background: var(--discord-lighter);
 	}
 }
 
 /* feed all play all */
 
-center > div.row:has(div.feature) {
+center>div.row:has(div.feature) {
 	display: flex;
 	align-items: center;
 	flex-wrap: nowrap;
@@ -794,11 +1072,11 @@ center > div.row:has(div.feature) {
 	height: 12em;
 	position: relative;
 	gap: 1em;
-	
+
 	br {
 		display: none;
 	}
-	
+
 
 	.col-sm-6.col-xs-12 {
 		display: block;
@@ -807,11 +1085,11 @@ center > div.row:has(div.feature) {
 		border: 1px solid var(--discord-border);
 		border-radius: 6px;
 	}
-	
+
 	form {
 		display: contents;
 	}
-	
+
 	.feature {
 		display: flex;
 		position: relative;
@@ -825,31 +1103,151 @@ center > div.row:has(div.feature) {
 		align-items: center;
 		justify-content: center;
 		align-content: space-around;
-		
+
 
 		h3 {
 			width: 100%;
 		}
 	}
-	
+
 }
 
 /* allies and clans tables */
 
 #allies {
 
-	tbody > tr > td.right {
-		width: 31% !important;
+	td.top {
+		font-size: 0px;
+		
+		&::before {
+			content: " ";
+			display: inline-block;
+			background-image: var(--friends-icon);
+			background-size: contain;
+			width: auto;
+			height: 100%;
+			min-height: 24px;
+			aspect-ratio: 1 / 1;
+		}
+
+		&::after {
+			content: "Friends";
+			font-size: 16px;
+		}
 	}
 
 	a:hover {
 		text-decoration: underline;
 	}
+
+	tbody>tr>td.right {
+		background: var(--discord-mid);
+		border: 1px solid var(--discord-border);
+		border-radius: 6px;
+		height: 70px;
+		width: 380px !important;
+		margin: .5em;
+		overflow: hidden;
+		padding: 10px 55px;
+		display: flex;
+		position: relative;
+		justify-content: flex-start;
+		align-items: center;
+		flex-direction: row;
+		flex-wrap: wrap;
+		text-align: left !important;
+		align-content: center;
+		
+		
+		
+		
+		
+		br {
+			display: none !important;
+		}
+	
+		&::before {
+			content: " ";
+			background-image: var(--paws-icon);
+			background-size: contain;
+			background-origin: content-box;
+			background-position: center;
+			background-color: var(--discord-lighter);
+			background-repeat: no-repeat;
+			border-radius: 500px;
+			width: 40px;
+			height: 40px;
+			padding: 5px;
+			position: absolute;
+			left: 0;
+			margin-left: 5px;
+		}
+
+		
+		a[href^="/lion.php"] {
+			display: inline-block;
+			width: 100%;
+			height: fit-content;
+			font-size: 16px;
+		}
+
+		b {
+			font-size: 10px;
+			max-width: 50%;
+			vertical-align: middle;
+			display: inline-block;
+		}
+
+		a[href^="/compose.php"] {
+			font-size: 0px !important;
+			background-image: var(--message-icon);
+			background-size: contain;
+			background-origin: content-box;
+			background-repeat: no-repeat;
+			background-color: #323237;
+			/* border: 4px solid var(--discord-mid); */
+			padding: 8px;
+			width: 40px;
+			background-position: center;
+			aspect-ratio: 1 / 1;
+			/* height: 40px; */
+			border-radius: 100px;
+			color: white;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			right: 10px;
+		}
+		
+		.small {
+			display: contents;
+			font-size: 0px;
+
+			a[href^="/territory.php"] {
+				font-size: 12px;
+				/* max-width: 50%; */
+				/* flex: 1; */
+				text-wrap-mode: nowrap;
+				vertical-align: middle;
+				height: fit-content;
+				font-weight: 500;
+				color: var(--discord-darkest-white);
+			}
+		}
+	}
 }
 
-#allies, #clans {
-	
-	tbody {
+#allies,
+#clans {
+	height: 300px;
+	max-height: 300px;
+	width: 48.5%;
+	/* border: none; */
+	position: relative;
+	/* border-radius: 10px; */
+		
+		tbody {
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: row;
@@ -857,21 +1255,54 @@ center > div.row:has(div.feature) {
 		align-items: center;
 		/* gap: 1em; */
 	}
-
-	tr {
+		tr {
 		width: 100%;
 	}
-
-	tbody > tr:has(td.right) {
+		tbody>tr:has(td.right) {
 		display: contents;
 		height: 100%;
 	}
-
-	tbody > tr:has(td.left) {
+		tbody>tr:has(td.left) {
 		display: none;
 	}
+	
+	
+	
+	td.top,
+	td.bottom {
+		width: 100%;
+		display: flex;
+		gap: 5px;
+		text-align: left;
+		height: fit-content;
+		align-items: center;
+	}
+}
 
-	tbody > tr > td.right {
+#clans {
+	overflow-y: auto;
+	
+	td.top {
+		font-size: 0px;
+		
+		&::before {
+			content: " ";
+			display: inline-block;
+			background-image: var(--discover-icon);
+			background-size: contain;
+			width: auto;
+			height: 100%;
+			min-height: 24px;
+			aspect-ratio: 1 / 1;
+		}
+
+		&::after {
+			content: "Clans";
+			font-size: 16px;
+		}
+	}
+
+	tbody>tr>td.right {
 		background: var(--discord-mid);
 		border: 1px solid var(--discord-border);
 		border-radius: 6px;
@@ -883,47 +1314,35 @@ center > div.row:has(div.feature) {
 		align-items: center;
 		margin: .5em;
 		overflow: hidden;
-		
-		
-		>br {
-			display: none;
-		}
-	}
 
-	td.top, td.bottom {
-		width: 100%;
-		display: block;
-		text-align: left;
 	}
-}
-
-#clans {
-	tbody > tr > td.right {
+	
+	tbody>tr>td.right {
 		height: fit-content;
 		width: 31% !important;
-        max-width: 300px;
+		max-width: 300px;
 
 		br {
 			display: none;
 		}
-		
+
 		&:hover {
 			background: var(--discord-light);
 			border: 1.5px solid var(--discord-light-border);
 		}
-		
-		> a.bigger {
+
+		>a.bigger {
 			width: 100%;
 			height: fit-content;
 			/* display: flex; */
 			flex-direction: column;
 			text-align: left;
-			
+
 			padding: 0px;
 			padding-left: 18px;
 			padding-bottom: 10px;
 			overflow: hidden;
-		
+
 			img {
 				display: block;
 				position: relative;
@@ -937,16 +1356,21 @@ center > div.row:has(div.feature) {
 	}
 }
 
+#attack {
+	order: 1;
+}
+
 /* extra table boxes */
 
 div.row.dynastycollection {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	order: 99;
 
 	div.dynastylist {
 		max-width: 300px;
-		
+
 		a {
 			display: block;
 			background: var(--discord-mid);
@@ -970,40 +1394,40 @@ div.row.dynastycollection {
 		}
 
 
-		
+
 		div.left {
 			display: contents;
 		}
-		
+
 	}
 }
 
 
 #editdetailspanel {
 	width: 100%;
-	
-	> table {
+
+	>table {
 		width: 100% !important;
 	}
 
-	> table > tbody {
+	>table>tbody {
 		display: flex;
 		flex-direction: column;
 		padding-left: 1em;
 	}
 
-	> table > tbody > tr {
+	>table>tbody>tr {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: nowrap;
 		align-items: center;
-		
+
 
 		.left {
 			width: 25%;
 			/* padding-top: 1em; */
 		}
-		
+
 		.right {
 			width: 100%;
 
@@ -1022,14 +1446,17 @@ div.row.dynastycollection {
 /* profile contents (move to user "profile" ?) */
 
 #fraProfileContent:has(div.discord-custom-profile) {
-    position: absolute;
-    top: 1052px;
-    left: 30px;
-    z-index: 10;
-    border: var(--discord-border) solid 1px;
+	position: absolute;
+	top: 1052px;
+	left: 30px;
+	z-index: 10;
+	border: var(--discord-border) solid 1px;
 }
 
 #fraProfileContent {
+	/* for testing */
+	display: none;
+
 	a {
 		color: var(--discord-link);
 		font-weight: normal;
@@ -1043,47 +1470,73 @@ div.row.dynastycollection {
 /* topbar */
 
 .container.topbar {
-    background-color: #121214;
-    margin: 0px;
-    width: 100%;
-    padding: 10px 10px;
+	background-color: #121214;
+	margin: 0px;
+	width: 100%;
+	height: 40px;
+	padding: 10px 10px;
 
-    ul {
-        position: relative;
-        z-index: 5 !important;
-        gap: 30px;
-        display: flex;
-        flex-direction: row;
-        align-content: center;
-    }
+	ul {
+		position: relative;
+		z-index: 5 !important;
+		gap: 30px;
+		display: flex;
+		flex-direction: row;
+		align-content: center;
+	}
 
-    &::before {
-        content: var(--server-name);
-        position: absolute;
-        display: block;
-        text-align: center;
-        width: 98.5%;
-        z-index: 1;
-    }
+	&::before {
+		content: var(--server-name);
+		position: absolute;
+		display: block;
+		text-align: center;
+		width: 98.5%;
+		z-index: 1;
+	}
 
 	a {
-        color: var(--discord-white);;
+		color: var(--discord-white);
+		;
 	}
 }
 
+body:has(#pageContainer .alert a[href="inbox.php"]) {
+
+
+
+	.toplinks>li:has(a[href="/inbox.php"]) {
+		/* background-color: blue !important; */
+
+		position: relative;
+
+		&::before {
+			content: " ";
+			position: absolute;
+			right: -6px;
+			bottom: -5px;
+			width: 16px;
+			height: 16px;
+			border-radius: 100px;
+			border: 3px solid var(--discord-dark);
+			background-color: var(--discord-notif-red);
+			z-index: 100;
+			pointer-events: none;
+		}
+	}
+}
 
 .toplinks {
-	
-    >li>a:hover {
-        filter: brightness(1.1);
-    }
 
-    >li>a:before {
-        min-height: 20px;
-        min-width: 20px;
-    }
+	>li>a:hover {
+		filter: brightness(1.1);
+	}
 
-    >li>a:hover:after{
+	>li>a:before {
+		min-height: 20px;
+		min-width: 20px;
+	}
+
+	>li>a:hover:after {
 		display: block;
 		position: absolute;
 		height: 40px;
@@ -1098,274 +1551,287 @@ div.row.dynastycollection {
 		animation: .05s ease-in-out 0s 1 tooltipHover;
 	}
 
-    li:has(a) {
-		
+	li:has(a) {
+
 		padding: 0 !important;
-		
-        >a:before {
-            display: inline-block;
-            background-repeat: no-repeat;
-            background-size: 100%;
-            background-position: center center;
-            content: " ";
-            vertical-align: middle;
-        }
-    }
 
-    >li:has(a[href="/inbox.php"]){ 
-        font-size: 0px;
+		>a:before {
+			display: inline-block;
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center center;
+			content: " ";
+			vertical-align: middle;
+		}
+	}
 
-        >a:before{
-            background-image: url(https://cdn3.emoji.gg/emojis/4059-inbox.png);
-        }
+	>li:has(a[href="/inbox.php"]) {
+		font-size: 0px;
 
-        >a:hover:after{
-                content: "Messages";
-                width: 86px;
-                top: 23px;
-                right: -30px;
-        }
-    }
-
-	>li:has(a[href^="/spend-history.php?type=sb"]){ 
-
-		>a:before{
-            display: none;
-        }
-		
-		img {
-			width: 24px;
-	        content: var(--silver-beetle-icon);
+		>a::before {
+			background-image: url(https://cdn3.emoji.gg/emojis/4059-inbox.png);
 		}
 
-        >a:hover:after{
-                content: "Silver Beetles";
-                width: 110px;
-                top: 31px;
-                right: -30px;
-        }
-    }
-	
-	>li:has(a[href^="/spend-history.php?type=gb"]){ 
-        >a:before{
-            display: none;
-        }
-		
-		img {
-			width: 24px;
-	        content: var(--gold-beetle-icon);
+		>a:hover:after {
+			content: "Messages";
+			width: 86px;
+			top: 23px;
+			right: -30px;
+		}
+	}
+
+	>li:has(a[href^="/spend-history.php?type=sb"]) {
+
+		>a:before {
+			display: none;
 		}
 
-        >a:hover:after{
-                content: "Gold Beetles";
-                width: 107px;
-                top: 31px;
-                right: -30px;
-        }
-    }
+		img {
+			width: 24px;
+			content: var(--silver-beetle-icon);
+		}
 
-    >li:has(a[href="/journal.php"]){ 
-        font-size: 0px;
+		>a:hover:after {
+			content: "Silver Beetles";
+			width: 110px;
+			top: 31px;
+			right: -30px;
+		}
+	}
 
-        >a:before{
-            background-image: url(https://cdn3.emoji.gg/emojis/1731-discord-profile-activity-white.png);
-        }
+	>li:has(a[href^="/spend-history.php?type=gb"]) {
+		>a:before {
+			display: none;
+		}
 
-        >a:hover:after{
-                content: "Journal";
-                width: 71px;
-                top: 23px;
-                right: -24px;
-        }
-    }
+		img {
+			width: 24px;
+			content: var(--gold-beetle-icon);
+		}
 
-    >li:has(a[href="https://www.lioden.wiki"]){ 
-        font-size: 0px;
+		>a:hover:after {
+			content: "Gold Beetles";
+			width: 107px;
+			top: 31px;
+			right: -30px;
+		}
+	}
 
-        >a:before{
-            background-image: url(https://cdn3.emoji.gg/emojis/5139-help.png);
-        }
+	>li:has(a[href="/journal.php"]) {
+		font-size: 0px;
 
-        >a:hover:after{
-                content: "Wiki";
-                width: 50x;
-                top: 23px;
-                right: -13px;
-        }
-        
-    }
+		>a:before {
+			background-image: url(https://cdn3.emoji.gg/emojis/1731-discord-profile-activity-white.png);
+		}
 
-    >li:has(a[href="/modbox.php"]){ 
-        font-size: 0px;
+		>a:hover:after {
+			content: "Journal";
+			width: 71px;
+			top: 23px;
+			right: -24px;
+		}
+	}
 
-        >a:before{
-            background-image: url(https://cdn3.emoji.gg/emojis/4524-moderation-mobile.png);
-        }
+	>li:has(a[href="https://www.lioden.wiki"]) {
+		font-size: 0px;
 
-        >a:hover:after{
-                content: "Modbox";
-                width: 74px;
-                top: 23px;
-                right: -22px;
-        }
-        
-    }
+		>a:before {
+			background-image: url(https://cdn3.emoji.gg/emojis/5139-help.png);
+		}
 
-    >li:has(a[href="/logout.php"]){ 
-        font-size: 0px;
+		>a:hover:after {
+			content: "Wiki";
+			width: 50x;
+			top: 23px;
+			right: -13px;
+		}
 
-        >a:before{
-            background-image: url(https://cdn3.emoji.gg/emojis/2792-show-user-profile-white.png);
-        }
+	}
 
-        >a:hover:after{
-                content: "Logout";
-                width: 70px;
-                top: 23px;
-                right: 0px;
-        }
-        
-    }
+	>li:has(a[href="/modbox.php"]) {
+		font-size: 0px;
+
+		>a:before {
+			background-image: url(https://cdn3.emoji.gg/emojis/4524-moderation-mobile.png);
+		}
+
+		>a:hover:after {
+			content: "Modbox";
+			width: 74px;
+			top: 23px;
+			right: -22px;
+		}
+
+	}
+
+	>li:has(a[href="/logout.php"]) {
+		font-size: 0px;
+
+		>a:before {
+			background-image: url(https://cdn3.emoji.gg/emojis/2792-show-user-profile-white.png);
+		}
+
+		>a:hover:after {
+			content: "Logout";
+			width: 70px;
+			top: 23px;
+			right: 0px;
+		}
+
+	}
 
 }
 
 @keyframes tooltipHover {
-  0% {
-    transform: 
-        translateY(-3%)
-        scale(.98);
-  }
-  100% {
-    transform: 
-        translateY(0%) 
-        scale(1);
-  }
+	0% {
+		transform:
+			translateY(-3%) scale(.98);
+	}
+
+	100% {
+		transform:
+			translateY(0%) scale(1);
+	}
 }
 
 .welcomeback {
-    background-color: #202024;
-    display: flex;
-    position: fixed;
-    height: 50px;
-    max-width: 222px;
-    flex-direction: column;
-    justify-content: flex-start;
-    bottom: 0;
-    padding: 10px;
-    border-radius: 5.5px;
-    margin-bottom: 10px;
-    font-size: 0px;
-    flex-wrap: wrap;
-    
-    
-    a {
-        font-size: 13px !important;
-        color: white !important;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        width: 80%;
-        /* height: 50%; */
-    }
+	background-color: #202024;
+	display: flex;
+	position: fixed;
+	height: 50px;
+	max-width: 222px;
+	flex-direction: column;
+	justify-content: flex-start;
+	bottom: 0;
+	padding: 10px;
+	border-radius: 5.5px;
+	margin-bottom: 10px;
+	font-size: 0px;
+	flex-wrap: wrap;
 
-    &::before {
-        content: " ";
-        background-image: url("https://img-l.ink/img/10wprPkNR7cAMkNSZQjobPbm8Dzb0q4rD.png") !important;
-        background-color: var(--user-highlight-color);
-        border-radius: 100%;
-        background-position: center center;
-        background-size: cover;
-        min-width: 32px;
-        min-height: 32px;
-        height: 100%;
-        margin-right: 6px;
-    }
 
-    &::after {
-        content: " Welcome Back! ";
-        font-size: 9px;
-        color: #82838b;
-        max-height: 30%;
-        width: auto;
-        position: relative;
-        /* left: 44px; */
-        /* top: 21px; */
-        display: block;
-        }
+	a {
+		font-size: 13px !important;
+		color: white !important;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		width: 80%;
+		/* height: 50%; */
+	}
+
+	&::before {
+		content: " ";
+		background-image: url("https://img-l.ink/img/10wprPkNR7cAMkNSZQjobPbm8Dzb0q4rD.png") !important;
+		background-color: var(--user-highlight-color);
+		border-radius: 100%;
+		background-position: center center;
+		background-size: cover;
+		min-width: 32px;
+		min-height: 32px;
+		height: 100%;
+		margin-right: 6px;
+	}
+
+	&::after {
+		content: " Welcome Back! ";
+		font-size: 9px;
+		color: #82838b;
+		max-height: 30%;
+		width: auto;
+		position: relative;
+		/* left: 44px; */
+		/* top: 21px; */
+		display: block;
+	}
 }
 
 /* text inputs and dropdowns */
 
-select, textarea, input[type="text"], input[type="password"], input:active, input:target {
-    background-color: var(--discord-mid);
-    color: var(--discord-darkest-white);
-    border: var(--discord-border) 1px solid;
-    outline: none;
-    border-radius: 6px;
-    padding: 10px;
-    margin: 5px;
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input:active,
+input:target {
+	background-color: var(--discord-mid);
+	color: var(--discord-darkest-white);
+	border: var(--discord-border) 1px solid;
+	outline: none;
+	border-radius: 6px;
+	padding: 10px;
+	margin: 5px;
 }
 
-textarea:active, textarea:target, textarea:focus, input:active, input:target, input:focus {
-    color: var(--discord-white) !important;
-    
-    &:placeholder {
-        color: var(--discord-white);
-    }
+textarea:active,
+textarea:target,
+textarea:focus,
+input:active,
+input:target,
+input:focus {
+	color: var(--discord-white) !important;
+
+	&:placeholder {
+		color: var(--discord-white);
+	}
 }
 
 select {
-    border: none;
+	border: none;
 }
 
 textarea[name=desc] {
-    width: calc(100% - 10px) !important;
-    position: relative;
-    
+	width: calc(100% - 10px) !important;
+	position: relative;
+
 }
 
 /* comment box to message box */
 
 
 #makeComment {
-    margin: 10px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    background-color: var(--discord-mid);
-    border: 1px solid var(--discord-border);
-    color: #fbfbfb;
-    font-weight: bold;
-    height: 60px;
-    border-radius: 6px;
-    padding-left: 15px;
-    /* padding-right: 20px; */
+	margin: 10px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	background-color: var(--discord-mid);
+	border: 1px solid var(--discord-border);
+	color: #fbfbfb;
+	font-weight: bold;
+	height: 60px;
+	border-radius: 6px;
+	padding-left: 15px;
+	/* padding-right: 20px; */
 }
 
 #comment {
-    position: relative;
-    text-align: left;
-    width: 100%;
-    height: 100%;
-    font-size: 1.5em;
-    font-weight: lighter;
-    background-color: transparent;
-    margin-top: 4px;
-    padding-right: 30px;
+	position: relative;
+	text-align: left;
+	width: 100%;
+	height: 100%;
+	font-size: 1.5em;
+	font-weight: lighter;
+	background-color: transparent;
+	margin-top: 4px;
+	padding-right: 30px;
 }
 
 #comment::placeholder {
-    color: transparent;
+	color: transparent;
 }
 
-#comment:focus, #comment:active, #comment:target, #comment:hover, input#comment {
-    border: none;
-    outline: none;
+#comment:focus,
+#comment:active,
+#comment:target,
+#comment:hover,
+input#comment {
+	border: none;
+	outline: none;
 }
 
 #makeComment:has(#comment:placeholder-shown)::before {
-    display: block;
+	display: block;
 }
 
 #makeComment:has(#comment:placeholder-shown) {
@@ -1377,35 +1843,35 @@ textarea[name=desc] {
 }
 
 #makeComment::before {
-    content: "Message #den";
-    display: none;
-    position: absolute;
-    /* height: 100%; */
-    text-align: left;
-    /* font-size: 14px; */
-    width: 88%;
-    z-index: 4;
-    pointer-events: none;
-    font-size: 1.4em;
-    font-weight: lighter;
-    color: #757575;
-    top: 16px;
-    left: 30px;
+	content: "Message #den";
+	display: none;
+	position: absolute;
+	/* height: 100%; */
+	text-align: left;
+	/* font-size: 14px; */
+	width: 88%;
+	z-index: 4;
+	pointer-events: none;
+	font-size: 1.4em;
+	font-weight: lighter;
+	color: #757575;
+	top: 16px;
+	left: 30px;
 }
 
-input#postComment{
-    background-color: transparent;
-    background-image: var(--send-icon);
-    font-size: 0px;
-    background-position: center center !important;
-    background-size: 100% !important;
-    background-repeat: no-repeat !important;
-    margin: 0;
-    min-width: 24px;
-    min-height: 24px;
-    padding: 0;
-    margin-right: 20px;
-    transition: background-image linear .1s;
+input#postComment {
+	background-color: transparent;
+	background-image: var(--send-icon);
+	font-size: 0px;
+	background-position: center center !important;
+	background-size: 100% !important;
+	background-repeat: no-repeat !important;
+	margin: 0;
+	min-width: 24px;
+	min-height: 24px;
+	padding: 0;
+	margin-right: 20px;
+	transition: background-image linear .1s;
 }
 
 input#postComment:hover {
@@ -1413,14 +1879,16 @@ input#postComment:hover {
 }
 
 
-#commentBox, #makeComment, #commentErrors {
+#commentBox,
+#makeComment,
+#commentErrors {
 	order: -1;
 	width: 100%;
 }
 
 /* commentbox to messages */
 
-center > #commentBox {
+center>#commentBox {
 	display: flex;
 	flex-direction: column-reverse;
 	border: 1px solid transparent;
@@ -1439,60 +1907,65 @@ center > #commentBox {
 }
 
 .comment {
-    width: 100%;
-    text-align: left;
-    padding: 4px 7px;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    gap: 10px;
+	width: 100%;
+	text-align: left;
+	padding: 4px 7px;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	gap: 10px;
 }
+
 .comment:nth-child(even) {
-    background-color: rgba(0,0,0,0.1);
+	background-color: rgba(0, 0, 0, 0.1);
 }
+
 .commentTag {
-    width: 40px; 
-    height: 40px; 
-    border-radius: 4px;
+	width: 40px;
+	height: 40px;
+	border-radius: 4px;
 }
+
 .comment .commentText {
-    flex-grow: 4;
-    margin-left: 6px;
+	flex-grow: 4;
+	margin-left: 6px;
 }
+
 .comment .bad {
-    padding: 2px 7px !important;
-    font-size: 10px !important;
+	padding: 2px 7px !important;
+	font-size: 10px !important;
 }
 
 /* conditions for highlighting user message */
 #pageContainer:not(:has(#editdetailspanel)) {
 
-    .comment:has(input[type="button"].bad) {
-        background: var(--message-ping-background) !important;
+	.comment:has(input[type="button"].bad) {
+		background: var(--message-ping-background) !important;
 
-        small.text-muted > a{
-            background: var(--message-ping-background) !important;
-        }
+		small.text-muted>a {
+			background: var(--message-ping-background) !important;
+			display: inline-block;
+		}
 
-        &:hover {
-            background: var(--message-ping-hover) !important;
+		&:hover {
+			background: var(--message-ping-hover) !important;
 
-            small.text-muted > a{
-                background: var(--message-ping-hover) !important;
-                }
-        }
-    }
+			small.text-muted>a {
+				background: var(--message-ping-hover) !important;
+			}
+		}
+	}
 
-    .comment:has(input[type="button"].bad):before {
-        content: " ";
-        height: auto;
-        width: 2px;
-        background-color: var(--message-ping);
-    }
+	.comment:has(input[type="button"].bad):before {
+		content: " ";
+		height: auto;
+		width: 2px;
+		background-color: var(--message-ping);
+	}
 }
 
 #commentBox {
-    border-radius: 0px !important;
+	border-radius: 0px !important;
 }
 
 .comment:last-child {
@@ -1500,7 +1973,7 @@ center > #commentBox {
 	color: var(--discord-darkest-white);
 	margin-left: 1em;
 	/* width: 80%; */
-	
+
 
 	.commentText {
 		display: inline-block;
@@ -1509,88 +1982,92 @@ center > #commentBox {
 }
 
 .comment {
-    background-color: var(--message-background) !important;
-    padding: 0px !important;
-    padding-right: 7px !important;
-    margin-bottom: 13px;
+	background-color: var(--message-background) !important;
+	padding: 0px !important;
+	padding-right: 7px !important;
+	margin-bottom: 13px;
 
-    div {
-        padding: 5px 0px;
-        
-        
-        
-        
+	div {
+		padding: 5px 0px;
 
-        img {
+
+
+
+
+		img {
 			display: inline-block;
 			margin: 3px 0px;
 			/* max-width: 23px; */
-			}
-    }
+		}
+	}
 
-    &::before {
-        content: " ";
-        height: auto;
-        width: 2px;
-        background-color: transparent;
-    }
+	&::before {
+		content: " ";
+		height: auto;
+		width: 2px;
+		background-color: transparent;
+	}
 }
 
-.comment:hover{
-    background-color: var(--message-highlight-background) !important;
+.comment:hover {
+	background-color: var(--message-highlight-background) !important;
 
-    small.text-muted>a {
-        background-color: var(--message-highlight-background);
-    }
+	small.text-muted>a {
+		background-color: var(--message-highlight-background);
+	}
 }
 
 /* pfps */
 .commentTag {
-    border-radius: 100% !important;
+	border-radius: 100% !important;
 }
 
 .commentText {
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: flex-end;
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: flex-end;
 }
 
 small.text-muted {
-    color:#82838b;
+	color: #82838b;
+	display: inline-block;
+	
+	
+	
 
-    a {
-        margin-left: -17px;
-        font-size: 15px;
-        color: #efefef;
-        background-color: var(--message-background);
-    }
+	a {
+		margin-left: -17px;
+		font-size: 15px;
+		color: #efefef;
+		background-color: var(--message-background);
+	}
 
 }
 
 .comment:nth-child(even) {
-     small.text-muted > a {
-        color: red;
-     }
+	small.text-muted>a {
+		color: red;
+	}
 }
 
 /* delete button */
 .comment .bad {
-    background: url("https://cdn3.emoji.gg/emojis/4151-delete-guild.png") !important;
-    background-position: center center !important;
-    background-size: 100% !important;
-    background-repeat: no-repeat !important;
-    border: none !important;
-    color: transparent !important;
-    font-size: 0px !important;
-    text-shadow: none !important;
-    border-radius: 0px !important;
-    padding: 0px !important;
-    min-width: 20px;
-    min-height: 20px;
+	background: url("https://cdn3.emoji.gg/emojis/4151-delete-guild.png") !important;
+	background-position: center center !important;
+	background-size: 100% !important;
+	background-repeat: no-repeat !important;
+	border: none !important;
+	color: transparent !important;
+	font-size: 0px !important;
+	text-shadow: none !important;
+	border-radius: 0px !important;
+	padding: 0px !important;
+	min-width: 20px;
+	min-height: 20px;
 
-    &:hover {
-        background-color: #e938482b !important;
-    }
+	&:hover {
+		background-color: #e938482b !important;
+	}
 }
 
 
@@ -1611,7 +2088,7 @@ small.text-muted {
 
 /* caves AND mounds */
 
-.col-md-3.col-xs-4.center, 
+.col-md-3.col-xs-4.center,
 .col-md-4.col-xs-6.center {
 	position: relative;
 	padding: 10px;
@@ -1626,7 +2103,7 @@ small.text-muted {
 	max-width: 33.333%;
 	/* overflow: hidden; */
 
-	
+
 	img {
 		display: block;
 		position: relative;
@@ -1668,7 +2145,7 @@ a>div.mound-grid:hover {
 
 div.mound-grid:first-letter,
 div.cave-grid:first-letter {
-    padding-left: 30px;
+	padding-left: 30px;
 }
 
 /* mound section */
@@ -1743,19 +2220,20 @@ div.cave-grid:first-letter {
 
 /* ------------------- header images ------------------- */
 
-div.col-md-4.col-xs-6.center img, div.col-md-3.col-xs-4.center img {
+div.col-md-4.col-xs-6.center img,
+div.col-md-3.col-xs-4.center img {
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
-    content: var(--blank) !important;
-    color: transparent;
+	content: var(--blank) !important;
+	color: transparent;
 }
 
 /* ------------------- cave header images ------------------- */
 
 /* unsorted */
 
-div.col-md-4.col-xs-6.center > a[href^="unsorted.php?"] {
+div.col-md-4.col-xs-6.center>a[href^="unsorted.php?"] {
 
 	img {
 		background-image: var(--unsorted-cave-image);
@@ -1764,7 +2242,8 @@ div.col-md-4.col-xs-6.center > a[href^="unsorted.php?"] {
 
 /* nesting */
 
-div.col-md-4.col-xs-6.center > a[href^="nesting.php"], div.col-md-4.col-xs-6.center:has(img[src$="nestingbanner.png"]) {
+div.col-md-4.col-xs-6.center>a[href^="nesting.php"],
+div.col-md-4.col-xs-6.center:has(img[src$="nestingbanner.png"]) {
 
 	img {
 		background-image: var(--pregnant-cave-image);
@@ -1773,7 +2252,7 @@ div.col-md-4.col-xs-6.center > a[href^="nesting.php"], div.col-md-4.col-xs-6.cen
 
 /* overview */
 
-div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
+div.col-md-4.col-xs-6.center>a[href^="lionoverview.php"] {
 
 	img {
 		background-image: var(--overview-cave-image);
@@ -1787,42 +2266,42 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
-	
-	div:nth-child(1) > a[href^="cave.php?"] {
+
+	div:nth-child(1)>a[href^="cave.php?"] {
 
 		img {
-            background-image: var(--first-cave-image), var(--default-cave-image);
+			background-image: var(--first-cave-image), var(--default-cave-image);
 		}
 	}
-	
-	div:nth-child(2) > a[href^="cave.php?"] {
+
+	div:nth-child(2)>a[href^="cave.php?"] {
 
 		img {
 			background-image: var(--second-cave-image), var(--default-cave-image);
 		}
 	}
 
-	div:nth-child(3) > a[href^="cave.php?"] {
+	div:nth-child(3)>a[href^="cave.php?"] {
 		img {
 			background-image: var(--third-cave-image), var(--default-cave-image);
 		}
 	}
 
-	div:nth-child(4) > a[href^="cave.php?"] {
+	div:nth-child(4)>a[href^="cave.php?"] {
 
 		img {
 			background-image: var(--fourth-cave-image), var(--default-cave-image);
 		}
 	}
 
-	div:nth-child(5) > a[href^="cave.php?"] {
+	div:nth-child(5)>a[href^="cave.php?"] {
 
 		img {
 			background-image: var(--fifth-cave-image), var(--default-cave-image);
 		}
 	}
 
-	div:nth-child(6) > a[href^="cave.php?"] {
+	div:nth-child(6)>a[href^="cave.php?"] {
 
 		img {
 			background-image: var(--sixth-cave-image), var(--default-cave-image);
@@ -1831,7 +2310,7 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
 
 	/* unused */
 
-	div > a[href*="cave.php?"]:has(i) {
+	div>a[href*="cave.php?"]:has(i) {
 
 		img {
 			content: var(--unused-cave-image) !important;
@@ -1843,41 +2322,41 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
 
 #fraMoundList {
 
-	
+
 	/* unsorted */
-	div > a[href*="unsorted-beetles.php"] {
+	div>a[href*="unsorted-beetles.php"] {
 
 		img {
 			background-image: var(--unsorted-mound-image), var(--default-mound-image);
 		}
 	}
-	
+
 	/* first */
-	div.col-md-3.col-xs-4.center:nth-child(2) > a[href^="mound.php?"] > div {
+	div.col-md-3.col-xs-4.center:nth-child(2)>a[href^="mound.php?"]>div {
 
 		img {
 			background-image: var(--first-mound-image), var(--default-mound-image);
 		}
 	}
 
-    /* second */
-	div.col-md-3.col-xs-4.center:nth-child(3) > a[href^="mound.php?"] > div {
+	/* second */
+	div.col-md-3.col-xs-4.center:nth-child(3)>a[href^="mound.php?"]>div {
 
 		img {
 			background-image: var(--second-mound-image), var(--default-mound-image);
 		}
 	}
 
-    /* third */
-	div.col-md-3.col-xs-4.center:nth-child(4) > a[href^="mound.php?"] > div {
+	/* third */
+	div.col-md-3.col-xs-4.center:nth-child(4)>a[href^="mound.php?"]>div {
 
 		img {
 			background-image: var(--third-mound-image), var(--default-mound-image);
 		}
 	}
-	
+
 	/* unused */
-	div > a[href*="mound.php"]:has(i) {
+	div>a[href*="mound.php"]:has(i) {
 
 		img {
 			content: var(--unused-mound-image) !important;
@@ -1894,11 +2373,11 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
 	.col-md-4.col-xs-6.center {
 		line-height: 2.2rem;
 	}
-    
-    .col-md-4.col-xs-6.center > a > div.cave-grid{
-        padding-bottom: 10px;
-        line-height: 1 !important;
-	
+
+	.col-md-4.col-xs-6.center>a>div.cave-grid {
+		padding-bottom: 10px;
+		line-height: 1 !important;
+
 		&::before {
 			content: " ";
 			display: block;
@@ -1932,79 +2411,79 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
 			white-space: normal;
 			text-wrap: auto;
 		} */
-		
+
 	}
 
-	a[href^="unsorted.php"] > div.cave-grid{
-	
+	a[href^="unsorted.php"]>div.cave-grid {
+
 		&::before {
 			background-image: var(--unsorted-cave-icon);
 		}
 	}
 
-    a[href^="nesting.php"] > div.cave-grid{
-	
+	a[href^="nesting.php"]>div.cave-grid {
+
 		&::before {
 			background-image: var(--pregnant-cave-icon);
 		}
 	}
 
-    a[href^="lionoverview.php"] > div.cave-grid{
-	
+	a[href^="lionoverview.php"]>div.cave-grid {
+
 		&::before {
 			background-image: var(--overview-cave-icon);
 		}
 	}
 
-	#fraCaveList{
-		
-		div:nth-child(1) > a[href^="cave.php?"] > div.cave-grid{
-		
+	#fraCaveList {
+
+		div:nth-child(1)>a[href^="cave.php?"]>div.cave-grid {
+
 			&::before {
 				content: var(--first-cave-icon, var(--default-cave-icon));
 			}
 		}
 
-		div:nth-child(2) > a[href^="cave.php?"] > div.cave-grid{
-		
+		div:nth-child(2)>a[href^="cave.php?"]>div.cave-grid {
+
 			&::before {
 				background-image: var(--second-cave-icon, var(--default-cave-icon));
 			}
 		}
 
-		div:nth-child(3) > a[href^="cave.php?"] > div.cave-grid{
-		
+		div:nth-child(3)>a[href^="cave.php?"]>div.cave-grid {
+
 			&::before {
 				background-image: var(--third-cave-icon, var(--default-cave-icon));
 			}
 		}
 
-		div:nth-child(4) > a[href^="cave.php?"] > div.cave-grid{
-		
+		div:nth-child(4)>a[href^="cave.php?"]>div.cave-grid {
+
 			&::before {
 				background-image: var(--fourth-cave-icon, var(--default-cave-icon));
 			}
 		}
 
-		div:nth-child(5) > a[href^="cave.php?"] > div.cave-grid{
-		
+		div:nth-child(5)>a[href^="cave.php?"]>div.cave-grid {
+
 			&::before {
 				background-image: var(--fifth-cave-icon, var(--default-cave-icon));
 			}
 		}
 
-		div:nth-child(6) > a[href^="cave.php?"] > div.cave-grid{
-		
+		div:nth-child(6)>a[href^="cave.php?"]>div.cave-grid {
+
 			&::before {
 				background-image: var(--sixth-cave-icon, var(--default-cave-icon));
 			}
 		}
-		
+
 		/* unused */
 
-		div > a[href^="cave.php?"]:has(i)> div.cave-grid {
-		
-	
+		div>a[href^="cave.php?"]:has(i)>div.cave-grid {
+
+
 			&::before {
 				background-image: var(--unused-cave-icon) !important;
 				background-size: 300%;
@@ -2019,9 +2498,11 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
 	.col-md-3.col-xs-4.center {
 		line-height: 2.2rem;
 	}
-    
-    .col-md-3.col-xs-4.center > a > div.mound-grid{padding-bottom: 10px;line-height: 1 !important;
-	
+
+	.col-md-3.col-xs-4.center>a>div.mound-grid {
+		padding-bottom: 10px;
+		line-height: 1 !important;
+
 		&::before {
 			content: " ";
 			display: block;
@@ -2056,42 +2537,42 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
 			white-space: normal;
 			text-wrap: auto;
 		} */
-		
+
 	}
-	
-	#fraMoundList{
-		a[href^="unsorted.php"] > div.mound-grid{
-	
+
+	#fraMoundList {
+		a[href^="unsorted.php"]>div.mound-grid {
+
 			&::before {
 				background-image: var(--unsorted-cave-icon);
 			}
 		}
 
-		div:nth-child(2) > a[href^="mound.php?"] > div.mound-grid{
-		
+		div:nth-child(2)>a[href^="mound.php?"]>div.mound-grid {
+
 			&::before {
 				background-image: var(--second-cave-icon);
 			}
 		}
 
-		div:nth-child(3) > a[href^="mound.php?"] > div.mound-grid{
-		
+		div:nth-child(3)>a[href^="mound.php?"]>div.mound-grid {
+
 			&::before {
 				background-image: var(--third-cave-icon);
 			}
 		}
 
-		div:nth-child(4) > a[href^="mound.php?"] > div.mound-grid{
-		
+		div:nth-child(4)>a[href^="mound.php?"]>div.mound-grid {
+
 			&::before {
 				background-image: var(--fourth-cave-icon);
 			}
 		}
-		
+
 		/* unused */
 
-		div > a[href^="mound.php?"]:has(i)> div.mound-grid {
-		
+		div>a[href^="mound.php?"]:has(i)>div.mound-grid {
+
 			&::before {
 				background-image: var(--unused-mound-icon) !important;
 				background-size: 300%;
@@ -2107,12 +2588,14 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
 /* caves */
 #pageContainer:has(#fraProfileContent div.discord-cave-descriptions) {
 
-	.col-md-4.col-xs-6.center > a > div.cave-grid {line-height: .7;padding-bottom: 10px;
+	.col-md-4.col-xs-6.center>a>div.cave-grid {
+		line-height: .7;
+		padding-bottom: 10px;
 
 		&::before {
 			top: 35%;
 		}
-	
+
 		&::after {
 			content: " ";
 			position: relative;
@@ -2138,83 +2621,85 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
 		}
 	}
 
-	.col-md-4.col-xs-6.center > a img {
+	.col-md-4.col-xs-6.center>a img {
 		margin-bottom: 10px;
 	}
 
-	div.col-md-4.col-xs-6.center > a[href^="unsorted.php"] {
-		> div.cave-grid::after {
+	div.col-md-4.col-xs-6.center>a[href^="unsorted.php"] {
+		>div.cave-grid::after {
 			content: var(--unsorted-cave-description);
 		}
 	}
 
-    div.col-md-4.col-xs-6.center > a[href^="nesting.php"] {
-		> div.cave-grid::after {
+	div.col-md-4.col-xs-6.center>a[href^="nesting.php"] {
+		>div.cave-grid::after {
 			content: var(--pregnant-cave-description);
 		}
 	}
 
-    div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
-		> div.cave-grid::after {
+	div.col-md-4.col-xs-6.center>a[href^="lionoverview.php"] {
+		>div.cave-grid::after {
 			content: var(--overview-cave-description);
 		}
 	}
 
-    #fraCaveList {
+	#fraCaveList {
 
-        div:nth-child(1) > a[href^="cave.php?"] > div.cave-grid{
-		
-			&::before {
-			content: var(--first-cave-description);
-            }
-        }
+		div:nth-child(1)>a[href^="cave.php?"]>div.cave-grid {
 
-        div:nth-child(2) > a[href^="cave.php?"] > div.cave-grid{
-		
 			&::before {
-			content: var(--second-cave-description);
-            }
-        }
+				content: var(--first-cave-description);
+			}
+		}
 
-        div:nth-child(3) > a[href^="cave.php?"] > div.cave-grid{
-		
-			&::before {
-			content: var(--third-cave-description);
-            }
-        }
+		div:nth-child(2)>a[href^="cave.php?"]>div.cave-grid {
 
-        div:nth-child(4) > a[href^="cave.php?"] > div.cave-grid{
-		
 			&::before {
-			content: var(--fourth-cave-description);
-            }
-        }
+				content: var(--second-cave-description);
+			}
+		}
 
-        div:nth-child(5) > a[href^="cave.php?"] > div.cave-grid{
-		
-			&::before {
-			content: var(--fifth-cave-description);
-            }
-        }
+		div:nth-child(3)>a[href^="cave.php?"]>div.cave-grid {
 
-        div:nth-child(6) > a[href^="cave.php?"] > div.cave-grid{
-		
 			&::before {
-			content: var(--sixth-cave-description);
-            }
-        }
-    }
+				content: var(--third-cave-description);
+			}
+		}
+
+		div:nth-child(4)>a[href^="cave.php?"]>div.cave-grid {
+
+			&::before {
+				content: var(--fourth-cave-description);
+			}
+		}
+
+		div:nth-child(5)>a[href^="cave.php?"]>div.cave-grid {
+
+			&::before {
+				content: var(--fifth-cave-description);
+			}
+		}
+
+		div:nth-child(6)>a[href^="cave.php?"]>div.cave-grid {
+
+			&::before {
+				content: var(--sixth-cave-description);
+			}
+		}
+	}
 }
 
 /* mounds */
 #pageContainer:has(#fraProfileContent div.discord-mound-descriptions) {
 
-	.col-md-3.col-xs-4.center > a > div.mound-grid {line-height: .7;padding-bottom: 10px;
+	.col-md-3.col-xs-4.center>a>div.mound-grid {
+		line-height: .7;
+		padding-bottom: 10px;
 
 		&::before {
 			top: 35%;
 		}
-	
+
 		&::after {
 			content: " ";
 			position: relative;
@@ -2240,12 +2725,12 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
 		}
 	}
 
-	.col-md-3.col-xs-4.center > a img {
+	.col-md-3.col-xs-4.center>a img {
 		margin-bottom: 10px;
 	}
 
-	div.col-md-3.col-xs-4.center > a[href^="unsorted-beetles.php?"] {
-		> div.mound-grid::after {
+	div.col-md-3.col-xs-4.center>a[href^="unsorted-beetles.php?"] {
+		>div.mound-grid::after {
 			content: var(--unsorted-mound-description);
 		}
 	}
@@ -2254,14 +2739,16 @@ div.col-md-4.col-xs-6.center > a[href^="lionoverview.php"] {
 
 /* ------------------- fake user and lion profiles ------------------- */
 
-#about, #player {
-    height: 600px;
-    width: 48.5%;
-    border: none;
-    position: relative;
-    border-radius: 10px;
-    /* overflow: hidden; */
-    order: -1;
+#about,
+#player {
+	height: 600px;
+	width: 48.5%;
+	border: none;
+	position: relative;
+	border-radius: 10px;
+	/* overflow: hidden; */
+	order: -1;
+	/* overflow: visible; */
 }
 
 /* lion profile */
@@ -2271,45 +2758,86 @@ form[method="post"]:has(>#about) {
 }
 
 #about {
-    background-color: #242429;
-    /* float: right; */
-    display: flex;
+	background-color: #242429;
+	/* float: right; */
+	display: flex;
 
 	td {
 		background: transparent;
 	}
 }
 
-#about > tbody {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    flex-wrap: wrap;
-    padding: 0 15px;
-    align-content: flex-start;
+#about>tbody {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+	flex-wrap: wrap;
+	padding: 0 15px;
+	align-content: flex-start;
 }
 
-#about > tbody {
+#about>tbody {
 
 	/* header row */
-	> tr:nth-child(1) {
+	>tr:nth-child(1) {
 		order: 2;
-
+		margin-bottom: 20px;
+		
 		/* name */
+
 		td {
 			color: var(--discord-white);
 			top: 270px;
 			text-align: left;
+			margin: 0px;
+			padding: 0px;
+
+			div.xlarge.b {
+				font-size: 0px;
+			}
+
+			a[href^="/lion.php?"] {
+				display: inline-flex;
+				font-size: 24px;
+				color: white;
+				align-items: center;
+				gap: 10px;
+				
+
+				&::after {
+					content: "Lion";
+					text-transform: uppercase;
+					display: inline-flex;
+					padding: 2px 6px;
+					color: white;
+					background-image: var(--checkmark-icon);
+					background-repeat: no-repeat;
+					background-size: contain;
+					background-color: var(--discord-blurple);
+					border-radius: 6px;
+					justify-content: flex-end;
+					align-content: center;
+					align-items: center;
+					width: 64px;
+					font-weight: 900;
+					font-size: 14px;
+					height: 26px;
+				}
+
+				;
+			}
 		}
+
+
 	}
 
 	/* info row */
-	> tr:nth-child(2).right {
+	>tr:nth-child(2).right {
 		display: contents;
 
 		/* lion header and image */
-		> td:nth-child(1) {
+		>td:nth-child(1) {
 			order: -1;
 			background-image: var(--lion-header) !important;
 			background-color: var(--player-secondary);
@@ -2318,215 +2846,229 @@ form[method="post"]:has(>#about) {
 			width: calc(100% + 30px) !important;
 			text-align: left !important;
 			vertical-align: bottom;
-			height:215px;
+			height: 215px;
 			border-top-left-radius: 10px;
 			border-top-right-radius: 10px;
 			margin: 0 -15px;
 			margin-bottom: 60px;
 			position: relative;
 			padding: 0 !important;
-			
-			
+
+
 
 			a:has(div#lion_image) {
-			    position: absolute;
-			    width: 130px;
-			    aspect-ratio: 1 / 1;
-			    bottom: -50px;
-			    border-radius: 500px;
-			    overflow: hidden;
-			    margin-left: 10px;
-			    /* object-fit: none; */
+				position: absolute;
+				width: 130px;
+				aspect-ratio: 1 / 1;
+				bottom: -50px;
+				border-radius: 500px;
+				overflow: hidden;
+				margin-left: 10px;
+				/* object-fit: none; */
 			}
 		}
 
-		/* lion info */
-		> td:nth-child(2) {
+		/* pride info */
+		>td:nth-child(2) {
 			order: 4;
-			display: none;
+			/* height: 225px; */
+			max-height: 220px;
+			
+			
+			.inner-table {
+				overflow-y: auto;
+				height: 225px;
+				max-height: 220px !important;
+				position: relative;
+				padding-right: 5px;
+				width: 100%;
+				display: block;
+				scrollbar-color: var(--discord-light) var(--discord-dark);
+				scrollbar-width: thin;
+				scrollbar-gutter: stable;
+				
+				
+				a {
+					font-size: 14px;
+				}
+
+				tr {
+					position: relative;
+					display: flex;
+					width: 50%;
+					gap: 0px;
+					max-width: 50%;
+					flex-direction: row;
+					flex-wrap: wrap;
+					min-width: 0;
+				}
+
+				td:empty {
+					display: none;
+				}
+
+				td {
+					height: fit-content;
+					border: 1px solid var(--discord-border);
+					width: 50%;
+				}
+				
+				td.left:has(+ td.right) {
+					display: flex;
+					/* width: fit-content; */
+					background-color: var(--discord-dark);
+					border-top-left-radius: 10px;
+					border-bottom-left-radius: 10px;
+					text-transform: lowercase;
+
+
+					b {
+						font-weight: 500;
+					}
+			
+					/* procedurally cover table colons */
+					&::after {
+						content: " ";
+						width: 4px;
+						background: inherit;
+						min-height: 100%;
+						display: inline-block;
+						/* position: absolute; */
+						bottom: 0;
+						margin-left: -4px;
+					}
+				}
+
+				td.left + td.right {
+					display: flex;
+					background-color: var(--discord-mid);
+					/* width: fit-content; */
+					border-left: none;
+					border-top-right-radius: 10px;
+					border-bottom-right-radius: 10px;
+				}
+			}
 		}
-		
+
 	}
 
 	/* mutated lions count */
-	> tr:nth-last-child(1) {
+	>tr:nth-last-child(1) {
 		order: 2;
 		display: flex;
 		width: 100%;
 		border-bottom: 1px solid var(--discord-border);
+		gap: 100px;
+		position: relative;
+		margin-bottom: 10px;
+		
+		
+		
+		
 
 		&::before {
-			content: "About Me";
+			content: "Info";
 			text-decoration: underline;
 			text-underline-offset: 7px;
 			display: block;
 			font-size: 14px;
 			font-weight: lighter;
-			padding-bottom: 5px;
+			padding-bottom: 2px;
 			cursor: pointer;
 			width: fit-content;
 			/* position: absolute; */
-			/* top: -23px; */
+			top: -2px;
 		}
 
-		td > a[href^="/lionoverview.php?id="] {font-size: 0px;width: fit-content;height: auto;display: inline-block;
-			
-			b {
-				font-weight: lighter;
-				font-size: 14px;
+		td {
+			display: block;
+
+			a[href^="/lionoverview.php?id="] {
+				font-size: 0px;
+				width: 100%;
+				height: auto;
 				display: inline-block;
-				  /* lock the width to create a stable container. 
-				     115px usually fits '100 mutated lions' nicely */
-				width: auto;
-				text-align: justify;
-				  /* this forces the single space between '8' and 'lions' to stretch */
-				text-align-last: justify;
 				position: relative;
-				word-spacing: calc(5rem + 10px);
-				margin-right: -15px;
+
+				&:hover {
+					b {
+						text-decoration: underline;
+						text-underline-offset: 7px;
+					}
 				}
 
-				b::after {
-				  content: "mutated";
-				  position: absolute;
-				  right: calc(3rem + 4px);
-				  /* transform: translateX(-50%); */
+				&:hover::after {
+					content: "Mutations";
+					display: block;
+					position: absolute;
+					text-align: center;
+					bottom: -50px;
+					left: -20px;
+					height: 40px;
+					font-size: 13px;
+					background-color: #242429;
+					border: 1px solid #323237;
+					color: #f3f3f3;
+					font-weight: bold;
+					padding: 11px;
+					border-radius: 10px;
+					box-shadow: #121214ad 0 5px 12px 0px;
+					animation: .05s ease-in-out 0s 1 tooltipHover;
 				}
+
+				b {
+					font-weight: lighter;
+					font-size: 14px;
+					display: inline-block;
+					position: relative;
+					/* word-spacing: calc(5rem + 10px); */
+					/* margin-right: -15px; */
+					width: fit-content;
+				}
+
+
+			}
 		}
-		
+
 	}
 }
 
 
 /* lion pfp */
-#about > tbody > tr.right > td:nth-child(1) > 
-
-#lion_image {
-    width: 100%;
-    height: 100%;
+#about>tbody>tr.right>td:nth-child(1)>#lion_image {
+	width: 100%;
+	height: 100%;
 }
 
 .lion-image-block {
-    
-    width: 130px !important;
-    height: 130px !important;
-    
-    img {
-        position: absolute;
-        width: 130px !important;
-        height: 130px !important;
-    }
 
-    img:last-of-type {
-        /* content: var(--lion-pfp); */
-    }
+	width: 130px !important;
+	height: 130px !important;
+
+	img {
+		position: absolute;
+		width: 130px !important;
+		height: 130px !important;
+	}
+
+	img:last-of-type {
+		/* content: var(--lion-pfp); */
+	}
 }
 
-#about > tbody > tr.right > td.right > table > tbody {
+#about>tbody>tr.right>td.right>table>tbody {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 5px 0;
 	flex-direction: row;
+	height: fit-content;
+	min-width: 0;
+	min-height: 0;
+	width: 100%;
+	position: relative;
 }
 
 /* fake roles for lion profile */
-
-#about > tbody > tr.right > td.right > table > tbody > tr:nth-last-child(n+3) > td:nth-child(3) {
-	width: 0px !important;
-}
-
-
-#about > tbody > tr.right > td.right > table > tbody > tr {
-    position: relative;
-    display: flex;
-    width: auto;
-    gap: 0px;
-    /* flex-basis: 50%; */
-    
-
-    
-    
-    td.left {
-        display: block;
-        cursor: pointer;
-        background-color: var(--discord-buttons);
-        border-radius: 4px;
-        position: relative;
-        width: fit-content;
-        min-width: 87px;
-        margin-right: 6px;
-        text-align: center;
-        text-transform: lowercase;
-        
-        
-        
-
-		b {
-			font-weight: 500;
-		}
-        
-        /* procedurally cover table colons */
-        &::after {
-            content: " ";
-            width: 4px;
-            background: inherit;
-            height: 100%;
-            display: inline-block;
-            position: absolute;
-            bottom: 0;
-            margin-left: -4px;
-        }
-    }
-
-    td.left:hover {
-		filter: brightness(1.2);
-		
-        + td.right {
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-        }
-    }
-
-    td.left + td.right {
-        display: block;
-/* 		flex-direction: column; */
-/*         position: absolute; */
-/*         bottom: 42px; */
-/*         height: 40px; */
-        font-size: 13px;
-        background-color: #242429;
-        border: 1px solid #323237;
-        color: #f3f3f3;
-        font-weight: 700;
-        padding: 11px;
-        border-radius: 10px;
-        box-shadow: #121214ad 0 5px 12px 0px;
-        animation: .05s ease-in-out 0s 1 tooltipHover;
-        z-index: 4;
-        width: auto;
-		min-width: 60px;
-        
-		br {
-			display: none;
-		}
-    }
-
-	td:nth-child(2) {
-		left: 0;
-	}
-
-	td.left + td.right:last-of-type {
-		right: calc(50% - 100px);
-	}
-
-	td.left + td.right:has(a[href^="/lion.php?id="]){
-		height: auto;
-		padding-bottom: 8px;
-	}
-
-}
-
 
 
 
@@ -2534,51 +3076,49 @@ form[method="post"]:has(>#about) {
 
 /* player profile */
 
-#player:has(a[href^="/refer.php"]) {
-    
-}
+#player:has(a[href^="/refer.php"]) {}
 
 
 #player {
-    background-color: var(--player-primary);
-    /* float: left; */
-    display: flex;
+	background-color: var(--player-primary);
+	/* float: left; */
+	display: flex;
 }
 
-#player > tbody {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    flex-wrap: wrap;
-    padding: 0 15px;
-    align-content: flex-start;
-    
-    
-    
+#player>tbody {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+	flex-wrap: wrap;
+	padding: 0 15px;
+	align-content: flex-start;
 
-	> tr:nth-child(1) {
+
+
+
+	>tr:nth-child(1) {
 		order: 3;
 		align-self: start;
 	}
 
-	> tr:nth-child(2) {
+	>tr:nth-child(2) {
 		/* order: -1; */
 	}
 }
 
 
-#player > tbody tr + tr.right {
-    display: contents;
-    width: 100%;
-    height: 100%;
+#player>tbody tr+tr.right {
+	display: contents;
+	width: 100%;
+	height: 100%;
 
-	> td:nth-child(1) {
+	>td:nth-child(1) {
 		/* order: 1; */
 		display: contents;
 	}
 
-	> td:nth-child(2) {
+	>td:nth-child(2) {
 		order: -1;
 	}
 
@@ -2587,23 +3127,23 @@ form[method="post"]:has(>#about) {
 	}
 }
 
-#player hr{
-    display:none;
+#player hr {
+	display: none;
 }
 
 #player .center {
-    text-align: left;
-    
-    
+	text-align: left;
 
-    &.h3 {
-        font-weight: bold;
-        margin-top: 10px;
-        order: 2;
-        width: 100%;
-        display: block;
-        /* align-self: start; */
-    }
+
+
+	&.h3 {
+		font-weight: bold;
+		margin-top: 10px;
+		order: 2;
+		width: 100%;
+		display: block;
+		/* align-self: start; */
+	}
 }
 
 
@@ -2614,17 +3154,15 @@ form[method="post"]:has(>#about) {
 if no: replace with fake friend button + move message button */
 
 #player :has(tbody td.right_odd>a[href*="befriends"]) {
-    tbody > tr:nth-child(3) {
-        
-    }
-        
-    >td.right_odd::before {
-        display: none;
-    }
+	tbody>tr:nth-child(3) {}
+
+	>td.right_odd::before {
+		display: none;
+	}
 }
 
 
-#player > tbody > tr:nth-child(3) {
+#player>tbody>tr:nth-child(3) {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
@@ -2640,8 +3178,8 @@ if no: replace with fake friend button + move message button */
 	align-self: end;
 	/* margin-top: auto; */
 	padding: 15px;
-	
-	
+
+
 	td {
 		background: inherit;
 		height: 40px;
@@ -2654,20 +3192,20 @@ if no: replace with fake friend button + move message button */
 	}
 
 	a:hover {
-        filter: brightness(1.2);
-    }
+		filter: brightness(1.2);
+	}
 
 }
 
-#player > tbody > tr:last-child {
+#player>tbody>tr:last-child {
 	color: blue !important;
 
-	.right_odd.text-right:not(:has(a)){
+	.right_odd.text-right:not(:has(a)) {
 		display: none;
 	}
 }
 
-#player > tbody > tr.right > td:nth-child(1) > div::after {
+#player>tbody>tr.right>td:nth-child(1)>div::after {
 	/* content: "About Me";
 	text-decoration: underline;
 	text-underline-offset: 7px;
@@ -2684,25 +3222,25 @@ if no: replace with fake friend button + move message button */
 
 
 
-#player > tbody > tr.right > td:nth-child(1) > table::before {
+#player>tbody>tr.right>td:nth-child(1)>table::before {
 	content: var(--player-description);
 	display: block;
 	margin: 15px 0;
 }
 
-#player > tbody > tr.right > td:nth-child(1) > table::after {
+#player>tbody>tr.right>td:nth-child(1)>table::after {
 	content: var(--player-description);
 	display: block;
 	margin-bottom: 15px;
 }
 
 
-#player > tbody > tr:nth-child(1){
-	
+#player>tbody>tr:nth-child(1) {
+
 	position: relative;
 }
 
-#player > tbody > tr:nth-child(1) > td {
+#player>tbody>tr:nth-child(1)>td {
 	/* position: absolute; */
 	width: 100%;
 	display: flex;
@@ -2724,118 +3262,121 @@ if no: replace with fake friend button + move message button */
 	}
 }
 
-#player > tbody > tr:nth-child(1) > td > small {
+#player>tbody>tr:nth-child(1)>td>small {
 	font-size: 0px;
 }
 
 /* fake roles attempt */
 
-#player > tbody > tr.right > td:nth-child(1) > table::before {
+#player>tbody>tr.right>td:nth-child(1)>table::before {
 	/* content: "roles" */
 }
 
-#player > tbody > tr.right > td:nth-child(1) > table::after {
-		content: "About Me";
-		text-decoration: underline;
-		text-underline-offset: 7px;
-		display: block;
-		font-size: 14px;
-		font-weight: lighter;
-		padding-bottom: 5px;
-		cursor: pointer;
-		width: fit-content;
-		position: absolute;
-		top: -23px;
-	}
+#player>tbody>tr.right>td:nth-child(1)>table::after {
+	content: "About Me";
+	text-decoration: underline;
+	text-underline-offset: 7px;
+	display: block;
+	font-size: 14px;
+	font-weight: lighter;
+	padding-bottom: 5px;
+	cursor: pointer;
+	width: fit-content;
+	position: absolute;
+	top: -23px;
+}
 
 /* joined and last active */
 
-#player > tbody > tr.right > td:nth-child(1) > table {
-    margin: 0px;
+#player>tbody>tr.right>td:nth-child(1)>table {
+	margin: 0px;
 	border-top: 1px solid var(--discord-border);
-    width: 100%;
-    order: 4;
+	width: 100%;
+	order: 4;
 	position: relative;
-    
 
-    tbody > tr {
-        width: 100%;    
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: normal;
-        align-items: stretch;
-        align-content: stretch;
 
-		td.left, td.right {
-            background-color: transparent;
-            padding: 0;
-            position: relative;
-		}
-        
-        .left {
-            font-size: .8em;
-            display: block;
-        }
-        
-        .right {
-            /* float: right; */
-        }
+	tbody>tr {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: normal;
+		align-items: stretch;
+		align-content: stretch;
 
-        td:nth-child(1){
-            color: transparent;
-            
-            ::before {
-                color: var(--discord-white);
-                content: "Member Since";
-                position: absolute;
-        }}
-
-		td:nth-child(2){
-            margin-bottom: 10px;
+		td.left,
+		td.right {
+			background-color: transparent;
+			padding: 0;
+			position: relative;
 		}
 
-        td:nth-child(4){
-            color: transparent;
-            
-            ::before {
-                color: var(--discord-white);
-                content: "Last Active";
-                position: absolute;
-        }}
-    }
+		.left {
+			font-size: .8em;
+			display: block;
+		}
+
+		.right {
+			/* float: right; */
+		}
+
+		td:nth-child(1) {
+			color: transparent;
+
+			::before {
+				color: var(--discord-white);
+				content: "Member Since";
+				position: absolute;
+			}
+		}
+
+		td:nth-child(2) {
+			margin-bottom: 10px;
+		}
+
+		td:nth-child(4) {
+			color: transparent;
+
+			::before {
+				color: var(--discord-white);
+				content: "Last Active";
+				position: absolute;
+			}
+		}
+	}
 }
 
 /* player header */
-#player > tbody > tr.right > td:nth-child(2) {
-    background-image: var(--player-header) !important;
-    background-color: var(--player-secondary);
-    background-size: cover;
-    background-position: center;
-    width: calc(100% + 30px) !important;
-    text-align: left !important;
-    vertical-align: bottom;
-    height:215px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    margin: 0 -15px;
-    margin-bottom: 15px;
-    position: relative;
+#player>tbody>tr.right>td:nth-child(2) {
+	background-image: var(--player-header) !important;
+	background-color: var(--player-secondary);
+	background-size: cover;
+	background-position: center;
+	width: calc(100% + 30px) !important;
+	text-align: left !important;
+	vertical-align: bottom;
+	height: 215px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	margin: 0 -15px;
+	margin-bottom: 15px;
+	position: relative;
 }
 
 #player:has(div.member-offline) {
-	tbody > tr.right > td:nth-child(2)::before {
+	tbody>tr.right>td:nth-child(2)::before {
 		background-image: url(https://cdn3.emoji.gg/emojis/4624-discord-offline.png);
 	}
 }
 
 #player:has(div.member-online) {
-	tbody > tr.right > td:nth-child(2)::before {
+	tbody>tr.right>td:nth-child(2)::before {
 		background-image: url(https://cdn3.emoji.gg/emojis/1415-online.png);
 	}
 }
 
-#player > tbody > tr.right > td:nth-child(2)::before {
+#player>tbody>tr.right>td:nth-child(2)::before {
 	content: " ";
 	display: block;
 	background-size: cover;
@@ -2852,14 +3393,14 @@ if no: replace with fake friend button + move message button */
 
 
 /* player pfp */
-#player > tbody > tr.right > td:nth-child(2) > img{
-    position: absolute;
-    border-radius: 500px;
-    width: 130px;
-    bottom: -50px;
-    margin-left: 10px;
-    display: block;
-    object-fit: none;
+#player>tbody>tr.right>td:nth-child(2)>img {
+	position: absolute;
+	border-radius: 500px;
+	width: 130px;
+	bottom: -50px;
+	margin-left: 10px;
+	display: block;
+	object-fit: none;
 }
 
 /* online / offline / optional idle + DnD */
@@ -2872,9 +3413,10 @@ if no: replace with fake friend button + move message button */
     height: 20px;
     width: 20px;
 } */
- 
-.member-online, .member-offline{
-    display: none;
+
+.member-online,
+.member-offline {
+	display: none;
 }
 
 /* buttons */
@@ -2883,7 +3425,7 @@ if no: replace with fake friend button + move message button */
 
 #pageContainer:not(:has(#editdetailspanel)) {
 
-    #player > tbody > tr.right > td:nth-child(1) > div.xlarge {
+	#player>tbody>tr.right>td:nth-child(1)>div.xlarge {
 		display: flex;
 		flex-wrap: nowrap;
 		justify-content: center;
@@ -2898,20 +3440,20 @@ if no: replace with fake friend button + move message button */
 		align-items: center;
 		height: fit-content;
 		/* align-self: flex-start; */
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
+
+
+
+
+
+
+
+
 		>a:hover {
 			filter: brightness(1.2);
 		}
-		
-		>span.text-muted{
+
+		>span.text-muted {
 			font-size: 0px;
 			display: none;
 		}
@@ -2923,17 +3465,15 @@ if no: replace with fake friend button + move message button */
 
 #pageContainer:has(#editdetailspanel) {
 
-    div.ads {
-        display: block;
-    }
+	div.ads {
+		display: block;
+	}
 }
 
-#player > tbody > tr.right > td:nth-child(1) > div.xlarge, 
-#player:has(a[href^="/refer.php"]) > tbody > tr.right > td:nth-child(1) > p {
-    
-}
+#player>tbody>tr.right>td:nth-child(1)>div.xlarge,
+#player:has(a[href^="/refer.php"])>tbody>tr.right>td:nth-child(1)>p {}
 
-#player:has(a[href^="/refer.php"]) > tbody > tr.right > td:nth-child(1) > p {
+#player:has(a[href^="/refer.php"])>tbody>tr.right>td:nth-child(1)>p {
 	right: 13px;
 }
 
@@ -2942,16 +3482,16 @@ if no: replace with fake friend button + move message button */
 /* friend req */
 
 td.right_odd>a[href*="befriends"] {
-	
+
 	&::after {
-        font-size: 15px;
-        content: "Add Friend";
-        vertical-align: middle;
-    }
-	
-    img {
-        content: url(https://cdn3.emoji.gg/emojis/9437-invite.png);
-    }
+		font-size: 15px;
+		content: "Add Friend";
+		vertical-align: middle;
+	}
+
+	img {
+		content: url(https://cdn3.emoji.gg/emojis/9437-invite.png);
+	}
 }
 
 
@@ -2968,200 +3508,258 @@ td.right_odd>a[href*="befriends"] {
 /* block */
 td.right_odd>a[href^="/allies.php?p=blocked"] {
 	img {
-        content: url(https://cdn3.emoji.gg/emojis/2360-cross.png);
+		content: url(https://cdn3.emoji.gg/emojis/2360-cross.png);
 		filter: brightness(1) !important;
 	}
 
 	&:hover:after {
-        content: "Block Member";
-        width: 113px;
-        right: -38px;
-    }
+		content: "Block Member";
+		width: 113px;
+		right: -38px;
+	}
 }
 
-#player > tbody > tr.right > td:nth-child(1) > p:hover::after {
-    content: " ";
-    width: 30px;
-    position: absolute;
-    height: 60px;
-    left: 32px;
+#player>tbody>tr.right>td:nth-child(1)>p:hover::after {
+	content: " ";
+	width: 30px;
+	position: absolute;
+	height: 60px;
+	left: 32px;
 }
 
-#player > tbody > tr.right > td:nth-child(1) > div.xlarge > a > img, 
-#player > tbody > tr:nth-child(3) > td > a > img, #player:has(a[href^="/refer.php"]) > tbody > tr.right > td:nth-child(1) > p a>img {
-    width: 20px;
-    aspect-ratio: 1/1;
-    filter: brightness(2);
+#player>tbody>tr.right>td:nth-child(1)>div.xlarge>a>img,
+#player>tbody>tr:nth-child(3)>td>a>img,
+#player:has(a[href^="/refer.php"])>tbody>tr.right>td:nth-child(1)>p a>img {
+	width: 20px;
+	aspect-ratio: 1/1;
+	filter: brightness(2);
 }
 
 /* specified topbar and pagecontainer to avoid conflicts with sidebar links */
 
-.container.topbar, #pageContainer {
+.container.topbar,
+#pageContainer {
 
-/* long buttons */
+	/* long buttons */
 
-div>a[href^="/compose.php"], td.right_odd>a[href*="befriends"] {
-	display: block;
-	font-size: 0px;
-	background-color: #323237;
-	padding: 9px 17px 9px;
-	border-radius: 8px;
-	vertical-align: middle;
-	height: fit-content;
-	
-	
-	
-    
-    img {
-        margin-right: 5px;
-        margin-bottom: 2px;
-    }
+	div>a[href^="/compose.php"],
+	td.right_odd>a[href*="befriends"] {
+		display: block;
+		font-size: 0px;
+		background-color: #323237;
+		padding: 9px 17px 9px;
+		border-radius: 8px;
+		vertical-align: middle;
+		height: fit-content;
 
-    &::after {
-        font-size: 15px;
-        vertical-align: middle;
-    }
+
+
+
+		img {
+			margin-right: 5px;
+			margin-bottom: 2px;
+		}
+
+		&::after {
+			font-size: 15px;
+			vertical-align: middle;
+		}
+	}
+
+	div>a[href^="/compose.php"] {
+		img {
+			content: var(--message-icon);
+		}
+	}
+
+	td.right_odd>a[href^="/territory.php"] {
+		background-color: var(--player-buttons);
+	}
+
+	/* icons w/ tooltips */
+
+	div>a[href^="/trading_center.php"],
+	div>a[href^="/transfers.php"],
+	td.right_odd>a[href^="/allies.php?p=blocked"],
+	#player:has(a[href^="/refer.php"]) a[href^="/refer.php"],
+	#player:has(a[href^="/refer.php"]) a[href^="/wishlist.php"] {
+		font-size: 0px;
+		background-color: #323237;
+		padding: 8px;
+		width: 40px;
+		aspect-ratio: 1 / 1;
+		height: 40px;
+		border-radius: 8px;
+		color: white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		/* height: fit-content; */
+
+
+
+		&:hover::after {
+			display: block;
+			position: absolute;
+			text-align: center;
+			top: 46px;
+			height: 40px;
+			font-size: 13px;
+			background-color: #242429;
+			border: 1px solid #323237;
+			color: #f3f3f3;
+			font-weight: bold;
+			padding: 11px;
+			border-radius: 10px;
+			box-shadow: #121214ad 0 5px 12px 0px;
+			animation: .05s ease-in-out 0s 1 tooltipHover;
+		}
+	}
+
+	/* message */
+
+	div>a[href^="/compose.php"] {
+		&::after {
+			font-size: 15px;
+			content: "Message";
+			vertical-align: middle;
+		}
+	}
+
+	/* gift */
+
+	div>a[href^="/transfers.php"] {
+		font-size: 0px;
+
+		img {
+			content: url("https://cdn3.emoji.gg/emojis/8630-gift.png");
+		}
+
+		&:hover:after {
+			content: "Gift";
+			width: 48px;
+			right: -4px;
+		}
+	}
+
+	/* make a trade */
+
+	div>a[href^="/trading_center.php"] {
+		font-size: 0px;
+
+		img {
+			content: url("https://cdn3.emoji.gg/emojis/8067-integrations-channels-followed.png");
+		}
+
+		&:hover:after {
+			content: "Make A Trade";
+			width: 114px;
+			right: -38px;
+		}
+	}
+
 }
 
-div>a[href^="/compose.php"] {
-    img {
-        content: url("https://cdn3.emoji.gg/emojis/8312-active-threads.png");
-    }
+.footer {
+	position: relative;
+	padding-top: 20px;
+	margin-bottom: 20px;
 }
 
-td.right_odd>a[href^="/territory.php"] {
-	background-color: var(--player-buttons);
-}
-
-/* icons w/ tooltips */
-
-div>a[href^="/trading_center.php"], 
-div>a[href^="/transfers.php"], 
-td.right_odd>a[href^="/allies.php?p=blocked"], 
-#player:has(a[href^="/refer.php"]) a[href^="/refer.php"], 
-#player:has(a[href^="/refer.php"]) a[href^="/wishlist.php"]{
-	font-size: 0px;
-	background-color: #323237;
-	padding: 8px;
-	width: 40px;
-	px; */
-	aspect-ratio: 1 / 1;
-	height: 40px;
-	border-radius: 8px;
-	color: white;
+.footer>.row {
 	display: flex;
-	align-items: center;
 	justify-content: center;
-	/* height: fit-content; */
-	
-	
-    
-    &:hover::after{
-        display: block;
-        position: absolute;
+	background: transparent;
+
+	.col-xs-10 {
+		display: block;
+		/* justify-self: center; */
+		width: fit-content;
 		text-align: center;
-        top: 46px;
-        height: 40px;
-        font-size: 13px;
-        background-color: #242429;
-        border: 1px solid #323237;
-        color: #f3f3f3;
-        font-weight: bold;
-        padding: 11px;
-        border-radius: 10px;
-        box-shadow: #121214ad 0 5px 12px 0px;
-        animation: .05s ease-in-out 0s 1 tooltipHover;
-    }
-}
+		flex: 1;
+		background: transparent;
 
-/* message */
+		/* credit! */
 
-div>a[href^="/compose.php"] {
+		&::before {
+			content: "Dencord.css made with love by Wizard (#414436)";
+			display: block;
+			text-align: center;
+			margin-bottom: 10px;
+			font-style: italic;
+		}
+	}
+
+	.col-xs-2.text-right {
+		display: block;
+		width: fit-content;
+		/* position: absolute; */
+		right: 0px;
+		bottom: 0px;
+		filter: grayscale(10) brightness(10);
+		margin-left: auto;
+	}
+
+	&::before,
 	&::after {
-        font-size: 15px;
-        content: "Message";
-        vertical-align: middle;
-    }
+		display: none;
+	}
 }
 
-/* gift */
-
-div>a[href^="/transfers.php"] {
-    font-size: 0px;
-
-    img {
-        content: url("https://cdn3.emoji.gg/emojis/8630-gift.png");
-    }
-
-    &:hover:after {
-        content: "Gift";
-        width: 48px;
-        right: -4px;
-    }
+.footer a:link,
+.footer a:visited,
+.footer a:active {
+	border-color: var(--discord-white);
+	color: var(--discord-dark-white);
 }
 
-/* make a trade */
-
-div>a[href^="/trading_center.php"] {
-    font-size: 0px;
-
-    img {
-        content: url("https://cdn3.emoji.gg/emojis/8067-integrations-channels-followed.png");
-    }
-
-    &:hover:after {
-        content: "Make A Trade";
-        width: 114px;
-        right: -38px;
-    }
+.footer a:hover {
+	color: var(--discord-white);
 }
-
-
-
 
 
 /* personal view */
 
 #player:has(a[href^="/refer.php"]) {
 
-	span.text-muted{
-        font-size: 0px;
-        padding: 0 7px !important;
-    }
-	
+	span.text-muted {
+		font-size: 0px;
+		padding: 0 7px !important;
+	}
+
 	/* refer */
 	a[href^="/refer.php"] {
-	    font-size: 0px;
-	
-	    img {
-	        content: var(--invite-icon);
-	    }
-	
-	    &:hover:after {
-	        content: "Refer A Friend";
-	        width: 120px;
-	        right: -38px;
-	    }
+		font-size: 0px;
+
+		img {
+			content: var(--invite-icon);
+		}
+
+		&:hover:after {
+			content: "Refer A Friend";
+			width: 120px;
+			right: -38px;
+		}
 	}
-	
+
 	/* wishlist */
-	
+
 	a[href^="/wishlist.php"] {
-	    font-size: 0px;
-	
-	    img {
-	        content: url("https://cdn3.emoji.gg/emojis/1546-nature.png");
-	    }
-	
-	    &:hover:after {
-	        content: "View Your Wishlist";
-	        width: 140px;
-	        right: -50px;
-	    }
+		font-size: 0px;
+
+		img {
+			content: url("https://cdn3.emoji.gg/emojis/1546-nature.png");
+		}
+
+		&:hover:after {
+			content: "View Your Wishlist";
+			width: 140px;
+			right: -50px;
+		}
 	}
 }
 
-#player:has(a[href^="/compose.php"]) tbody > tr.right > td:nth-child(1) > p {
+#player:has(a[href^="/compose.php"]) tbody>tr.right>td:nth-child(1)>p {
 	/* position: absolute; */
 	background-color: #323237;
 	padding: 8px;
@@ -3178,32 +3776,23 @@ div>a[href^="/trading_center.php"] {
 	z-index: 100;
 	height: fit-content;
 	order: 1;
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
 	.text-muted {
 		font-size: 0px;
 		padding: 0px !important;
 	}
 
-	
-	&:hover, &:active {
+
+	&:hover,
+	&:active {
 		cursor: pointer;
 		filter: brightness(1.2);
-		
-		
-		
-		a[href^="/wishlist.php"], a[href^="/trading_center.php?s=users&owner="] {
+
+
+
+		a[href^="/wishlist.php"],
+		a[href^="/trading_center.php?s=users&owner="] {
 			display: block;
 			position: absolute;
 			width: 185px;
@@ -3217,8 +3806,8 @@ div>a[href^="/trading_center.php"] {
 			box-shadow: #121214ad 0 5px 12px 0px;
 			animation: .05s ease-in-out 0s 1 tooltipHover;
 			z-index: 100;
-			
-			
+
+
 
 			&:hover {
 				filter: brightness(1.2);
@@ -3239,6 +3828,7 @@ div>a[href^="/trading_center.php"] {
 			border-bottom-right-radius: 0px;
 			border-bottom-left-radius: 0px;
 
+
 			img {
 				content: url(https://cdn3.emoji.gg/emojis/1546-nature.png);
 			}
@@ -3258,175 +3848,176 @@ div>a[href^="/trading_center.php"] {
 	}
 
 
-    &::before {
-        content: " ";
-        display: block;
-        background-image: url("https://cdn3.emoji.gg/emojis/8895-more-options.png");
-        background-position: center center;
-        background-size: 100%;
-        min-width: 20px;
-        min-height: 20px;
-        align-self: center;
-        top: 1px;
-        filter: brightness(2);
-    }
+	&::before {
+		content: " ";
+		display: block;
+		background-image: url("https://cdn3.emoji.gg/emojis/8895-more-options.png");
+		background-position: center center;
+		background-size: 100%;
+		min-width: 20px;
+		min-height: 20px;
+		align-self: center;
+		top: 1px;
+		filter: brightness(2);
+	}
 
-	a[href^="/wishlist.php"], a[href^="/trading_center.php?s=users&owner="] {
+	a[href^="/wishlist.php"],
+	a[href^="/trading_center.php?s=users&owner="] {
 		display: none;
 		position: absolute;
 	}
 
-	
-}
 
 }
 
 /* CHAT BOX ADJUSTMENTS */
 
 #btnLoadNewMessages {
-    background: var(--reload-icon) 0 0 / contain no-repeat;
+	background: var(--reload-icon) 0 0 / contain no-repeat;
 }
 
 #fraChatSettings {
-    height: 24px;
-    width: 24px;
+	height: 24px;
+	width: 24px;
 }
 
 #btnChatSettings {
-    background: var(--settings-icon) 0 0 / contain no-repeat;
+	background: var(--settings-icon) 0 0 / contain no-repeat;
 }
 
- div#chatMessageContainer .highlight-user-messages {
-    --new-user-highlight-color: hsla(from var(--user-highlight-color) h s l calc(a - 50%));
+div#chatMessageContainer .highlight-user-messages {
+	--new-user-highlight-color: hsla(from var(--user-highlight-color) h s l calc(a - 50%));
 }
 
 /* div#chatMessageContainer[style*="background-color: yellow"] {
 } */
 
 #fraSidebarChat {
-    background: var(--discord-dark);
-    color: var(--discord-white);
+	background: var(--discord-dark);
+	color: var(--discord-white);
 }
 
 .s-chat-sidebar #chatMessageContainer {
-    background-color: var(--discord-dark);
-    border: none;
+	background-color: var(--discord-dark);
+	border: none;
 }
 
 #chatMessageList {
-    scrollbar-color: var(--discord-light) transparent;
-    overflow-y: scroll;
-    overflow-x: hidden;
+	scrollbar-color: var(--discord-light) transparent;
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
-.s-chat-message:nth-child(even), .s-chat-message:nth-child(odd) {
+.s-chat-message:nth-child(even),
+.s-chat-message:nth-child(odd) {
 	background: transparent;
 }
 
 span.s-chat-message_content {
 	color: var(--discord-white);
-    margin-top:3px;
+	margin-top: 3px;
 	flex: 100%;
 }
 
-span.s-chat-message_content > a {
-    color: var(--discord-link);
-    
-    &::after {
-        display: none !important;
-    }
+span.s-chat-message_content>a {
+	color: var(--discord-link);
+
+	&::after {
+		display: none !important;
+	}
 }
 
 .s-chat-sidebar .s-chat-message {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-    width: 100%;
-    margin-bottom: 10px;
-    border: none;
-    padding: 0px 12px;
-    padding-bottom: 7px;
-    border-bottom: 1px solid var(--discord-lighter);
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: center;
+	width: 100%;
+	margin-bottom: 10px;
+	border: none;
+	padding: 0px 12px;
+	padding-bottom: 7px;
+	border-bottom: 1px solid var(--discord-lighter);
 }
 
 .s-chat-message:hover {
-    background: var(--message-highlight-background);
+	background: var(--message-highlight-background);
 }
 
-.s-chat-message__mod>div, .s-chat-message>div:has(.s-chat__username) {
-    font-weight: bold;
-    font-size: 14px;
-    display: block;
-    flex-grow: 1;
-    flex-shrink: 0;
-    align-self: auto;
-    order: -1;
-    width: 100%;
+.s-chat-message__mod>div,
+.s-chat-message>div:has(.s-chat__username) {
+	font-weight: bold;
+	font-size: 14px;
+	display: block;
+	flex-grow: 1;
+	flex-shrink: 0;
+	align-self: auto;
+	order: -1;
+	width: 100%;
 }
 
 .s-chat-sidebar .s-chat-message_timestamp {
-    position: relative;
-    display: block;
-    flex-grow: 10;
-    flex-shrink: 0;
-    flex-basis: 50%;
-    align-self: auto;
-    order: -1;
-    margin-top: 2px;
+	position: relative;
+	display: block;
+	flex-grow: 10;
+	flex-shrink: 0;
+	flex-basis: 50%;
+	align-self: auto;
+	order: -1;
+	margin-top: 2px;
 	font-size: 12px;
 
-    color: var(--discord-lightest);
+	color: var(--discord-lightest);
 }
 
 
 .s-chat-message:has(span.s-chat-message_content>a.s-chat__username) {
-    padding-top: 30px;
-    
-    b:has(+ a.s-chat__username) {
-        content: " ";
-        display: block;
-        position: absolute;
-        z-index: 1;
-        background-image: url("");
-        width: 20px;
-        height: 12px;
-        border-block-width: 2px 0;
-        border-color: var(--discord-border);
-        border-inline-width: 2px 0;
-        border-start-start-radius: 6px;
-        border-style: solid;
-        box-sizing: border-box;
-        top: 11px;
-        left: 13px;
-        color: transparent;
-    }
-    
-    span.s-chat-message_content .s-chat__username{
-        position: absolute;
-        top: 5px;
-        left: 40px;
-        font-size: 12px;
-        font-weight: normal;
-        background-color: var(--discord-blurple-50);
-        color: var(--discord-blurple-text);
-        border-radius: 4px;
-        padding: 1px;
-        padding-left: 3px;
-        z-index: 5;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        width: fit-content;
-        max-width: 80%;
-		
-        &:hover {
-            background-color: var(--discord-blurple);
-            color: var(--discord-white);
-            text-decoration: none;
-        }
-    }
+	padding-top: 30px;
+
+	b:has(+ a.s-chat__username) {
+		content: " ";
+		display: block;
+		position: absolute;
+		z-index: 1;
+		background-image: url("");
+		width: 20px;
+		height: 12px;
+		border-block-width: 2px 0;
+		border-color: var(--discord-border);
+		border-inline-width: 2px 0;
+		border-start-start-radius: 6px;
+		border-style: solid;
+		box-sizing: border-box;
+		top: 11px;
+		left: 13px;
+		color: transparent;
+	}
+
+	span.s-chat-message_content .s-chat__username {
+		position: absolute;
+		top: 5px;
+		left: 40px;
+		font-size: 12px;
+		font-weight: normal;
+		background-color: var(--discord-blurple-50);
+		color: var(--discord-blurple-text);
+		border-radius: 4px;
+		padding: 1px;
+		padding-left: 3px;
+		z-index: 5;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		width: fit-content;
+		max-width: 80%;
+
+		&:hover {
+			background-color: var(--discord-blurple);
+			color: var(--discord-white);
+			text-decoration: none;
+		}
+	}
 
 	span.s-chat-message_content .s-chat__username::before {
 		/* content: " ";
@@ -3447,91 +4038,94 @@ span.s-chat-message_content > a {
 	}
 }
 
-.s-chat__username:hover, span.s-chat-message_content > a:hover {
-    text-decoration: underline;
+.s-chat__username:hover,
+span.s-chat-message_content>a:hover {
+	text-decoration: underline;
 }
 
-#fra_chatContainer .modMessage, .s-chat-message__mod {
-    background: var(--message-ping-background) !important;
-    border: none;
-    color: inherit;
-    font-weight: bold;
-}
-
-
-#chatMessagePinned.s-chat-message__pinned {
-    border: none;
-    color: var(--discord-white);
-    font-weight: normal;
+#fra_chatContainer .modMessage,
+.s-chat-message__mod {
+	background: var(--message-ping-background) !important;
+	border: none;
+	color: inherit;
+	font-weight: bold;
 }
 
 
 #chatMessagePinned.s-chat-message__pinned {
-    background-color: var(--discord-mid);
-    background-image: var(--pinned-icon);
-    background-size: 20px;
+	border: none;
+	color: var(--discord-white);
+	font-weight: normal;
+}
+
+
+#chatMessagePinned.s-chat-message__pinned {
+	background-color: var(--discord-mid);
+	background-image: var(--pinned-icon);
+	background-size: 20px;
 }
 
 #fra_chatContainer .channelMenu {
-    background-color: var(--discord-dark);
-    z-index: 100;
+	background-color: var(--discord-dark);
+	z-index: 100;
 }
 
 #fra_chatContainer .channelMenu .channelSwitcher {
-    color: var(--discord-darkest-white);
-    border-radius: 3px;
-    display: inline-block;
-    font-weight: 700;
-    margin-right: 4px;
-    padding: 3px 12px;
+	color: var(--discord-darkest-white);
+	border-radius: 3px;
+	display: inline-block;
+	font-weight: 700;
+	margin-right: 4px;
+	padding: 3px 12px;
 }
 
 #fra_chatContainer .channelMenu .channelSwitcher:hover {
-    background: #1d1d1e;
-    color: var(--discord-white);
+	background: #1d1d1e;
+	color: var(--discord-white);
 }
 
 #fra_chatContainer .channelMenu .channelSwitcher.active {
-    background: var(--discord-lighter);
-    color: var(--discord-white);
+	background: var(--discord-lighter);
+	color: var(--discord-white);
 }
 
 .s-chat-sidebar #label_currentChannel {
-    background: var(--discord-light);
-    border: none;
-    color: var(--discord-darkest-white);
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    min-width: 140px;
-    padding: 4px 12px;
-    border: 1px solid var(--discord-border);
+	background: var(--discord-light);
+	border: none;
+	color: var(--discord-darkest-white);
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: bold;
+	min-width: 140px;
+	padding: 4px 12px;
+	border: 1px solid var(--discord-border);
 }
 
 .s-chat-sidebar #fraChatChannelMenu {
-    background: inherit;
-    border-radius: 4px;
-    border: 1px solid var(--discord-border);
-    box-shadow: 1px 4px 9px 3px #000000;
-    cursor: default;
-    padding: 2px;
-    position: absolute;
-    width: 140px;
-    z-index: 99999999;
+	background: inherit;
+	border-radius: 4px;
+	border: 1px solid var(--discord-border);
+	box-shadow: 1px 4px 9px 3px #000000;
+	cursor: default;
+	padding: 2px;
+	position: absolute;
+	width: 140px;
+	z-index: 99999999;
 }
 
 #txtChatContainer .emoteContainer {
-    position: absolute;
-    right: 47px;
+	position: absolute;
+	right: 47px;
 	top: 0px;
 }
 
-#txtChatContainer .emoteContainer, #txtChatContainer > div:nth-child(2):has(#btnChatSend) {
+#txtChatContainer .emoteContainer,
+#txtChatContainer>div:nth-child(2):has(#btnChatSend) {
 	top: 8px;
 }
 
 .emoteInput {
-	background-image: var(--emoji-icon)!important;
+	background-image: var(--emoji-icon) !important;
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -3544,18 +4138,18 @@ span.s-chat-message_content > a {
 }
 
 .emoteList {
-    background: var(--discord-dark);
-    box-shadow: 0 2px 8px 4px rgba(0, 0, 0, 0.5);
-    border: 2px solid var(--discord-border);
-    border-radius: 6px;
-    /* display: block; */
-    padding: 6px;
-    position: absolute;
-    text-align: center;
-    bottom: 41px !important;
-    left: -157px !important;
-    width: 184px;
-    min-height: 120px;
+	background: var(--discord-dark);
+	box-shadow: 0 2px 8px 4px rgba(0, 0, 0, 0.5);
+	border: 2px solid var(--discord-border);
+	border-radius: 6px;
+	/* display: block; */
+	padding: 6px;
+	position: absolute;
+	text-align: center;
+	bottom: 41px !important;
+	left: -157px !important;
+	width: 184px;
+	min-height: 120px;
 }
 
 .emoteList img:hover {
@@ -3564,21 +4158,21 @@ span.s-chat-message_content > a {
 }
 
 .s-chat-sidebar .emoteList::after {
-    border-bottom-color: transparent;
-    border-top-color: var(--discord-dark);
-    /* background-color: inherit; */
+	border-bottom-color: transparent;
+	border-top-color: var(--discord-dark);
+	/* background-color: inherit; */
 }
 
 .s-chat-sidebar .emoteList::before {
 	border-bottom-color: transparent;
-    border-top-color: var(--discord-border);
+	border-top-color: var(--discord-border);
 }
 
-#txtChatContainer > div:nth-child(1) {
+#txtChatContainer>div:nth-child(1) {
 	z-index: 100 !important;
 }
 
-#txtChatContainer > div:nth-child(2) {
+#txtChatContainer>div:nth-child(2) {
 	margin: 0 !important;
 	position: absolute;
 	top: 0;
@@ -3599,7 +4193,7 @@ span.s-chat-message_content > a {
 	border: none;
 	/* position: absolute; */
 	z-index: 5;
-	width:  24px;
+	width: 24px;
 	height: 24px;
 }
 
@@ -3608,38 +4202,54 @@ span.s-chat-message_content > a {
 }
 
 #fra_chatContainer #txtChatInput {
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    background-color: #242429;
-    border: 1px solid #323237;
-    color: #fbfbfb;
-    font-weight: bold;
-    height: 40px;
-    border-radius: 4px;
-    outline: none;
-    padding-right: 75px;
-    padding-left: 5px;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	background-color: #242429;
+	border: 1px solid #323237;
+	color: #fbfbfb;
+	font-weight: bold;
+	height: 40px;
+	border-radius: 4px;
+	outline: none;
+	padding-right: 75px;
+	padding-left: 5px;
 }
 
 
 /* wizard is a special boy */
 
 a[href="/territory.php?id=414436"]::after {
-    content: " ";
-    display: inline-block;
-    height: 14px;
-    /* position: absolute; */
-    width: auto;
-    aspect-ratio: 1 / 1;
-    background-size: cover;
-    margin: 5px;
-    background-image: url(https://cdn3.emoji.gg/emojis/3773-active-developer-badge-animated.gif);
-    margin-bottom: -2px;
+	content: " ";
+	display: inline-block;
+	height: 14px;
+	position: relative;
+	width: auto;
+	aspect-ratio: 1 / 1;
+	vertical-align: baseline;
+	background-size: cover;
+	margin: 0 5px;
+	background-image: url(https://cdn3.emoji.gg/emojis/3773-active-developer-badge-animated.gif);
+	margin-bottom: -2px;
 }
 
-.comment small.text-muted > a[href="/territory.php?id=414436"] {
-    color: #81aecf;
+.comment small.text-muted>a[href="/territory.php?id=414436"] {
+	color: #81aecf;
+}
+
+.comment small.text-muted {
+
+	/* make sure to add any other "special boys" to this list so the icons line up
+	in the chat box correctly :] */
+	a[href="/territory.php?id=414436"] 
+	{
+	}
+}
+
+#allies .small {
+	a[href="/territory.php?id=414436"] {
+		/* margin-right: 60px; */
+	}
 }
