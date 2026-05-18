@@ -222,6 +222,7 @@ https://emoji.gg/user/bet.official
 	--activity-icon: url("https://cdn3.emoji.gg/emojis/5636-activity.png");
 	--bug-icon: url("https://cdn3.emoji.gg/emojis/17891-discord-bugs-white.png");
 	--heart-icon: url("https://cdn3.emoji.gg/emojis/2085_white_heart.png");
+	--time-danger-icon: url("https://cdn3.emoji.gg/emojis/4688-time-out.png");
 
 	/* default misc icons */
 	--paws-icon: url("https://cdn3.emoji.gg/emojis/8224-purple-paw-prints.png");
@@ -708,8 +709,9 @@ body {
 }
 
 /* fake alert grouping panel */
+/* broken cause of z-index stuff. commenting out for performance until it can b fixed :] */
 
-#pageContainer>center>div:nth-last-child(1 of .alert) {
+/* #pageContainer>center>div:nth-last-child(1 of .alert) {
 
 	&::after {
 		border-bottom-left-radius: 4px;
@@ -728,7 +730,6 @@ body {
 }
 
 #pageContainer>div:nth-last-child(1 of .alert) {
-	/* color: blue !important; */
 
 	&::after {
 		border-bottom-left-radius: 4px;
@@ -738,7 +739,6 @@ body {
 }
 
 #pageContainer>div:nth-child(1 of .alert) {
-	/* color: blue !important; */
 
 	&::after {
 		border-top-left-radius: 4px;
@@ -749,12 +749,6 @@ body {
 
 #pageContainer:has(>.alert):has(>center .alert) {
 
-	/* >div:nth-child(1 of .alert) {
-	
-		&::after {
-		}
-	} */
-
 	>center div:nth-child(1 of .alert) {
 		&::after {
 			border-top: none;
@@ -763,7 +757,7 @@ body {
 		}
 	}
 
-}
+} */
 
 /* the rollover alert (which is?? inside another div?? idk.) */
 ol.breadcrumb+div:has(>.alert) {
@@ -869,9 +863,9 @@ ol.breadcrumb+div:has(>.alert) {
 		}
 	}
 
+	/* core fake panel. to be bug-fixed */
 
-
-	&::after {
+	/* &::after {
 		position: absolute;
 		content: " ";
 		right: -15px;
@@ -888,7 +882,7 @@ ol.breadcrumb+div:has(>.alert) {
 		border-bottom-color: var(--discord-dark);
 		background-color: var(--discord-dark);
 		border-radius: 4px;
-	}
+	} */
 
 
 	img[src$="hungry.png"] {
@@ -2221,8 +2215,8 @@ input#postComment:hover {
 center>#commentBox {
 	display: flex;
 	flex-direction: column-reverse;
-	border: 1px solid transparent;
-	border-radius: 10px;
+	border: 1px solid var(--discord-border);
+	border-radius: 6px !important;
 	padding: 0px;
 	margin-bottom: 5px;
 	height: 500px;
@@ -3706,14 +3700,6 @@ form[method="post"]:has(>#about) {
 - check if the request button exists
 if no: replace with fake friend button + move message button */
 
-#player :has(tbody td.right_odd>a[href*="befriends"]) {
-	tbody>tr:nth-child(3) {}
-
-	>td.right_odd::before {
-		display: none;
-	}
-}
-
 
 #player>tbody>tr:nth-child(3) {
 	display: flex;
@@ -3745,7 +3731,19 @@ if no: replace with fake friend button + move message button */
 	}
 
 	td.right_odd.text-right:not(:has(>a[href*="befriends"])) {
-		display: none;
+		background-image: url("https://cdn3.emoji.gg/emojis/8982-member.png");
+		background-size: contain;
+		background-color: var(--discord-border);
+		background-origin: content-box;
+		padding: 8px;
+		border-radius: 8px;
+		background-repeat: no-repeat;
+	}
+
+	td.right_odd.text-right:has(>a[href*="befriends"]) {
+		&::before {
+			display: none;
+		}
 	}
 
 	td.right_odd>a[href*="befriends"] {
@@ -3968,11 +3966,10 @@ if no: replace with fake friend button + move message button */
 
 /* buttons */
 
-/* check if this is the user's page or a visitor by checking if the edit details panel exists */
+/* check if this is the user's page or a visitor */
 
-#pageContainer:not(:has(#editdetailspanel)) {
-
-	#player>tbody>tr.right>td:nth-child(1)>div.xlarge {
+#player:not(:has(a[href^="/refer.php"])) {
+	>tbody>tr.right>td:nth-child(1)>div.xlarge {
 		display: flex;
 		flex-wrap: nowrap;
 		justify-content: center;
@@ -3988,14 +3985,6 @@ if no: replace with fake friend button + move message button */
 		height: fit-content;
 		/* align-self: flex-start; */
 
-
-
-
-
-
-
-
-
 		>a:hover {
 			filter: brightness(1.2);
 		}
@@ -4006,16 +3995,6 @@ if no: replace with fake friend button + move message button */
 		}
 	}
 }
-
-/* the page *does* have the edit details panel */
-/* this would usually just be "default", but it's here for the sake of argument/example */
-
-/* #pageContainer:has(#editdetailspanel) {
-
-	div.ads {
-		display: block;
-	}
-} */
 
 
 #player:has(a[href^="/refer.php"]) p.center.xlarge {
@@ -4183,9 +4162,80 @@ td.right_odd>a[href^="/allies.php?p=blocked"] {
 }
 
 /* ------ temporarily hide reclaim panel until i get around to fixing it ------ */
-#reclaim {
-	display: none;
+
+center > form[method="post"]:has(#reclaim){
+
+	display: contents;
+	
+	#reclaim {
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+		align-content: center;
+		align-items: center;
+		margin-bottom: 30px;
+		padding-bottom: 20px;
+		position: relative;
+
+		tr:nth-child(1) {
+			width: 100%;
+			display: flex;
+			gap: 10px;
+			text-align: left;
+			height: fit-content;
+			align-items: center;
+			border: 1px solid var(--discord-lighter);
+			background: var(--discord-lighter);
+			padding: 8px 15px;
+			margin-bottom: 15px;
+		
+			&::before {
+				content: " ";
+				display: inline-block;
+				background-image: var(--time-danger-icon);
+				background-size: contain;
+				width: auto;
+				height: 100%;
+				min-height: 24px;
+				aspect-ratio: 1 / 1;
+			}
+
+			th {
+				font-size: 16px;
+				padding: 0px;
+			}
+		}
+		
+		tr:has(td.left.b.center) {
+			display: none;
+		}
+
+		tr:has(select[name="reclaimlion"]) {
+			display: flex;
+			flex-direction: column-reverse;
+		}
+
+		select {
+			background-color: var(--discord-lighter);
+		}
+
+		select:hover {
+			color: var(--discord-white);
+			cursor: pointer;
+		}
+
+		input {
+			font-size: 16px;
+			padding: 6px 10px;
+		}
+	}
+
+	#reclaim > tbody {
+		display: contents;
+	}
+	
 }
+
 
 .footer {
 	position: relative;
@@ -4592,11 +4642,6 @@ center>div.row:has(div.feature) {
 		background-color: var(--discord-blurple);
 
 
-
-		&:hover {
-			background-color: var(--discord-dark-blurple);
-		}
-
 		&::before {
 			content: " ";
 			display: inline-block;
@@ -4621,11 +4666,20 @@ center>div.row:has(div.feature) {
 			margin-top: 0;
 		}
 
+		select:hover {
+			color: var(--discord-white);
+			cursor: pointer;
+		}
+
 		&::after {
 			content: " Feed Pride!";
 			font-weight: bold;
 			font-size: 12px;
 		}
+	}
+
+	.feature:has(input[name="feedall"]:hover) {
+		background-color: var(--discord-dark-blurple);
 	}
 
 }
