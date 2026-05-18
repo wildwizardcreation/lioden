@@ -223,6 +223,7 @@ https://emoji.gg/user/bet.official
 	--bug-icon: url("https://cdn3.emoji.gg/emojis/17891-discord-bugs-white.png");
 	--heart-icon: url("https://cdn3.emoji.gg/emojis/2085_white_heart.png");
 	--time-danger-icon: url("https://cdn3.emoji.gg/emojis/4688-time-out.png");
+	--moderation-icon: url("https://cdn3.emoji.gg/emojis/4524-moderation-mobile.png");
 
 	/* default misc icons */
 	--paws-icon: url("https://cdn3.emoji.gg/emojis/8224-purple-paw-prints.png");
@@ -1361,16 +1362,10 @@ a.btn.button {
 		padding: 5px;
 
 
-
 		td {
 			display: inline-block;
 			background: none;
 			/* height: 100%; */
-
-
-
-
-
 
 			a {
 				text-decoration: none;
@@ -1384,11 +1379,6 @@ a.btn.button {
 				border-radius: 8px;
 				padding: 4px 10px;
 				/* height: 100%; */
-
-
-
-
-
 
 				&::after {
 					content: " ";
@@ -1406,7 +1396,6 @@ a.btn.button {
 				}
 			}
 		}
-
 
 	}
 
@@ -1680,7 +1669,7 @@ a.btn.button {
 }
 
 #attack {
-	order: 1;
+	order: 0;
 }
 
 /* extra table boxes */
@@ -1976,7 +1965,7 @@ body:has(#pageContainer .alert a[href="inbox.php"]) {
 		font-size: 0px;
 
 		>a:before {
-			background-image: url(https://cdn3.emoji.gg/emojis/4524-moderation-mobile.png);
+			background-image: var(--moderation-icon);
 		}
 
 		>a:hover:after {
@@ -2109,313 +2098,6 @@ textarea[name=desc] {
 	position: relative;
 
 }
-
-/* comment box to message box */
-
-
-#makeComment {
-	margin: 10px 0;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	position: relative;
-	background-color: var(--discord-mid);
-	border: 1px solid var(--discord-border);
-	color: #fbfbfb;
-	font-weight: bold;
-	height: 60px;
-	border-radius: 6px;
-	padding-left: 15px;
-	/* padding-right: 20px; */
-}
-
-#comment {
-	position: relative;
-	text-align: left;
-	width: 100%;
-	height: 100%;
-	font-size: 1.5em;
-	font-weight: lighter;
-	background-color: transparent;
-	margin-top: 4px;
-	padding-right: 30px;
-}
-
-#comment::placeholder {
-	color: transparent;
-}
-
-#comment:focus,
-#comment:active,
-#comment:target,
-#comment:hover,
-input#comment {
-	border: none;
-	outline: none;
-}
-
-#makeComment:has(#comment:placeholder-shown)::before {
-	display: block;
-}
-
-#makeComment:has(#comment:placeholder-shown) {
-	#postComment {
-		cursor: default;
-		opacity: .2;
-		background-image: var(--send-icon);
-	}
-}
-
-#makeComment::before {
-	content: "Message #den";
-	display: none;
-	position: absolute;
-	/* height: 100%; */
-	text-align: left;
-	/* font-size: 14px; */
-	width: 88%;
-	z-index: 4;
-	pointer-events: none;
-	font-size: 1.4em;
-	font-weight: lighter;
-	color: #757575;
-	top: 16px;
-	left: 30px;
-}
-
-input#postComment {
-	background-color: transparent;
-	background-image: var(--send-icon);
-	font-size: 0px;
-	background-position: center center !important;
-	background-size: 100% !important;
-	background-repeat: no-repeat !important;
-	margin: 0;
-	min-width: 24px;
-	min-height: 24px;
-	padding: 0;
-	margin-right: 20px;
-	transition: background-image linear .1s;
-}
-
-input#postComment:hover {
-	background-image: url("https://sitebuilder.neocities.org/assets/lioden/blurple-send-message-icon.png");
-}
-
-
-#commentBox,
-#makeComment,
-#commentErrors {
-	order: -1;
-	width: 100%;
-}
-
-/* commentbox to messages */
-
-center>#commentBox {
-	display: flex;
-	flex-direction: column-reverse;
-	border: 1px solid var(--discord-border);
-	border-radius: 6px !important;
-	padding: 0px;
-	margin-bottom: 5px;
-	height: 500px;
-	overflow-x: hidden;
-	overflow-y: auto;
-	scrollbar-color: var(--discord-border) var(--discord-mid);
-	scrollbar-width: thin;
-	scrollbar-gutter: stable;
-	margin-top: 5px;
-}
-
-#commentBox .comment:last-child i {
-	&::before {
-		content: " Comments are in chronological order from bottom to top. ";
-	}
-}
-
-.comment {
-	width: 100%;
-	text-align: left;
-	padding: 4px 7px;
-	display: flex;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-	gap: 10px;
-}
-
-.comment:nth-child(even) {
-	background-color: rgba(0, 0, 0, 0.1);
-}
-
-.commentTag {
-	width: 40px;
-	height: 40px;
-	border-radius: 4px;
-}
-
-.comment .commentText {
-	flex-grow: 4;
-	margin-left: 6px;
-}
-
-.comment .bad {
-	padding: 2px 7px !important;
-	font-size: 10px !important;
-}
-
-/* conditions for highlighting user message */
-#pageContainer:not(:has(> center > form > #editdetailspanel)) {
-
-	.comment:has(input[type="button"].bad) {
-		background: var(--message-ping-background) !important;
-
-		small.text-muted>a {
-			background: var(--message-ping-background) !important;
-			display: inline-block;
-		}
-
-		&:hover {
-			background: var(--message-ping-hover) !important;
-
-			small.text-muted>a {
-				background: var(--message-ping-hover) !important;
-			}
-		}
-	}
-
-	.comment:has(input[type="button"].bad):before {
-		content: " ";
-		height: auto;
-		width: 2px;
-		background-color: var(--message-ping);
-	}
-}
-
-#commentBox {
-	border-radius: 0px !important;
-}
-
-.comment:last-child {
-	display: block;
-	color: var(--discord-darkest-white);
-	margin-left: 1em;
-	/* width: 80%; */
-
-
-	.commentText {
-		display: inline-block;
-		padding-left: 10px;
-	}
-}
-
-.comment {
-	background-color: var(--message-background) !important;
-	padding: 0px !important;
-	padding-right: 7px !important;
-	margin-bottom: 13px;
-
-	div {
-		padding: 5px 0px;
-
-
-
-
-
-		img {
-			display: inline-block;
-			margin: 3px 0px;
-			/* max-width: 23px; */
-		}
-	}
-
-	&::before {
-		content: " ";
-		height: auto;
-		width: 2px;
-		background-color: transparent;
-	}
-}
-
-.comment:hover {
-	background-color: var(--message-highlight-background) !important;
-
-	small.text-muted>a {
-		background-color: var(--message-highlight-background);
-	}
-}
-
-/* pfps */
-.commentTag {
-	border-radius: 100% !important;
-}
-
-.commentText {
-	display: flex;
-	flex-direction: column-reverse;
-	justify-content: flex-end;
-}
-
-small.text-muted {
-	color: #82838b;
-	display: inline-block;
-
-
-
-
-	a {
-		margin-left: -17px;
-		font-size: 15px;
-		color: #efefef;
-		background-color: var(--message-background);
-	}
-
-}
-
-
-/* fake color scrambler */
-/* temp! */
-
-.comment:nth-child(2n) a {
-	color: skyblue;
-}
-
-.comment:nth-child(4n) a {
-	color: palegreen;
-}
-
-.comment:nth-child(5n) a {
-	color: plum;
-}
-
-.comment:nth-child(7n) a {
-	color: gold;
-}
-
-.comment:nth-child(5n + 1) a {
-	color: hotpink;
-}
-
-/* delete button */
-.comment .bad {
-	background: url("https://cdn3.emoji.gg/emojis/4151-delete-guild.png") !important;
-	background-position: center center !important;
-	background-size: 100% !important;
-	background-repeat: no-repeat !important;
-	border: none !important;
-	color: transparent !important;
-	font-size: 0px !important;
-	text-shadow: none !important;
-	border-radius: 0px !important;
-	padding: 0px !important;
-	min-width: 20px;
-	min-height: 20px;
-
-	&:hover {
-		background-color: #e938482b !important;
-	}
-}
-
 
 
 /* lower block */
@@ -4161,81 +3843,234 @@ td.right_odd>a[href^="/allies.php?p=blocked"] {
 
 }
 
-/* ------ temporarily hide reclaim panel until i get around to fixing it ------ */
-
-center > form[method="post"]:has(#reclaim){
-
+/* ------ reclaim / attack panel ------ */
+center > form[method="post"]:has(#reclaim) {
 	display: contents;
-	
-	#reclaim {
-		display: flex;
-		width: 100%;
-		flex-direction: column;
-		align-content: center;
-		align-items: center;
-		margin-bottom: 30px;
-		padding-bottom: 20px;
-		position: relative;
-
-		tr:nth-child(1) {
-			width: 100%;
-			display: flex;
-			gap: 10px;
-			text-align: left;
-			height: fit-content;
-			align-items: center;
-			border: 1px solid var(--discord-lighter);
-			background: var(--discord-lighter);
-			padding: 8px 15px;
-			margin-bottom: 15px;
-		
-			&::before {
-				content: " ";
-				display: inline-block;
-				background-image: var(--time-danger-icon);
-				background-size: contain;
-				width: auto;
-				height: 100%;
-				min-height: 24px;
-				aspect-ratio: 1 / 1;
-			}
-
-			th {
-				font-size: 16px;
-				padding: 0px;
-			}
-		}
-		
-		tr:has(td.left.b.center) {
-			display: none;
-		}
-
-		tr:has(select[name="reclaimlion"]) {
-			display: flex;
-			flex-direction: column-reverse;
-		}
-
-		select {
-			background-color: var(--discord-lighter);
-		}
-
-		select:hover {
-			color: var(--discord-white);
-			cursor: pointer;
-		}
-
-		input {
-			font-size: 16px;
-			padding: 6px 10px;
-		}
-	}
-
-	#reclaim > tbody {
-		display: contents;
-	}
-	
 }
 
+#attack, #reclaim {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	align-content: center;
+	align-items: center;
+	margin-bottom: 30px;
+	padding-bottom: 20px;
+	position: relative;
+	
+	tbody {
+		display: contents;
+	}
+
+	tr:nth-child(1) {
+		width: 100%;
+		display: flex;
+		gap: 10px;
+		text-align: left;
+		height: fit-content;
+		align-items: center;
+		border: 1px solid var(--discord-lighter);
+		background: var(--discord-lighter);
+		padding: 8px 15px;
+		margin-bottom: 15px;
+	
+		&::before {
+			content: " ";
+			display: inline-block;
+			background-size: contain;
+			width: auto;
+			height: 100%;
+			min-height: 24px;
+			aspect-ratio: 1 / 1;
+		}
+
+		th {
+			font-size: 16px;
+			padding: 0px;
+		}
+	}
+	
+	tr:has(td.left.b.center) {
+		display: none;
+	}
+	
+	tr:has(select[name="reclaimlion"]) {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
+	select {
+		background-color: var(--discord-lighter);
+	}
+
+	select:hover {
+		color: var(--discord-white);
+		cursor: pointer;
+	}
+
+	input {
+		font-size: 16px;
+		padding: 6px 10px;
+	}
+}
+
+#attack {
+
+	center:nth-child(1) {
+		border-radius: 6px;
+		position: absolute;
+		top: 0;
+		z-index: 100;
+		right: 190px;
+		height: 40px;
+		width: fit-content;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 5px;
+
+		a {
+			text-decoration: none;
+			background-color: var(--discord-blurple);
+			display: flex;
+			align-content: center;
+			align-items: center;
+			justify-content: center;
+			flex-wrap: nowrap;
+			flex-direction: row;
+			border-radius: 8px;
+			padding: 4px 10px;
+			height: 30px;
+
+			&::after {
+					content: " ";
+					display: inline-block;
+					background-image: url("https://cdn3.emoji.gg/emojis/6849-server-guide.png");
+					background-size: contain;
+					width: 22px;
+					height: 22px;
+					margin-left: 8px;
+					filter: brightness(1.5);
+				}
+
+				&:hover {
+					background: var(--discord-dark-blurple);
+				}
+		}
+	}
+
+	#attacking[style*="display: block"] {
+		display: flex !important;
+	}
+
+	#attacking {
+		position: absolute;
+		width: calc(100% - 60px);
+		background-color: var(
+		--discord-mid);
+		border: 1px solid var(
+		--discord-light-border);
+		border-radius: 6px;
+		top: -225px;
+		padding: 20px;
+		margin: 0 30px;
+		text-align: center;
+		height: 212px;
+		max-height: 212px;
+		right: 0;
+		box-shadow: 0px 3px 10px 2px var(--discord-dark);
+		overflow-x: auto;
+		scrollbar-color: var(--discord-border) var(--discord-mid);
+		scrollbar-width: thin;
+		scrollbar-gutter: stable;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		align-content: center;
+
+		p:last-of-type {
+			margin-bottom: 0px;
+		}
+	}
+	
+	tr:nth-child(1)::before {
+		background-image: var(--moderation-icon);
+	 }
+	
+	tr:nth-child(2) {
+		width: 100%;
+		position: static;
+		
+		
+
+		td {
+			width: 100%;
+			display: flex;
+			position: static;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	tr:nth-last-child(1) {
+		position: absolute;
+		top: 0;
+		z-index: 100;
+		right: 0;
+		height: 40px;
+		width: fit-content;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 5px;
+
+
+		td {
+			display: inline-block;
+			background: none;
+			/* height: 100%; */
+
+			a {
+				text-decoration: none;
+				background-color: var(--discord-blurple);
+				display: flex;
+				align-content: center;
+				align-items: center;
+				justify-content: center;
+				flex-wrap: nowrap;
+				flex-direction: row;
+				border-radius: 8px;
+				padding: 4px 10px;
+				/* height: 100%; */
+
+				&::after {
+					content: " ";
+					display: inline-block;
+					background-image: var(--right-arrow-icon);
+					background-size: contain;
+					width: 22px;
+					height: 22px;
+					margin-left: 8px;
+					filter: brightness(1.5);
+				}
+
+				&:hover {
+					background: var(--discord-dark-blurple);
+				}
+			}
+		}
+
+	}
+}
+
+ #reclaim {
+
+
+	 
+	 tr:nth-child(1)::before {
+		background-image: var(--time-danger-icon);
+	 }
+ }
 
 .footer {
 	position: relative;
@@ -4812,6 +4647,312 @@ center>div.row:has(a[href*="stud_requests"]) {
 		max-height: fit-content;
 	}
 }
+
+/* ------------------- COMMENT BOX ADJUSTMENTS ---------------------- */
+
+/* comment box to message box */
+center{
+	#makeComment {
+		margin: 10px 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+		background-color: var(--discord-mid);
+		border: 1px solid var(--discord-border);
+		color: #fbfbfb;
+		font-weight: bold;
+		height: 60px;
+		border-radius: 6px;
+		padding-left: 15px;
+		/* padding-right: 20px; */
+	}
+	
+	#comment {
+		position: relative;
+		text-align: left;
+		width: 100%;
+		height: 100%;
+		font-size: 1.5em;
+		font-weight: lighter;
+		background-color: transparent;
+		margin-top: 4px;
+		padding-right: 30px;
+	}
+
+	input#postComment {
+		background-color: transparent;
+		background-image: var(--send-icon);
+		font-size: 0px;
+		background-position: center center;
+		background-size: 100% !important;
+		background-repeat: no-repeat !important;
+		margin: 0;
+		min-width: 24px;
+		min-height: 24px;
+		padding: 0;
+		margin-right: 20px;
+		transition: background-image linear .1s;
+	}
+}
+
+
+
+#comment::placeholder {
+	color: transparent;
+}
+
+#comment:focus,
+#comment:active,
+#comment:target,
+#comment:hover,
+input#comment {
+	border: none;
+	outline: none;
+}
+
+#makeComment:has(#comment:placeholder-shown)::before {
+	display: block;
+}
+
+#makeComment:has(#comment:placeholder-shown) {
+	#postComment {
+		cursor: default;
+		opacity: .2;
+		background-image: var(--send-icon);
+	}
+}
+
+#makeComment::before {
+	content: "Message #den";
+	display: none;
+	position: absolute;
+	/* height: 100%; */
+	text-align: left;
+	/* font-size: 14px; */
+	width: 88%;
+	z-index: 4;
+	pointer-events: none;
+	font-size: 1.4em;
+	font-weight: lighter;
+	color: #757575;
+	top: 16px;
+	left: 30px;
+}
+
+
+
+input#postComment:hover {
+	background-image: url("https://sitebuilder.neocities.org/assets/lioden/blurple-send-message-icon.png");
+}
+
+
+#commentBox,
+#makeComment,
+#commentErrors {
+	order: -1;
+	width: 100%;
+}
+
+/* commentbox to messages */
+
+center>#commentBox {
+	display: flex;
+	flex-direction: column-reverse;
+	border: 1px solid var(--discord-border);
+	border-radius: 6px;
+	padding: 0px;
+	margin-bottom: 5px;
+	height: 500px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	scrollbar-color: var(--discord-border) var(--discord-mid);
+	scrollbar-width: thin;
+	scrollbar-gutter: stable;
+	margin-top: 5px;
+}
+
+#commentBox .comment:last-child i {
+	&::before {
+		content: " Comments are in chronological order from bottom to top. ";
+	}
+}
+
+.comment {
+	width: 100%;
+	text-align: left;
+	padding: 4px 7px;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	gap: 10px;
+}
+
+.comment:nth-child(even) {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.commentTag {
+	width: 40px;
+	height: 40px;
+	border-radius: 4px;
+}
+
+.comment .commentText {
+	flex-grow: 4;
+	margin-left: 6px;
+}
+
+.comment .bad {
+	padding: 2px 7px !important;
+	font-size: 10px !important;
+}
+
+/* conditions for highlighting user message */
+#pageContainer:not(:has(> center > form > #editdetailspanel)) {
+
+	.comment:has(input[type="button"].bad) {
+		background: var(--message-ping-background) !important;
+
+		small.text-muted>a {
+			background: var(--message-ping-background) !important;
+			display: inline-block;
+		}
+
+		&:hover {
+			background: var(--message-ping-hover) !important;
+
+			small.text-muted>a {
+				background: var(--message-ping-hover) !important;
+			}
+		}
+	}
+
+	.comment:has(input[type="button"].bad):before {
+		content: " ";
+		height: auto;
+		width: 2px;
+		background-color: var(--message-ping);
+	}
+}
+
+.comment:last-child {
+	display: block;
+	color: var(--discord-darkest-white);
+	margin-left: 1em;
+	/* width: 80%; */
+
+
+	.commentText {
+		display: inline-block;
+		padding-left: 10px;
+	}
+}
+
+.comment {
+	background-color: var(--message-background) !important;
+	padding: 0px !important;
+	padding-right: 7px !important;
+	margin-bottom: 13px;
+
+	div {
+		padding: 5px 0px;
+
+		img {
+			display: inline-block;
+			margin: 3px 0px;
+			/* max-width: 23px; */
+		}
+	}
+
+	&::before {
+		content: " ";
+		height: auto;
+		width: 2px;
+		background-color: transparent;
+	}
+}
+
+.comment:hover {
+	background-color: var(--message-highlight-background) !important;
+
+	small.text-muted>a {
+		background-color: var(--message-highlight-background);
+	}
+}
+
+/* pfps */
+.commentTag {
+	border-radius: 100% !important;
+}
+
+.commentText {
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: flex-end;
+}
+
+small.text-muted {
+	color: #82838b;
+	display: inline-block;
+
+
+
+
+	a {
+		margin-left: -17px;
+		font-size: 15px;
+		color: #efefef;
+		background-color: var(--message-background);
+	}
+
+}
+
+
+/* fake color scrambler */
+/* temp! */
+
+.comment:nth-child(2n) a {
+	color: skyblue;
+}
+
+.comment:nth-child(4n) a {
+	color: palegreen;
+}
+
+.comment:nth-child(5n) a {
+	color: plum;
+}
+
+.comment:nth-child(7n) a {
+	color: gold;
+}
+
+.comment:nth-child(5n + 1) a {
+	color: hotpink;
+}
+
+/* delete button */
+.comment .bad {
+	background: url("https://cdn3.emoji.gg/emojis/4151-delete-guild.png") !important;
+	background-position: center center !important;
+	background-size: 100% !important;
+	background-repeat: no-repeat !important;
+	border: none !important;
+	color: transparent !important;
+	font-size: 0px !important;
+	text-shadow: none !important;
+	border-radius: 0px !important;
+	padding: 0px !important;
+	min-width: 20px;
+	min-height: 20px;
+
+	&:hover {
+		background-color: #e938482b !important;
+	}
+}
+
+
 
 /* ------------------- CHAT BOX ADJUSTMENTS ---------------------- */
 
