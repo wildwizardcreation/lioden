@@ -57,24 +57,18 @@ https://emoji.gg/user/bet.official
 	/* ------------------- utility vars ------------------- */
 	--blank: url("https://cdn3.emoji.gg/emojis/7352-blank.png");
 	--default-pfp: url(https://archive.org/download/discordprofilepictures/discordblue.png);
-
 	--message-background: #1a1a1e;
 	--message-highlight-background: #242428;
 	--message-ping: #ce9c5c;
 	--message-ping-background: #25201c;
 	--message-ping-hover: #1f1d1d;
-
 	--gold-beetle-icon: url(https://cdn3.emoji.gg/emojis/5611-evolving-badge-nitro-15-months.png);
 	--silver-beetle-icon: url(https://cdn3.emoji.gg/emojis/99057-orbs-discord.png);
-
-
 	--banner-height: 215px;
 
 
 
 	/* ------------------- customization vars ------------------- */
-
-
 	--server-name: "Abbadon's Epic Den";
 
 
@@ -91,7 +85,7 @@ https://emoji.gg/user/bet.official
 	--player-pfp: url(https://cdn3.emoji.gg/emojis/98237-akkoshrug.png);
 
 
-	
+
 	/* lion "profile" colors, info, and images */
 	--lion-border: ;
 	--lion-primary: #242429;
@@ -128,22 +122,15 @@ https://emoji.gg/user/bet.official
 
 	/* other caves */
 	--first-cave-image: url("https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/61aa7642a72a1b627d695f49_Discord-Elixir-Blog-Header.png");
-
-
 	--first-cave-icon: url("https://cdn3.emoji.gg/emojis/620166-discord-wumpussale.png");
-
 	--second-cave-image: url("https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/611be3897e514d7771a4a0e7_0_NMu3mta7hRrQas_X.png");
 	--second-cave-icon: url("https://cdn3.emoji.gg/emojis/7609-wumpus-coin.png");
-
 	--third-cave-image: url("https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/64121f8765e921a28f9a2b54_Discord%20HQ%20-%202-p-2600.png");
 	--third-cave-icon: url(" ");
-
 	--fourth-cave-image: url("");
 	--fourth-cave-icon: none;
-
 	--fifth-cave-image: none;
 	--fifth-cave-icon: url(" ");
-
 	--sixth-cave-image: url(" ");
 	--sixth-cave-icon: url(" ");
 
@@ -167,11 +154,9 @@ https://emoji.gg/user/bet.official
 	--first-mound-image: url("");
 	--first-mound-icon: url("https://cdn3.emoji.gg/emojis/620166-discord-wumpussale.png");
 	--first-mound-description: "TEST TEST TEST LALALALA";
-
 	--second-mound-image: url("");
 	--second-mound-icon: url("https://cdn3.emoji.gg/emojis/620166-discord-wumpussale.png");
 	--second-mound-description: "TEST TEST TEST LALALALA";
-
 	--third-mound-image: url("");
 	--third-mound-icon: url("https://cdn3.emoji.gg/emojis/620166-discord-wumpussale.png");
 	--third-mound-description: "TEST TEST TEST LALALALA";
@@ -185,31 +170,24 @@ https://emoji.gg/user/bet.official
 	/* default colors */
 	--discord-border: #323237;
 	--discord-light-border: #424248;
-
 	--discord-white: #fbfbfb;
 	--discord-dark-white: #d2cece;
 	--discord-darkest-white: #82838b;
-
 	--discord-darkest: #121214;
 	--discord-dark: #18181c;
 	--discord-mid: #202024;
 	--discord-light: #242429;
 	--discord-lighter: #2c2c30;
 	--discord-lightest: #7f8088;
-
 	--discord-buttons: #323237;
-
 	--discord-link: #61B0FE;
-
 	--discord-blurple: #5865f2;
 	--discord-dark-blurple: #4654c0;
 	--discord-blurple-50: #282b50;
 	--discord-blurple-text: #a9baff;
-
 	--discord-green: #35ed7e;
 	--discord-pink: #ff4cd2;
 	--discord-yellow: #ffdb5e;
-
 	--discord-notif-green: #3ba561;
 	--discord-notif-red: #eb3d47;
 	--discord-notif-yellow: #f0b132;
@@ -243,16 +221,17 @@ https://emoji.gg/user/bet.official
 	--log-icon: url("https://cdn3.emoji.gg/emojis/6137-auditlog-mobile.png");
 	--activity-icon: url("https://cdn3.emoji.gg/emojis/5636-activity.png");
 	--bug-icon: url("https://cdn3.emoji.gg/emojis/17891-discord-bugs-white.png");
+	--heart-icon: url("https://cdn3.emoji.gg/emojis/2085_white_heart.png");
 
 	/* default misc icons */
-	--paws-icon: url("https://cdn3.emoji.gg/emojis/8224-purple-paw-prints.png"); /* used for the "user icons" in the friends list */
+	--paws-icon: url("https://cdn3.emoji.gg/emojis/8224-purple-paw-prints.png");
+	/* used for the "user icons" in the friends list */
 
 	/* pixel social media icons */
 	--twitch-icon: url("https://cdn3.emoji.gg/emojis/77281-twitch.png");
 	--twitter-icon: url("https://cdn3.emoji.gg/emojis/12994-twitter.png");
 	--facebook-icon: url("https://cdn3.emoji.gg/emojis/87895-facebook.png");
 	--youtube-icon: url("https://cdn3.emoji.gg/emojis/12899-youtube.png");
-
 }
 
 [hidden] {
@@ -308,7 +287,11 @@ h5 {
 	padding: 0px;
 }
 
-center p:empty, center p:empty + p, br.clear + p, br.clear, div.dynastycollection + p {
+center p:empty,
+center p:empty+p,
+br.clear+p,
+br.clear,
+div.dynastycollection+p {
 	display: none;
 }
 
@@ -330,14 +313,14 @@ center p:empty, center p:empty + p, br.clear + p, br.clear, div.dynastycollectio
 } */
 
 @media (max-width: 768px) {
-	a[name="fapa"] + b + p + div.row {
+	a[name="fapa"]+b+p+div.row {
 		left: 0px;
 		/* justify-content: flex-end !important; */
 		flex-direction: row-reverse !important;
 		width: calc(100% - 30px - 60px);
 	}
 
-	a[name="fapa"] + b {
+	a[name="fapa"]+b {
 		left: 0px;
 	}
 
@@ -349,21 +332,20 @@ center p:empty, center p:empty + p, br.clear + p, br.clear, div.dynastycollectio
 			left: 55px;
 			margin-bottom: 5px !important;
 		}
-	
+
 	}
 }
 
-@media (min-width: 992px) and (max-width:1199px),
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 992px) and (max-width:1199px) {
 	.nav.navbar-nav.visible-md {
 		display: flex !important
 	}
 
-	
+
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-	.nav.navbar-nav.visible-sm {
+	.nav.navbar-nav.visible-sm, .nav.navbar-nav.visible-md {
 		display: flex !important
 	}
 
@@ -422,37 +404,39 @@ center p:empty, center p:empty + p, br.clear + p, br.clear, div.dynastycollectio
 	.navbar-default .navbar-nav>li>a:hover {
 		background: none;
 	}
-	
+
 	.feature:has(input[name="feedall"]) {
 
 		select[name="carcasstype"] {
 			width: calc(100% - 20px) !important;
 		}
-	
+
 	}
 
-	a[name="fapa"] + b + p + div.row {
+	a[name="fapa"]+b+p+div.row {
 		width: calc(25% - 95px);
 		justify-content: center;
 		z-index: 1;
 	}
 
-	a[name="fapa"] + b {
+	a[name="fapa"]+b {
 		width: calc(25% - 100px);
 		top: 64px;
-		
-		
-		> span, &::before, &::after {
+
+
+		>span,
+		&::before,
+		&::after {
 			font-size: 13px;
 		}
 
-		> span {
+		>span {
 			color: var(--discord-blurple) !important;
 		}
 	}
 
-	
-	
+
+
 }
 
 @media (min-width: 769px) and (max-width: 999px) {
@@ -476,10 +460,10 @@ center p:empty, center p:empty + p, br.clear + p, br.clear, div.dynastycollectio
 			right: 60px !important;
 			margin-bottom: 5px !important;
 		}
-	
+
 	}
 
-	a[name="fapa"] + b + p + div.row  {
+	a[name="fapa"]+b+p+div.row {
 		width: calc(100% - 30px - 210px);
 	}
 }
@@ -488,21 +472,21 @@ center p:empty, center p:empty + p, br.clear + p, br.clear, div.dynastycollectio
 	.navbar-header {
 		padding: 10px 0;
 	}
-	
-	a[name="fapa"] + b + p + div.row {
-	    margin: 15px;
-	    position: absolute;
-	    top: 35px !important;
-	    justify-content: flex-start;
-	    right: 0px;
-	    z-index: 0;
-	    padding: 10px;
-	    padding-top: 10px !important;
-	    border-radius: 5px;
-	    padding-bottom: 10px !important;
+
+	a[name="fapa"]+b+p+div.row {
+		margin: 15px;
+		position: absolute;
+		top: 35px !important;
+		justify-content: flex-start;
+		right: 0px;
+		z-index: 0;
+		padding: 10px;
+		padding-top: 10px !important;
+		border-radius: 5px;
+		padding-bottom: 10px !important;
 	}
-	
-	a[name="fapa"] + b {
+
+	a[name="fapa"]+b {
 		order: -3;
 		font-size: 0px;
 		margin-bottom: 5px;
@@ -518,13 +502,14 @@ center p:empty, center p:empty + p, br.clear + p, br.clear, div.dynastycollectio
 		height: fit-content;
 		padding: 10px !important;
 		/* background-color: white; */
-		
-		
-		&::before, &::after {
+
+
+		&::before,
+		&::after {
 			font-size: 0px !important;
 		}
-	
-		> span {
+
+		>span {
 			color: var(--discord-white) !important;
 		}
 	}
@@ -532,8 +517,11 @@ center p:empty, center p:empty + p, br.clear + p, br.clear, div.dynastycollectio
 
 
 @media only screen and (max-width: 1050px) {
-	a[name="fapa"] + b {
-		> span, &::before, &::after {
+	a[name="fapa"]+b {
+
+		>span,
+		&::before,
+		&::after {
 			font-size: 11px;
 		}
 	}
@@ -592,26 +580,30 @@ center p:empty, center p:empty + p, br.clear + p, br.clear, div.dynastycollectio
 
 /* image replacements */
 
-img[src^="//static.lioden.com/images/layout/donator.png"] {
-	content: var(--vip-badge) !important;
+a.s-chat__username,
+.commentText>.text-muted {
+
+	img[src^="//static.lioden.com/images/layout/donator.png"] {
+		content: var(--vip-badge) !important;
+	}
+
+	img[src^="//static.lioden.com/images/PawMod.png"] {
+		content: var(--mod-badge) !important;
+	}
+
+	img[src^="//static.lioden.com/images/PawAdmin.png"] {
+		content: var(--admin-badge) !important;
+	}
+
+	img[src^="//static.lioden.com/images/PawArtist.png"] {
+		content: var(--artist-badge) !important;
+	}
 }
 
-img[src^="//static.lioden.com/images/PawMod.png"] {
-	content: var(--mod-badge) !important;
-}
-
-img[src^="//static.lioden.com/images/PawAdmin.png"] {
-	content: var(--admin-badge) !important;
-}
-
-img[src^="//static.lioden.com/images/PawArtist.png"] {
-	content: var(--artist-badge) !important;
-}
-
-img[src="//static.lioden.com/images/layout/bugbox.png"] {
+a.btn[href*="bugbox"] img[src="//static.lioden.com/images/layout/bugbox.png"] {
 	content: var(--bug-icon) !important;
 	width: 24px;
-	
+	filter: brightness(1.5);
 }
 
 /* themeing */
@@ -634,6 +626,12 @@ body {
 	justify-content: space-between;
 	align-items: center;
 
+
+
+
+
+
+
 	>h1 {
 		display: none;
 		visibility: hidden;
@@ -648,7 +646,7 @@ body {
 }
 
 .breadcrumb {
-	order: -999;
+	order: -998;
 }
 
 
@@ -678,7 +676,7 @@ body {
 }
 
 /* fake notif bell for alerts */
-#pageContainer:has(.alert) {
+#pageContainer:has(> .alert, > center > .alert, > div.left > .alert) {
 	.breadcrumb {
 		margin-bottom: 10px;
 	}
@@ -742,25 +740,25 @@ body {
 }
 
 #pageContainer:has(>.alert):has(>center .alert) {
-	
+
 	/* >div:nth-child(1 of .alert) {
 	
 		&::after {
 		}
 	} */
 
-	>center div:nth-child(1 of .alert) {	
+	>center div:nth-child(1 of .alert) {
 		&::after {
 			border-top: none;
 			border-top-right-radius: 0px;
 			border-top-left-radius: 0px;
 		}
 	}
-	
+
 }
 
 /* the rollover alert (which is?? inside another div?? idk.) */
-ol.breadcrumb + div:has(>.alert) {
+ol.breadcrumb+div:has(>.alert) {
 	display: contents;
 
 	.alert {
@@ -774,7 +772,7 @@ ol.breadcrumb + div:has(>.alert) {
 		flex-direction: row;
 		color: var(--discord-white);
 	}
-	
+
 	.alert::after {
 		all: unset;
 	}
@@ -800,7 +798,9 @@ ol.breadcrumb + div:has(>.alert) {
 
 
 /* removed messages alert */
-#pageContainer:has(.alert a[href="inbox.php"]) {
+#pageContainer:has(> .alert > a[href="inbox.php"],
+	> center > .alert> a[href="inbox.php"],
+	> div.left > .alert > a[href="inbox.php"]) {
 
 	>div:nth-child(2 of .alert)::after {
 		border-top-left-radius: 4px;
@@ -829,10 +829,9 @@ ol.breadcrumb + div:has(>.alert) {
 	/* margin-bottom: 0px; */
 	gap: 10px;
 	align-content: center;
-	
-	
-	
-	
+
+
+
 
 	b {
 		color: var(--discord-white);
@@ -986,10 +985,36 @@ ol.breadcrumb + div:has(>.alert) {
 
 #pageContainer>div.floatright {
 	display: block;
-	position: absolute;
-	right: 70px;
-	top: 33px;
 	margin: 0px !important;
+	order: -999;
+	width: fit-content !important;
+	float: none;
+	position: relative;
+	margin-left: auto !important;
+	margin-right: 60px !important;
+	margin-bottom: -48px !important;
+	z-index: 99;
+
+	form[method="post"] {}
+
+	input {
+		/* padding: 6px 15px; */
+		background-image: var(--heart-icon);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: left;
+		border: 6px solid var(--discord-blurple);
+		height: 32px;
+		vertical-align: middle;
+		padding: 0;
+		margin: 0;
+		padding-left: 25px;
+
+
+		&:hover {
+			border-color: var(--discord-dark-blurple);
+		}
+	}
 }
 
 .breadcrumb-item.active {
@@ -1002,17 +1027,6 @@ ol.breadcrumb + div:has(>.alert) {
 	color: #6f6f77;
 	display: flex !important;
 	flex-direction: column;
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
 
 	h3 {
 		color: #6f6f77;
@@ -1229,7 +1243,8 @@ ol.breadcrumb + div:has(>.alert) {
 button.button,
 input[type="button"],
 input[type="submit"],
-input[type="reset"], a.btn.button {
+input[type="reset"],
+a.btn.button {
 	background: var(--discord-blurple);
 	color: var(--discord-white);
 	padding: 6px;
@@ -1238,7 +1253,7 @@ input[type="reset"], a.btn.button {
 	font-weight: bold;
 	text-shadow: none;
 	border: none;
-	
+
 
 	&:hover {
 		background: var(--discord-dark-blurple);
@@ -1308,8 +1323,8 @@ input[type="reset"], a.btn.button {
 
 .table tbody {
 	width: 100%;
-	
-	
+
+
 
 	tr {
 		/* background: var(--discord-light); */
@@ -1344,18 +1359,18 @@ input[type="reset"], a.btn.button {
 		align-items: center;
 		justify-content: center;
 		padding: 5px;
-		
-		
+
+
 
 		td {
 			display: inline-block;
 			background: none;
 			/* height: 100%; */
-			
-			
-			
-			
-			
+
+
+
+
+
 
 			a {
 				text-decoration: none;
@@ -1369,12 +1384,12 @@ input[type="reset"], a.btn.button {
 				border-radius: 8px;
 				padding: 4px 10px;
 				/* height: 100%; */
-				
-				
-				
-				
-				
-				
+
+
+
+
+
+
 				&::after {
 					content: " ";
 					display: inline-block;
@@ -1392,12 +1407,12 @@ input[type="reset"], a.btn.button {
 			}
 		}
 
-		
+
 	}
 
 	td.top {
 		font-size: 0px;
-		
+
 		&::before {
 			content: " ";
 			display: inline-block;
@@ -1436,15 +1451,11 @@ input[type="reset"], a.btn.button {
 		flex-wrap: wrap;
 		text-align: left !important;
 		align-content: center;
-		
-		
-		
-		
-		
+
 		br {
 			display: none !important;
 		}
-	
+
 		&::before {
 			content: " ";
 			background-image: var(--paws-icon);
@@ -1462,7 +1473,7 @@ input[type="reset"], a.btn.button {
 			margin-left: 5px;
 		}
 
-		
+
 		a[href^="/lion.php"] {
 			display: inline-block;
 			width: 100%;
@@ -1503,7 +1514,7 @@ input[type="reset"], a.btn.button {
 				filter: brightness(1.2);
 			}
 		}
-		
+
 		.small {
 			display: contents;
 			font-size: 0px;
@@ -1534,20 +1545,8 @@ input[type="reset"], a.btn.button {
 	padding-top: 40px;
 	border-radius: 6px;
 	overflow: clip;
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
 	tbody {
 		display: flex;
 		flex-wrap: wrap;
@@ -1560,6 +1559,7 @@ input[type="reset"], a.btn.button {
 		scrollbar-color: var(--discord-light) var(--discord-dark);
 		scrollbar-width: thin;
 		scrollbar-gutter: stable;
+		align-content: flex-start;
 	}
 
 	tr:nth-child(1) {
@@ -1572,19 +1572,21 @@ input[type="reset"], a.btn.button {
 		/* border-radius: 6px; */
 		border: 1px solid var(--discord-lighter);
 	}
-	
+
 	tr {
 		width: 100%;
 	}
-		tbody>tr:has(td.right) {
+
+	tbody>tr:has(td.right) {
 		display: contents;
 		height: 100%;
 	}
-		tbody>tr:has(td.left) {
+
+	tbody>tr:has(td.left) {
 		display: none;
 	}
 
-	
+
 	td.top {
 		width: 100%;
 		display: flex;
@@ -1597,10 +1599,10 @@ input[type="reset"], a.btn.button {
 
 #clans {
 	overflow-y: auto;
-	
+
 	td.top {
 		font-size: 0px;
-		
+
 		&::before {
 			content: " ";
 			display: inline-block;
@@ -1632,7 +1634,7 @@ input[type="reset"], a.btn.button {
 		overflow: hidden;
 
 	}
-	
+
 	tbody>tr>td.right {
 		height: fit-content;
 		width: 30% !important;
@@ -1659,10 +1661,10 @@ input[type="reset"], a.btn.button {
 			white-space: nowrap;
 			overflow: hidden;
 			text-overflow: ellipsis;
-			
-			
-			
-			
+
+
+
+
 
 			img {
 				display: block;
@@ -1689,19 +1691,7 @@ div.row.dynastycollection {
 	justify-content: center;
 	order: 1;
 	margin: 0;
-	/* margin-top: -50px; */
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	width: 100%;
 
 	div.dynastylist {
 		max-width: 300px;
@@ -1774,8 +1764,6 @@ div.row.dynastycollection {
 
 	}
 }
-
-
 
 
 /* profile contents (move to user "profile" ?) */
@@ -2277,7 +2265,7 @@ center>#commentBox {
 }
 
 /* conditions for highlighting user message */
-#pageContainer:not(:has(#editdetailspanel)) {
+#pageContainer:not(:has(> center > form > #editdetailspanel)) {
 
 	.comment:has(input[type="button"].bad) {
 		background: var(--message-ping-background) !important;
@@ -2371,9 +2359,9 @@ center>#commentBox {
 small.text-muted {
 	color: #82838b;
 	display: inline-block;
-	
-	
-	
+
+
+
 
 	a {
 		margin-left: -17px;
@@ -2388,24 +2376,24 @@ small.text-muted {
 /* fake color scrambler */
 /* temp! */
 
-.comment:nth-child(2n) a { 
-  color: skyblue; 
+.comment:nth-child(2n) a {
+	color: skyblue;
 }
 
-.comment:nth-child(4n) a { 
-  color: palegreen; 
+.comment:nth-child(4n) a {
+	color: palegreen;
 }
 
-.comment:nth-child(5n) a { 
-  color: plum; 
+.comment:nth-child(5n) a {
+	color: plum;
 }
 
-.comment:nth-child(7n) a { 
-  color: gold; 
+.comment:nth-child(7n) a {
+	color: gold;
 }
 
 .comment:nth-child(5n + 1) a {
-  color: hotpink;
+	color: hotpink;
 }
 
 /* delete button */
@@ -2525,6 +2513,10 @@ div.cave-grid:first-letter {
 	margin-bottom: 30px;
 }
 
+#fraMoundList:not(:has(>div)) {
+	display: none;
+}
+
 
 #fraMoundList::before {
 	display: block;
@@ -2625,6 +2617,7 @@ div.col-md-4.col-xs-6.center>a[href^="lionoverview.php"] {
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
+	margin-bottom: 20px;
 
 	div:nth-child(1)>a[href^="cave.php?"] {
 
@@ -3148,7 +3141,7 @@ form[method="post"]:has(>#about) {
 	>tr:nth-child(1) {
 		order: 2;
 		margin-bottom: 20px;
-		
+
 		/* name */
 
 		td {
@@ -3168,7 +3161,7 @@ form[method="post"]:has(>#about) {
 				color: white;
 				align-items: center;
 				gap: 10px;
-				
+
 
 				&::after {
 					content: "Lion";
@@ -3200,8 +3193,8 @@ form[method="post"]:has(>#about) {
 	/* info row */
 	>tr:nth-child(2).right {
 		display: contents;
-		
-		
+
+
 
 		/* lion header and image */
 		>td:nth-child(1) {
@@ -3241,8 +3234,8 @@ form[method="post"]:has(>#about) {
 			/* height: 225px; */
 			max-height: 220px;
 			position: static;
-			
-			
+
+
 			.inner-table {
 				overflow-y: auto;
 				height: 225px;
@@ -3254,9 +3247,9 @@ form[method="post"]:has(>#about) {
 				scrollbar-color: var(--discord-light) var(--discord-dark);
 				scrollbar-width: thin;
 				scrollbar-gutter: stable;
-				
-				
-				
+
+
+
 				a {
 					font-size: 14px;
 					margin-left: 6px;
@@ -3305,7 +3298,7 @@ form[method="post"]:has(>#about) {
 					display: flex;
 					padding: 15px;
 					z-index: 100;
-					
+
 					a {
 						font-size: 0px;
 						width: 40px;
@@ -3321,9 +3314,9 @@ form[method="post"]:has(>#about) {
 						border-radius: 8px;
 						z-index: 100;
 						background-color: var(--discord-border) !important;
-						
-						
-						
+
+
+
 						&::after {
 							content: " ";
 							background-image: var(--shop-icon) !important;
@@ -3337,7 +3330,7 @@ form[method="post"]:has(>#about) {
 							width: 40px;
 							margin-top: 16px;
 						}
-						
+
 						&:hover {
 							filter: brightness(1.2);
 							font-size: 13px;
@@ -3363,7 +3356,7 @@ form[method="post"]:has(>#about) {
 						}
 					}
 				}
-				
+
 				td.left:has(+ td.right) {
 					display: flex;
 					/* width: fit-content; */
@@ -3376,7 +3369,7 @@ form[method="post"]:has(>#about) {
 					b {
 						font-weight: 500;
 					}
-			
+
 					/* procedurally cover table colons */
 					&::after {
 						content: " ";
@@ -3390,7 +3383,7 @@ form[method="post"]:has(>#about) {
 					}
 				}
 
-				td.left + td.right {
+				td.left+td.right {
 					display: flex;
 					background-color: var(--discord-mid);
 					/* width: fit-content; */
@@ -3416,10 +3409,10 @@ form[method="post"]:has(>#about) {
 		gap: 100px;
 		position: relative;
 		margin-bottom: 10px;
-		
-		
-		
-		
+
+
+
+
 
 		&::before {
 			content: "Pride Info";
@@ -3473,7 +3466,7 @@ form[method="post"]:has(>#about) {
 	}
 }
 
-	/* ---- submale to mods button ---- */
+/* ---- submale to mods button ---- */
 
 #about>tbody>tr.right>td.right>table>tbody tr:nth-last-child(2) {
 
@@ -3504,13 +3497,13 @@ form[method="post"]:has(>#about) {
 		a {
 			font-size: 0px;
 		}
-		
-		
+
+
 		&:hover {
 			filter: brightness(1.2);
 			cursor: pointer;
-			
-			
+
+
 
 			&::after {
 				content: " ";
@@ -3549,7 +3542,7 @@ form[method="post"]:has(>#about) {
 				filter: brightness(1.2);
 			}
 
-			a + br + a:not(:nth-of-type(1)):not(:nth-last-of-type(1)) {
+			a+br+a:not(:nth-of-type(1)):not(:nth-last-of-type(1)) {
 				border-radius: 0px !important;
 				border-top: none;
 				border-bottom: none;
@@ -3565,7 +3558,7 @@ form[method="post"]:has(>#about) {
 				border-top-right-radius: 0px;
 			}
 		}
-			
+
 		&::before {
 			content: " ";
 			background-image: var(--asterisk-icon) !important;
@@ -3647,8 +3640,8 @@ form[method="post"]:has(>#about) {
 	flex-wrap: wrap;
 	padding: 0 15px;
 	align-content: flex-start;
-	
-	
+
+
 
 
 	>tr:nth-child(1) {
@@ -3743,6 +3736,23 @@ if no: replace with fake friend button + move message button */
 		justify-items: center;
 		align-items: center;
 		width: 40px;
+	}
+
+	td.right_odd.text-right:not(:has(>a[href*="befriends"])) {
+		display: none;
+	}
+
+	td.right_odd>a[href*="befriends"] {
+
+		&::after {
+			font-size: 15px;
+			content: "Add Friend";
+			vertical-align: middle;
+		}
+
+		img {
+			content: url(https://cdn3.emoji.gg/emojis/9437-invite.png);
+		}
 	}
 
 	a:hover {
@@ -3994,12 +4004,12 @@ if no: replace with fake friend button + move message button */
 /* the page *does* have the edit details panel */
 /* this would usually just be "default", but it's here for the sake of argument/example */
 
-#pageContainer:has(#editdetailspanel) {
+/* #pageContainer:has(#editdetailspanel) {
 
 	div.ads {
 		display: block;
 	}
-}
+} */
 
 
 #player:has(a[href^="/refer.php"]) p.center.xlarge {
@@ -4009,22 +4019,6 @@ if no: replace with fake friend button + move message button */
 	justify-content: flex-end;
 }
 
-
-
-/* friend req */
-
-td.right_odd>a[href*="befriends"] {
-
-	&::after {
-		font-size: 15px;
-		content: "Add Friend";
-		vertical-align: middle;
-	}
-
-	img {
-		content: url(https://cdn3.emoji.gg/emojis/9437-invite.png);
-	}
-}
 
 
 /* block */
@@ -4407,51 +4401,51 @@ td.right_odd>a[href^="/allies.php?p=blocked"] {
 }
 
 /* the "feed all play all" link itself, the bold "days left" text, the spacing paragraph, the feed all row itself */
-a[name="fapa"] + b + p + div.row {
-    display: flex;
-    flex-direction: row;
-    margin: 15px;
-    gap: 15px;
-    position: absolute;
-    top: 50px;
-    right: 0px;
-    align-items: center;
-    /* z-index: 99; */
-    flex-wrap: wrap;
-    /* justify-content: center; */
-    align-content: center;
-    height: fit-content;
-    background: var(--discord-light);
-    border: 1px solid var(--discord-border);
-    padding: 10px;
-    padding-top: 60px;
-    border-radius: 5px;
-    padding-bottom: 70px;
-    
-    
-    &::before,
-    &::after {
-        display: none !important;
-    }
+a[name="fapa"]+b+p+div.row {
+	display: flex;
+	flex-direction: row;
+	margin: 15px;
+	gap: 15px;
+	position: absolute;
+	top: 50px;
+	right: 0px;
+	align-items: center;
+	/* z-index: 99; */
+	flex-wrap: wrap;
+	/* justify-content: center; */
+	align-content: center;
+	height: fit-content;
+	background: var(--discord-light);
+	border: 1px solid var(--discord-border);
+	padding: 10px;
+	padding-top: 60px;
+	border-radius: 5px;
+	padding-bottom: 70px;
 
-    >form {
-        width: 50%;
-        /* the forms that hold the feature elements */
-    }
 
-    .col-sm-6.col-xs-12 {
-        display: contents;
-        /* width: 100%;
+	&::before,
+	&::after {
+		display: none !important;
+	}
+
+	>form {
+		width: 50%;
+		/* the forms that hold the feature elements */
+	}
+
+	.col-sm-6.col-xs-12 {
+		display: contents;
+		/* width: 100%;
         background: var(--discord-light);
         border: 1px solid var(--discord-border);
         padding: 10px; */
-    }
+	}
 
 
-    span.xsmall {
-        /* the tip text. we don't need this! we know how to use these buttons! */
-        display: none;
-    }
+	span.xsmall {
+		/* the tip text. we don't need this! we know how to use these buttons! */
+		display: none;
+	}
 
 	input[name="playall"] {
 		font-size: 0px !important;
@@ -4479,7 +4473,7 @@ a[name="fapa"] {
 }
 
 /* the days left warning */
-a[name="fapa"] + b {
+a[name="fapa"]+b {
 	order: -3;
 	font-size: 0px;
 	margin-bottom: 5px;
@@ -4493,16 +4487,18 @@ a[name="fapa"] + b {
 	align-items: center;
 	height: fit-content;
 	padding: 0 5px;
-	
-	
-	
 
-	
-	> span, &::before, &::after {
+
+
+
+
+	>span,
+	&::before,
+	&::after {
 		/* font-size: 13px; */
 	}
 
-	> span {
+	>span {
 		/* color: var(--discord-blurple) !important; */
 	}
 
@@ -4512,7 +4508,7 @@ a[name="fapa"] + b {
 
 	&::after {
 		content: " of the Feed All/Play All tool left.";
-		
+
 	}
 }
 
@@ -4528,7 +4524,7 @@ center>div.row:has(div.feature) {
 	position: relative;
 	gap: 1em;
 
-	
+
 	br {
 		display: none;
 	}
@@ -4551,9 +4547,9 @@ center>div.row:has(div.feature) {
 		justify-content: center;
 		align-content: space-around;
 		z-index: 100;
-		
-		
-		
+
+
+
 
 		h3 {
 			display: none;
@@ -4562,11 +4558,11 @@ center>div.row:has(div.feature) {
 
 	.feature:has(input[name="playall"]) {
 		background-color: var(--discord-blurple);
-		
+
 		&:hover {
 			background-color: var(--discord-dark-blurple);
 		}
-		
+
 		&::before {
 			content: " ";
 			display: inline-block;
@@ -4587,13 +4583,13 @@ center>div.row:has(div.feature) {
 
 	.feature:has(input[name="feedall"]) {
 		background-color: var(--discord-blurple);
-		
-		
-		
+
+
+
 		&:hover {
 			background-color: var(--discord-dark-blurple);
 		}
-		
+
 		&::before {
 			content: " ";
 			display: inline-block;
@@ -4630,11 +4626,11 @@ center>div.row:has(div.feature) {
 /* ------------------- player view: utility stuff ------------------- */
 
 
-center > form[method="post"]:nth-last-of-type(1):has(p:empty) {
+center>form[method="post"]:nth-last-of-type(1):has(p:empty) {
 	display: none;
 }
 
-center > form[method="post"]:has(#editdetailspanel) {
+center>form[method="post"]:has(#editdetailspanel) {
 	order: 999;
 	width: 100%;
 
@@ -4668,7 +4664,7 @@ center > form[method="post"]:has(#editdetailspanel) {
 	}
 }
 
-center > div.row:has(a[href*="stud_requests"]) {
+center>div.row:has(a[href*="stud_requests"]) {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
@@ -4676,9 +4672,11 @@ center > div.row:has(a[href*="stud_requests"]) {
 	justify-content: center;
 	width: 100%;
 	gap: 10px;
-	
 
-	br, &::before, &::after {
+
+	br,
+	&::before,
+	&::after {
 		display: none;
 	}
 
@@ -4689,8 +4687,8 @@ center > div.row:has(a[href*="stud_requests"]) {
 		background-color: var(--discord-mid);
 		border: 1px solid var(--discord-border);
 		border-radius: 4px;
-		
-		
+
+
 
 		&:hover {
 			filter: brightness(1.2);
@@ -4699,6 +4697,7 @@ center > div.row:has(a[href*="stud_requests"]) {
 
 	div.col a {
 		color: var(--discord-dark-white);
+
 		.left {
 			background: none;
 			display: flex;
@@ -4717,24 +4716,24 @@ center > div.row:has(a[href*="stud_requests"]) {
 		}
 	}
 
-	a[href^="/stud_requests"]{
+	a[href^="/stud_requests"] {
 		div::before {
 			background-image: var(--insights-icon);
 		}
 	}
 
-	a[href^="/userlog"]{
+	a[href^="/userlog"] {
 		div::before {
 			background-image: var(--log-icon);
 		}
 	}
 
-	a[href^="/attacks"]{
+	a[href^="/attacks"] {
 		div::before {
 			background-image: var(--activity-icon);
 		}
 	}
-	
+
 }
 
 /* sidebar buttons */
@@ -4746,18 +4745,12 @@ center > div.row:has(a[href*="stud_requests"]) {
 	br {
 		display: none;
 	}
-	
+
 
 	p.center {
 		max-height: fit-content;
 	}
 }
-
-
-
-
-
-
 
 /* ------------------- CHAT BOX ADJUSTMENTS ---------------------- */
 
@@ -5132,9 +5125,7 @@ a[href="/territory.php?id=414436"]::after {
 
 	/* make sure to add any other "special boys" to this list so the icons line up
 	in the chat box correctly :] */
-	a[href="/territory.php?id=414436"] 
-	{
-	}
+	a[href="/territory.php?id=414436"] {}
 }
 
 #allies .small {
