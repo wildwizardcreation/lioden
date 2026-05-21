@@ -224,6 +224,7 @@ https://emoji.gg/user/bet.official
 	--heart-icon: url("https://cdn3.emoji.gg/emojis/2085_white_heart.png");
 	--time-danger-icon: url("https://cdn3.emoji.gg/emojis/4688-time-out.png");
 	--moderation-icon: url("https://cdn3.emoji.gg/emojis/4524-moderation-mobile.png");
+	--rocket-icon: url("https://cdn3.emoji.gg/emojis/2619-activities.png");
 
 	/* default misc icons */
 	--paws-icon: url("https://cdn3.emoji.gg/emojis/8224-purple-paw-prints.png");
@@ -364,7 +365,7 @@ div.dynastycollection+p {
 	}
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 	.nav.navbar-nav.visible-xs {
 		display: flex !important
 	}
@@ -449,7 +450,7 @@ div.dynastycollection+p {
 
 }
 
-@media (min-width: 769px) and (max-width: 999px) {
+@media (max-width: 999px) {
 	.navbar-header {
 		width: 100%;
 	}
@@ -1672,6 +1673,40 @@ a.btn.button {
 	order: 0;
 }
 
+@media (min-width: 768px) and (max-width: 999px) {
+	div:nth-child(-n+2 of .dynastylist) {
+		flex: 1 1;
+	}
+
+	
+	div:nth-child(n + 3 of .dynastylist) {
+		flex: 1 1;
+	}
+}
+
+@media (min-width: 1000px) and (max-width: 1244px) {
+	div:nth-child(-n+2 of .dynastylist) {
+		flex: 45%;
+	}
+
+	
+	div:nth-child(n + 3 of .dynastylist) {
+		width: 33.3%;
+		flex: 0 1;
+	}
+}
+
+@media (min-width: 1245px) {
+	div:nth-child(-n+2 of .dynastylist) {
+		flex: 1 1;
+	}
+
+	
+	div:nth-child(n + 3 of .dynastylist) {
+		flex: 1 1;
+	}
+}
+
 /* extra table boxes */
 
 div.row.dynastycollection {
@@ -1681,10 +1716,20 @@ div.row.dynastycollection {
 	order: 1;
 	margin: 0;
 	width: 100%;
+	gap: 10px;
+	
 
+	&::before, &::after {
+		display: none;
+	}
+	
 	div.dynastylist {
 		max-width: 300px;
-
+		min-width: 130px;
+		/* width: calc(33.3% - 20px); */
+		padding: 0px;
+		margin: 0px !important;
+		
 		a {
 			display: block;
 			background: var(--discord-mid);
@@ -1700,6 +1745,7 @@ div.row.dynastycollection {
 
 		h3 {
 			margin: 1rem !important;
+			font-size: 14px;
 		}
 
 		img {
@@ -2009,7 +2055,7 @@ body:has(#pageContainer .alert a[href="inbox.php"]) {
 
 .welcomeback {
 	background-color: #202024;
-	display: flex;
+	display: flex !important;
 	position: fixed;
 	height: 50px;
 	max-width: 222px;
@@ -2021,6 +2067,16 @@ body:has(#pageContainer .alert a[href="inbox.php"]) {
 	margin-bottom: 10px;
 	font-size: 0px;
 	flex-wrap: wrap;
+	z-index: 1000;
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 
 	a {
@@ -3848,7 +3904,7 @@ center > form[method="post"]:has(#reclaim) {
 	display: contents;
 }
 
-#attack, #reclaim {
+#attack, #reclaim, #sparring {
 	display: flex;
 	width: 100%;
 	flex-direction: column;
@@ -3872,7 +3928,13 @@ center > form[method="post"]:has(#reclaim) {
 		border: 1px solid var(--discord-lighter);
 		background: var(--discord-lighter);
 		padding: 8px 15px;
-		margin-bottom: 15px;
+		margin-bottom: 20px;
+		
+		
+		
+		
+		
+		
 	
 		&::before {
 			content: " ";
@@ -4065,12 +4127,28 @@ center > form[method="post"]:has(#reclaim) {
 
  #reclaim {
 
-
-	 
 	 tr:nth-child(1)::before {
 		background-image: var(--time-danger-icon);
 	 }
  }
+
+
+#sparring {
+	
+	tr:nth-child(1)::before {
+		background-image: var(--rocket-icon);
+	}
+
+	tr:nth-child(2) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		align-content: center;
+		justify-content: center;
+		text-align: center;
+		padding: 0 20px;
+	}
+}
 
 .footer {
 	position: relative;
