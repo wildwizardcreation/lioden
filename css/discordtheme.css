@@ -52,6 +52,29 @@ https://emoji.gg/user/bet.official
 /* sourced from https://discord.com/blog */
 
 
+/* ------------------- TO DO ------------------- */
+/* ------------------- semi-urgent dev stuff ------------------- */
+/* - fix tooltips in the #player box (currently appear underneath the sidebar) */
+/* - fix submale stuff. 1 submale has square corners and im unsure what happens with 0 lol */
+/* - fix branch link to make it consistent with the other hover icon links */
+/* - fix lions (mutations) for if there's 0 lions (no link, selector breaks) */
+/* - beta and bug test alerts and alert functions */
+/* - "old den" layout cross compatibility */
+/* - fix feed all play all getting weird on some screensizes */
+/* - hover styling for the sidebar chat */
+/* - fix sidebar layout on smaller screen sizes */
+/* - figure out what to do with the typical den html */
+
+/* ------------------- general distribution and webmaster stuff ------------------- */
+/* - get a proper forum post for my css MAYBE a seperate one for beta testing */
+
+/* ------------------- QOL stuff ------------------- */
+/* - bookmarks to channels option */
+/* - skim through and double check for any hard-coded vars */
+/* - move both chatbox adjustment blocks to the top of the sheet */
+/* - properly label each section of the sheet */
+/* - documentation wiki */
+
 :root {
 
 	/* ------------------- utility vars ------------------- */
@@ -686,134 +709,8 @@ body {
 	border-bottom: none;
 }
 
-/* fake notif bell for alerts */
-#pageContainer:has(> .alert, > center > .alert, > div.left > .alert) {
-	.breadcrumb {
-		margin-bottom: 10px;
-	}
+/* ---------------- alert styling, reordering, etc ---------------- */
 
-	.breadcrumb::after {
-		filter: brightness(1.5);
-	}
-
-	.breadcrumb::before {
-		content: " ";
-		position: absolute;
-		right: 16px;
-		bottom: 10px;
-		width: 10px;
-		height: 10px;
-		border-radius: 100px;
-		border: 2px solid var(--discord-dark);
-		background-color: var(--discord-notif-red);
-		z-index: 100;
-	}
-}
-
-/* fake alert grouping panel */
-/* broken cause of z-index stuff. commenting out for performance until it can b fixed :] */
-
-/* #pageContainer>center>div:nth-last-child(1 of .alert) {
-
-	&::after {
-		border-bottom-left-radius: 4px;
-		border-bottom-right-radius: 4px;
-		border-bottom-color: var(--discord-border);
-	}
-}
-
-#pageContainer>center>div:nth-child(1 of .alert) {
-
-	&::after {
-		border-bottom-left-radius: 4px;
-		border-bottom-right-radius: 4px;
-		border-top-color: var(--discord-border);
-	}
-}
-
-#pageContainer>div:nth-last-child(1 of .alert) {
-
-	&::after {
-		border-bottom-left-radius: 4px;
-		border-bottom-right-radius: 4px;
-		border-bottom-color: var(--discord-border);
-	}
-}
-
-#pageContainer>div:nth-child(1 of .alert) {
-
-	&::after {
-		border-top-left-radius: 4px;
-		border-top-right-radius: 4px;
-		border-top-color: var(--discord-border);
-	}
-}
-
-#pageContainer:has(>.alert):has(>center .alert) {
-
-	>center div:nth-child(1 of .alert) {
-		&::after {
-			border-top: none;
-			border-top-right-radius: 0px;
-			border-top-left-radius: 0px;
-		}
-	}
-
-} */
-
-/* the rollover alert (which is?? inside another div?? idk.) */
-ol.breadcrumb+div:has(>.alert) {
-	display: contents;
-
-	.alert {
-		margin: 0;
-		margin-bottom: 20px;
-		text-align: center !important;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		align-content: center;
-		flex-direction: row;
-		color: var(--discord-white);
-	}
-
-	.alert::after {
-		all: unset;
-	}
-
-	.alert::before {
-		content: " ";
-		position: relative;
-		display: inline-block;
-		width: 25px;
-		height: 24px;
-		background-image: var(--gift-icon);
-		background-size: contain;
-		background-repeat: no-repeat;
-		background-position: center;
-		border: none;
-		padding: 0px;
-		right: 0;
-		top: 0;
-		background-color: transparent;
-		z-index: 1;
-	}
-}
-
-
-/* removed messages alert */
-#pageContainer:has(> .alert > a[href="inbox.php"],
-	> center > .alert> a[href="inbox.php"],
-	> div.left > .alert > a[href="inbox.php"]) {
-
-	>div:nth-child(2 of .alert)::after {
-		border-top-left-radius: 4px;
-		border-top-right-radius: 4px;
-		border-top-color: var(--discord-border);
-	}
-}
-
-/* alert styling, reordering, etc */
 
 .alert {
 	position: relative;
@@ -865,27 +762,6 @@ ol.breadcrumb+div:has(>.alert) {
 		}
 	}
 
-	/* core fake panel. to be bug-fixed */
-
-	/* &::after {
-		position: absolute;
-		content: " ";
-		right: -15px;
-		top: -15px;
-		display: block;
-		width: calc(100% + 30px);
-		height: calc(100% + 30px);
-		padding: 10px;
-		margin: 0px 0;
-		background-color: transparent;
-		z-index: -1;
-		border: var(--discord-border) 1px solid;
-		border-top-color: var(--discord-dark);
-		border-bottom-color: var(--discord-dark);
-		background-color: var(--discord-dark);
-		border-radius: 4px;
-	} */
-
 
 	img[src$="hungry.png"] {
 		content: var(--food-icon);
@@ -894,6 +770,125 @@ ol.breadcrumb+div:has(>.alert) {
 		height: auto;
 		aspect-ratio: 1 / 1;
 		filter: brightness(1.5);
+	}
+}
+
+/* fake sidebar notifs */
+
+/* news */
+.container.main:has(#pageContainer >.alert-success>img[src$="iconnews.png"]) {
+
+	.navbar-nav>li>a[href="/news.php"]{
+		color: var(--discord-white);
+
+		&::after {
+			display: inline;
+			content: " ";
+			background: var(--discord-white);
+			width: 12px;
+			height: 12px;
+			border-radius: 500px;
+			position: absolute;
+			left: -18px;
+		}
+	}
+}
+
+/* forums and chatter */
+.container.main:has(#pageContainer >.alert>a[href*="boards"]) {
+
+	.navbar-nav>li>a[href="/boards.php"]{
+		color: var(--discord-white);
+
+		&::after {
+			display: inline;
+			content: " ";
+			background: var(--discord-white);
+			width: 12px;
+			height: 12px;
+			border-radius: 500px;
+			position: absolute;
+			left: -18px;
+		}
+	}
+}
+
+/* events */
+/* mostly may stuff atm! always expanding the list of potential links! */
+
+.container.main:has(
+	#pageContainer>.alert>a[href*="may_challenges"],
+	#pageContainer>.alert>a[href*="events"],
+	#pageContainer>.alert>a[href*="brotherhood"]
+
+	) {
+
+	
+	.navbar-nav>li:has(>a[href="/event.php"]){
+		a {
+			color: var(--discord-white);
+		}
+
+		&::before {
+			display: inline;
+			content: " ";
+			background: var(--discord-white);
+			width: 12px;
+			height: 12px;
+			border-radius: 500px;
+			position: absolute;
+			left: -18px;
+			top: 12px; 
+		}
+	}
+}
+
+
+/* fake notif bell for alerts */
+#pageContainer:has(> .alert, > center > .alert, > div[style="text-align: left;"] > .alert) {
+	.breadcrumb {
+		margin-bottom: 10px;
+	}
+
+	.breadcrumb::after {
+		filter: brightness(1.5);
+	}
+
+	.breadcrumb::before {
+		content: " ";
+		position: absolute;
+		right: 16px;
+		bottom: 10px;
+		width: 10px;
+		height: 10px;
+		border-radius: 100px;
+		border: 2px solid var(--discord-dark);
+		background-color: var(--discord-notif-red);
+		z-index: 100;
+	}
+}
+
+/* rollover alert */
+#pageContainer > div[style="text-align: left;"] {
+	order: -99;
+	display: contents;
+
+	>.alert {
+		text-align: center !important;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color:  var(--discord-white);
+	}
+
+	>.alert::before {
+		display: inline;
+		content: " ";
+		background-image: var(--gift-icon);
+		width: 20px;
+		height: 20px;
+		background-size: contain;
+		aspect-ratio: 1 / 1;
 	}
 }
 
@@ -919,12 +914,15 @@ ol.breadcrumb+div:has(>.alert) {
 
 }
 
+
+/* removed new messages alert */
 .alert.alert-danger:has(a[href="inbox.php"]) {
 	display: none;
 }
 
 
-/* breadcrumb */
+
+/* ---------------- breadcrumb ----------------  */
 .breadcrumb {
 	background-color: #18181c;
 	border: 1px solid #2a2a2e;
@@ -1150,6 +1148,12 @@ ol.breadcrumb+div:has(>.alert) {
 	background: transparent;
 	font-weight: 100;
 	border-radius: 8px;
+	position: relative;
+	float: none;
+	
+	
+	
+	
 
 	a {
 		vertical-align: middle;
@@ -1162,6 +1166,10 @@ ol.breadcrumb+div:has(>.alert) {
 		align-items: center;
 		justify-content: flex-start;
 		align-content: center;
+		
+		
+		
+		
 
 		&:hover {
 			color: var(--discord-white);
