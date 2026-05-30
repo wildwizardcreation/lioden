@@ -92,7 +92,8 @@ https://emoji.gg/user/bet.official
 
 
 	/* ------------------- customization vars ------------------- */
-	--server-name: "Abbadon's Epic Den";
+	--server-name: "Wizard's Epic Den";
+	--player-name: "The Wizard";
 
 
 	/* player "profile" colors, info, and images */
@@ -104,8 +105,8 @@ https://emoji.gg/user/bet.official
 	--player-description: "test test lalala yayyyyyy";
 
 	/* player "profile" images */
-	--player-header: url(https://sitebuilder.neocities.org/assets/tumblr_c0ce31cb8da59f998d1b29443edbe203_2ab0ebec_500.png);
-	--player-pfp: url(https://cdn3.emoji.gg/emojis/98237-akkoshrug.png);
+	--player-header: url("https://sitebuilder.neocities.org/assets/tumblr_c0ce31cb8da59f998d1b29443edbe203_2ab0ebec_500.png");
+	--player-pfp: url("https://static.lioden.com/images/tags/0/4/4155.png");
 
 
 
@@ -224,6 +225,7 @@ https://emoji.gg/user/bet.official
 	/* default ui icons */
 	--invite-icon: url("https://cdn3.emoji.gg/emojis/9437-invite.png");
 	--pinned-icon: url("https://cdn3.emoji.gg/emojis/7896-pinned.png");
+	--pinned-white-icon: url("https://wildwizardcreation.github.io/lioden/assets/discord/pinned-white.png");
 	--settings-icon: url("https://cdn3.emoji.gg/emojis/2888-settings.png");
 	--reload-icon: url("https://cdn3.emoji.gg/emojis/8562-replay.png");
 	--emoji-icon: url("https://cdn3.emoji.gg/emojis/7354-emoji.png");
@@ -715,6 +717,10 @@ body {
 
 /* ---------------- alert styling, reordering, etc ---------------- */
 
+/* -------------------- TESTING A TOGGLE CHECKBOX -------------------- */
+.alert-checkbox {
+	
+}
 
 .alert {
 	position: relative;
@@ -1812,6 +1818,8 @@ div.row.dynastycollection {
 	}
 }
 
+	
+
 
 /* profile contents (move to user "profile" ?) */
 
@@ -1823,8 +1831,46 @@ div.row.dynastycollection {
 	border: var(--discord-border) solid 1px;
 }
 
-#fraProfileContent {
 
+/* emojis */
+#fraProfileContent span {
+	display: inline-block;
+	vertical-align: bottom;
+	height: 20px;
+	margin: 0px 8px;
+	aspect-ratio: 1;
+	
+	&.three {
+		content: url(https://static.lioden.com/images/emotes/3.png);
+	}
+}
+
+	
+/* ---------- "pinned" messages aka default profile content ------------- */
+#fraProfileContent {
+	order: -2;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	width: 100%;
+	position: relative;
+
+	.pinned-box {
+		display: none;
+	}
+	
+	&:has(.pinned-check:checked) {
+		.pinned-box {
+			display: block;
+			
+		}
+	}
+	
+	
+	br {
+		display: none;
+	}
+	
 	a {
 		color: var(--discord-link);
 		font-weight: normal;
@@ -1835,8 +1881,131 @@ div.row.dynastycollection {
 	}
 }
 
-/* topbar */
 
+div.pinned-box {
+	background-color: var(--discord-mid);
+	/* display: block; */
+	font-size: 13px;
+	border: 1px solid var(--discord-border);
+	padding: 11px;
+	border-radius: 10px;
+	box-shadow: #121214ad 0 5px 12px 0px;
+	animation: .05s ease-in-out 0s 1 tooltipHover;
+	border: 1px solid var(--discord-border);
+	margin-bottom: 5px;
+	max-height: 500px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	scrollbar-color: var(--discord-border) var(--discord-mid);
+	scrollbar-width: thin;
+	scrollbar-gutter: stable;
+	margin-top: 5px;
+}
+
+div.pinned-message {
+	text-align: left;
+	position: relative;
+	background-color: var(--discord-light);
+	border: 1px solid var(--discord-border);
+	z-index: 0;
+	margin: 5px 0px;
+	border-radius: 10px;
+	padding: 15px;
+	padding-left: 70px;
+}
+
+
+/* fake pfp */
+.pinned-message::before {
+	content: " ";
+	position: absolute;
+	display: block;
+	width: 40px;
+	height: 40px;
+	left: 15px;
+	background: var(--player-pfp);
+	background-size: contain;
+	border-radius: 100%;
+	margin-top: -2px;
+}
+	
+/* fake username */
+.pinned-message > :nth-child(2) {
+	&::before {
+		content: var(--player-name);
+		display: block;
+		font-size: 15px;
+		color: #efefef;
+		font-weight: bold;
+		margin-top: -3px;
+		margin-bottom: 5px;
+	}
+}
+
+
+input.pinned-check {
+	display: block;
+	/* text-align: right; */
+	margin: 5px;
+	margin-left: auto;
+	width: 30px;
+	height: 30px;
+	position: relative;
+	-webkit-appearance: none;
+    -moz-appearance: none;
+	outline: none !important;
+	border: none !important;
+	background-image: var(--pinned-icon);
+	background-size: contain;
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	
+	/* if not checked, show the 'pinned messages' tooltip */
+	&:not(:checked):hover::after {
+		content: "Pinned Messages";
+		width: 130px;
+		top: 37px;
+		right: -45px;
+		display: block;
+		position: absolute;
+		height: 40px;
+		font-size: 13px;
+		background-color: var(--discord-light);
+		border: 1px solid var(--discord-border);
+		color: #f3f3f3;
+		font-weight: bold;
+		padding: 11px;
+		border-radius: 10px;
+		box-shadow: #121214ad 0 5px 12px 0px;
+		animation: .05s ease-in-out 0s 1 tooltipHover;
+		z-index: 999;
+		line-height: 16px;
+	}
+
+	&::before {
+		content: " ";
+		position: absolute;
+		right: 0px;
+		bottom: 0px;
+		width: 15px;
+		aspect-ratio: 1/1;
+		border-radius: 100px;
+		border: 3px solid var(--discord-dark);
+		background-color: var(--discord-notif-red);
+		z-index: 100;
+	}
+
+	&:checked {
+		background-image: var(--pinned-white-icon);
+	}
+}
+
+
+
+/* ----------------------- topbar ----------------------------- */
 .container.topbar {
 	background-color: #121214;
 	margin: 0px;
@@ -2063,6 +2232,9 @@ body:has(#pageContainer .alert a[href="inbox.php"]) {
 	}
 }
 
+
+/* move welcomeback to the bottom corner */
+
 .welcomeback {
 	background-color: #202024;
 	display: flex !important;
@@ -2079,16 +2251,6 @@ body:has(#pageContainer .alert a[href="inbox.php"]) {
 	flex-wrap: wrap;
 	z-index: 1000;
 	
-	
-	
-	
-	
-	
-	
-	
-	
-
-
 	a {
 		font-size: 13px !important;
 		color: white !important;
@@ -2131,8 +2293,8 @@ select,
 textarea,
 input[type="text"],
 input[type="password"],
-input:active,
-input:target {
+input[type="text"]:active,
+input[type="text"]:target {
 	background-color: var(--discord-mid);
 	color: var(--discord-darkest-white);
 	border: var(--discord-border) 1px solid;
@@ -2145,9 +2307,9 @@ input:target {
 textarea:active,
 textarea:target,
 textarea:focus,
-input:active,
-input:target,
-input:focus {
+input[type="text"]:active,
+input[type="text"]:target,
+input[type="text"]:focus {
 	color: var(--discord-white) !important;
 
 	&:placeholder {
@@ -5393,7 +5555,8 @@ span.s-chat-message_content>a:hover {
 
 /* wizard is a special boy */
 
-a[href="/territory.php?id=414436"]::after {
+a[href="/territory.php?id=414436"]::after,
+a[href="/territory.php?id=425531"]::after {
 	content: " ";
 	display: inline-block;
 	height: 14px;
@@ -5407,19 +5570,7 @@ a[href="/territory.php?id=414436"]::after {
 	margin-bottom: -2px;
 }
 
-.comment small.text-muted>a[href="/territory.php?id=414436"] {
+.comment small.text-muted>a[href="/territory.php?id=414436"],
+.comment small.text-muted>a[href="/territory.php?id=425531"] {
 	color: #81aecf;
-}
-
-.comment small.text-muted {
-
-	/* make sure to add any other "special boys" to this list so the icons line up
-	in the chat box correctly :] */
-	a[href="/territory.php?id=414436"] {}
-}
-
-#allies .small {
-	a[href="/territory.php?id=414436"] {
-		/* margin-right: 60px; */
-	}
 }
