@@ -386,6 +386,10 @@ div.dynastycollection+p {
 	.container.topbar::before {
 		display: none !important;
 	}
+
+	.navbar-collapse {
+		padding: 0;
+	}
 }
 
 @media (max-width: 768px) {
@@ -795,7 +799,7 @@ body {
 }
 
 /* forums and chatter */
-.container.main:has(#pageContainer >.alert>a[href*="boards"]) {
+.container.main:has(#pageContainer >.alert>a[href*="forum"]) {
 
 	.navbar-nav>li>a[href="/boards.php"]{
 		color: var(--discord-white);
@@ -1820,8 +1824,6 @@ div.row.dynastycollection {
 }
 
 #fraProfileContent {
-	/* for testing */
-	display: none;
 
 	a {
 		color: var(--discord-link);
