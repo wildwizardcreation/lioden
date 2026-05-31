@@ -233,6 +233,7 @@ https://emoji.gg/user/bet.official
 	--options-icon: url("https://cdn3.emoji.gg/emojis/6375-more-options.png");
 	--send-icon: url("https://sitebuilder.neocities.org/assets/lioden/send-message-icon.png");
 	--notifcation-icon: url("https://cdn3.emoji.gg/emojis/7238-notification-settings.png");
+	--notification-white-icon: url("https://wildwizardcreation.github.io/lioden/assets/discord/notification-white.png");
 	--dismiss-icon: url("https://cdn3.emoji.gg/emojis/8864-discord-clear-search.png");
 	--food-icon: url("https://cdn3.emoji.gg/emojis/2605-food-and-drinks.png");
 	--checkmark-icon: url("https://cdn3.emoji.gg/emojis/586735-checkmark.png");
@@ -664,8 +665,9 @@ body {
 	overflow: visible;
 	height: fit-content;
 	align-content: space-between;
-	justify-content: space-between;
+	justify-content: flex-end;
 	align-items: center;
+	
 	
 
 
@@ -741,14 +743,16 @@ body {
 	
 /* ---------- "pinned" messages aka default profile content ------------- */
 #fraProfileContent {
-	display: none;
+	
 	/* for testing */
 	order: -2;
-	/* display: contents; */
+	display: contents;
 	flex-direction: column;
 	flex-wrap: nowrap;
 	width: 100%;
 	position: static;
+	
+	
 	
 
 	.pinned-box {
@@ -850,16 +854,13 @@ input.alert-checkbox, input.pinned-check {
 	border: none !important;
 	margin: 5px;
 	margin-bottom: -45px;
-	margin-right: 20px;
-	margin-left: auto;
+	/* margin-right: 20px; */
+	/* margin-left: auto; */
 	background-size: cover;
 	width: 25px;
 	aspect-ratio: 1;
 	display: inline-block;
 	position: relative;
-	
-	
-	
 	
 	&:hover {
 		cursor: pointer;
@@ -927,8 +928,14 @@ input.pinned-check {
 }
 
 input.alert-checkbox {
-	margin-left: auto;
+	/* margin-right: auto; */
+	/* float: left; */
+	/* margin-left: auto; */
 	background-image: var(--notifcation-icon);
+	
+	
+	
+	
 
 	&:not(:checked):hover::after {
 		content: "Alerts";
@@ -952,7 +959,7 @@ input.alert-checkbox {
 	}
 
 	&:checked {
-		background-image: var(--notifcation-white-icon);
+		background-image: var(--notification-white-icon);
 	}
 }
 
@@ -2459,7 +2466,7 @@ textarea[name=desc] {
 	/* padding: 5px; */
 	text-align: center;
 	/* word-wrap: break-word; */
-	/* font-size: 0px; */
+	font-size: 0px;
 	padding-top: 20px;
 	margin-top: 15px;
 	width: 100%;
