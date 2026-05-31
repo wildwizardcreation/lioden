@@ -741,8 +741,10 @@ body {
 	
 /* ---------- "pinned" messages aka default profile content ------------- */
 #fraProfileContent {
+	display: none;
+	/* for testing */
 	order: -2;
-	display: contents;
+	/* display: contents; */
 	flex-direction: column;
 	flex-wrap: nowrap;
 	width: 100%;
@@ -1470,10 +1472,6 @@ input.alert-checkbox {
 	border-radius: 8px;
 	position: relative;
 	float: none;
-	
-	
-	
-	
 
 	a {
 		vertical-align: middle;
@@ -1486,9 +1484,6 @@ input.alert-checkbox {
 		align-items: center;
 		justify-content: flex-start;
 		align-content: center;
-		
-		
-		
 		
 
 		&:hover {
@@ -2458,13 +2453,25 @@ textarea[name=desc] {
 
 
 /* lower block */
-#fraOrganizationBlock {
+#fraOrganizationBlock:has(#fraCaveList > .col-md-4.col-xs-6.center) {
 	position: relative;
 	display: inline-block;
 	/* padding: 5px; */
 	text-align: center;
 	/* word-wrap: break-word; */
-	font-size: 0px;
+	/* font-size: 0px; */
+	padding-top: 20px;
+	margin-top: 15px;
+	width: 100%;
+}
+
+#fraOrganizationBlock:has(#fraCaveList > #pride) {
+	position: relative;
+	display: inline-block;
+	/* padding: 5px; */
+	text-align: center;
+	/* word-wrap: break-word; */
+	/* font-size: 0px; */
 	padding-top: 20px;
 	margin-top: 15px;
 	width: 100%;
@@ -2649,7 +2656,341 @@ div.col-md-4.col-xs-6.center>a[href^="lionoverview.php"] {
 	}
 }
 
-#fraCaveList {
+#fraCaveList:has(>#pride) {
+	width: auto;
+	height: auto;
+	position: relative;
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: column;
+	margin-bottom: 20px;
+}
+
+/* cave headers */
+#fraCaveList #pride th>a {
+	color: var(--discord-darkest-white);
+	font-weight: normal;
+}
+
+/* nursing cubs */
+#fraCaveList #pride tbody > tr + tr:has(.right_cub) {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		align-content: flex-start;
+		justify-content: flex-start;
+		max-width: 100%;
+		background: var(--discord-mid);
+		border-radius: 8px;
+		padding: 10px;
+		margin: 10px;
+		/* column-gap: 10px; */
+		position: relative;
+	}
+
+/* lions */
+#fraCaveList #pride tbody > tr:has(>.right_odd, >.right) {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	align-content: flex-start;
+	justify-content: flex-start;
+	max-width: 100%;
+	background: var(--discord-mid);
+	border-radius: 8px;
+	padding: 10px;
+	margin: 10px;
+	/* column-gap: 10px; */
+	position: relative;
+	
+
+	&:hover {
+		background: var(--discord-light);
+	}
+	
+
+	br {
+		display: none !important;
+	}
+	
+
+	/* level */
+	td:nth-child(1 of .right), 
+	td:nth-child(1 of .right_odd) {
+		
+		&::before {
+			content: "Level ";
+		}
+	}
+	
+	/* stats */
+	td:nth-child(2 of .right), 
+	td:nth-child(2 of .right_odd) {
+
+		&::after {
+			content: " Stats";
+		}
+	}
+
+	td:nth-child(-n+2 of .right), 
+	td:nth-child(-n+2 of .right_odd) {
+		color: var(--discord-darkest-white);
+		background-color: var(--discord-lighter);
+		order: 5;
+		margin-right: 5px;
+		font-weight: bold;
+		font-size: smaller;
+		padding: 3px 8px;
+		border-radius: 8px;
+	}
+
+	/* name */
+	td:nth-child(3 of .right), 
+	td:nth-child(3 of .right_odd) {
+		display: contents;
+
+		/* name link */
+		a {
+			order: -1;
+			display: block;
+			width: fit-content;
+			font-size: medium;
+			margin-right: 14px;
+
+			&:hover {
+				text-decoration: underline;
+			}
+
+			&::after {
+				content: " ";
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				/* background: blue; */
+				top: 0;
+				left: 0;
+			}
+		}
+
+		/* gender badge */
+		> img {
+			display: none;
+		}
+
+
+		/* footnote */
+		span.xsmall {
+			order: 4;
+			text-align: left;
+			font-size: small;
+			display:  inline-block;
+			color: var(--discord-darkest-white);
+			margin-right: 5px;
+		}
+		
+		color: purple !important;
+	}
+
+	/* age */
+	td:nth-last-child(2 of .right), 
+	td:nth-last-child(2 of .right_odd) {
+		color: var(--discord-dark-white);
+		order: 1;
+		text-align: left;
+		background-color: var(--discord-lighter);
+		padding: 3px 8px;
+		border-radius: 8px;
+		display: inline-block;
+		font-weight: bold;
+	}
+
+	/* badges */
+	td:nth-last-child(1 of .right), 
+	td:nth-last-child(1 of .right_odd) {
+		display: contents;
+
+		/* split element for the flex boxes */
+		&::after {
+			/* background: white; */
+			width: 100%;
+			height: 7px;
+			content: " ";
+			order: 2;
+		}
+	}
+
+	/* if there's icons flatten the side of the age badge */
+	td.small:has(+ .small > img[data-toggle="tooltip-html"]) {
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
+	}
+
+	td.small img:nth-child(1) {
+		border-top-left-radius: 8px !important;
+		border-bottom-left-radius: 8px !important;
+	}
+
+	td.small + .small > img[data-toggle="tooltip-html"] {
+		border-radius: 0px;
+	}
+	
+
+	/* icon badges */
+	.small img[data-toggle="tooltip-html"] {
+		order: 0;
+		height: 23px;
+		aspect-ratio: 1;
+		background-color: var(--discord-lighter);
+		display: block;
+		border: 3px solid var(--discord-lighter);
+		z-index: 5;
+	}
+
+	/* breeding cooldown badge */
+	div.badge {
+		order: 8
+	}
+
+
+}
+
+
+
+/* lion section headers */
+#fraCaveList #pride tbody > tr:has(>.left.b) {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	column-gap: 10px;
+	align-items: center;
+	align-content: center;
+	/* padding: 10px; */
+	margin: 10px;
+	
+
+	td {
+		display: none;
+	}
+
+	&::before {
+		content: " ";
+		order: -1;
+		width: 14px;
+		height: 14px;
+		display: block;
+		text-align: left;
+		flex-shrink: 1;
+		background-size: contain;
+		image-rendering: pixelated;
+		background-repeat: no-repeat;
+	}
+	
+	&::after {
+		order: -1;
+		flex-basis: 80%;
+		max-width: 100%;
+		width: 50%;
+		display: inline-block;
+		text-align: left;
+		flex-grow: 1;
+		margin-right: auto;
+	}
+}
+
+#fraCaveList #pride tbody {
+	min-width: 100%;
+	display: block;
+	
+	
+	tr:has(.left.b) ~ tr:has(.right_odd, .right) {
+		color: pink !important;
+	}
+}
+
+/* submales */
+#fraCaveList #pride tbody > tr:nth-child(1 of :has(.left.b)) {
+	color: purple !important;
+
+	&::before {
+		background-image: url(//static.lioden.com/images/maleicon.png);
+	}
+
+	&::after {
+		content: "Submales";
+		display: block;
+		text-align: left;
+	}
+}
+
+/* females */
+#fraCaveList #pride tbody > tr:nth-child(2 of :has(.left.b)) {
+	color: red !important;
+	
+	&::before {
+		background-image: url(//static.lioden.com/images/femaleicon.png);
+	}
+	
+	&::after {
+		content: "Pride Members";
+	}
+}
+
+/* cubs/adols */
+#fraCaveList #pride tbody > tr:nth-child(3 of :has(.left.b)) {
+	color: yellow !important;
+
+	&::after {
+		content: "Cubs/Adols";
+	}
+}
+
+.navbar-default .navbar-nav>li {
+	width: 100%;
+	margin: 2px 0px;
+	text-align: left;
+	background: transparent;
+	font-weight: 100;
+	border-radius: 8px;
+	position: relative;
+	float: none;
+
+	a {
+		vertical-align: middle;
+		padding: 6.5px 13px;
+		color: #82838b;
+		font-size: 16px;
+		border-radius: 8px;
+		width: 100%;
+		display: inline-flex;
+		align-items: center;
+		justify-content: flex-start;
+		align-content: center;
+		
+
+		&:hover {
+			color: var(--discord-white);
+			background-color: #1d1d1e;
+		}
+
+		&::before {
+			background-image: url(https://cdn3.emoji.gg/emojis/3280-text.png);
+			display: inline-block;
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center center;
+			content: " ";
+			vertical-align: bottom;
+			min-height: 23px;
+			min-width: 20px;
+			margin-right: 10px;
+		}
+	}
+}
+
+#fraCaveList:has(> .col-md-4.col-xs-6.center) {
 	width: auto;
 	height: auto;
 	position: relative;
