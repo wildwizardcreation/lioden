@@ -252,6 +252,7 @@ https://emoji.gg/user/bet.official
 	--time-danger-icon: url("https://cdn3.emoji.gg/emojis/4688-time-out.png");
 	--moderation-icon: url("https://cdn3.emoji.gg/emojis/4524-moderation-mobile.png");
 	--rocket-icon: url("https://cdn3.emoji.gg/emojis/2619-activities.png");
+	--info-icon: url("https://cdn3.emoji.gg/emojis/4260-info.png");
 
 	/* default misc icons */
 	--paws-icon: url("https://cdn3.emoji.gg/emojis/8224-purple-paw-prints.png");
@@ -327,33 +328,11 @@ div.dynastycollection+p {
 
 
 /* layout adjustment */
-@media (max-width: 1199px) {
-	.alert {
-		justify-content: center;
-	}
-}
 
-@media (min-width: 1200px) {
-	.nav.navbar-nav.visible-lg {
-		display: flex !important;
-	}
-
-	.alert {
-		justify-content: flex-end;
-	}
-}
-
-/* @media (min-width: 992px) and (max-width:1199px) {
-	.nav.navbar-nav.visible-md {
-		display: flex !important
-	}
-	
-} */
-
-@media (max-width: 768px) {
+/* extra small devices */
+@media (max-width: 767px) {
 	a[name="fapa"]+b+p+div.row {
 		left: 0px;
-		/* justify-content: flex-end !important; */
 		flex-direction: row-reverse !important;
 		width: calc(100% - 30px - 60px);
 	}
@@ -364,27 +343,29 @@ div.dynastycollection+p {
 
 	.feature:has(input[name="feedall"]) {
 		background-color: var(--discord-blurple);
+	}
 
-		select[name="carcasstype"] {
-			width: calc(100% - 165px) !important;
-			left: 55px;
-			margin-bottom: 5px !important;
-		}
+	.feature:has(input[name="feedall"]) select[name="carcasstype"] {
+		width: calc(100% - 165px) !important;
+		left: 55px;
+		margin-bottom: 5px !important;
+	}
 
+	.nav.navbar-nav.visible-xs {
+		display: flex !important;
+	}
+
+	.navbar-brand.visible-lg.visible-md,
+	.container.topbar::before {
+		display: none !important;
 	}
 }
 
-@media (min-width: 992px) and (max-width:1199px) {
-	.nav.navbar-nav.visible-md {
-		display: flex !important
-	}
-
-
-}
-
+/* small devices */
 @media (min-width: 768px) and (max-width: 991px) {
-	.nav.navbar-nav.visible-sm, .nav.navbar-nav.visible-md {
-		display: flex !important
+	.nav.navbar-nav.visible-sm, 
+	.nav.navbar-nav.visible-md {
+		display: flex !important;
 	}
 
 	.container.topbar::before {
@@ -396,21 +377,97 @@ div.dynastycollection+p {
 	}
 }
 
-@media (max-width: 768px) {
-	.nav.navbar-nav.visible-xs {
-		display: flex !important
-	}
-
-	.navbar-brand.visible-lg.visible-md {
-		display: none !important;
-	}
-
-	.container.topbar::before {
-		display: none !important;
+/* medium devices */
+@media (min-width: 992px) and (max-width: 1199px) {
+	.nav.navbar-nav.visible-md {
+		display: flex !important;
 	}
 }
 
-@media only screen and (min-width: 1000px) {
+/* large devices */
+@media (min-width: 1200px) {
+	.nav.navbar-nav.visible-lg {
+		display: flex !important;
+	}
+
+	.alert {
+		justify-content: flex-end;
+	}
+}
+
+/* general sub-1200px adjustments */
+@media (max-width: 1199px) {
+	.alert {
+		justify-content: center;
+	}
+}
+
+/* layout container specific breakpoints */
+@media (max-width: 999px) {
+	.navbar-header {
+		padding: 10px 0;
+		width: 100%;
+	}
+	
+	.navbar-brand {
+		width: fit-content !important;
+	}
+
+	.navbar-brand.visible-lg.visible-md::after {
+		display: none !important;
+	}
+
+	.feature:has(input[name="feedall"]) {
+		background-color: var(--discord-blurple);
+	}
+
+	.feature:has(input[name="feedall"]) select[name="carcasstype"] {
+		width: calc(100% - 165px) !important;
+		right: 60px !important;
+		margin-bottom: 5px !important;
+	}
+
+	a[name="fapa"]+b+p+div.row {
+		margin: 15px;
+		position: absolute;
+		top: 35px !important;
+		justify-content: flex-start;
+		right: 0px;
+		z-index: 0;
+		padding: 10px;
+		padding-top: 10px !important;
+		border-radius: 5px;
+		padding-bottom: 10px !important;
+		width: calc(100% - 30px - 210px);
+	}
+
+	a[name="fapa"]+b {
+		order: -3;
+		font-size: 0px;
+		margin-bottom: 5px;
+		color: var(--discord-white) !important;
+		position: absolute;
+		right: 0;
+		z-index: 101;
+		margin: 15px;
+		top: 43px;
+		align-items: center;
+		width: fit-content;
+		height: fit-content;
+		padding: 10px !important;
+	}
+
+	a[name="fapa"]+b::before,
+	a[name="fapa"]+b::after {
+		font-size: 0px !important;
+	}
+
+	a[name="fapa"]+b>span {
+		color: var(--discord-white) !important;
+	}
+}
+
+@media (min-width: 1000px) {
 	.container {
 		width: 1300px;
 	}
@@ -427,32 +484,22 @@ div.dynastycollection+p {
 		flex-direction: column;
 		width: 260px;
 		background: none;
-		/*! padding: 5px; */
-		/*! margin: 0 10px; */
 	}
 
 	.navbar-collapse {
 		padding: 0px;
 	}
 
-	.navbar-header {
-		/* margin-bottom: 53px; */
-	}
-
-	.nav>li {
-		/* transform:translate(-180px,70px); */
-	}
-
 	.navbar-default .navbar-nav>li>a:hover {
 		background: none;
 	}
 
-	.feature:has(input[name="feedall"]) {
+	.container.main:has(center a[name="fapa"]) .sidebar {
+		padding-top: 205px;
+	}
 
-		select[name="carcasstype"] {
-			width: calc(100% - 20px) !important;
-		}
-
+	.feature:has(input[name="feedall"]) select[name="carcasstype"] {
+		width: calc(100% - 20px) !important;
 	}
 
 	a[name="fapa"]+b+p+div.row {
@@ -464,113 +511,47 @@ div.dynastycollection+p {
 	a[name="fapa"]+b {
 		width: calc(25% - 100px);
 		top: 64px;
-
-
-		>span,
-		&::before,
-		&::after {
-			font-size: 13px;
-		}
-
-		>span {
-			color: var(--discord-blurple) !important;
-		}
 	}
 
-
-
-}
-
-@media (max-width: 999px) {
-	.navbar-header {
-		width: 100%;
+	a[name="fapa"]+b>span,
+	a[name="fapa"]+b::before,
+	a[name="fapa"]+b::after {
+		font-size: 13px;
 	}
 
-	.navbar-brand {
-		width: fit-content !important;
-	}
-
-	.navbar-brand.visible-lg.visible-md::after {
-		display: none !important;
-	}
-
-	.feature:has(input[name="feedall"]) {
-		background-color: var(--discord-blurple);
-
-		select[name="carcasstype"] {
-			width: calc(100% - 165px) !important;
-			right: 60px !important;
-			margin-bottom: 5px !important;
-		}
-
-	}
-
-	a[name="fapa"]+b+p+div.row {
-		width: calc(100% - 30px - 210px);
+	a[name="fapa"]+b>span {
+		color: var(--discord-blurple) !important;
 	}
 }
 
-@media only screen and (max-width: 999px) {
-	.navbar-header {
-		padding: 10px 0;
-	}
-
-	a[name="fapa"]+b+p+div.row {
-		margin: 15px;
-		position: absolute;
-		top: 35px !important;
-		justify-content: flex-start;
-		right: 0px;
-		z-index: 0;
-		padding: 10px;
-		padding-top: 10px !important;
-		border-radius: 5px;
-		padding-bottom: 10px !important;
-	}
-
-	a[name="fapa"]+b {
-		order: -3;
-		font-size: 0px;
-		margin-bottom: 5px;
-		color: var(--discord-white) !important;
-		position: absolute;
-		right: 0;
-		z-index: 101;
-		margin: 15px;
-		position: absolute;
-		top: 43px;
-		align-items: center;
-		width: fit-content;
-		height: fit-content;
-		padding: 10px !important;
-		/* background-color: white; */
-
-
-		&::before,
-		&::after {
-			font-size: 0px !important;
-		}
-
-		>span {
-			color: var(--discord-white) !important;
-		}
+/* custom element scaling */
+@media (max-width: 1050px) {
+	a[name="fapa"]+b>span,
+	a[name="fapa"]+b::before,
+	a[name="fapa"]+b::after {
+		font-size: 11px;
 	}
 }
 
+@media (max-width: 1500px) {
+	#about,
+	#player,
+	#allies,
+	#clans {
+		width: 100% !important;
+		max-width: 100% !important;
+	}
 
-@media only screen and (max-width: 1050px) {
-	a[name="fapa"]+b {
+	#pageContainer:has(#fraProfileContent div.discord-cave-icons) .col-md-4.col-xs-6.center {
+		line-height: 2.1em;
+	}
 
-		>span,
-		&::before,
-		&::after {
-			font-size: 11px;
-		}
+	#pageContainer:has(#fraProfileContent div.discord-cave-icons) .col-md-4.col-xs-6.center>a>div.cave-grid img {
+		height: 7em !important;
 	}
 }
 
-@media only screen and (max-width: 1592px) {
-
+@media (max-width: 1592px) {
 	.feature::after {
 		display: none !important;
 	}
@@ -579,40 +560,36 @@ div.dynastycollection+p {
 		margin: 0px !important;
 	}
 
-	input[name="playall"] {
-		width: 34px !important;
-	}
-
+	input[name="playall"],
 	input[name="feedall"] {
 		width: 34px !important;
 	}
 }
 
-@media only screen and (max-width: 1500px) {
+/* dynastylist scaling */
+@media (min-width: 768px) and (max-width: 999px) {
+	div:nth-child(-n+2 of .dynastylist),
+	div:nth-child(n + 3 of .dynastylist) {
+		flex: 1 1;
+	}
+}
 
-	#about,
-	#player {
-		width: 100% !important;
-		max-width: 100% !important;
+@media (min-width: 1000px) and (max-width: 1244px) {
+	div:nth-child(-n+2 of .dynastylist) {
+		flex: 45%;
 	}
 
-	#allies,
-	#clans {
-		width: 100% !important;
-		max-width: 100% !important;
+	div:nth-child(n + 3 of .dynastylist) {
+		width: 33.3%;
+		flex: 0 1;
 	}
+}
 
-	#pageContainer:has(#fraProfileContent div.discord-cave-icons) {
-
-		.col-md-4.col-xs-6.center {
-			line-height: 2.1em;
-		}
-
-		.col-md-4.col-xs-6.center>a>div.cave-grid img {
-			height: 7em !important;
-		}
+@media (min-width: 1245px) {
+	div:nth-child(-n+2 of .dynastylist),
+	div:nth-child(n + 3 of .dynastylist) {
+		flex: 1 1;
 	}
-
 }
 
 
@@ -623,7 +600,8 @@ div.dynastycollection+p {
 /* image replacements */
 
 a.s-chat__username,
-.commentText>.text-muted {
+.commentText>.text-muted,
+#player {
 
 	img[src^="//static.lioden.com/images/layout/donator.png"] {
 		content: var(--vip-badge) !important;
@@ -845,6 +823,14 @@ div.pinned-message {
 
 
 /* -------------------- TESTING A TOGGLE CHECKBOX -------------------- */
+
+/* removed new messages alert */
+.alert.alert-danger:has(a[href="inbox.php"]),
+.alert.alert-danger:has(a[href*="forum"]),
+.alert.alert-success:has(img[src$="iconnews.png"]){
+	display: none !important;
+}
+
 input.alert-checkbox, input.pinned-check {
 	z-index: 1;
 	order: -999;
@@ -1025,6 +1011,11 @@ input.alert-checkbox {
 		}
 	}
 
+	&:has(a[href$="notice"]) {
+		justify-content: center;
+		color: var(--discord-white);
+	}
+
 	a {
 		background-color: #5865f2;
 		color: white;
@@ -1047,6 +1038,14 @@ input.alert-checkbox {
 		height: auto;
 		aspect-ratio: 1 / 1;
 		filter: brightness(1.5);
+	}
+
+	img[src$="nonest.png"] {
+		content: var(--info-icon);
+		object-fit: contain;
+		width: 20px;
+		height: auto;
+		aspect-ratio: 1 / 1;
 	}
 }
 
@@ -1168,13 +1167,6 @@ input.alert-checkbox {
 }
 
 
-/* removed new messages alert */
-.alert.alert-danger:has(a[href="inbox.php"]) {
-	display: none;
-}
-
-
-
 /* ---------------- breadcrumb ----------------  */
 .breadcrumb {
 	background-color: #18181c;
@@ -1202,15 +1194,6 @@ input.alert-checkbox {
 	/* position: absolute; */
 	/* right: 0; */
 	z-index: 0;
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	
@@ -1392,6 +1375,11 @@ input.alert-checkbox {
 
 .sidebar>.col-md-12.col-xs-6,
 .sidebar>.col-md-12.col-xs-5 {
+
+	width: 100%;
+
+
+	
 	>a {
 		position: relative;
 		display: flex;
@@ -1431,6 +1419,14 @@ input.alert-checkbox {
 
 
 /* progress bars */
+
+.progress {
+	img {
+		vertical-align: bottom;
+		margin-right: 5px;
+	}
+}
+
 .progress-bar-warning {
 	background-color: #ffdb5e;
 }
@@ -1589,7 +1585,7 @@ a.btn.button {
 
 	&:hover {
 		background: var(--discord-dark-blurple);
-		color: currentColor;
+		color: var(--discord-white);
 		padding: 6px;
 		border-radius: 5px;
 		font-size: 12px;
@@ -4067,16 +4063,34 @@ form[method="post"]:has(>#about) {
 
 #player .center {
 	text-align: left;
+}
 
 
 
-	&.h3 {
-		font-weight: bold;
-		margin-top: 10px;
-		order: 2;
-		width: 100%;
+
+#player .center.h3 {
+	display: flex;
+	font-weight: bold;
+	margin-top: 10px;
+	order: 2;
+	width: 100%;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+	align-items: center;
+	align-content: center;
+	
+	
+
+	img {
+		object-fit: contain;
+		object-position: center;
+		aspect-ratio: 1/1;
+		width: 24px !important;
+		height: 24px;
 		display: block;
-		/* align-self: start; */
+		margin: 0px;
+		padding: 0px;
+		margin-left: 5px;
 	}
 }
 
@@ -5011,15 +5025,6 @@ center > form[method="post"]:has(#reclaim) {
 
 }
 
-
-/* ------------------- player view: feed all play all ------------------- */
-
-.container.main:has(center a[name="fapa"]) {
-	.sidebar {
-		padding-top: 205px;
-		z-index: 0;
-	}
-}
 
 /* the "feed all play all" link itself, the bold "days left" text, the spacing paragraph, the feed all row itself */
 
