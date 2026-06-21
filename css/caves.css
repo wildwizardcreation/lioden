@@ -1,8 +1,14 @@
 
+.hidden, [hidden] {
+    display: none;
+}
+
+p.center.b {
+    margin: 5px 0;
+}
 
 
-
-/* ------- SALES CAVE ------- */
+/* ------- The Cavern's Maw // For Sale ------- */
 /* cid=352756 */
 
 
@@ -12,7 +18,7 @@ body:has(#pride a[href$="cid=352756"]) {
     background-size: cover;
 }
 
-
+#pageContainer:has(tbody>tr>th>a[href$="cid=352756"])
 .lionImage.featured-lion {
     position: relative;
     
@@ -26,4 +32,24 @@ body:has(#pride a[href$="cid=352756"]) {
         background-size: cover;
     }
 
+}
+
+
+
+/* ------- Mossy Nook // Prides and Joys ------- */
+/* cid=340759 */
+
+#pageContainer:has(tbody>tr>th>a[href$="cid=340759"]) {
+    .lionImage.featured-lion {
+        img[src$="cave/default.png"] {
+            content: url("https://cdnb.artstation.com/p/assets/images/images/002/637/633/large/jared-sobotta-cave-screenshot-09.jpg");
+            height: 110% !important;
+            max-width: unset !important;
+            width: auto;
+            left: -15%;
+            
+        }
+    }
+
+    
 }
