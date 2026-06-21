@@ -1,0 +1,29 @@
+
+
+
+
+/* ------- SALES CAVE ------- */
+/* cid=352756 */
+
+
+body:has(#pride a[href$="cid=352756"]) {
+    background-image: url("https://cdnb.artstation.com/p/assets/images/images/023/492/419/4k/brian-bellamy-redo.jpg");
+    background-position: top center;
+    background-size: cover;
+}
+
+
+.lionImage.featured-lion {
+    position: relative;
+    
+    &::before {
+        content: " ";
+        background-image: url("https://cdna.artstation.com/p/assets/images/images/054/395/108/large/roan-larsen-forestgrottoartstation.jpg");
+        height: 100%;
+        width: 100%;
+        display: block;
+        position: absolute;
+        background-size: cover;
+    }
+
+}
