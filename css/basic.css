@@ -4,6 +4,100 @@
 
 
 
+
+
+
+/* testing */
+
+/* ------------  lion circluar pfp / discord avatar decoration ------------  */
+#about>tbody>tr.right>td:nth-child(1)>#lion_image {
+	width: 100%;
+	height: 100%;
+}
+
+.lion-image-block {
+    border-radius: 500px;
+}
+
+#lion_image {
+	overflow: visible;
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+#lion_image::after {
+	content: " ";
+	display: block;
+	background-image: url(https://discord-decoration.art/decorations/woolgathering.png);
+	width: 100%;
+	height: 100%;
+	background-size:contain;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+    transform: scale(1.2);
+}
+
+
+/* ------------ player circluar pfp / discord avatar decoration ------------  */
+
+:root {
+    --player-pfp-size: 200px;
+}
+
+#player>tbody>tr.right>td:nth-child(2){
+    padding: 0px;
+    display: block;
+    position: relative;
+    width: var(--player-pfp-size) !important;
+    height: var(--player-pfp-size);
+    
+    &::after {
+	content: " ";
+	display: block;
+	background-image: url(https://discord-decoration.art/decorations/neon_nibbles.png);
+	width: var(--player-pfp-size);
+	height: var(--player-pfp-size);
+	background-size:contain;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	transform: scale(1.2);
+}}
+
+/* player pfp */
+#player>tbody>tr.right>td:nth-child(2)>img {
+	border-radius: 500px;
+	max-width: var(--player-pfp-size) !important;
+	width: var(--player-pfp-size) !important;
+	max-height: var(--player-pfp-size) !important;
+	height: var(--player-pfp-size) !important;
+    /*! position: absolute; */
+	left: 0px;
+	top: 0px;
+}
+
+
+
+
+/* fiddling with the table flex for better centering/balancing of elements */
+#about tr.right {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+
+#player tr.right {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+}
+
 #fraProfileContent {
     * {
     box-sizing: border-box;
@@ -78,7 +172,7 @@
     }
 }
 
-/* css credit if the page does not have the bookmark button */
+/* ------------  css credit if the page does not have the bookmark button ------------  */
 
 #pageContainer:not(:has(ol.breadcrumb + div.floatright)) {
     ol.breadcrumb {
@@ -136,7 +230,7 @@ ol.breadcrumb + div.floatright {
 
     li {
         margin-top: .5em;
-        list-style: "✦";
+        list-style: "â¦";
         
         &::marker {
             font-size: medium;
@@ -286,10 +380,15 @@ div.container.main {
 
 /* custom show/hide buttons */
 /* made to show and hide the allies/clans rows. feel free to tear this apart and test with other elements! :3 */
+
+/* requires 
+<input type=checkbox class="button-check show-allies/clans"> 
+somewhere in the custom profile content! */
 .show-allies, .show-clans {
 	margin-left: auto !important;
 	margin-bottom: -32px !important;
 	margin-right: 5px !important;
+    z-index: 5;
 }
 
 .show-allies {
