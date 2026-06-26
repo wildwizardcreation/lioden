@@ -51,6 +51,10 @@ https://emoji.gg/user/bet.official
 /* default bg art courtesy of the discord art team */
 /* sourced from https://discord.com/blog */
 
+/* find more avatar decorations here! */
+
+/* https://discord-decoration.art/discord_avatar_decoration */
+
 
 /* ------------------- TO DO ------------------- */
 /* ------------------- semi-urgent dev stuff ------------------- */
@@ -100,15 +104,18 @@ https://emoji.gg/user/bet.official
 	/* player "profile" colors, info, and images */
 	--player-border: ;
 	--player-primary: #242429;
-	--player-secondary: #323237;
+	--player-secondary: #242429;
 	--player-buttons: #323237;
 	--player-pronouns: "he/him or gam/er";
 	--player-description: "test test lalala yayyyyyy";
+	--player-status: "test test lalala statrus!!! :3";
+	--player-badge: url("https://cdn3.emoji.gg/emojis/3773-active-developer-badge-animated.gif");
 
+	
 	/* player "profile" images */
 	--player-header: url("https://sitebuilder.neocities.org/assets/tumblr_c0ce31cb8da59f998d1b29443edbe203_2ab0ebec_500.png");
 	--player-pfp: url("https://static.lioden.com/images/tags/0/4/4155.png");
-
+	--player-avatar-decor: url("https://discord-decoration.art/decorations/starlight_whales.png");
 
 
 	/* lion "profile" colors, info, and images */
@@ -121,6 +128,7 @@ https://emoji.gg/user/bet.official
 	--lion-header: url("https://64.media.tumblr.com/84cab2875d316c4abc251ef7460eb5d3/762c38b2d9a400e5-bc/s540x810/d8fa449274740daf766aece2cd6782d733a8026d.gif");
 	--lion-pfp: url("https://cdn3.emoji.gg/emojis/33751-epiccat.png");
 	/* <- leave blank for normal lion headshot */
+	--lion-avatar-decor: url("https://discord-decoration.art/decorations/call_of_duty_mobile.png");
 
 
 	/* ------------------- cave customization ------------------- */
@@ -222,6 +230,8 @@ https://emoji.gg/user/bet.official
 	--mod-badge: url("https://cdn3.emoji.gg/emojis/2731-certified-moderator.png");
 	--admin-badge: url("https://cdn3.emoji.gg/emojis/7871-discord-staff.png");
 	--artist-badge: url("https://sitebuilder.neocities.org/assets/lioden/artist_badge.png");
+
+	--dev-badge: url("https://cdn3.emoji.gg/emojis/3773-active-developer-badge-animated.gif");
 
 	/* default ui icons */
 	--invite-icon: url("https://cdn3.emoji.gg/emojis/9437-invite.png");
@@ -643,8 +653,9 @@ body {
 	overflow: visible;
 	height: fit-content;
 	align-content: space-between;
-	justify-content: flex-end;
+	justify-content: space-between;
 	align-items: center;
+	
 	
 	
 
@@ -710,11 +721,19 @@ body {
 	display: inline-block;
 	vertical-align: bottom;
 	height: 20px;
-	margin: 0px 8px;
+	margin: 0px 3px;
 	aspect-ratio: 1;
 	
 	&.three {
 		content: url(https://static.lioden.com/images/emotes/3.png);
+	}
+
+	&.pat {
+		content: url(https://static.lioden.com/images/emotes/pat.png);
+	}
+
+	&.blush {
+		content: url(https://static.lioden.com/images/emotes/blush.png);
 	}
 }
 
@@ -791,6 +810,10 @@ div.pinned-message {
 	border-radius: 10px;
 	padding: 15px;
 	padding-left: 70px;
+
+	img {
+		max-width: 100%;
+	}
 }
 
 
@@ -915,8 +938,8 @@ input.pinned-check {
 
 input.alert-checkbox {
 	/* margin-right: auto; */
-	/* float: left; */
-	/* margin-left: auto; */
+	float: left;
+	margin-left: auto;
 	background-image: var(--notifcation-icon);
 	
 	
@@ -3514,6 +3537,11 @@ form[method="post"]:has(>#about) {
 	align-content: flex-start;
 }
 
+#lion_image {
+	border-radius: 500px;
+	overflow: hidden;
+}
+
 #about>tbody {
 
 	br {
@@ -3605,7 +3633,7 @@ form[method="post"]:has(>#about) {
 				aspect-ratio: 1 / 1;
 				bottom: -50px;
 				border-radius: 500px;
-				overflow: hidden;
+				/* overflow: hidden; */
 				margin-left: 10px;
 				/* object-fit: none; */
 			}
@@ -3989,6 +4017,22 @@ form[method="post"]:has(>#about) {
 	}
 }
 
+/* lion avatar decoration */
+
+#lion_image::after {
+	content: " ";
+	display: block;
+	background-image: var(--lion-avatar-decor);
+	width: 130px;
+	height: 130px;
+	background-size:contain;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 0px;
+	bottom: 0;
+	transform: scale(1.16);
+}
+
 #about>tbody>tr.right>td.right>table>tbody {
 	display: flex;
 	flex-wrap: wrap;
@@ -4008,7 +4052,7 @@ form[method="post"]:has(>#about) {
 
 
 #player {
-	background-color: var(--player-primary);
+	background: linear-gradient(0deg, var(--player-primary) 0%, var(--player-secondary) 100%);
 	float: none;
 	display: flex;
 	/* justify-self: flex-end; */
@@ -4057,9 +4101,6 @@ form[method="post"]:has(>#about) {
 	}
 }
 
-#player hr {
-	display: none;
-}
 
 #player .center {
 	text-align: left;
@@ -4079,8 +4120,6 @@ form[method="post"]:has(>#about) {
 	align-items: center;
 	align-content: center;
 	
-	
-
 	img {
 		object-fit: contain;
 		object-position: center;
@@ -4091,6 +4130,18 @@ form[method="post"]:has(>#about) {
 		margin: 0px;
 		padding: 0px;
 		margin-left: 5px;
+	}
+
+	&::after {
+		content: " ";
+		display: inline-block;
+		background-image: var(--player-badge);
+		width: 20px;
+		height: 20px;
+		order: -1;
+		background-size: contain;
+		background-repeat: no-repeat;
+		margin-left: 4px;
 	}
 }
 
@@ -4312,6 +4363,9 @@ if no: replace with fake friend button + move message button */
 	z-index: 0;
 }
 
+
+/* player online/offline badge */
+
 #player:has(div.member-offline) {
 	tbody>tr.right>td:nth-child(2)::before {
 		background-image: url(https://cdn3.emoji.gg/emojis/4624-discord-offline.png);
@@ -4339,33 +4393,87 @@ if no: replace with fake friend button + move message button */
 	border-radius: 100px
 }
 
+/* player avatar decoration */
+
+#player>tbody>tr.right>td:nth-child(2)::after {
+	content: " ";
+	display: block;
+	background-image: var(--player-avatar-decor);
+	width: 150px;
+	height: 150px;
+	background-size:contain;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 0px;
+	bottom: -60px;
+	transform: scale(1.02);
+}
 
 /* player pfp */
 #player>tbody>tr.right>td:nth-child(2)>img {
 	position: absolute;
 	border-radius: 500px;
 	width: 130px;
+	height: 130px;
 	bottom: -50px;
 	margin-left: 10px;
 	display: block;
 	object-fit: none;
 }
 
-/* online / offline / optional idle + DnD */
-
-/* .member-online, .member-offline {
-    vertical-align: baseline;
-    background-color: transparent;
-    background-size: cover;
-    background-position: center;
-    height: 20px;
-    width: 20px;
-} */
-
 .member-online,
 .member-offline {
 	display: none;
 }
+
+/* player status */
+
+#player hr {
+	margin: 0px;
+	border-top: none;
+	top: 190px;
+	left: 160px;
+	position: absolute;
+	height: 100px;
+	width: 200px;
+}
+
+#player hr::before {
+	content: var(--player-status);
+	display: block;
+	color: var(--discord-white);
+    background: var(--discord-light);
+    border: 1px solid var(--discord-light-border);
+    border-radius: 16px;
+    box-shadow: 0 1px 4px 0 var(
+    --discord-dark);
+    box-sizing: border-box;
+    max-width: 181px;
+    min-width: 42px;
+    overflow: hidden;
+    padding: 8px 12px;
+	font-size: small;
+	top: 0;
+	left: 0;
+	position: absolute;
+    /* order: 0; */
+}
+
+#player hr::after {
+	background: var(--discord-light);
+    border: 1px solid var(--discord-light-border);
+    border-radius: 50%;
+    box-shadow: inherit;
+    box-sizing: border-box;
+    content: "";
+    height: 20px;
+    inset-inline-start: 10px;
+    position: absolute;
+    top: -8px;
+    width: 20px;
+}
+
+	
 
 /* buttons */
 
@@ -6055,7 +6163,7 @@ a[href="/territory.php?id=425531"]::after {
 	vertical-align: baseline;
 	background-size: cover;
 	margin: 0 5px;
-	background-image: url(https://cdn3.emoji.gg/emojis/3773-active-developer-badge-animated.gif);
+	background-image: var(--dev-badge);
 	margin-bottom: -2px;
 }
 
