@@ -58,15 +58,15 @@ https://emoji.gg/user/bet.official
 
 /* ------------------- TO DO ------------------- */
 /* ------------------- semi-urgent dev stuff ------------------- */
-/* - fix tooltips in the #player box (currently appear underneath the sidebar) ✓ */
-/* - fix submale stuff. 1 submale has square corners and im unsure what happens with 0 lol ✗ */
-/* - fix branch link to make it consistent with the other hover icon links ✗ */
-/* - fix lions (mutations) for if there's 0 lions (no link, selector breaks) ✗ */
+/* - fix tooltips in the #player box (currently appear underneath the sidebar) â */
+/* - fix submale stuff. 1 submale has square corners and im unsure what happens with 0 lol â */
+/* - fix branch link to make it consistent with the other hover icon links â */
+/* - fix lions (mutations) for if there's 0 lions (no link, selector breaks) â */
 /* - beta and bug test alerts and alert functions */
-/* - "old den" layout cross compatibility ✗ */
-/* - fix feed all play all getting weird on some screensizes ✗ */
-/* - hover styling for the sidebar chat's channel selector ✓ */
-/* - fix sidebar layout on smaller screen sizes ✗ */
+/* - "old den" layout cross compatibility â */
+/* - fix feed all play all getting weird on some screensizes â */
+/* - hover styling for the sidebar chat's channel selector â */
+/* - fix sidebar layout on smaller screen sizes â */
 /* - figure out what to do with the typical den html ~ */
 /* | -> make the 'pinned messages' layout togglable via existence of the .pinned-check element*/
 
@@ -93,6 +93,7 @@ https://emoji.gg/user/bet.official
 	--gold-beetle-icon: url(https://cdn3.emoji.gg/emojis/5611-evolving-badge-nitro-15-months.png);
 	--silver-beetle-icon: url(https://cdn3.emoji.gg/emojis/99057-orbs-discord.png);
 	--banner-height: 215px;
+	--auto-text-color: oklch(from var(--player-primary) calc((0.6 - l) * 1000) 0 0);
 
 
 
@@ -103,9 +104,12 @@ https://emoji.gg/user/bet.official
 
 	/* player "profile" colors, info, and images */
 	--player-border: ;
-	--player-primary: #242429;
-	--player-secondary: #242429;
-	--player-buttons: #323237;
+	--player-primary: #2e3530;
+	--player-secondary: #241728;
+	--player-buttons: oklch(from var(--player-primary) calc(l + (0.5 - l) * 0.3) c h);
+	--player-buttons-hover: oklch(from var(--player-buttons) calc(l + (0.5 - l) * 0.4) c h);
+	--player-buttons-active: oklch(from var(--player-buttons) calc(l + (0.5 - l) * 0.7) c h);
+
 	--player-pronouns: "he/him or gam/er";
 	--player-description: "test test lalala yayyyyyy";
 	--player-status: "test test lalala statrus!!! :3";
@@ -113,8 +117,9 @@ https://emoji.gg/user/bet.official
 
 	
 	/* player "profile" images */
-	--player-header: url("https://sitebuilder.neocities.org/assets/tumblr_c0ce31cb8da59f998d1b29443edbe203_2ab0ebec_500.png");
-	--player-pfp: url("https://static.lioden.com/images/tags/0/4/4155.png");
+	--player-header: url("https://i.pinimg.com/1200x/5d/81/1b/5d811bacb86ae786f4803bd81cdacdc8.jpg");
+	--player-pfp: url("https://64.media.tumblr.com/f720506dbf88ed989fb14a90f887f2da/d55ba5e560b5fe3d-53/s500x750/afc4029a87e01ebf73ff6350fbdccdaf3f221959.gifv");
+	--player-pfp-position: 25%;
 	--player-avatar-decor: url("https://discord-decoration.art/decorations/starlight_whales.png");
 
 
@@ -122,8 +127,10 @@ https://emoji.gg/user/bet.official
 	--lion-border: ;
 	--lion-primary: #242429;
 	--lion-secondary: #323237;
-	--lion-buttons: #323237;
-
+	--lion-buttons: oklch(from var(--lion-primary) calc(l + (0.5 - l) * 0.3) c h);
+	--lion-buttons-hover: oklch(from var(--lion-buttons) calc(l + (0.5 - l) * 0.4) c h);
+	--lion-buttons-active: oklch(from var(--lion-buttons) calc(l + (0.5 - l) * 0.7) c h);
+	
 	/* lion "profile" images */
 	--lion-header: url("https://64.media.tumblr.com/84cab2875d316c4abc251ef7460eb5d3/762c38b2d9a400e5-bc/s540x810/d8fa449274740daf766aece2cd6782d733a8026d.gif");
 	--lion-pfp: url("https://cdn3.emoji.gg/emojis/33751-epiccat.png");
@@ -274,6 +281,7 @@ https://emoji.gg/user/bet.official
 	--facebook-icon: url("https://cdn3.emoji.gg/emojis/87895-facebook.png");
 	--youtube-icon: url("https://cdn3.emoji.gg/emojis/12899-youtube.png");
 }
+
 
 [hidden] {
 	display: none !important;
@@ -826,7 +834,8 @@ div.pinned-message {
 	height: 40px;
 	left: 15px;
 	background: var(--player-pfp);
-	background-size: contain;
+	background-size: cover;
+	background-position: var(--player-pfp-position);
 	border-radius: 100%;
 	margin-top: -2px;
 }
@@ -3724,7 +3733,7 @@ form[method="post"]:has(>#about) {
 						text-wrap-mode: nowrap;
 						border-radius: 8px;
 						z-index: 100;
-						background-color: var(--discord-border) !important;
+						background-color: var(--lion-buttons) !important;
 
 
 
@@ -3896,7 +3905,7 @@ form[method="post"]:has(>#about) {
 		margin: 15px;
 		width: 40px;
 		height: 40px;
-		background-color: var(--discord-border) !important;
+		background-color: var(--lion-buttons) !important;
 		border-radius: 8px;
 		align-content: center;
 		align-items: center;
@@ -4057,6 +4066,8 @@ form[method="post"]:has(>#about) {
 	display: flex;
 	/* justify-self: flex-end; */
 	right: 0;
+	color: var(
+	--auto-text-color);
 }
 
 #player>tbody {
@@ -4249,13 +4260,14 @@ if no: replace with fake friend button + move message button */
 	background: none;
 	font-weight: normal;
 	font-size: .95em;
+	color: var(--auto-text-color);
 
 	&::after {
 		content: var(--player-pronouns);
 	}
 
 	>.floatright::after {
-		content: "•";
+		content: "â¢";
 		margin: 0 0.5em;
 	}
 }
@@ -4323,7 +4335,7 @@ if no: replace with fake friend button + move message button */
 			color: transparent;
 
 			::before {
-				color: var(--discord-white);
+				color: var(--auto-text-color);
 				content: "Member Since";
 				position: absolute;
 			}
@@ -4337,7 +4349,7 @@ if no: replace with fake friend button + move message button */
 			color: transparent;
 
 			::before {
-				color: var(--discord-white);
+				color: var(--auto-text-color);
 				content: "Last Active";
 				position: absolute;
 			}
@@ -4389,7 +4401,7 @@ if no: replace with fake friend button + move message button */
 	bottom: -50px;
 	left: 105px;
 	z-index: 1;
-	background-color: var(--player-primary);
+	background-color: var(--discord-light);
 	border-radius: 100px
 }
 
@@ -4411,6 +4423,7 @@ if no: replace with fake friend button + move message button */
 
 /* player pfp */
 #player>tbody>tr.right>td:nth-child(2)>img {
+	content: var(--player-pfp);
 	position: absolute;
 	border-radius: 500px;
 	width: 130px;
@@ -4418,7 +4431,8 @@ if no: replace with fake friend button + move message button */
 	bottom: -50px;
 	margin-left: 10px;
 	display: block;
-	object-fit: none;
+	object-fit: cover;
+	object-position: var(--player-pfp-position);
 }
 
 .member-online,
@@ -4436,6 +4450,7 @@ if no: replace with fake friend button + move message button */
 	position: absolute;
 	height: 100px;
 	width: 200px;
+	overflow: visible;
 }
 
 #player hr::before {
@@ -4450,10 +4465,10 @@ if no: replace with fake friend button + move message button */
     box-sizing: border-box;
     max-width: 181px;
     min-width: 42px;
-    overflow: hidden;
+/*     overflow: visible; */
     padding: 8px 12px;
 	font-size: small;
-	top: 0;
+	top: 0px;
 	left: 0;
 	position: absolute;
     /* order: 0; */
@@ -4465,12 +4480,14 @@ if no: replace with fake friend button + move message button */
     border-radius: 50%;
     box-shadow: inherit;
     box-sizing: border-box;
-    content: "";
+    content: " ";
     height: 20px;
     inset-inline-start: 10px;
     position: absolute;
-    top: -8px;
+    top: -27px;
     width: 20px;
+	z-index: 999;
+	left: -7px;
 }
 
 	
@@ -4596,7 +4613,7 @@ td.right_odd>a[href^="/allies.php?p=blocked"] {
 	#player:has(a[href^="/refer.php"]) a[href^="/refer.php"],
 	#player:has(a[href^="/refer.php"]) a[href^="/wishlist.php"] {
 		font-size: 0px;
-		background-color: var(--discord-border);
+		background-color: var(--player-buttons);
 		padding: 8px;
 		width: 40px;
 		aspect-ratio: 1 / 1;
@@ -4608,7 +4625,9 @@ td.right_odd>a[href^="/allies.php?p=blocked"] {
 		justify-content: center;
 		/* height: fit-content; */
 
-
+		&:hover {
+			background-color: var(--player-buttons-hover);
+		}
 
 		&:hover::after {
 			display: block;
@@ -5016,7 +5035,7 @@ center > form[method="post"]:has(#reclaim) {
 
 		&:hover:after {
 			content: "View Your Wishlist";
-			width: 140px;
+			width: max-content;
 			right: -50px;
 		}
 	}

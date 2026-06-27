@@ -5,15 +5,53 @@
 
 
 
+/* ticker test */
+
+.ticker {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4rem;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.container.main>.row {
+    position: relative;
+}
+
+.container.main>.row:first-child::before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  width: 100px;   
+  height: 50px;          
+  top: -90%;
+  background-image: url(https://i.pinimg.com/originals/c1/0f/09/c10f09d7fe6f756c8abf441c92a0ba3c.gif);
+  background-repeat: no-repeat;
+  background-size: contain;
+    z-index: 5;
+  animation: slide 10s linear infinite;
+}
+
+@keyframes slide {
+    0%   { left: 90%; transform: translateX(0); }
+    100% { left: 10%;    transform: translateX(-100px) };
+}
+
+
+
+
 
 
 /* testing */
 
 /* ------------  lion circluar pfp / discord avatar decoration ------------  */
-#about>tbody>tr.right>td:nth-child(1)>#lion_image {
-	width: 100%;
-	height: 100%;
+:root {
+    --custom-lion-image: url("https://wildwizardcreation.github.io/lioden/assets/art/roscoe_headshot.png");
 }
+
 
 .lion-image-block {
     border-radius: 500px;
@@ -26,13 +64,21 @@
     height: 200px;
 }
 
+#lion_image img:last-child {
+    content: var(--custom-lion-image);
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+}
+
+
 #lion_image::after {
 	content: " ";
 	display: block;
 	background-image: url(https://discord-decoration.art/decorations/woolgathering.png);
 	width: 100%;
 	height: 100%;
-	background-size:contain;
+	background-size: contain;
 	background-repeat: no-repeat;
 	position: absolute;
 	left: 0;
@@ -53,6 +99,7 @@
     position: relative;
     width: var(--player-pfp-size) !important;
     height: var(--player-pfp-size);
+/*     overflow: hidden; */
     
     &::after {
 	content: " ";
@@ -70,11 +117,14 @@
 
 /* player pfp */
 #player>tbody>tr.right>td:nth-child(2)>img {
-	border-radius: 500px;
+    content: url(https://i.pinimg.com/736x/36/06/f1/3606f1cff2794d889b66ccf61807884e.jpg);
+    object-fit: cover;
+    object-position: center top;
 	max-width: var(--player-pfp-size) !important;
 	width: var(--player-pfp-size) !important;
 	max-height: var(--player-pfp-size) !important;
 	height: var(--player-pfp-size) !important;
+	border-radius: 500px;
     /*! position: absolute; */
 	left: 0px;
 	top: 0px;
@@ -230,7 +280,7 @@ ol.breadcrumb + div.floatright {
 
     li {
         margin-top: .5em;
-        list-style: "â¦";
+        list-style: "ÃÂ¢ÃÂÃÂ¦";
         
         &::marker {
             font-size: medium;
