@@ -845,18 +845,27 @@ div.pinned-message {
 
 
 /* fake pfp */
-.pinned-message::before {
+.pinned-message::before,
+.pinned-message::after {
 	content: " ";
 	position: absolute;
 	display: block;
 	width: 40px;
 	height: 40px;
 	left: 15px;
-	background: var(--player-pfp);
+	top: 15px;
 	background-size: cover;
 	background-position: var(--player-pfp-position);
+}
+
+.pinned-message::before {
 	border-radius: 100%;
-	margin-top: -2px;
+	background-image: var(--player-pfp);
+}
+
+.pinned-message::after {
+	background-image: var(--player-avatar-decor);
+	transform: scale(1.2);
 }
 	
 /* fake username */
